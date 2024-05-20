@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: postgres_container
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=akilan24
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=service
+
+  rabbitmq:
+    image: rabbitmq
+    container_name: rabbitmq_container
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=akilan24
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    restart: always
+    ports:
+      - "9090:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=akilan@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=akilan24
+    volumes:
+      - ./data/pgadmin:/var/lib/pgadmin

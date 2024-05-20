@@ -1,0 +1,174 @@
+select {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0%;
+}
+#hotelclass select,
+#hotelclass input {
+  width: 200px;
+}
+#hotelclass .formclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(0, 213, 255);
+  border-radius: 0%;
+}
+.divclass {
+  margin-right: 5px;
+}
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+#hotelclass #logo {
+  height: 60px;
+  width: fit-content;
+}
+#hotelclass .login {
+  font-size: 20px;
+  background-color: rgb(90, 213, 250);
+  color: white;
+  display: flex;
+  border-radius: 50px;
+  padding: 2px;
+  height: 40px;
+  width: 120px;
+  align-items: center;
+}
+
+#icon {
+  width: 40px;
+}
+#hotellogo,
+#planelogo,
+#trainlogo,
+#buslogo,
+#carlogo,
+#cslogo {
+  width: 30px;
+  cursor: pointer;
+}
+#hotelclass .selector {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  height: 75px;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+}
+.formclass button {
+  background-color: rgb(145, 51, 186);
+}
+#tab {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  flex-direction: column;
+  background-color: transparent;
+}
+#tab button {
+  background-color: transparent;
+}
+p {
+  margin: 0%;
+  color: rgb(145, 51, 186);
+}
+button {
+  cursor: pointer;
+}
+#profile {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 270px;
+  height: 270px;
+  border: 3px solid green;
+  border-radius: 25px;
+  background-color: white;
+  left: 82vw;
+  top: 6vh;
+  transform: translate(-50%, -50%);
+}
+#profile #ptab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  left: 30px;
+}
+#ptab button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  color: rgb(145, 51, 186);
+}
+#profile img {
+  width: 25px;
+  padding-right: 10px;
+}
+#profile button {
+  background-color: transparent;
+}
+#passwordclass input {
+  width: 250px;
+  margin-left: 15px;
+}
+#passwordclass {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  background-color: rgba(233, 227, 227, 0.5);
+  width: 400px;
+  height: 200px;
+  align-items: center;
+  border: 3px solid green;
+  position: relative;
+  left: 62vw;
+  top: -15vh;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+}
+#passwordclass .ptab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#passwordclass h3 {
+  color: #4bad57;
+}
+#passwordclass #submit {
+  padding-top: 10px;
+}
+.cslogo {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#csclass {
+  background-color: white;
+  width: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 25px;
+  border: 3px solid green;
+  position: relative;
+  left: 85%;
+  top: -4vh;
+  transform: translate(-50%, -50%);
+}
+#csclass h3 {
+  color: #4bad57;
+}

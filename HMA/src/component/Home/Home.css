@@ -1,0 +1,27 @@
+body {
+  background-image: url(./index.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(90, 213, 250);
+}
+div a {
+  color: rgb(90, 213, 250);
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+#a {
+  color: rgb(27, 11, 109);
+  text-decoration: none;
+}
+#logo {
+  width: 450px;
+  margin-top: 5px;
+}
