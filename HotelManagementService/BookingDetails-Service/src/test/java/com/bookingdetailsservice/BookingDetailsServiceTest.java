@@ -3,9 +3,6 @@ package com.bookingdetailsservice;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -58,17 +55,16 @@ public class BookingDetailsServiceTest {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
 				"9876543210", "9876543211", "http://website.com", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe", hotel);
+		Room room = new Room(101010, 201, 4000.00, "Deluxe");
 		hotel.setRooms(Arrays.asList(room));
 		BookingDetails bookingDetails = new BookingDetails();
 		bookingDetails.setRoomno(201);
-		bookingDetails.setHotelname(room.getHotel().getHotelName());
+		bookingDetails.setHotelname(hotel.getHotelName());
 		when(bookingDetailsRepository.findAll()).thenReturn(Arrays.asList());
 		when(hotelRepo.findAll()).thenReturn(Arrays.asList(hotel));
 		when(bookingDetailsRepository.save(any(BookingDetails.class))).thenReturn(bookingDetails);
 
-		assertEquals(bookingDetails,
-				bookingDetailsService.BookRoom(userId, bookingDetails));
+		assertEquals(bookingDetails, bookingDetailsService.BookRoom(userId, bookingDetails));
 	}
 
 	@Test

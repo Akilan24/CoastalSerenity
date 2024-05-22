@@ -41,12 +41,12 @@ class UserServiceImplTest {
 		Registration updatedUser = new Registration(username, "John12", "newemail@example.com", "password", "user",
 				"9876543210", "New Address", "male", "Single", null);
 		when(userRepository.existsById(user.getUsername())).thenReturn(true);
-        when(userRepository.findById(user.getUsername())).thenReturn(Optional.of(user));
-        when(userRepository.save(updatedUser)).thenReturn(updatedUser);
+		when(userRepository.findById(user.getUsername())).thenReturn(Optional.of(user));
+		when(userRepository.save(updatedUser)).thenReturn(updatedUser);
 
-        Registration result = userService.updateUser(user.getUsername(), updatedUser);
+		Registration result = userService.updateUser(user.getUsername(), updatedUser);
 
-        assertEquals(updatedUser.getAddress(), result.getAddress());
+		assertEquals(updatedUser.getAddress(), result.getAddress());
 	}
 
 	@Test

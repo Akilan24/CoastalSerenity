@@ -7,22 +7,30 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.roomservice.entity.Hotel;
 import com.roomservice.entity.Room;
 import com.roomservice.exception.RoomDetailsNotFoundException;
+import com.roomservice.repository.HotelRepository;
 import com.roomservice.repository.RoomRepository;
 
 @Service
 public class RoomServiceImpl implements RoomService {
 	@Autowired
 	RoomRepository rrepo;
+	@Autowired
+	HotelRepository hrepo;
 
-	public Room addRoomDetails(Room room) throws Exception {
+	public Room addRoomDetails(long hid, Room room) throws Exception {
 		try {
 			long MIN_ID = 100000;
 			int count = rrepo.findAll().size();
 			room.setRoomId(count == 0 ? MIN_ID : MIN_ID + count);
-
-			return rrepo.save(room);
+			Hotel h = hrepo.findByHotelId(hid).get();
+			List<Room> l = h.getRooms();
+			l.add(room);
+			h.setRooms(l);
+			hrepo.save(h);
+			return room;
 		} catch (Exception e) {
 			throw new Exception("Details are mismatched");
 		}
@@ -35,7 +43,7 @@ public class RoomServiceImpl implements RoomService {
 			roomdetails.setRoomtype(room.getRoomtype());
 			roomdetails.setRate_per_day(room.getRate_per_day());
 			return rrepo.save(roomdetails);
-			
+
 		} else
 			throw new RoomDetailsNotFoundException("Room details are not found");
 	}
@@ -67,8 +75,7 @@ public class RoomServiceImpl implements RoomService {
 
 	@Override
 	public List<Room> showAllRoomDetailsByHotelId(long hid) {
-		List<Room> r = rrepo.findAll().stream().filter(n -> n.getHotel().getHotelId() == hid)
-				.collect(Collectors.toList());
+		List<Room> r = hrepo.findByHotelId(hid).get().getRooms();
 		if (!r.isEmpty())
 			return r;
 		else

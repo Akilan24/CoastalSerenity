@@ -34,11 +34,13 @@ public class UserController {
 		log.info("/getallusers called");
 		return new ResponseEntity<>(userService.ShowAllUser(), HttpStatus.OK);
 	}
+
 	@GetMapping("/getalltravellers/{username}")
 	public ResponseEntity<List<Traveller>> getalltravellersbyusername(@PathVariable String username) {
 		log.info("/getalltravellers/{username} called");
 		return new ResponseEntity<>(userService.getTravellerByUsername(username), HttpStatus.OK);
 	}
+
 	@PostMapping("/addtraveller/{username}")
 	public ResponseEntity<String> addtraveller(@PathVariable String username, @RequestBody @Valid Traveller t) {
 		log.info("/addtraveller/{username} called");

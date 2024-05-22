@@ -27,9 +27,9 @@ public class RoomController {
 	@Autowired
 	RoomProxyController roomProxy;
 
-	@PostMapping("/addroom")
-	public ResponseEntity<Room> addroom(@RequestBody @Valid Room room) throws Exception {
-		return roomProxy.addroom(room);
+	@PostMapping("/addroom/{hid}")
+	public ResponseEntity<Room> addroom(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception {
+		return roomProxy.addroom(hid, room);
 
 	}
 

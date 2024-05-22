@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Hotel.css";
 import { useNavigate } from "react-router-dom";
+import Tabs from "./Tabs";
 function Hotel() {
   const [cityNames, setCityNames] = useState([]);
   const [password, setPassword] = useState("");
@@ -13,6 +14,7 @@ function Hotel() {
     checkout: getDefaultDate(),
   });
   const [hotels, setHotels] = useState([]);
+  const [hotelRooms, setHotelRooms] = useState([]);
   const navigate = useNavigate();
   const config = {
     headers: {
@@ -34,24 +36,6 @@ function Hotel() {
     }
     fetchCityNames();
   }, []);
-  useEffect(() => {
-    if (city) {
-      fetchHotels();
-    }
-  }, [city]);
-  async function fetchHotels() {
-    try {
-      console.log(city);
-      const response = await axios.get(
-        `http://localhost:8080/HMA/Hotel/getallhotelnamesbycity/${city}`,
-        config
-      );
-      setHotels(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.log(error.response.data.message);
-    }
-  }
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === "city") {
@@ -68,6 +52,7 @@ function Hotel() {
         `http://localhost:8080/HMA/BookingDetails/availablerooms/${formData.city}/${formData.roomType}/${formData.checkin}/${formData.checkout}`,
         config
       );
+      setHotelRooms(response.data);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -93,18 +78,7 @@ function Hotel() {
     const year = today.getFullYear();
     return `${year}-${month}-${day}`;
   }
-  function accountDetails() {
-    const element = document.getElementById("profile");
-    const element1 = document.getElementById("passwordclass");
-    const element2 = document.getElementById("csclass");
-    if (element.style.display == "none") {
-      element2.style.display = "none";
-      element.style.display = "flex";
-    } else {
-      element.style.display = "none";
-      element1.style.display = "none";
-    }
-  }
+
   function changePassword() {
     const element = document.getElementById("passwordclass");
     if (element.style.display == "none") {
@@ -113,18 +87,7 @@ function Hotel() {
       element.style.display = "none";
     }
   }
-  function customerCare() {
-    const element = document.getElementById("csclass");
-    const element1 = document.getElementById("profile");
-    const element2 = document.getElementById("passwordclass");
-    if (element.style.display == "none") {
-      element1.style.display = "none";
-      element2.style.display = "none";
-      element.style.display = "flex";
-    } else {
-      element.style.display = "none";
-    }
-  }
+
   function routeTo(nav) {
     navigate(nav);
   }
@@ -137,51 +100,7 @@ function Hotel() {
   return (
     <>
       <div id="hotelclass">
-        <div className="menu">
-          <img id="logo" src="./cslogo.png" />
-          <div className="selector">
-            <div id="tab">
-              <button onClick={(n) => routeTo("/hotel")}>
-                <img id="hotellogo" src="./hotellogo.png" />
-                <p>Hotels</p>
-              </button>
-            </div>
-            <div id="tab">
-              <button onClick={(n) => routeTo("plane")}>
-                <img id="planelogo" src="./planelogo.png" />
-                <p>Flights</p>
-              </button>
-            </div>
-            <div id="tab">
-              <button onClick={(n) => routeTo("/train")}>
-                <img id="trainlogo" src="./trainlogo.png" />
-                <p>Trains</p>
-              </button>
-            </div>
-            <div id="tab">
-              <button onClick={(n) => routeTo("/bus")}>
-                <img id="buslogo" src="./buslogo.png" />
-                <p>Buses</p>
-              </button>
-            </div>
-            <div id="tab">
-              <button onClick={(n) => routeTo("/cab")}>
-                <img id="carlogo" src="./carlogo.png" />
-                <p>Cabs</p>
-              </button>
-            </div>
-          </div>
-          <button className="login" onClick={accountDetails}>
-            <img id="icon" src="./login.png" />
-            Profile
-          </button>
-          <div id="tab">
-            <button className="cslogo" onClick={customerCare}>
-              <img id="cslogo" src="./customer.png" />
-              <p>Customer Service</p>
-            </button>
-          </div>
-        </div>
+        <Tabs />
         <form className="formclass" onSubmit={handleSubmit}>
           <div className="divclass">
             <label htmlFor="city">City:</label>
@@ -246,19 +165,15 @@ function Hotel() {
         </form>
       </div>
       <div>
-        {hotels.map((item, _) => (
-          <li key={item.hotelName}>
-            <div>
-              <p>HotelName: {item.hotelName}</p>
-              <p>City: {item.city}</p>
-              <p>Address: {item.address}</p>
-              <p>Mobile1: {item.mobile1}</p>
-              <p>Mobile2: {item.mobile2}</p>
-              <p>Website: {item.website}</p>
-              <p>Description: {item.description}</p>
-            </div>
-          </li>
-        ))}
+        {hotels.length > 0 ? (
+          <ul>
+            {hotels.map((hotel, index) => (
+              <li key={index}>{hotel}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No hotels found for the selected city.</p>
+        )}
       </div>
       <div id="profile">
         <div>

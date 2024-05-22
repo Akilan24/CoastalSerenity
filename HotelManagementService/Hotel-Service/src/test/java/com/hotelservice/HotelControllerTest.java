@@ -107,7 +107,7 @@ class HotelControllerTest {
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null);
 		Hotel updatedhotel = new Hotel(123456, "Bangalore", "Hotel", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876548455", "8765474210", "https://www.hotelwebsite.com", null);
-		
+
 		when(hotelService.updatehotel(hotel)).thenReturn(updatedhotel);
 
 		ResponseEntity<Hotel> response = hotelController.updatehotel(hotel);

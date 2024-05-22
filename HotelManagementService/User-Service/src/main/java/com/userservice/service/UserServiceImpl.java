@@ -23,6 +23,7 @@ public class UserServiceImpl implements UserService {
 	UserRepository userrepo;
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+
 	@Override
 	public Registration updateUser(String username, Registration u) {
 		if (userrepo.existsById(username)) {

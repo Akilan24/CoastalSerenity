@@ -9,7 +9,7 @@ import com.roomservice.entity.Room;
 @Service
 public interface RoomService {
 
-	public Room addRoomDetails(Room room) throws Exception;
+	public Room addRoomDetails(long hid, Room room) throws Exception;
 
 	public Room updateRoomDetails(Room room);
 

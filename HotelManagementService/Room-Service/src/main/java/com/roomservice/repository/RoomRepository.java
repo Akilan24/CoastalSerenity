@@ -9,6 +9,7 @@ import com.roomservice.entity.Room;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Long> {
- public Optional<Room> findByRoomId(long roomId);
- public void deleteByRoomId(long roomId);
+	public Optional<Room> findByRoomId(long roomId);
+
+	public void deleteByRoomId(long roomId);
 }

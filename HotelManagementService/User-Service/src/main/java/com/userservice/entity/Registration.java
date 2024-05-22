@@ -43,6 +43,6 @@ public class Registration {
 	@NotBlank(message = "Please provide a Marital Status")
 	private String maritalStatus;
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="username",referencedColumnName = "username")
+	@JoinColumn(name = "username", referencedColumnName = "username")
 	private List<Traveller> traveller;
 }

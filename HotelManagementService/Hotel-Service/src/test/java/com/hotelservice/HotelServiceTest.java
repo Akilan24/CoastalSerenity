@@ -120,10 +120,10 @@ public class HotelServiceTest {
 	@Test
 	void testGetHotelByCitySuccess() {
 		List<Hotel> hotels = new ArrayList<>();
-		hotels.add(new Hotel(123456, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null));
-		hotels.add(new Hotel(123457, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+		hotels.add(new Hotel(123456, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description", "hotel@example.com",
+				"9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+		hotels.add(new Hotel(123457, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description", "hotel@example.com",
+				"9876543210", "8765432109", "https://www.hotelwebsite.com", null));
 		when(hotelRepository.findAllByCity("City")).thenReturn(Optional.of(hotels));
 		assertEquals(hotels, hotelService.gethotelByCity("City"));
 	}

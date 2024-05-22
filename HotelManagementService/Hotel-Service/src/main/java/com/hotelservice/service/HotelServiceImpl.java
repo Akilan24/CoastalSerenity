@@ -25,7 +25,7 @@ public class HotelServiceImpl implements HotelService {
 			throw new HotelDetailsNotFoundException("Hotel details are not found");
 		return list;
 	}
-    
+
 	@Override
 	public Set<String> getHotelCityNames() {
 		List<Hotel> list = hrepo.findAll();
@@ -63,10 +63,10 @@ public class HotelServiceImpl implements HotelService {
 	public Hotel addhotel(Hotel h) throws Exception {
 		try {
 			long MIN_ID = 100000;
-			int count=hrepo.findAll().size();
-			h.setHotelId(count == 0 ? MIN_ID  : MIN_ID + count );
+			int count = hrepo.findAll().size();
+			h.setHotelId(count == 0 ? MIN_ID : MIN_ID + count);
 			return hrepo.save(h);
-			
+
 		} catch (Exception e) {
 			throw new Exception("Details are mismatched");
 		}
@@ -85,7 +85,7 @@ public class HotelServiceImpl implements HotelService {
 			h.setMobile2(ht.getMobile2());
 			h.setWebsite(ht.getWebsite());
 			return hrepo.save(h);
-			
+
 		} else
 			throw new HotelDetailsNotFoundException("Hotel details are not found");
 	}

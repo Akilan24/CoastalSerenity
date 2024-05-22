@@ -26,9 +26,9 @@ public class RoomController {
 	@Autowired
 	RoomServiceImpl rservice;
 
-	@PostMapping("/addroom")
-	public ResponseEntity<Room> addroom(@RequestBody @Valid Room room) throws Exception {
-		return new ResponseEntity<>(rservice.addRoomDetails(room), HttpStatus.OK);
+	@PostMapping("/addroom/{hid}")
+	public ResponseEntity<Room> addroom(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception {
+		return new ResponseEntity<>(rservice.addRoomDetails(hid, room), HttpStatus.OK);
 
 	}
 

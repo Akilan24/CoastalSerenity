@@ -23,9 +23,9 @@ public class BookingDetails {
 	private String name;
 	private int roomno;
 	private String hotelname;
-	@JsonFormat(pattern = "yyyy/MM/dd")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date booked_from;
-	@JsonFormat(pattern = "yyyy/MM/dd")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date booked_to;
 	private int no_of_adults;
 	private int no_of_children;

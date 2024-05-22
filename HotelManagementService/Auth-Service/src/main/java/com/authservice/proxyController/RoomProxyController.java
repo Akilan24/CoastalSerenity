@@ -18,8 +18,8 @@ import jakarta.validation.Valid;
 @FeignClient(name = "ROOM-SERVICE", url = "http://localhost:8083/Room")
 public interface RoomProxyController {
 
-	@PostMapping("/addroom")
-	public ResponseEntity<Room> addroom(@RequestBody @Valid Room room) throws Exception;
+	@PostMapping("/addroom/{hid}")
+	public ResponseEntity<Room> addroom(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception;
 
 	@PutMapping("/updateroom")
 	public ResponseEntity<Room> updateroom(@RequestBody @Valid Room room);

@@ -30,7 +30,7 @@ class BookingDetailsControllerTest {
 
 	@Mock
 	private BookingDetailsService bookingDetailsService;
-	
+
 	@Mock
 	private BookingDetailsRepository bookingDetailsRepo;
 
@@ -41,19 +41,9 @@ class BookingDetailsControllerTest {
 
 	@BeforeEach
 	void setUp() {
-		 bookingDetails = new BookingDetails(123456,
-			    "John Doe",
-			    101,
-			    "HotelName",
-			    new Date(),
-			    new Date(),
-			    2,
-			    1,
-			    5000.0,
-			    "Payment done"
-			);
+		bookingDetails = new BookingDetails(123456, "John Doe", 101, "HotelName", new Date(), new Date(), 2, 1, 5000.0,
+				"Payment done");
 
-		
 	}
 
 	@Test
@@ -65,7 +55,6 @@ class BookingDetailsControllerTest {
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(bookingDetailsList, response.getBody());
 	}
-
 
 	@Test
 	void testGetBookingDetails() {
@@ -83,15 +72,14 @@ class BookingDetailsControllerTest {
 
 	@Test
 	void testBookRoom() {
-		when(bookingDetailsService.BookRoom(anyString(), any(BookingDetails.class)))
-				.thenReturn(bookingDetails);
+		when(bookingDetailsService.BookRoom(anyString(), any(BookingDetails.class))).thenReturn(bookingDetails);
 		ResponseEntity<BookingDetails> response = bookingDetailsController.bookroom("user123", bookingDetails);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(bookingDetails, response.getBody());
 	}
 
 	@Test
-	void testRemove() {	
+	void testRemove() {
 		when(bookingDetailsService.removeBookingDetails(123456)).thenReturn("Booking details removed successfully");
 		ResponseEntity<String> response = bookingDetailsController.remove(123456);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
