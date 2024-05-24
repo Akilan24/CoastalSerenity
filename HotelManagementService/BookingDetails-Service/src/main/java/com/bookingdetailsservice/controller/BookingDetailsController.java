@@ -48,9 +48,9 @@ public class BookingDetailsController {
 		return new ResponseEntity<>(service.paymentstatuschange(booking_id), HttpStatus.OK);
 	}
 
-	@PostMapping("/bookroom/{name}")
-	public ResponseEntity<BookingDetails> bookroom(@PathVariable String name, @RequestBody BookingDetails bd) {
-		return new ResponseEntity<>(service.BookRoom(name, bd), HttpStatus.OK);
+	@PostMapping("/bookroom/{username}")
+	public ResponseEntity<BookingDetails> bookroom(@PathVariable String username, @RequestBody BookingDetails bd) {
+		return new ResponseEntity<>(service.BookRoom(username, bd), HttpStatus.OK);
 	}
 
 	@DeleteMapping("/deletebyid/{bookingid}")

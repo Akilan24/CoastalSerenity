@@ -33,9 +33,9 @@ class HotelControllerTest {
 	void testGetHotels() {
 		List<Hotel> hotels = new ArrayList<>();
 		hotels.add(new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null));
 		hotels.add(new Hotel(123457L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null));
 		when(hotelService.getHotels()).thenReturn(hotels);
 
 		ResponseEntity<List<Hotel>> response = hotelController.getHotels();
@@ -48,7 +48,7 @@ class HotelControllerTest {
 	void testGetHotelById() {
 		Long id = 123456L;
 		Hotel hotel = new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null);
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null);
 
 		when(hotelService.gethotelByHotelId(id)).thenReturn(hotel);
 
@@ -62,7 +62,7 @@ class HotelControllerTest {
 	void testGetHotelByHotelName() {
 		String hotelName = "Hotel1";
 		Hotel hotel = new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null);
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null);
 
 		when(hotelService.gethotelByHotelName(hotelName)).thenReturn(hotel);
 
@@ -77,9 +77,9 @@ class HotelControllerTest {
 		String cityName = "Bangalore";
 		List<Hotel> hotels = new ArrayList<>();
 		hotels.add(new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null));
 		hotels.add(new Hotel(123457L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null));
 
 		when(hotelService.gethotelByCity(cityName)).thenReturn(hotels);
 
@@ -92,7 +92,7 @@ class HotelControllerTest {
 	@Test
 	void testAddHotel() throws Exception {
 		Hotel hotel = new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null);
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null);
 		when(hotelService.addhotel(hotel)).thenReturn(hotel);
 
 		ResponseEntity<Hotel> response = hotelController.addhotel(hotel);
@@ -104,9 +104,9 @@ class HotelControllerTest {
 	@Test
 	void testUpdateHotel() {
 		Hotel hotel = new Hotel(123456, "Bangalore", "Hotel", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", null);
+				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com","image", null);
 		Hotel updatedhotel = new Hotel(123456, "Bangalore", "Hotel", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876548455", "8765474210", "https://www.hotelwebsite.com", null);
+				"hotel@example.com", "9876548455", "8765474210", "https://www.hotelwebsite.com","image", null);
 
 		when(hotelService.updatehotel(hotel)).thenReturn(updatedhotel);
 

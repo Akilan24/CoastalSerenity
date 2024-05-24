@@ -36,9 +36,9 @@ public class HotelServiceTest {
 	@BeforeEach
 	void setUp() {
 		hotel = new Hotel(123456, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description", "hotel@example.com",
-				"9876543210", "8765432109", "https://www.hotelwebsite.com", null);
+				"9876543210", "8765432109", "https://www.hotelwebsite.com","image", null);
 		updatedhotel = new Hotel(123456, "Bangalore", "Hotel", "123 Main Street", "Hotel Description",
-				"hotel@example.com", "9876548455", "8765474210", "https://www.hotelwebsite.com", null);
+				"hotel@example.com", "9876548455", "8765474210", "https://www.hotelwebsite.com","image", null);
 
 	}
 
@@ -121,9 +121,9 @@ public class HotelServiceTest {
 	void testGetHotelByCitySuccess() {
 		List<Hotel> hotels = new ArrayList<>();
 		hotels.add(new Hotel(123456, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description", "hotel@example.com",
-				"9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+				"9876543210", "8765432109", "https://www.hotelwebsite.com","image", null));
 		hotels.add(new Hotel(123457, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description", "hotel@example.com",
-				"9876543210", "8765432109", "https://www.hotelwebsite.com", null));
+				"9876543210", "8765432109", "https://www.hotelwebsite.com","image", null));
 		when(hotelRepository.findAllByCity("City")).thenReturn(Optional.of(hotels));
 		assertEquals(hotels, hotelService.gethotelByCity("City"));
 	}

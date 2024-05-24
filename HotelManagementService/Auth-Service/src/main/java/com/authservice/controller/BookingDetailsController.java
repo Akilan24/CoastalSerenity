@@ -47,9 +47,9 @@ public class BookingDetailsController {
 		return bookingDetailsProxy.paymentstatuschange(booking_id);
 	}
 
-	@PostMapping("/bookroom/{name}")
-	public ResponseEntity<BookingDetails> bookroom(@PathVariable String name, @RequestBody BookingDetails bd) {
-		return bookingDetailsProxy.bookroom(name, bd);
+	@PostMapping("/bookroom/{username}")
+	public ResponseEntity<BookingDetails> bookroom(@PathVariable String username, @RequestBody BookingDetails bd) {
+		return bookingDetailsProxy.bookroom(username, bd);
 	}
 
 	@DeleteMapping("/deletebyid/{bookingid}")

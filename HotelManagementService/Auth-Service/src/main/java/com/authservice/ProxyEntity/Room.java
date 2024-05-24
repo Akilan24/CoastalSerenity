@@ -1,8 +1,5 @@
 package com.authservice.ProxyEntity;
 
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -22,7 +19,8 @@ public class Room {
 	private int room_no;
 	@NotNull
 	private Double rate_per_day;
-	@Pattern(regexp = "^(Single Room|Standard Twin Room|Standard Double Room|Deluxe Double Room|Triple room|Quad room|Suite)$", message = "Please provide a valid room type")
+	@Pattern(regexp = "^(Single Room|Standard Twin Room|Standard Double Room|Deluxe Double Room|Triple Room|Quad Room|Suite)$", message = "Please provide a valid room type")
 	private String roomtype;
+	private String roomImage;
 
 }

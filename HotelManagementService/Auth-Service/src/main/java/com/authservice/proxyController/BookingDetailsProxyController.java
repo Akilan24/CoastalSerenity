@@ -32,8 +32,8 @@ public interface BookingDetailsProxyController {
 	@PutMapping("/paymentstatuschangebybid/{bookingid}")
 	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long bookingid);
 
-	@PostMapping("/bookroom/{name}")
-	public ResponseEntity<BookingDetails> bookroom(@PathVariable String name, @RequestBody BookingDetails bd);
+	@PostMapping("/bookroom/{username}")
+	public ResponseEntity<BookingDetails> bookroom(@PathVariable String username, @RequestBody BookingDetails bd);
 
 	@DeleteMapping("/deletebyid/{bookingid}")
 	public ResponseEntity<String> remove(@PathVariable long bookingid);

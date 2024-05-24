@@ -53,9 +53,9 @@ public class BookingDetailsServiceTest {
 	void testBookRoom() {
 		String userId = "user123";
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com", null);
+				"9876543210", "9876543211", "http://website.com","image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
 		hotel.setRooms(Arrays.asList(room));
 		BookingDetails bookingDetails = new BookingDetails();
 		bookingDetails.setRoomno(201);

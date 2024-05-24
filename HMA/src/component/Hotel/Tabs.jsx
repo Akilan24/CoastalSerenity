@@ -7,30 +7,30 @@ function Tabs() {
   function routeTo(nav) {
     navigate(nav);
   }
-   function accountDetails() {
-     const element = document.getElementById("profile");
-     const element1 = document.getElementById("passwordclass");
-     const element2 = document.getElementById("csclass");
-     if (element.style.display == "none") {
-       element2.style.display = "none";
-       element.style.display = "flex";
-     } else {
-       element.style.display = "none";
-       element1.style.display = "none";
-     }
-   }
-   function customerCare() {
-     const element = document.getElementById("csclass");
-     const element1 = document.getElementById("profile");
-     const element2 = document.getElementById("passwordclass");
-     if (element.style.display == "none") {
-       element1.style.display = "none";
-       element2.style.display = "none";
-       element.style.display = "flex";
-     } else {
-       element.style.display = "none";
-     }
-   }
+  function accountDetails() {
+    const element = document.getElementById("profile");
+    const element1 = document.getElementById("passwordclass");
+    const element2 = document.getElementById("csclass");
+    if (element.style.display == "none") {
+      element2.style.display = "none";
+      element.style.display = "flex";
+    } else {
+      element.style.display = "none";
+      element1.style.display = "none";
+    }
+  }
+  function customerCare() {
+    const element = document.getElementById("csclass");
+    const element1 = document.getElementById("profile");
+    const element2 = document.getElementById("passwordclass");
+    if (element.style.display == "none") {
+      element1.style.display = "none";
+      element2.style.display = "none";
+      element.style.display = "flex";
+    } else {
+      element.style.display = "none";
+    }
+  }
   return (
     <div className="menu">
       <img id="logo" src="./cslogo.png" />

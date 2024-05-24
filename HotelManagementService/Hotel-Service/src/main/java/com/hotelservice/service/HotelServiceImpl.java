@@ -81,6 +81,7 @@ public class HotelServiceImpl implements HotelService {
 			h.setCity(ht.getCity());
 			h.setDescription(ht.getDescription());
 			h.setEmail(ht.getEmail());
+			h.setHotelImage(ht.getHotelImage());
 			h.setMobile1(ht.getMobile1());
 			h.setMobile2(ht.getMobile2());
 			h.setWebsite(ht.getWebsite());

@@ -6,14 +6,12 @@ import Tabs from "./Tabs";
 function Hotel() {
   const [cityNames, setCityNames] = useState([]);
   const [password, setPassword] = useState("");
-  const [city, setCity] = useState("");
   const [formData, setFormData] = useState({
     city: "",
     roomType: "",
     checkin: getDefaultDate(),
     checkout: getDefaultDate(),
   });
-  const [hotels, setHotels] = useState([]);
   const [hotelRooms, setHotelRooms] = useState([]);
   const navigate = useNavigate();
   const config = {
@@ -40,7 +38,6 @@ function Hotel() {
     const { name, value } = e.target;
     if (name === "city") {
       setFormData({ ...formData, [name]: value });
-      setCity(value);
     }
     setFormData({ ...formData, [name]: value });
   };
@@ -119,7 +116,6 @@ function Hotel() {
               ))}
             </select>
           </div>
-
           <div className="divclass">
             <label htmlFor="checkin">Check-In:</label>
             <input
@@ -164,13 +160,41 @@ function Hotel() {
           </div>
         </form>
       </div>
-      <div>
-        {hotels.length > 0 ? (
-          <ul>
-            {hotels.map((hotel, index) => (
-              <li key={index}>{hotel}</li>
-            ))}
-          </ul>
+      <div className="hoteldisplay">
+        {hotelRooms.length > 0 ? (
+          hotelRooms.map((hotel, index) => (
+            <div key={index} className="hotel">
+              <div className="hoteldetails">
+                <div>
+                  <h2>{hotel.hotelName}</h2>
+                  <p>{hotel.address}</p>
+                  <p>{hotel.description}</p>
+                </div>
+                <div>
+                  <img id="imgh" src={hotel.hotelImage} />
+                </div>
+              </div>
+
+              <h3>Rooms:</h3>
+              {hotel.rooms.map((room) => (
+                <div key={room.roomId} className="room">
+                  <div>
+                    <img id="imgr" src={room.roomImage} />
+                  </div>
+                  <div className="roomdisplay">
+                    <div className="roomdetails">
+                      <p>Room Number: {room.room_no}</p>
+                      <p>Rate per Day: &#8377; {room.rate_per_day}</p>
+                      <p>Room Type: {room.roomtype}</p>
+                    </div>
+                    <div id="roombutton">
+                      <button>Book</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
         ) : (
           <p>No hotels found for the selected city.</p>
         )}

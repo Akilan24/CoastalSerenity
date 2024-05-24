@@ -14,6 +14,7 @@ import com.bookingdetailsservice.exception.BookingDetailsNotFoundException;
 import com.bookingdetailsservice.externalclass.Hotel;
 import com.bookingdetailsservice.externalclass.Room;
 import com.bookingdetailsservice.proxy.RoomProxy;
+import com.bookingdetailsservice.proxy.UserProxy;
 import com.bookingdetailsservice.repository.BookingDetailsRepository;
 import com.bookingdetailsservice.repository.HotelRepository;
 import com.bookingdetailsservice.repository.RoomRepository;
@@ -29,16 +30,18 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 	@Autowired
 	RoomProxy rproxy;
 	@Autowired
+    UserProxy uproxy;
+	@Autowired
 	HotelRepository hrepo;
 
 	@Override
-	public BookingDetails BookRoom(String name, BookingDetails bookingdetails) {
+	public BookingDetails BookRoom(String username, BookingDetails bookingdetails) {
 
 		int count = bookingrepo.findAll().size();
 		long MIN_ID = 100000;
 		bookingdetails.setBookingId(count == 0 ? MIN_ID : MIN_ID + count);
-
-		bookingdetails.setName(name);
+          
+		bookingdetails.setName(uproxy.showUserByUserName(username).getBody().getName());
 		long daysBetween = 0;
 		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
 		System.out.println("Days between: " + daysBetween);
@@ -102,13 +105,14 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 		for (Hotel hotel : hotels) {
 			
 			List<Room> rooms = hotel.getRooms().stream()
-					.filter(r -> r.getRoomtype().equalsIgnoreCase(roomtype) && isRoomAvailable(r, fromDate, toDate))
+					.filter(r -> r.getRoomtype().equalsIgnoreCase(roomtype) && isRoomAvailable(hotel.getHotelName(),r.getRoom_no(), fromDate, toDate))
 					.collect(Collectors.toList());
 			if(!rooms.isEmpty()) {
 				HotelRooms hotelRooms=new HotelRooms();
 				hotelRooms.setAddress(hotel.getAddress());
 				hotelRooms.setDescription(hotel.getDescription());
 				hotelRooms.setHotelName(hotel.getHotelName());
+				hotelRooms.setHotelImage(hotel.getHotelImage());
 				hotelRooms.setRooms(rooms);
 				availableRooms.add(hotelRooms);
 			}
@@ -118,12 +122,12 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 		return availableRooms;
 	}
 
-	private boolean isRoomAvailable(Room room, Date fromDate, Date toDate) {
+	private boolean isRoomAvailable(String hotelname,int roomno, Date fromDate, Date toDate) {
 
 		for (BookingDetails booking : bookingrepo.findAll()) {
 			Date bookedFrom = booking.getBooked_from();
 			Date bookedTo = booking.getBooked_to();
-			if ((fromDate.before(bookedTo) || fromDate.equals(bookedTo))
+			if (booking.getHotelname().equalsIgnoreCase(hotelname) && booking.getRoomno()==roomno && (fromDate.before(bookedTo) || fromDate.equals(bookedTo))
 					&& (toDate.after(bookedFrom) || toDate.equals(bookedFrom))) {
 				return false;
 			}

@@ -42,6 +42,7 @@ public class RoomServiceImpl implements RoomService {
 			Room roomdetails = rrepo.findByRoomId(room.getRoomId()).get();
 			roomdetails.setRoomtype(room.getRoomtype());
 			roomdetails.setRate_per_day(room.getRate_per_day());
+			roomdetails.setRoomImage(room.getRoomImage());
 			return rrepo.save(roomdetails);
 
 		} else

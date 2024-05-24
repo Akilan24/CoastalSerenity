@@ -11,7 +11,7 @@ import com.bookingdetailsservice.entity.HotelRooms;
 @Service
 public interface BookingDetailsService {
 
-	public BookingDetails BookRoom(String name, BookingDetails bookingdetails);
+	public BookingDetails BookRoom(String username, BookingDetails bookingdetails);
 
 	public String removeBookingDetails(long bookingId);
 
