@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Hotel.css";
 import { useNavigate } from "react-router-dom";
+import "./Hotel.css";
 import Tabs from "./Tabs";
+import AccountDetails from "../AccountDetails/AccountDetails";
 function Hotel() {
   const [cityNames, setCityNames] = useState([]);
   const [password, setPassword] = useState("");
@@ -12,8 +13,8 @@ function Hotel() {
     checkin: getDefaultDate(),
     checkout: getDefaultDate(),
   });
-  const [hotelRooms, setHotelRooms] = useState([]);
   const navigate = useNavigate();
+  const [hotelRooms, setHotelRooms] = useState([]);
   const config = {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
@@ -41,7 +42,6 @@ function Hotel() {
     }
     setFormData({ ...formData, [name]: value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -68,6 +68,27 @@ function Hotel() {
       console.log(error.response.data.message);
     }
   }
+  async function handleBookRoom(e) {
+    const bookingDetails = {
+      roomno: e.target.getAttribute("roomno"),
+      hotelname: e.target.getAttribute("hotelname"),
+      booked_from: formData.checkin,
+      booked_to: formData.checkout,
+    };
+    try {
+      const response = await axios.post(
+        `http://localhost:8080/HMA/BookingDetails/bookroom/${localStorage.getItem(
+          `username`
+        )}`,
+        bookingDetails,
+        config
+      );
+      navigate("/bookingDetails");
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  }
   function getDefaultDate() {
     const today = new Date();
     const day = String(today.getDate()).padStart(2, "0");
@@ -83,16 +104,6 @@ function Hotel() {
     } else {
       element.style.display = "none";
     }
-  }
-
-  function routeTo(nav) {
-    navigate(nav);
-  }
-  function logout() {
-    localStorage.removeItem(`accesstoken`);
-    localStorage.removeItem(`refreshtoken`);
-    localStorage.removeItem(`username`);
-    navigate("/login");
   }
   return (
     <>
@@ -174,7 +185,6 @@ function Hotel() {
                   <img id="imgh" src={hotel.hotelImage} />
                 </div>
               </div>
-
               <h3>Rooms:</h3>
               {hotel.rooms.map((room) => (
                 <div key={room.roomId} className="room">
@@ -188,7 +198,13 @@ function Hotel() {
                       <p>Room Type: {room.roomtype}</p>
                     </div>
                     <div id="roombutton">
-                      <button>Book</button>
+                      <button
+                        hotelname={hotel.hotelName}
+                        roomno={room.room_no}
+                        onClick={(e) => handleBookRoom(e)}
+                      >
+                        Book
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -199,35 +215,7 @@ function Hotel() {
           <p>No hotels found for the selected city.</p>
         )}
       </div>
-      <div id="profile">
-        <div>
-          <h3>Account Details</h3>
-        </div>
-        <div id="ptab">
-          <button onClick={(n) => routeTo("/profile")}>
-            <img id="img" src="./profile.png" />
-            Profile
-          </button>
-        </div>
-        <div id="ptab">
-          <button onClick={changePassword}>
-            <img id="img" src="./password.png" />
-            Change Password
-          </button>
-        </div>
-        <div id="ptab">
-          <button onClick={(n) => routeTo("/saveTraveller")}>
-            <img id="img" src="./traveller.png" />
-            Save Travellers
-          </button>
-        </div>
-        <div id="ptab">
-          <button onClick={logout}>
-            <img id="img" src="./logout.png" />
-            Logout
-          </button>
-        </div>
-      </div>
+      <AccountDetails />
       <div id="passwordclass">
         <div className="ptab">
           <h3>Change Password</h3>

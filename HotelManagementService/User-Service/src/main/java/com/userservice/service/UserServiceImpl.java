@@ -10,8 +10,9 @@ import org.springframework.stereotype.Service;
 
 import com.userservice.entity.Registration;
 import com.userservice.entity.Traveller;
+import com.userservice.exception.TravellerDetailsNotFoundException;
 import com.userservice.exception.UserDetailsNotFoundException;
-import com.userservice.repo.UserRepository;
+import com.userservice.repository.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -126,12 +127,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String updatetraveller(String username, Traveller t) {
+	public String updatetraveller(String username, Traveller traveller) {
 		if (userrepo.existsById(username)) {
 			Registration r = userrepo.findByUsername(username).get();
-			List<Traveller> l = r.getTraveller().stream().filter(n -> !n.getName().equals(t.getName()))
+			List<Traveller> l = r.getTraveller().stream().filter(t -> !t.getName().equalsIgnoreCase(traveller.getName()))
 					.collect(Collectors.toList());
-			l.add(t);
+			l.add(traveller);
 			r.setTraveller(l);
 			userrepo.save(r);
 			log.info("Traveller details of username: " + username + " got updated");
@@ -146,9 +147,8 @@ public class UserServiceImpl implements UserService {
 	public String deletetraveller(String username, String name) {
 		if (userrepo.existsById(username)) {
 			Registration r = userrepo.findByUsername(username).get();
-			List<Traveller> l = r.getTraveller().stream().filter(n -> !n.getName().equals(name))
+			List<Traveller> l = r.getTraveller().stream().filter(t -> !t.getName().equalsIgnoreCase(t.getName()))
 					.collect(Collectors.toList());
-			System.out.println(l.toString());
 			r.setTraveller(l);
 			userrepo.save(r);
 			log.info("Traveller details of username: " + username + " got deleted");
@@ -163,13 +163,29 @@ public class UserServiceImpl implements UserService {
 	public List<Traveller> getTravellerByUsername(String username) {
 		if (userrepo.findByUsername(username).isPresent()) {
 			List<Traveller> list = userrepo.findByUsername(username).get().getTraveller();
-			if (!list.isEmpty())
+			if (!list.isEmpty()) {
+				log.info("Traveller details of username: " + username + " are found");
 				return list;
-			else
-				throw new UserDetailsNotFoundException("Travellers are not found");
+			} else {
+				log.info("Traveller details of username: " + username + " are not found");
+				return list;
+			// throw new TravellerDetailsNotFoundException("Travellers are not found");
+			}
 		} else
 			throw new UserDetailsNotFoundException("User details are not found");
 
+	}
+
+	@Override
+	public Traveller gettraveller(String username, String name) {
+		if (userrepo.existsById(username)) {
+			Registration r = userrepo.findByUsername(username).get();
+			log.info("Traveller details of username: " + username + " are found");
+			return r.getTraveller().stream().filter(t->t.getName().equalsIgnoreCase(name)).collect(Collectors.toList()).get(0);
+		} else {
+			log.info("User details of username: " + username + " are not found");
+			throw new UserDetailsNotFoundException("User details are not found");
+		}
 	}
 
 }

@@ -18,17 +18,17 @@ import lombok.NoArgsConstructor;
 public class BookingDetails {
 
 	@Id
-	private int bookingid;
-	private String username;
+	private long bookingid;
+	private String name;
 	private int roomno;
 	private String hotelname;
-	@JsonFormat(pattern = "yyyy/MM/dd")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date booked_from;
-	@JsonFormat(pattern = "yyyy/MM/dd")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date booked_to;
-	private int no_of_adults;
-	private int no_of_children;
 	private double amount;
+	private String email;
+	private String phonenumber;
 	private String paymentStatus;
 
 }

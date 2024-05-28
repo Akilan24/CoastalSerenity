@@ -2,8 +2,8 @@ package com.authservice.ProxyEntity;
 
 import java.util.Date;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,10 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Payment {
 
-	private long payment_id;
-	private int bookingid;
+	private long paymentid;
+	private long bookingid;
+	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date paymentDate;
-	private String user_id;
+	private String username;
 	private double amount;
 	private String paymentStatus;
 

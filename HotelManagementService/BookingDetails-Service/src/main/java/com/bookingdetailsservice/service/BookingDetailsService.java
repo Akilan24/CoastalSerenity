@@ -19,6 +19,8 @@ public interface BookingDetailsService {
 
 	public BookingDetails showBookingDetailsbyId(long bookingId);
 
+	public List<BookingDetails> showBookingDetailsbyUserName(String userName);
+
 	public BookingDetails paymentstatuschange(long bookingId);
 
 	public List<HotelRooms> AvailableRoom(String roomType, String city, Date fromDate, Date ToDate);

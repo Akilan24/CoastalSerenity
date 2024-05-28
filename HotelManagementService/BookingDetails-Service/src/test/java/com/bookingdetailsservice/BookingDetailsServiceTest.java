@@ -69,7 +69,7 @@ public class BookingDetailsServiceTest {
 
 	@Test
 	void testRemoveBookingDetails() {
-		when(bookingDetailsRepository.findByBookingId(123456)).thenReturn(Optional.of(bookingDetails));
+		when(bookingDetailsRepository.findByBookingid(123456)).thenReturn(Optional.of(bookingDetails));
 
 		String result = bookingDetailsService.removeBookingDetails(123456);
 
@@ -90,7 +90,7 @@ public class BookingDetailsServiceTest {
 
 	@Test
 	void testShowBookingDetailsbyId() {
-		when(bookingDetailsRepository.findByBookingId(123456)).thenReturn(Optional.of(bookingDetails));
+		when(bookingDetailsRepository.findByBookingid(123456)).thenReturn(Optional.of(bookingDetails));
 
 		BookingDetails result = bookingDetailsService.showBookingDetailsbyId(123456);
 
@@ -102,7 +102,7 @@ public class BookingDetailsServiceTest {
 		long bookingId = 123456;
 		BookingDetails bookingDetails = new BookingDetails();
 
-		when(bookingDetailsRepository.findByBookingId(bookingId)).thenReturn(Optional.of(bookingDetails));
+		when(bookingDetailsRepository.findByBookingid(bookingId)).thenReturn(Optional.of(bookingDetails));
 		when(bookingDetailsRepository.save(any(BookingDetails.class))).thenReturn(bookingDetails);
 
 		BookingDetails result = bookingDetailsService.paymentstatuschange(bookingId);
@@ -115,7 +115,7 @@ public class BookingDetailsServiceTest {
 	void testPaymentStatusChange_BookingNotFound() {
 		int bookingId = 1;
 
-		when(bookingDetailsRepository.findByBookingId(bookingId)).thenReturn(Optional.empty());
+		when(bookingDetailsRepository.findByBookingid(bookingId)).thenReturn(Optional.empty());
 
 		assertThrows(BookingDetailsNotFoundException.class, () -> bookingDetailsService.paymentstatuschange(bookingId));
 	}

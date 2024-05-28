@@ -6,7 +6,7 @@
   border: 1px;
   border-radius: 25px;
   margin: 10px;
-  height: 300px;
+  height: 420px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -47,14 +47,7 @@ button {
 }
 .loginclass h2,
 .forgotclass h2 {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 121, 116, 1) 35%,
-    rgba(0, 255, 4, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #4bad57;
   font-size: 50px;
   font-style: italic;
 }

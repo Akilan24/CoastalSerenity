@@ -54,6 +54,12 @@ public class UserController {
 	}
 
 	@PreAuthorize("hasAuthority('user')")
+	@GetMapping("/gettraveller/{username}/{name}")
+	public ResponseEntity<Traveller> gettraveller(@PathVariable String username, @PathVariable String name) {
+		return userProxy.gettraveller(username, name);
+	}
+
+	@PreAuthorize("hasAuthority('user')")
 	@DeleteMapping("/deletetraveller/{username}/{name}")
 	public ResponseEntity<String> deletetraveller(@PathVariable String username, @PathVariable String name) {
 		return userProxy.deletetraveller(username, name);

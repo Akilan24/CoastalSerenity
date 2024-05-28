@@ -24,7 +24,7 @@ public class PaymentController {
 	private PaymentProxyController paymentProxy;
 
 	@PostMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable int bookingid) throws Exception {
+	public ResponseEntity<Payment> addPayment(@PathVariable long bookingid) throws Exception {
 
 		return paymentProxy.addPayment(bookingid);
 	}
@@ -35,7 +35,7 @@ public class PaymentController {
 	}
 
 	@GetMapping("/getpaymentbybookingid/{bookingid}")
-	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable int bookingid) {
+	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable long bookingid) {
 		return paymentProxy.getpaymentbybookingid(bookingid);
 	}
 

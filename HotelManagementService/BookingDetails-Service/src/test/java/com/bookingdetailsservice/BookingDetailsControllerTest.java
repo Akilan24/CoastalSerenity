@@ -41,7 +41,7 @@ class BookingDetailsControllerTest {
 
 	@BeforeEach
 	void setUp() {
-		bookingDetails = new BookingDetails(123456, "John Doe", 101, "HotelName", new Date(), new Date(), 2, 1, 5000.0,
+		bookingDetails = new BookingDetails(123456, "John Doe", 101, "HotelName", new Date(), new Date(), 5000.0,"john@gmail.com","7894561230",
 				"Payment done");
 
 	}

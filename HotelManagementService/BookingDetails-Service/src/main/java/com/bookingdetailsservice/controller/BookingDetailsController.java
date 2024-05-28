@@ -39,13 +39,18 @@ public class BookingDetailsController {
 	}
 
 	@GetMapping("/getbyid/{bookingid}")
-	public ResponseEntity<BookingDetails> getBookingDetails(@PathVariable long booking_id) {
-		return new ResponseEntity<>(service.showBookingDetailsbyId(booking_id), HttpStatus.OK);
+	public ResponseEntity<BookingDetails> getBookingDetails(@PathVariable long bookingid) {
+		return new ResponseEntity<>(service.showBookingDetailsbyId(bookingid), HttpStatus.OK);
 	}
 
+	@GetMapping("/getbyusername/{username}")
+	public ResponseEntity<List<BookingDetails>> getBookingDetailsbyusername(@PathVariable String username) {
+		return new ResponseEntity<>(service.showBookingDetailsbyUserName(username), HttpStatus.OK);
+	}
+	
 	@PutMapping("/paymentstatuschangebybid/{bookingid}")
-	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long booking_id) {
-		return new ResponseEntity<>(service.paymentstatuschange(booking_id), HttpStatus.OK);
+	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long bookingid) {
+		return new ResponseEntity<>(service.paymentstatuschange(bookingid), HttpStatus.OK);
 	}
 
 	@PostMapping("/bookroom/{username}")
@@ -54,7 +59,7 @@ public class BookingDetailsController {
 	}
 
 	@DeleteMapping("/deletebyid/{bookingid}")
-	public ResponseEntity<String> remove(@PathVariable long booking_id) {
-		return new ResponseEntity<>(service.removeBookingDetails(booking_id), HttpStatus.OK);
+	public ResponseEntity<String> remove(@PathVariable long bookingid) {
+		return new ResponseEntity<>(service.removeBookingDetails(bookingid), HttpStatus.OK);
 	}
 }

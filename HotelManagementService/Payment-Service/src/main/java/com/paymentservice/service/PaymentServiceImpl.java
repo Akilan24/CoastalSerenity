@@ -25,21 +25,17 @@ public class PaymentServiceImpl implements PaymentService {
 	BookingDetailsProxy bdproxy;
 
 	@Override
-	public Payment doPayment(int bookingid) {
+	public Payment doPayment(long bookingid) {
 		BookingDetails bd = bdproxy.getBookingDetails(bookingid);
 
 		Payment p = new Payment();
 
-		int MIN_ID = 100000;
+		long MIN_ID = 100000;
 		int count = paymentRepository.findAll().size();
-		if (count == 0)
-			p.setPayment_id(count);
-		else
-			p.setPayment_id(MIN_ID + 1);
-
+		p.setPaymentid(count == 0 ? MIN_ID : MIN_ID + count);
 		p.setBookingid(bookingid);
 		p.setPaymentDate(DateNow());
-		p.setUsername(bd.getUsername());
+		p.setUsername(bd.getName());
 		p.setAmount(bd.getAmount());
 		p.setPaymentStatus("Payment Done");
 		bdproxy.paymentstatuschange(bookingid);
@@ -47,7 +43,7 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public Payment getPaymentbyBookingId(int bookingid) {
+	public Payment getPaymentbyBookingId(long bookingid) {
 		if (paymentRepository.findByBookingid(bookingid).isPresent())
 			return paymentRepository.findByBookingid(bookingid).get();
 		else
@@ -58,7 +54,7 @@ public class PaymentServiceImpl implements PaymentService {
 	public Date DateNow() {
 		LocalDate localDate = LocalDate.now();
 		Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		String fd = formatter.format(date);
 		try {
 			date = formatter.parse(fd);

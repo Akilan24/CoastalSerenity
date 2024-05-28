@@ -9,9 +9,9 @@ import com.paymentservice.entity.Payment;
 @Service
 public interface PaymentService {
 
-	Payment doPayment(int bookingid);
+	Payment doPayment(long bookingid);
 
-	Payment getPaymentbyBookingId(int bookingid);
+	Payment getPaymentbyBookingId(long bookingid);
 
 	List<Payment> getallpayment();
 

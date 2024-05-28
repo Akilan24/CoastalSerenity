@@ -1,0 +1,41 @@
+#profile {
+  display: none;
+  flex-direction: column;
+  width: 270px;
+  height: 300px;
+  border-radius: 25px;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border: 3px solid green;
+  z-index: 1000;
+}
+#profile #ptab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  left: 30px;
+}
+#ptab button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  color: rgb(145, 51, 186);
+}
+#profile img {
+  width: 25px;
+  padding-right: 10px;
+}
+#profile h3 {
+  color: #4bad57;
+  margin-bottom: 5px;
+}
+#profile button {
+  background-color: transparent;
+}

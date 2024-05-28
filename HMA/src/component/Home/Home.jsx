@@ -8,6 +8,8 @@ import Login from "../Login/Login.jsx";
 import Hotel from "../Hotel/Hotel.jsx";
 import Profile from "../Profile/Profile.jsx";
 import SaveTraveller from "../Profile/SaveTraveller.jsx";
+import BookingDetails from "../BookingDetails/BookingDetails.jsx";
+import Payment from "../Payment/Payment.jsx";
 function Home() {
   return (
     <>
@@ -21,6 +23,8 @@ function Home() {
           <Route path="/hotel" element={<Hotel />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/saveTraveller" element={<SaveTraveller />} />
+          <Route path="/bookingDetails" element={<BookingDetails />} />
+          <Route path="/payment/:value" element={<Payment />} />
         </Routes>
       </div>
     </>

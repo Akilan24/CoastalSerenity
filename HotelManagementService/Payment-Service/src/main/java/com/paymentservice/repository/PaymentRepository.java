@@ -10,6 +10,6 @@ import com.paymentservice.entity.Payment;
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, Long> {
 
-	Optional<Payment> findByBookingid(int bookingid);
+	Optional<Payment> findByBookingid(long bookingid);
 
 }

@@ -17,7 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.userservice.entity.Registration;
 import com.userservice.exception.UserDetailsNotFoundException;
-import com.userservice.repo.UserRepository;
+import com.userservice.repository.UserRepository;
 import com.userservice.service.UserServiceImpl;
 
 @ExtendWith(MockitoExtension.class)

@@ -1,0 +1,82 @@
+/* Payment.css */
+.payment {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.payment h2 {
+  color: #4bad57;
+  font-size: 50px;
+  font-style: italic;
+}
+
+.paymentDetails {
+  margin-bottom: 20px;
+  border: 1px solid green;
+  border-radius: 25px;
+  background-color: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.paymentDetails p {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment .label {
+  font-weight: bold;
+  margin-right: 5px;
+  flex: 1;
+  text-align: left;
+}
+
+.payment .value {
+  color: #4bad57;
+  flex: 2;
+  text-align: right;
+}
+
+.payment button {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 25px;
+  background-color: #28a745;
+  border: none;
+  cursor: pointer;
+}
+
+.payment button:disabled {
+  cursor: not-allowed;
+}
+
+.payment button:not(:disabled):hover {
+  background-color: #218838;
+}
+.display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.time {
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+}
+.warning {
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+#logo {
+  width: 450px;
+  margin-top: 10px;
+}

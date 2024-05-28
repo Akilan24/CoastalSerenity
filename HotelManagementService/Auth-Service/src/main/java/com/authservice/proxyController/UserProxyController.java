@@ -28,7 +28,7 @@ public interface UserProxyController {
 	@GetMapping("/addtraveller/{username}")
 	public ResponseEntity<String> addtraveller(@PathVariable String username, @RequestBody @Valid Traveller t);
 
-	@DeleteMapping("/updatetraveller/{username}")
+	@PutMapping("/updatetraveller/{username}")
 	public ResponseEntity<String> updatetraveller(@PathVariable String username, @RequestBody @Valid Traveller t);
 
 	@DeleteMapping("/deletetraveller/{username}/{name}")
@@ -50,6 +50,9 @@ public interface UserProxyController {
 	@GetMapping("/getuserbymobile/{mobile}")
 	public ResponseEntity<Registration> showUserByMobileNumber(@PathVariable String mobile);
 
+	@GetMapping("/gettraveller/{username}/{name}")
+	public ResponseEntity<Traveller> gettraveller(@PathVariable String username, @PathVariable String name);
+	
 	@DeleteMapping("/deleteuserbyid/{username}")
 	public ResponseEntity<String> remove(@PathVariable String username);
 

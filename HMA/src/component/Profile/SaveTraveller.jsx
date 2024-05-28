@@ -12,6 +12,7 @@ function SaveTraveller() {
     address: "",
   });
   const [travellers, setTravellers] = useState([]);
+  const [update, setUpdate] = useState(0);
   const navigate = useNavigate();
 
   function handleTravellerChange(e) {
@@ -37,12 +38,25 @@ function SaveTraveller() {
         setTravellers(response.data);
         console.log(response);
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data.message);
       }
     }
     fetchTravellers();
   }, []);
-
+  async function fetchTravellers() {
+    try {
+      const response = await axios.get(
+        `http://localhost:8080/HMA/User/getalltravellers/${localStorage.getItem(
+          "username"
+        )}`,
+        config
+      );
+      setTravellers(response.data);
+      console.log(response);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  }
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -63,6 +77,61 @@ function SaveTraveller() {
       setTravellers([...travellers, response.data]);
       console.log(response.data);
       addTraveller();
+      fetchTravellers();
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  }
+  async function getTraveller(e) {
+    try {
+      const response = await axios.get(
+        `http://localhost:8080/HMA/User/gettraveller/${localStorage.getItem(
+          "username"
+        )}/${e.target.value}`,
+        config
+      );
+      const traveller = {
+        name: response.data.name,
+        age: response.data.age,
+        gender: response.data.gender,
+        mobile: response.data.mobile,
+        address: response.data.address,
+      };
+      setTraveller(traveller);
+      setUpdate(1);
+      addTraveller();
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  }
+  async function updateTraveller(e) {
+    try {
+      const response = await axios.put(
+        `http://localhost:8080/HMA/User/updatetraveller/${localStorage.getItem(
+          "username"
+        )}`,
+        traveller,
+        config
+      );
+      fetchTravellers();
+      navigate("/saveTraveller");
+      console.log(traveller);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  }
+  async function deleteTraveller(e) {
+    try {
+      const response = await axios.delete(
+        `http://localhost:8080/HMA/User/deletetraveller/${localStorage.getItem(
+          "username"
+        )}/${e.target.value}`,
+        config
+      );
+      navigate("/saveTraveller");
+      fetchTravellers();
+      console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
@@ -97,10 +166,18 @@ function SaveTraveller() {
                 </p>
               </div>
               <div className="button">
-                <button id="s" value={item.name}>
+                <button
+                  id="s"
+                  value={item.name}
+                  onClick={(e) => getTraveller(e)}
+                >
                   Edit
                 </button>
-                <button id="c" value={item.name}>
+                <button
+                  id="c"
+                  value={item.name}
+                  onClick={(e) => deleteTraveller(e)}
+                >
                   Delete
                 </button>
               </div>
@@ -119,7 +196,7 @@ function SaveTraveller() {
       <form
         id="tc"
         className="travellerclass"
-        onSubmit={handleSubmit}
+        onSubmit={update > 0 ? updateTraveller : handleSubmit}
         style={{ display: "none" }}
       >
         <div>

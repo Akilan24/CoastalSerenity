@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +24,15 @@ public interface BookingDetailsProxyController {
 	public ResponseEntity<List<BookingDetails>> listBookingDetails();
 
 	@GetMapping("/availablerooms/{city}/{roomtype}/{fromDate}/{ToDate}")
-	public ResponseEntity<List<HotelRooms>> checkRoomAvailability(@PathVariable String city, @PathVariable String roomtype,
-			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date ToDate);
+	public ResponseEntity<List<HotelRooms>> checkRoomAvailability(@PathVariable String city,
+			@PathVariable String roomtype, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date ToDate);
 
 	@GetMapping("/getbyid/{bookingid}")
 	public ResponseEntity<BookingDetails> getBookingDetails(@PathVariable long bookingid);
+
+	@GetMapping("/getbyusername/{username}")
+	public ResponseEntity<List<BookingDetails>> getBookingDetailsbyusername(@PathVariable String username);
 
 	@PutMapping("/paymentstatuschangebybid/{bookingid}")
 	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long bookingid);

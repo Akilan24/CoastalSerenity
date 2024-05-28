@@ -12,6 +12,7 @@ import com.bookingdetailsservice.entity.BookingDetails;
 import com.bookingdetailsservice.entity.HotelRooms;
 import com.bookingdetailsservice.exception.BookingDetailsNotFoundException;
 import com.bookingdetailsservice.externalclass.Hotel;
+import com.bookingdetailsservice.externalclass.Registration;
 import com.bookingdetailsservice.externalclass.Room;
 import com.bookingdetailsservice.proxy.RoomProxy;
 import com.bookingdetailsservice.proxy.UserProxy;
@@ -36,15 +37,17 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 
 	@Override
 	public BookingDetails BookRoom(String username, BookingDetails bookingdetails) {
-
+   System.out.println(bookingdetails.getRoomno());
+		long MIN_id = 100000;
 		int count = bookingrepo.findAll().size();
-		long MIN_ID = 100000;
-		bookingdetails.setBookingId(count == 0 ? MIN_ID : MIN_ID + count);
-          
-		bookingdetails.setName(uproxy.showUserByUserName(username).getBody().getName());
+		bookingdetails.setBookingid(count == 0 ? MIN_id : MIN_id + count);
+		Registration user=uproxy.showUserByUserName(username).getBody();		
+		bookingdetails.setName(user.getName());
+		bookingdetails.setEmail(user.getEmail());
+		bookingdetails.setPhonenumber(user.getMobile());
 		long daysBetween = 0;
 		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
-		System.out.println("Days between: " + daysBetween);
+		daysBetween= daysBetween==0?1:daysBetween;
 		double amt = hrepo.findAll().stream()
 				.filter(h -> h.getHotelName().equalsIgnoreCase(bookingdetails.getHotelname()))
 				.collect(Collectors.toList()).get(0).getRooms().stream()
@@ -58,9 +61,9 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 	}
 
 	@Override
-	public String removeBookingDetails(long bookingId) {
-		if (bookingrepo.findByBookingId(bookingId).isPresent()) {
-			bookingrepo.deleteByBookingId(bookingId);
+	public String removeBookingDetails(long bookingid) {
+		if (bookingrepo.findByBookingid(bookingid).isPresent()) {
+			bookingrepo.deleteByBookingid(bookingid);
 			return "Booking details are deleted";
 		} else
 			throw new BookingDetailsNotFoundException("Booking details are not found");
@@ -75,18 +78,18 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 	}
 
 	@Override
-	public BookingDetails showBookingDetailsbyId(long bookingId) {
-		if (bookingrepo.findByBookingId(bookingId).isPresent()) {
-			BookingDetails bd = bookingrepo.findByBookingId(bookingId).get();
+	public BookingDetails showBookingDetailsbyId(long bookingid) {
+		if (bookingrepo.findByBookingid(bookingid).isPresent()) {
+			BookingDetails bd = bookingrepo.findByBookingid(bookingid).get();
 			return bd;
 		} else
 			throw new BookingDetailsNotFoundException("Booking details are not found");
 	}
 
 	@Override
-	public BookingDetails paymentstatuschange(long bookingId) {
-		if (bookingrepo.findByBookingId(bookingId).isPresent()) {
-			BookingDetails bd = bookingrepo.findByBookingId(bookingId).get();
+	public BookingDetails paymentstatuschange(long bookingid) {
+		if (bookingrepo.findByBookingid(bookingid).isPresent()) {
+			BookingDetails bd = bookingrepo.findByBookingid(bookingid).get();
 			bd.setPaymentStatus("Payment done");
 			return bookingrepo.save(bd);
 		} else
@@ -134,6 +137,17 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 		}
 
 		return true;
+	}
+
+	@Override
+	public List<BookingDetails> showBookingDetailsbyUserName(String userName) {
+		String email=uproxy.showUserByUserName(userName).getBody().getEmail();
+		List<BookingDetails> bd = bookingrepo.findAll().stream().filter(b->b.getEmail().equalsIgnoreCase(email)).collect(Collectors.toList());
+		if (!bd.isEmpty()) {
+			return bd;
+		} else
+			throw new BookingDetailsNotFoundException("Booking details are not found");
+	
 	}
 
 }

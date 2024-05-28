@@ -22,7 +22,7 @@ public class PaymentController {
 	private PaymentService paymentService;
 
 	@PostMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable int bookingid) throws Exception {
+	public ResponseEntity<Payment> addPayment(@PathVariable long bookingid) throws Exception {
 
 		return new ResponseEntity<>(paymentService.doPayment(bookingid), HttpStatus.OK);
 	}
@@ -33,7 +33,7 @@ public class PaymentController {
 	}
 
 	@GetMapping("/getpaymentbybookingid/{bookingid}")
-	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable int bookingid) {
+	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable long bookingid) {
 		return new ResponseEntity<>(paymentService.getPaymentbyBookingId(bookingid), HttpStatus.OK);
 	}
 

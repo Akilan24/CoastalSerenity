@@ -28,8 +28,9 @@ function Register() {
         "http://localhost:8080/HMA/Auth/register",
         formData
       );
-      window.alert("User registered successfully");0
-        navigate("/login");
+      window.alert("User registered successfully");
+      0;
+      navigate("/login");
     } catch (error) {
       window.alert("Error registering user");
       console.error("Error registering user:", error);
@@ -38,7 +39,6 @@ function Register() {
       }, 1000);
     }
   }
-
   return (
     <div className="register">
       <img id="logo" src="./cslogo.png" />

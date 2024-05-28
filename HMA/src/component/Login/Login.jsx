@@ -39,8 +39,8 @@ function Login() {
   return (
     <div className="loginclass">
       <img id="logo" src="./cslogo.png" />
-      <h2>Login</h2>
       <form className="formclass" onSubmit={onlogin}>
+        <h2>Login</h2>
         <div>
           <label htmlFor="username">Username: </label>
           <input

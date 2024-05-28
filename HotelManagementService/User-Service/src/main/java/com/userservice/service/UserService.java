@@ -29,7 +29,9 @@ public interface UserService {
 	public String addtraveller(String username, Traveller t);
 
 	public String updatetraveller(String username, Traveller t);
-
+    
+	public Traveller gettraveller(String username, String name);
+	
 	public String deletetraveller(String username, String name);
 
 }

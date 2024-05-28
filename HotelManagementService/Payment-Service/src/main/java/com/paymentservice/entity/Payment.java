@@ -2,6 +2,8 @@ package com.paymentservice.entity;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -15,8 +17,9 @@ import lombok.NoArgsConstructor;
 public class Payment {
 
 	@Id
-	private long payment_id;
-	private int bookingid;
+	private long paymentid;
+	private long bookingid;
+	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date paymentDate;
 	private String username;
 	private double amount;

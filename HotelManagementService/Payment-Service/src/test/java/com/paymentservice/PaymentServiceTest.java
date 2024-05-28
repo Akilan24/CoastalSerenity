@@ -40,12 +40,12 @@ public class PaymentServiceTest {
 	void testDoPayment() {
 		int bookingid = 123456;
 		BookingDetails bookingDetails = new BookingDetails();
-		bookingDetails.setUsername("user123");
+		bookingDetails.setName("user123");
 		bookingDetails.setAmount(100.0);
 		when(bdproxy.getBookingDetails(bookingid)).thenReturn(bookingDetails);
 
 		Payment payment = new Payment();
-		payment.setPayment_id(100001);
+		payment.setPaymentid(100001);
 		payment.setBookingid(bookingid);
 		payment.setPaymentDate(new Date());
 		payment.setUsername("user123");
@@ -56,7 +56,7 @@ public class PaymentServiceTest {
 		Payment result = paymentService.doPayment(bookingid);
 
 		assertNotNull(result);
-		assertEquals(100001, result.getPayment_id());
+		assertEquals(100001, result.getPaymentid());
 		assertEquals(bookingid, result.getBookingid());
 		assertEquals("user123", result.getUsername());
 		assertEquals(5000.0, result.getAmount());
@@ -67,7 +67,7 @@ public class PaymentServiceTest {
 	void testGetPaymentbyBookingId() {
 		int bookingid = 123456;
 		Payment payment = new Payment();
-		payment.setPayment_id(100001);
+		payment.setPaymentid(100001);
 		payment.setBookingid(bookingid);
 		payment.setPaymentDate(new Date());
 		payment.setUsername("user123");
@@ -78,7 +78,7 @@ public class PaymentServiceTest {
 		Payment result = paymentService.getPaymentbyBookingId(bookingid);
 
 		assertNotNull(result);
-		assertEquals(100001, result.getPayment_id());
+		assertEquals(100001, result.getPaymentid());
 		assertEquals(bookingid, result.getBookingid());
 		assertEquals("user123", result.getUsername());
 		assertEquals(5000.0, result.getAmount());
@@ -99,7 +99,7 @@ public class PaymentServiceTest {
 	void testGetallpayment() {
 		List<Payment> paymentList = new ArrayList<>();
 		Payment payment1 = new Payment();
-		payment1.setPayment_id(100001);
+		payment1.setPaymentid(100001);
 		payment1.setBookingid(123456);
 		payment1.setPaymentDate(new Date());
 		payment1.setUsername("user123");
@@ -113,7 +113,7 @@ public class PaymentServiceTest {
 
 		assertNotNull(result);
 		assertEquals(1, result.size());
-		assertEquals(100001, result.get(0).getPayment_id());
+		assertEquals(100001, result.get(0).getPaymentid());
 		assertEquals(123456, result.get(0).getBookingid());
 		assertEquals("user123", result.get(0).getUsername());
 		assertEquals(5000.0, result.get(0).getAmount());
@@ -134,7 +134,7 @@ public class PaymentServiceTest {
 		long id = 100001;
 		int bookingid = 123456;
 		Payment payment = new Payment();
-		payment.setPayment_id(id);
+		payment.setPaymentid(id);
 		payment.setBookingid(bookingid);
 		payment.setPaymentDate(new Date());
 		payment.setUsername("user123");
@@ -164,7 +164,7 @@ public class PaymentServiceTest {
 	void testGetPaymentbyPaymentId() {
 		long id = 100001;
 		Payment payment = new Payment();
-		payment.setPayment_id(id);
+		payment.setPaymentid(id);
 		payment.setBookingid(123456);
 		payment.setPaymentDate(new Date());
 		payment.setUsername("user123");
@@ -175,7 +175,7 @@ public class PaymentServiceTest {
 		Payment result = paymentService.getPaymentbyPaymentId(id);
 
 		assertNotNull(result);
-		assertEquals(id, result.getPayment_id());
+		assertEquals(id, result.getPaymentid());
 		assertEquals(123456, result.getBookingid());
 		assertEquals("user123", result.getUsername());
 		assertEquals(5000.0, result.getAmount());

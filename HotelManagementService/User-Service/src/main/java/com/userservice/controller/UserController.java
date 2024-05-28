@@ -42,17 +42,22 @@ public class UserController {
 	}
 
 	@PostMapping("/addtraveller/{username}")
-	public ResponseEntity<String> addtraveller(@PathVariable String username, @RequestBody @Valid Traveller t) {
+	public ResponseEntity<String> addtraveller(@PathVariable String username, @RequestBody  Traveller t) {
 		log.info("/addtraveller/{username} called");
 		return new ResponseEntity<>(userService.addtraveller(username, t), HttpStatus.OK);
 	}
 
 	@PutMapping("/updatetraveller/{username}")
-	public ResponseEntity<String> updatetraveller(@PathVariable String username, @RequestBody @Valid Traveller t) {
+	public ResponseEntity<String> updatetraveller(@PathVariable String username, @RequestBody  Traveller t) {
 		log.info("/updatetraveller/{username} called");
 		return new ResponseEntity<>(userService.updatetraveller(username, t), HttpStatus.OK);
 	}
 
+	@GetMapping("/gettraveller/{username}/{name}")
+	public ResponseEntity<Traveller> gettraveller(@PathVariable String username, @PathVariable String name) {
+		log.info("/gettraveller/{username}/{name} called");
+		return new ResponseEntity<>(userService.gettraveller(username, name), HttpStatus.OK);
+	}
 	@DeleteMapping("/deletetraveller/{username}/{name}")
 	public ResponseEntity<String> deletetraveller(@PathVariable String username, @PathVariable String name) {
 		log.info("/deletetraveller/{username}/{name} called");

@@ -65,6 +65,9 @@ select {
 .formclass button {
   background-color: rgb(145, 51, 186);
 }
+.formclass {
+  position: sticky;
+}
 #tab {
   display: flex;
   justify-content: space-evenly;
@@ -83,46 +86,7 @@ p {
 button {
   cursor: pointer;
 }
-#profile {
-  display: none;
-  flex-direction: column;
-  width: 270px;
-  height: 270px;
-  border-radius: 25px;
-  position: fixed;
-  top: 10%;
-  right: 10%;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border: 3px solid green;
-  z-index: 1000;
-}
-#profile #ptab {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-  left: 30px;
-}
-#ptab button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  font-weight: bold;
-  color: rgb(145, 51, 186);
-}
-#profile img {
-  width: 25px;
-  padding-right: 10px;
-}
-#profile h3 {
-  color: #4bad57;
-}
-#profile button {
-  background-color: transparent;
-}
+
 #passwordclass input {
   width: 250px;
   margin-left: 15px;
@@ -161,12 +125,16 @@ button {
   justify-content: center;
   align-items: center;
 }
+#csclass h3 {
+  color: #4bad57;
+  margin: 15px;
+}
 #csclass {
   background-color: white;
   width: 400px;
+  height: 140px;
   display: none;
   flex-direction: column;
-  justify-content: space-around;
   border-radius: 25px;
   border: 3px solid green;
   position: fixed;
@@ -195,7 +163,6 @@ button {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .hoteldisplay .hotel .room {
   margin: 10px;
   width: 95%;
@@ -208,9 +175,11 @@ button {
   padding: 10px;
   background-color: rgb(201, 198, 198);
 }
-.hoteldetails h2 {
+.hoteldetails h2,
+.hoteldisplay h3 {
   margin: 0px;
   margin-bottom: 10px;
+  color: #4bad57;
 }
 .hotel .hoteldetails {
   display: flex;

@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.authservice.ProxyEntity.Payment;
 
-@FeignClient(name = "PAYMENT-SERVICE", url = "http://localhost:8084/Payment")
+@FeignClient(name = "PAYMENT-SERVICE", url = "http://localhost:8085/Payment")
 public interface PaymentProxyController {
 
 	@PostMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable int bookingid) throws Exception;
+	public ResponseEntity<Payment> addPayment(@PathVariable long bookingid) throws Exception;
 
 	@GetMapping("/getallpayment")
 	public ResponseEntity<List<Payment>> getallpayments();
 
 	@GetMapping("/getpaymentbybookingid/{bookingid}")
-	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable int bookingid);
+	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable long bookingid);
 
 	@GetMapping("/getpaymentbypaymentid/{paymentid}")
 	public ResponseEntity<Payment> getpaymentbypaymentid(@PathVariable long paymentid);

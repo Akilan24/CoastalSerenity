@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,13 +39,18 @@ public class BookingDetailsController {
 	}
 
 	@GetMapping("/getbyid/{bookingid}")
-	public ResponseEntity<BookingDetails> getBookingDetails(@PathVariable long booking_id) {
-		return bookingDetailsProxy.getBookingDetails(booking_id);
+	public ResponseEntity<BookingDetails> getBookingDetails(@PathVariable long bookingid) {
+		return bookingDetailsProxy.getBookingDetails(bookingid);
+	}
+	
+	@GetMapping("/getbyusername/{username}")
+	public ResponseEntity<List<BookingDetails>> getBookingDetailsbyusername(@PathVariable String username) {
+		return bookingDetailsProxy.getBookingDetailsbyusername(username);
 	}
 
 	@PutMapping("/paymentstatuschangebybid/{bookingid}")
-	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long booking_id) {
-		return bookingDetailsProxy.paymentstatuschange(booking_id);
+	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long bookingid) {
+		return bookingDetailsProxy.paymentstatuschange(bookingid);
 	}
 
 	@PostMapping("/bookroom/{username}")
@@ -53,7 +59,7 @@ public class BookingDetailsController {
 	}
 
 	@DeleteMapping("/deletebyid/{bookingid}")
-	public ResponseEntity<String> remove(@PathVariable long booking_id) {
-		return bookingDetailsProxy.remove(booking_id);
+	public ResponseEntity<String> remove(@PathVariable long bookingid) {
+		return bookingDetailsProxy.remove(bookingid);
 	}
 }
