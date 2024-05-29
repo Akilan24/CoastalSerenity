@@ -91,7 +91,7 @@ function BookingDetails() {
           </div>
         ))
       ) : (
-        <p>No booking details found.</p>
+        <p id="none">No booking details found.</p>
       )}
     </div>
   );

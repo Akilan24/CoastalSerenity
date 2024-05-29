@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -108,7 +109,9 @@ public class AuthController {
 
 			System.out.println(userRepo.findByUsername(authRequest.getUsername()));
 			Optional<RefreshToken> r = refreshTokenRepo.findByUsername(authRequest.getUsername());
-			System.out.println(r);
+			List<RefreshToken> refreshTokenList=refreshTokenRepo.findAll().stream().filter(t->t.getUsername().equalsIgnoreCase(authRequest.getUsername())).collect(Collectors.toList());	
+			for(RefreshToken rt:refreshTokenList) {
+				refreshTokenRepo.deleteById(rt.getId());			}
 			if (r.isPresent()) {
 				refreshTokenRepo.deleteById(r.get().getId());
 			}

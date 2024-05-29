@@ -7,10 +7,8 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
   width: 30%;
-  backdrop-filter: blur(5px);
 }
 
 .form-group {
@@ -21,7 +19,7 @@
 
 .register label {
   font-weight: bold;
-  color: #0a088e;
+  color: rgb(145, 51, 186);
   margin-bottom: 5px;
   width: 100%;
   text-align: center;
@@ -40,7 +38,7 @@ select {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #4bad57;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -49,14 +47,7 @@ button {
 }
 
 .register h2 {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 121, 116, 1) 35%,
-    rgba(0, 255, 4, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #4bad57;
   font-size: 50px;
   font-style: italic;
 }
@@ -67,4 +58,7 @@ button {
 .input select,
 .input input {
   width: 200px;
+}
+[type="submit"] {
+  background-color: rgb(145, 51, 186);
 }

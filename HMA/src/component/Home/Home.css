@@ -1,5 +1,5 @@
 body {
-  background-image: url(./index.jpg);
+  background-image: url(./bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,8 +20,4 @@ div a {
 #a {
   color: rgb(27, 11, 109);
   text-decoration: none;
-}
-#logo {
-  width: 450px;
-  margin-top: 10px;
 }

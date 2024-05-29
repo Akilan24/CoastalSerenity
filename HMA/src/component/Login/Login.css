@@ -13,7 +13,6 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
-  backdrop-filter: blur(3px);
 }
 input {
   padding: 8px;
@@ -36,8 +35,8 @@ button {
   font-family: "Times New Roman", Times, serif;
 }
 #a {
-  color: rgb(27, 11, 109);
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
 }
 .forgotclass #email {
   margin: 20px;
@@ -46,8 +45,12 @@ button {
   height: 200px;
 }
 .loginclass h2,
-.forgotclass h2 {
+.forgotclass h2,
+.resetclass h2 {
   color: #4bad57;
   font-size: 50px;
   font-style: italic;
+}
+.resetclass h2 {
+  margin-bottom: 0px;
 }
