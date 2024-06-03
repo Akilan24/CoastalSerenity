@@ -68,7 +68,8 @@ public class FlightServiceImpl implements FlightService {
 			f.get().setOrigin(flight.getOrigin());
 			f.get().setDuration(flight.getDuration());
 			f.get().setAirlineLogo(flight.getAirlineLogo());
-			f.get().setFlightNumber(flight.getFlightNumber());
+			f.get().setFlightModel(flight.getFlightModel());
+			f.get().setSeatCount(flight.getSeatCount());
 			return flightRepository.save(f.get());
 		} else
 			throw new FlightDetailsNotFoundException("Flight details of flight id: " + id + " are not found");

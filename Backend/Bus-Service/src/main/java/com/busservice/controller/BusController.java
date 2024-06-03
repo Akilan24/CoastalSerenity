@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.busservice.entity.Bus;
+import com.busservice.entity.BusSeat;
 import com.busservice.service.BusService;
 
 @RestController
@@ -30,9 +31,9 @@ public class BusController {
 		return new ResponseEntity<>(BusService.getAllBuss(), HttpStatus.OK);
 	}
 
-	@GetMapping("/getbyid/{id}")
-	public ResponseEntity<Optional<Bus>> getBusById(@PathVariable long id) {
-		return new ResponseEntity<>(BusService.getBusById(id), HttpStatus.OK);
+	@GetMapping("/getbyid/{busId}")
+	public ResponseEntity<Optional<Bus>> getBusBybusId(@PathVariable long busId) {
+		return new ResponseEntity<>(BusService.getBusById(busId), HttpStatus.OK);
 	}
 
 	@PostMapping("/save")
@@ -40,14 +41,27 @@ public class BusController {
 		return new ResponseEntity<>(BusService.saveBus(Bus), HttpStatus.CREATED);
 	}
 
-	@PutMapping("/update/{id}")
-	public ResponseEntity<Bus> updateBus(@PathVariable long id, @RequestBody Bus Bus) {
-		return new ResponseEntity<>(BusService.updateBus(id, Bus), HttpStatus.OK);
+	@PutMapping("/update/{busId}")
+	public ResponseEntity<Bus> updateBus(@PathVariable long busId, @RequestBody Bus Bus) {
+		return new ResponseEntity<>(BusService.updateBus(busId, Bus), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<String> deleteBus(@PathVariable long id) {
-		return new ResponseEntity<>(BusService.deleteBus(id), HttpStatus.OK);
+	@DeleteMapping("/delete/{busId}")
+	public ResponseEntity<String> deleteBus(@PathVariable long busId) {
+		return new ResponseEntity<>(BusService.deleteBus(busId), HttpStatus.OK);
 
+	}
+	@PostMapping("/addseat/{busId}")
+	public ResponseEntity<Bus> addseat(@PathVariable long busId,@RequestBody BusSeat busSeat) {
+		return new ResponseEntity<>(BusService.addSeat(busId, busSeat), HttpStatus.CREATED);
+	}
+	
+	@PutMapping("/updateseat/{busId}")
+	public ResponseEntity<Bus> updateseat(@PathVariable long busId,@RequestBody BusSeat busSeat) {
+		return new ResponseEntity<>(BusService.updateSeat(busId, busSeat), HttpStatus.OK);
+	}
+	@PutMapping("/resetstatus/{busId}")
+	public ResponseEntity<Bus> resetstatus(@PathVariable long busId) {
+		return new ResponseEntity<>(BusService.resetStatus(busId), HttpStatus.OK);
 	}
 }

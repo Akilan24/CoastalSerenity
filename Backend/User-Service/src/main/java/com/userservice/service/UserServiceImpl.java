@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.userservice.entity.Registration;
 import com.userservice.entity.Traveller;
-import com.userservice.exception.TravellerDetailsNotFoundException;
 import com.userservice.exception.UserDetailsNotFoundException;
+import com.userservice.repository.TravellerRepository;
 import com.userservice.repository.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +22,10 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	UserRepository userrepo;
+
+	@Autowired
+	TravellerRepository travellerrepo;
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
@@ -111,13 +115,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String addtraveller(String username, Traveller t) {
-		if (userrepo.existsById(username)) {
-			Registration r = userrepo.findByUsername(username).get();
-			List<Traveller> l = r.getTraveller();
-			l.add(t);
-			r.setTraveller(l);
-			userrepo.save(r);
+	public String addtraveller(String username, Traveller traveller) {
+		Optional<Registration> res = userrepo.findByUsername(username);
+		if (!res.isEmpty()) {
+			res.get().getTraveller().add(traveller);
+			userrepo.save(res.get());
 			log.info("Traveller details of username: " + username + " got added");
 			return "Traveller added";
 		} else {
@@ -128,13 +130,20 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String updatetraveller(String username, Traveller traveller) {
-		if (userrepo.existsById(username)) {
-			Registration r = userrepo.findByUsername(username).get();
-			List<Traveller> l = r.getTraveller().stream().filter(t -> !t.getName().equalsIgnoreCase(traveller.getName()))
-					.collect(Collectors.toList());
-			l.add(traveller);
-			r.setTraveller(l);
-			userrepo.save(r);
+		Optional<Registration> res = userrepo.findByUsername(username);
+		if (!res.isEmpty()) {
+			List<Traveller> travellers = res.get().getTraveller();
+			for (Traveller travel : travellers) {
+				if (travel.getName().equalsIgnoreCase(traveller.getName())) {
+					Traveller t = travellerrepo.findById(travel.getTravellerId()).get();
+					t.setAddress(traveller.getAddress());
+					t.setAge(traveller.getAge());
+					t.setMobile(traveller.getMobile());
+					t.setGender(traveller.getGender());
+					travellerrepo.save(t);
+				}
+			}
+			res.get().setTraveller(travellers);
 			log.info("Traveller details of username: " + username + " got updated");
 			return "Traveller updated";
 		} else {
@@ -169,7 +178,6 @@ public class UserServiceImpl implements UserService {
 			} else {
 				log.info("Traveller details of username: " + username + " are not found");
 				return list;
-			// throw new TravellerDetailsNotFoundException("Travellers are not found");
 			}
 		} else
 			throw new UserDetailsNotFoundException("User details are not found");
@@ -181,7 +189,8 @@ public class UserServiceImpl implements UserService {
 		if (userrepo.existsById(username)) {
 			Registration r = userrepo.findByUsername(username).get();
 			log.info("Traveller details of username: " + username + " are found");
-			return r.getTraveller().stream().filter(t->t.getName().equalsIgnoreCase(name)).collect(Collectors.toList()).get(0);
+			return r.getTraveller().stream().filter(t -> t.getName().equalsIgnoreCase(name))
+					.collect(Collectors.toList()).get(0);
 		} else {
 			log.info("User details of username: " + username + " are not found");
 			throw new UserDetailsNotFoundException("User details are not found");

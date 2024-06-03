@@ -17,6 +17,8 @@ import lombok.NoArgsConstructor;
 public class Traveller {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long travellerId;
 	@Pattern(regexp = "^[a-zA-Z]{3,20}$", message = "Please provide a Name")
 	private String name;
 	@NotBlank(message = "Please provide a Gender")

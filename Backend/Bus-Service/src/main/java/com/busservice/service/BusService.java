@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.busservice.entity.Bus;
+import com.busservice.entity.BusSeat;
 
 @Service
 public interface BusService {
@@ -19,4 +20,9 @@ public interface BusService {
 
 	String deleteBus(long id);
 
+	Bus addSeat(long id, BusSeat busSeat);
+
+	Bus updateSeat(long id, BusSeat busSeat);
+
+	Bus resetStatus(long id);
 }

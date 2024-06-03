@@ -2,13 +2,17 @@ package com.busservice.entity;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,9 +24,8 @@ import lombok.NoArgsConstructor;
 public class Bus {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long busId;
-	private String busNumber;
+	private String busModel;
 	private String busCompany;
 	private List<String> origin;
 	private List<String> destination;
@@ -32,4 +35,7 @@ public class Bus {
 	private LocalDateTime arrivalTime;
 	private String duration;
 	private String busLogo;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "busId", referencedColumnName = "busId")
+	private List<BusSeat> busSeat;
 }
