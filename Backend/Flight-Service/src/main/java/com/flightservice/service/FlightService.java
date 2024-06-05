@@ -18,5 +18,8 @@ public interface FlightService {
 	Flight updateFlight(long id, Flight flight);
 
 	String deleteFlight(long id);
-
+	
+	Flight resetStatus(long id);
+	
+	List<List<String>> getAllCityNames();
 }

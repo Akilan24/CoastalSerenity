@@ -10,7 +10,7 @@ import com.busservice.entity.BusSeat;
 
 @Service
 public interface BusService {
-	List<Bus> getAllBuss();
+	List<Bus> getAllBus();
 
 	Optional<Bus> getBusById(long id);
 

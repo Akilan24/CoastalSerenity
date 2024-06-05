@@ -1,13 +1,18 @@
 package com.flightservice.entity;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +24,6 @@ import lombok.NoArgsConstructor;
 public class Flight {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long flightId;
 	private String flightModel;
 	private String airline;
@@ -31,5 +35,11 @@ public class Flight {
 	private LocalDateTime arrivalTime;
 	private String duration;
 	private String airlineLogo;
-	private int seatCount;
+	@ElementCollection
+	private Map<String, Integer> totalSeat;
+	@ElementCollection
+	private Map<String, Integer> seatPrice;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "flightId", referencedColumnName = "flightId")
+	private FlightBookingStatus flightBookingStatus;
 }

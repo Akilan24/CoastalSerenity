@@ -1,8 +1,11 @@
 package com.flightservice.service;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +22,9 @@ public class FlightServiceImpl implements FlightService {
 
 	@Override
 	public List<Flight> getAllFlights() {
-		if (!flightRepository.findAll().isEmpty())
-			return flightRepository.findAll();
+		List<Flight> list = flightRepository.findAll();
+		if (!list.isEmpty())
+			return list;
 		else
 			throw new FlightDetailsNotFoundException("Flight details are not found");
 	}
@@ -69,10 +73,43 @@ public class FlightServiceImpl implements FlightService {
 			f.get().setDuration(flight.getDuration());
 			f.get().setAirlineLogo(flight.getAirlineLogo());
 			f.get().setFlightModel(flight.getFlightModel());
-			f.get().setSeatCount(flight.getSeatCount());
+			f.get().setSeatPrice(flight.getSeatPrice());
+			f.get().setTotalSeat(flight.getTotalSeat());
 			return flightRepository.save(f.get());
 		} else
 			throw new FlightDetailsNotFoundException("Flight details of flight id: " + id + " are not found");
 
 	}
+
+	@Override
+	public Flight resetStatus(long id) {
+		Optional<Flight> b = flightRepository.findById(id);
+		if (b.isPresent()) {
+			Map<String, Integer> map = b.get().getFlightBookingStatus().getBookingStatus();
+			for (Map.Entry<String, Integer> entry : map.entrySet()) {
+				entry.setValue(0);
+			}
+			b.get().getFlightBookingStatus().setBookingStatus(map);
+			return flightRepository.save(b.get());
+		} else
+			throw new FlightDetailsNotFoundException("Flight details of flight id: " + id + " are not found");
+
+	}
+
+	@Override
+	public List<List<String>> getAllCityNames() {
+		List<Flight> list=flightRepository.findAll();
+		if (!list.isEmpty()) {
+			List<String> origins = list.stream().map(Flight::getOrigin).distinct().collect(Collectors.toList());
+            List<String> destinations = list.stream().map(Flight::getDestination).distinct().collect(Collectors.toList());
+            List<List<String>> cityNames = new ArrayList<>();
+            cityNames.add(origins);
+            cityNames.add(destinations);
+            return cityNames;
+		}
+		else
+			throw new FlightDetailsNotFoundException("Flight details are not found");
+
+	}
+
 }

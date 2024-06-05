@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Hotel.css";
-import Tabs from "./Tabs";
-import AccountDetails from "../AccountDetails/AccountDetails";
+import Tabs from "../Tabs/Tabs";
+import CustomerService from "../Profile/CustomerService/CustomerService.jsx";
+import AccountDetails from "../AccountDetails/AccountDetails.jsx";
+import Password from "../Profile/Password/Password.jsx";
 function Hotel() {
   const [cityNames, setCityNames] = useState([]);
-  const [password, setPassword] = useState("");
   const [formData, setFormData] = useState({
     city: "",
     roomType: "",
@@ -55,19 +56,6 @@ function Hotel() {
       console.log(error.response.data.message);
     }
   };
-  async function handlePasswordChange() {
-    try {
-      const response = await axios.put(
-        `http://localhost:8080/HMA/User/updatepassword/${localStorage.getItem(
-          `username`
-        )}/${password}`,
-        config
-      );
-      console.log(response.data);
-    } catch (error) {
-      console.log(error.response.data.message);
-    }
-  }
   async function handleBookRoom(e) {
     const bookingDetails = {
       roomno: e.target.getAttribute("roomno"),
@@ -95,15 +83,6 @@ function Hotel() {
     const month = String(today.getMonth() + 1).padStart(2, "0");
     const year = today.getFullYear();
     return `${year}-${month}-${day}`;
-  }
-
-  function changePassword() {
-    const element = document.getElementById("passwordclass");
-    if (element.style.display == "none") {
-      element.style.display = "flex";
-    } else {
-      element.style.display = "none";
-    }
   }
   return (
     <>
@@ -216,34 +195,8 @@ function Hotel() {
         )}
       </div>
       <AccountDetails />
-      <div id="passwordclass">
-        <div className="ptab">
-          <h3>Change Password</h3>
-        </div>
-        <div className="ptab">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div className="ptab" id="submit">
-          <button id="c" onClick={changePassword}>
-            Cancel
-          </button>
-          <button id="s" onClick={handlePasswordChange}>
-            Save
-          </button>
-        </div>
-      </div>
-      <div id="csclass">
-        <h3>Customer Care</h3>
-        <p>Mobile: 9876543210</p>
-        <p>Email: customercare@gmail.com</p>
-      </div>
+      <Password />
+      <CustomerService />
     </>
   );
 }

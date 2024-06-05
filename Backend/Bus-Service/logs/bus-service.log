@@ -517,3 +517,42 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2024-06-04 00:51:11 [http-nio-8087-exec-4] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_logo,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.origin from bus b1_0 where b1_0.bus_id=?
 2024-06-04 00:51:11 [http-nio-8087-exec-4] DEBUG org.hibernate.SQL - select bs1_0.bus_id,bs1_0.seat_id,bs1_0.booking_status,bs1_0.seat_no,bs1_0.seat_price,bs1_0.seat_type from bus_seat bs1_0 where bs1_0.bus_id=?
 2024-06-04 00:51:11 [http-nio-8087-exec-4] DEBUG org.hibernate.SQL - update bus_seat set booking_status=?,seat_no=?,seat_price=?,seat_type=? where seat_id=?
+2024-06-04 00:54:44 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:54:52 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(23)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(26)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(27)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(25)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(22)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(28)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:52 [RMI TCP Connection(21)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(30)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(20)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(31)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(33)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(32)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(34)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(35)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(36)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:53 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application BUS-SERVICE with eureka with status DOWN
+2024-06-04 00:54:53 [RMI TCP Connection(24)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1717442693730, current=DOWN, previous=UP]
+2024-06-04 00:54:53 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087: registering service...
+2024-06-04 00:54:54 [RMI TCP Connection(37)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:54 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2024-06-04 00:54:54 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087 - registration status: 204
+2024-06-04 00:54:54 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2024-06-04 00:54:54 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.1XlIX23BSgyWqw46AK7Zcw'
+2024-06-04 00:54:55 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'BUS-SERVICE.rabbit-1225242453.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-04 00:54:55 [RMI TCP Connection(38)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-04 00:54:56 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-04 00:54:56 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'BUS-SERVICE.errorChannel' has 0 subscriber(s).
+2024-06-04 00:54:56 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-06-04 00:54:56 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-04 00:54:56 [RMI TCP Connection(24)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-04 00:54:56 [RMI TCP Connection(24)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-04 00:54:57 [RMI TCP Connection(24)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-06-04 00:55:00 [RMI TCP Connection(24)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-06-04 00:55:00 [RMI TCP Connection(24)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087 - deregister  status: 200
+2024-06-04 00:55:01 [RMI TCP Connection(24)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

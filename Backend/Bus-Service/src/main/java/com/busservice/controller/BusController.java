@@ -27,8 +27,8 @@ public class BusController {
 	private BusService BusService;
 
 	@GetMapping("/getall")
-	public ResponseEntity<List<Bus>> getAllBuss() {
-		return new ResponseEntity<>(BusService.getAllBuss(), HttpStatus.OK);
+	public ResponseEntity<List<Bus>> getAllBus() {
+		return new ResponseEntity<>(BusService.getAllBus(), HttpStatus.OK);
 	}
 
 	@GetMapping("/getbyid/{busId}")

@@ -23,7 +23,7 @@ public class BusServiceImpl implements BusService {
 	private BusSeatRepository busSeatRepository;
 
 	@Override
-	public List<Bus> getAllBuss() {
+	public List<Bus> getAllBus() {
 		if (!busRepository.findAll().isEmpty())
 			return busRepository.findAll();
 		else
