@@ -102,13 +102,18 @@ function Profile() {
         </div>
         <div>
           <label htmlFor="gender">Gender</label>
-          <input
-            type="text"
-            name="gender"
+          <select
+            className="gender"
             id="gender"
+            name="gender"
             value={profile.gender}
             onChange={handleprofileChange}
-          />
+          >
+            <option value="">Select Your Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
         </div>
         <div>
           <label htmlFor="maritalStatus">Marital Status</label>

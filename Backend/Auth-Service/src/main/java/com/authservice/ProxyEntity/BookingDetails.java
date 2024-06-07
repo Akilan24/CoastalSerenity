@@ -1,13 +1,13 @@
 package com.authservice.ProxyEntity;
 
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +18,7 @@ import lombok.NoArgsConstructor;
 public class BookingDetails {
 
 	
+    
 	private long bookingid;
 	private String name;
 	private int roomno;
@@ -29,6 +30,9 @@ public class BookingDetails {
 	private double amount;
 	private String email;
 	private String phonenumber;
+	private String address;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "bookingid", referencedColumnName = "bookingid")
+	private List<HotelGuest> hotelGuest;
 	private String paymentStatus;
-
 }

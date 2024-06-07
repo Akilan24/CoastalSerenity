@@ -100,3 +100,6 @@ button {
   flex-direction: column;
   align-items: start;
 }
+.hoteldisplay {
+  margin-top: 50px;
+}

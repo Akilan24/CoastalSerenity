@@ -1,9 +1,11 @@
 package com.flightservice.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.flightservice.entity.Flight;
+import com.flightservice.entity.FlightBookingDetails;
 import com.flightservice.service.FlightService;
 
 @RestController
@@ -34,10 +37,19 @@ public class FlightController {
 	public ResponseEntity<Optional<Flight>> getFlightById(@PathVariable long id) {
 		return new ResponseEntity<>(flightService.getFlightById(id), HttpStatus.OK);
 	}
+	
+	@PutMapping("/addseats/{id}")
+	public ResponseEntity<Flight> addSeats(@PathVariable long id) {
+		return new ResponseEntity<>(flightService.addSeats(id), HttpStatus.OK);
+	}
 
 	@PostMapping("/save")
 	public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
 		return new ResponseEntity<>(flightService.saveFlight(flight), HttpStatus.CREATED);
+	}
+	@PostMapping("/savebooking")
+	public ResponseEntity<FlightBookingDetails> bookFlight(@RequestBody FlightBookingDetails flightBookingDetails) {
+		return new ResponseEntity<>(flightService.bookFlight(flightBookingDetails), HttpStatus.CREATED);
 	}
 
 	@PutMapping("/update/{id}")
@@ -59,4 +71,10 @@ public class FlightController {
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return new ResponseEntity<>(flightService.getAllCityNames(), HttpStatus.OK);
 	}
+	
+	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")
+	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from,@PathVariable String to,@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure,@PathVariable String travellerClass) {
+		return new ResponseEntity<>(flightService.getAllAvailableFlights(from, to, departure, travellerClass), HttpStatus.OK);
+	}
+	
 }

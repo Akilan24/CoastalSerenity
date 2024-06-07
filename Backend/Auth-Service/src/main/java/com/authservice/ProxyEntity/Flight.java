@@ -7,9 +7,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
@@ -20,10 +17,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Flight {
 
-	@Id
 	private long flightId;
 	private String flightModel;
 	private String airline;
@@ -35,11 +30,12 @@ public class Flight {
 	private LocalDateTime arrivalTime;
 	private String duration;
 	private String airlineLogo;
+	private String stopOver;
+	private String nextDay;
 	@ElementCollection
 	private Map<String, Integer> totalSeat;
 	@ElementCollection
-	private Map<String, Integer> seatPrice;
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "flightId", referencedColumnName = "flightId")
-	private FlightBookingStatus flightBookingStatus;
+	private Map<String, Double> seatPrice;
+	@ElementCollection
+	private Map<String, Integer> flightBookingStatus;
 }

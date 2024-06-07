@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.authservice.ProxyEntity.BookingDetails;
+import com.authservice.ProxyEntity.HotelGuest;
 import com.authservice.ProxyEntity.HotelRooms;
 import com.authservice.proxyController.BookingDetailsProxyController;
 
@@ -63,5 +63,10 @@ public class BookingDetailsController {
 	@DeleteMapping("/deletebyid/{bookingid}")
 	public ResponseEntity<String> remove(@PathVariable long bookingid) {
 		return bookingDetailsProxy.remove(bookingid);
+	}
+	
+	@PostMapping("/addguests/{bookingid}")
+	public ResponseEntity<BookingDetails> addGuest(@PathVariable long bookingid,@RequestBody List<HotelGuest> guest) {
+		return bookingDetailsProxy.addGuest(bookingid,guest);
 	}
 }

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bookingdetailsservice.entity.BookingDetails;
+import com.bookingdetailsservice.entity.HotelGuest;
 import com.bookingdetailsservice.entity.HotelRooms;
 import com.bookingdetailsservice.service.BookingDetailsService;
 
@@ -61,5 +62,10 @@ public class BookingDetailsController {
 	@DeleteMapping("/deletebyid/{bookingid}")
 	public ResponseEntity<String> remove(@PathVariable long bookingid) {
 		return new ResponseEntity<>(service.removeBookingDetails(bookingid), HttpStatus.OK);
+	}
+	
+	@PostMapping("/addguests/{bookingid}")
+	public ResponseEntity<BookingDetails> addGuest(@PathVariable long bookingid,@RequestBody List<HotelGuest> guest) {
+		return new ResponseEntity<>(service.addGuest(bookingid, guest), HttpStatus.OK);
 	}
 }

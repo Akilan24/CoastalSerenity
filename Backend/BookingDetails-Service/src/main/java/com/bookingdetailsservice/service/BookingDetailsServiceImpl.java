@@ -3,12 +3,14 @@ package com.bookingdetailsservice.service;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bookingdetailsservice.entity.BookingDetails;
+import com.bookingdetailsservice.entity.HotelGuest;
 import com.bookingdetailsservice.entity.HotelRooms;
 import com.bookingdetailsservice.exception.BookingDetailsNotFoundException;
 import com.bookingdetailsservice.externalclass.Hotel;
@@ -31,29 +33,29 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 	@Autowired
 	RoomProxy rproxy;
 	@Autowired
-    UserProxy uproxy;
+	UserProxy uproxy;
 	@Autowired
 	HotelRepository hrepo;
 
 	@Override
 	public BookingDetails BookRoom(String username, BookingDetails bookingdetails) {
-   System.out.println(bookingdetails.getRoomno());
+		System.out.println(bookingdetails.getRoomno());
 		long MIN_id = 100000;
 		int count = bookingrepo.findAll().size();
 		bookingdetails.setBookingid(count == 0 ? MIN_id : MIN_id + count);
-		Registration user=uproxy.showUserByUserName(username).getBody();		
+		Registration user = uproxy.showUserByUserName(username).getBody();
 		bookingdetails.setName(user.getName());
 		bookingdetails.setEmail(user.getEmail());
 		bookingdetails.setPhonenumber(user.getMobile());
 		long daysBetween = 0;
 		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
-		daysBetween= daysBetween==0?1:daysBetween;
-		double amt = hrepo.findAll().stream()
+		daysBetween = daysBetween == 0 ? 1 : daysBetween;
+		Hotel hotel = hrepo.findAll().stream()
 				.filter(h -> h.getHotelName().equalsIgnoreCase(bookingdetails.getHotelname()))
-				.collect(Collectors.toList()).get(0).getRooms().stream()
-				.filter(r -> r.getRoom_no() == bookingdetails.getRoomno()).collect(Collectors.toList()).get(0)
-				.getRate_per_day();
-
+				.collect(Collectors.toList()).get(0);
+		double amt = hotel.getRooms().stream().filter(r -> r.getRoom_no() == bookingdetails.getRoomno())
+				.collect(Collectors.toList()).get(0).getRate_per_day();
+		bookingdetails.setAddress(hotel.getAddress());
 		bookingdetails.setAmount(daysBetween * amt);
 		bookingdetails.setPaymentStatus("Payment has to be done");
 		return bookingrepo.save(bookingdetails);
@@ -106,12 +108,13 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 		List<HotelRooms> availableRooms = new ArrayList<>();
 
 		for (Hotel hotel : hotels) {
-			
+
 			List<Room> rooms = hotel.getRooms().stream()
-					.filter(r -> r.getRoomtype().equalsIgnoreCase(roomtype) && isRoomAvailable(hotel.getHotelName(),r.getRoom_no(), fromDate, toDate))
+					.filter(r -> r.getRoomtype().equalsIgnoreCase(roomtype)
+							&& isRoomAvailable(hotel.getHotelName(), r.getRoom_no(), fromDate, toDate))
 					.collect(Collectors.toList());
-			if(!rooms.isEmpty()) {
-				HotelRooms hotelRooms=new HotelRooms();
+			if (!rooms.isEmpty()) {
+				HotelRooms hotelRooms = new HotelRooms();
 				hotelRooms.setAddress(hotel.getAddress());
 				hotelRooms.setDescription(hotel.getDescription());
 				hotelRooms.setHotelName(hotel.getHotelName());
@@ -119,18 +122,19 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 				hotelRooms.setRooms(rooms);
 				availableRooms.add(hotelRooms);
 			}
-		
+
 		}
 
 		return availableRooms;
 	}
 
-	private boolean isRoomAvailable(String hotelname,int roomno, Date fromDate, Date toDate) {
+	private boolean isRoomAvailable(String hotelname, int roomno, Date fromDate, Date toDate) {
 
 		for (BookingDetails booking : bookingrepo.findAll()) {
 			Date bookedFrom = booking.getBooked_from();
 			Date bookedTo = booking.getBooked_to();
-			if (booking.getHotelname().equalsIgnoreCase(hotelname) && booking.getRoomno()==roomno && (fromDate.before(bookedTo) || fromDate.equals(bookedTo))
+			if (booking.getHotelname().equalsIgnoreCase(hotelname) && booking.getRoomno() == roomno
+					&& (fromDate.before(bookedTo) || fromDate.equals(bookedTo))
 					&& (toDate.after(bookedFrom) || toDate.equals(bookedFrom))) {
 				return false;
 			}
@@ -141,13 +145,25 @@ public class BookingDetailsServiceImpl implements BookingDetailsService {
 
 	@Override
 	public List<BookingDetails> showBookingDetailsbyUserName(String userName) {
-		String email=uproxy.showUserByUserName(userName).getBody().getEmail();
-		List<BookingDetails> bd = bookingrepo.findAll().stream().filter(b->b.getEmail().equalsIgnoreCase(email)).collect(Collectors.toList());
+		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
+		List<BookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
+				.collect(Collectors.toList());
 		if (!bd.isEmpty()) {
 			return bd;
 		} else
 			throw new BookingDetailsNotFoundException("Booking details are not found");
-	
+
+	}
+
+	@Override
+	public BookingDetails addGuest(long bookingId, List<HotelGuest> guest) {
+		Optional<BookingDetails> bd= bookingrepo.findByBookingid(bookingId);
+		if (!bd.isEmpty()) {
+			bd.get().setHotelGuest(guest);
+			return bookingrepo.save(bd.get());
+		} else
+			throw new BookingDetailsNotFoundException("Booking details are not found");
+
 	}
 
 }

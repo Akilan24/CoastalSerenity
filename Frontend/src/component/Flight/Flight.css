@@ -1,0 +1,97 @@
+select {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0%;
+}
+#travellerClass select,
+#travellerClass input {
+  width: 200px;
+}
+#travellerClass .formclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(0, 213, 255);
+  border-radius: 0%;
+}
+.divclass {
+  margin-right: 5px;
+}
+
+.formclass button {
+  background-color: rgb(145, 51, 186);
+}
+.formclass {
+  position: sticky;
+}
+
+p {
+  margin: 0%;
+  color: rgb(145, 51, 186);
+}
+button {
+  cursor: pointer;
+}
+
+.flight {
+  margin-top: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 10%;
+  width: 80%;
+  padding: 10px;
+}
+.flightname {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  align-items: start;
+}
+.flightDetails > p {
+  margin-top: 50px;
+}
+.journeyDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+.airline {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 35%;
+}
+.flight #imgh {
+  height: 70px;
+  width: 150px;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.price > p {
+  color: grey;
+}
+.days {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.days #count {
+  color: red;
+  font-size: 15px;
+  width: 20px;
+  margin-left: 10px;
+}

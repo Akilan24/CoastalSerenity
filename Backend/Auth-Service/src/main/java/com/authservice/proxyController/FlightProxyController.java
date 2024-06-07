@@ -1,9 +1,11 @@
 package com.authservice.proxyController;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,4 +40,6 @@ public interface FlightProxyController {
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames();
 
+	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")
+	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from,@PathVariable String to,@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure,@PathVariable String travellerClass);
 }

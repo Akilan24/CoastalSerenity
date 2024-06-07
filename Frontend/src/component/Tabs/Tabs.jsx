@@ -37,31 +37,31 @@ function Tabs() {
       <div className="selector">
         <div id="tab">
           <button onClick={(n) => routeTo("/hotel")}>
-            <img id="hotellogo" src="./hotellogo.png" />
+            <img id="hotellogo" src="../TabIcons/hotellogo.png" />
             <p>Hotels</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/flight")}>
-            <img id="planelogo" src="./planelogo.png" />
+            <img id="planelogo" src="../TabIcons/planelogo.png" />
             <p>Flights</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/train")}>
-            <img id="trainlogo" src="./trainlogo.png" />
+            <img id="trainlogo" src="../TabIcons/trainlogo.png" />
             <p>Trains</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/bus")}>
-            <img id="buslogo" src="./buslogo.png" />
+            <img id="buslogo" src="../TabIcons/buslogo.png" />
             <p>Buses</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/cab")}>
-            <img id="carlogo" src="./carlogo.png" />
+            <img id="carlogo" src="../TabIcons/carlogo.png" />
             <p>Cabs</p>
           </button>
         </div>

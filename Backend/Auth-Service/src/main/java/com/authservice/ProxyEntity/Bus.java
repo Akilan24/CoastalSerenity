@@ -20,10 +20,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Bus {
 
-	@Id
 	private long busId;
 	private String busModel;
 	private String busCompany;

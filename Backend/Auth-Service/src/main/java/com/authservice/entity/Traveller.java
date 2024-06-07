@@ -1,6 +1,8 @@
 package com.authservice.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -15,6 +17,8 @@ import lombok.NoArgsConstructor;
 public class Traveller {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long travellerId;
 	@Pattern(regexp = "^[a-zA-Z]{3,20}$", message = "Please provide a Name")
 	private String name;
 	@NotBlank(message = "Please provide a Gender")

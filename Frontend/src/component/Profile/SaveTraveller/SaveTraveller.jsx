@@ -248,14 +248,18 @@ function SaveTraveller() {
         </div>
         <div>
           <label htmlFor="gender">Gender</label>
-          <input
-            type="text"
-            name="gender"
+          <select
+            className="gender"
             id="gender"
+            name="gender"
             value={traveller.gender}
             onChange={handleTravellerChange}
-            required
-          />
+          >
+            <option value="">Select Your Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
         </div>
         <div id="submit">
           <button id="c" type="button" onClick={addTraveller}>

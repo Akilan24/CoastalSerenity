@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.authservice.ProxyEntity.BookingDetails;
+import com.authservice.ProxyEntity.HotelGuest;
 import com.authservice.ProxyEntity.HotelRooms;
 
 @FeignClient(name = "BOOKINGDETAILS-SERVICE", url = "http://localhost:8084/BookingDetails")
@@ -42,4 +42,7 @@ public interface BookingDetailsProxyController {
 
 	@DeleteMapping("/deletebyid/{bookingid}")
 	public ResponseEntity<String> remove(@PathVariable long bookingid);
+	
+	@PostMapping("/addguests/{bookingid}")
+	public ResponseEntity<BookingDetails> addGuest(@PathVariable long bookingid,@RequestBody List<HotelGuest> guest) ;
 }

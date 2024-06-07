@@ -35,7 +35,8 @@
   display: flex;
   flex-direction: row;
 }
-.travellerclass input {
+.travellerclass input,
+.travellerclass select {
   width: 400px;
 }
 #s {

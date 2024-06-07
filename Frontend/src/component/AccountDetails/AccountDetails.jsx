@@ -27,31 +27,31 @@ function AccountDetails() {
       </div>
       <div id="ptab">
         <button onClick={(n) => routeTo("/profile")}>
-          <img id="img" src="./profile.png" />
+          <img id="img" src="../Profile/profile.png" />
           Profile
         </button>
       </div>
       <div id="ptab">
         <button onClick={(n) => routeTo("/bookingDetails")}>
-          <img id="img" src="./booking.png" />
+          <img id="img" src="../Profile/booking.png" />
           Booking Details
         </button>
       </div>
       <div id="ptab">
         <button onClick={changePassword}>
-          <img id="img" src="./password.png" />
+          <img id="img" src="../Profile/password.png" />
           Change Password
         </button>
       </div>
       <div id="ptab">
         <button onClick={(n) => routeTo("/saveTraveller")}>
-          <img id="img" src="./traveller.png" />
+          <img id="img" src="../Profile/traveller.png" />
           Save Travellers
         </button>
       </div>
       <div id="ptab">
         <button onClick={logout}>
-          <img id="img" src="./logout.png" />
+          <img id="img" src="../Profile/logout.png" />
           Logout
         </button>
       </div>
