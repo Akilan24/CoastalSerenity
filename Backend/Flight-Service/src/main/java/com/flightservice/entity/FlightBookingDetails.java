@@ -38,5 +38,6 @@ public class FlightBookingDetails {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "bookingId", referencedColumnName = "bookingId")
 	private FlightPassenger flightPassengers;
+	private String paymentStatus;
 	private String username;
 }

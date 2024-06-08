@@ -7,6 +7,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -17,8 +18,10 @@ import org.springframework.stereotype.Service;
 
 import com.flightservice.entity.Flight;
 import com.flightservice.entity.FlightBookingDetails;
+import com.flightservice.entity.FlightPassenger;
 import com.flightservice.entity.FlightSeats;
 import com.flightservice.exception.FlightDetailsNotFoundException;
+import com.flightservice.externalclass.Traveller;
 import com.flightservice.repository.FlightBookingDetailsRepository;
 import com.flightservice.repository.FlightRepository;
 
@@ -158,11 +161,56 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public FlightBookingDetails bookFlight(FlightBookingDetails flightBookingDetails) {
-		long MIN_id = 100000;
-		int count = flightBookingDetailsRepository.findAll().size();
-		flightBookingDetails.setBookingId(count == 0 ? MIN_id : MIN_id + count);
-		return flightBookingDetailsRepository.save(flightBookingDetails);
+	public List<FlightBookingDetails> bookFlight(long id, List<Traveller> travellers, List<FlightSeats> flightSeats, String username) {
+	    Optional<Flight> flightOptional = flightRepository.findById(id);
+	    if (flightOptional.isEmpty()) {
+	        throw new FlightDetailsNotFoundException("Flight details of flight id: " + id + " are not found");
+	    }
+
+	    Flight flight = flightOptional.get();
+	    List<FlightBookingDetails> bookingDetailsList = new ArrayList<>();
+	    
+	    if (travellers.size() != flightSeats.size()) {
+	        throw new IllegalArgumentException("The number of travellers must match the number of flight seats.");
+	    }
+	    
+	    long MIN_ID = 100000;
+	    int count = flightBookingDetailsRepository.findAll().size();
+	    
+	    for (int i = 0; i < travellers.size(); i++) {
+	        Traveller traveller = travellers.get(i);
+	        FlightSeats seat = flightSeats.get(i);
+
+	        FlightBookingDetails bookingDetails = new FlightBookingDetails();
+	        bookingDetails.setBookingId(count == 0 ? MIN_ID : MIN_ID + count + i);
+	        bookingDetails.setAirline(flight.getAirline());
+	        bookingDetails.setAirlineLogo(flight.getAirlineLogo());
+	        bookingDetails.setFlightModel(flight.getFlightModel());
+	        bookingDetails.setOrigin(flight.getOrigin());
+	        bookingDetails.setDestination(flight.getDestination());
+	        bookingDetails.setDepartureTime(flight.getDepartureTime());
+	        bookingDetails.setArrivalTime(flight.getArrivalTime());
+	        bookingDetails.setDuration(flight.getDuration());
+	        bookingDetails.setStopOver(flight.getStopOver());
+	        bookingDetails.setNextDay(flight.getNextDay());
+	        bookingDetails.setUsername(username);
+	        bookingDetails.setPaymentStatus("Payment has to be done");
+	        bookingDetails.setSeatNo(seat.getSeatNumber());
+	        bookingDetails.setPrice(seat.getPrice());
+	        
+	        FlightPassenger passenger = new FlightPassenger();
+	        passenger.setAddress(traveller.getAddress());
+	        passenger.setGender(traveller.getGender());
+	        passenger.setMobile(traveller.getMobile());
+	        passenger.setAge(traveller.getAge());
+	        passenger.setName(traveller.getName());
+	        
+	        bookingDetails.setFlightPassengers(passenger);
+	        
+	        bookingDetailsList.add(flightBookingDetailsRepository.save(bookingDetails));
+	    }
+	    
+	    return bookingDetailsList;
 	}
 
 	@Override
@@ -195,7 +243,7 @@ public class FlightServiceImpl implements FlightService {
          
          for (int i = 1; i <= FIRST_CLASS_ROWS; i++) {
              for (int j = 1; j <= FIRST_CLASS_COLUMNS; j++) {
-                 FlightSeats seat = new FlightSeats(0, "F" + i + j, FIRST_CLASS_TYPE, FIRST_CLASS_PRICE, true);
+                 FlightSeats seat = new FlightSeats(0, "F" + i + j, FIRST_CLASS_TYPE, FIRST_CLASS_PRICE, false);
                  seats.add(seat);
              }
          }
@@ -209,7 +257,7 @@ public class FlightServiceImpl implements FlightService {
          
          for (int i = 1; i <= ECONOMY_ROWS; i++) {
              for (int j = 1; j <= ECONOMY_COLUMNS; j++) {
-            	 FlightSeats seat = new FlightSeats(0, "E" + i + j, "Economy", ECONOMY_PRICE, true);
+            	 FlightSeats seat = new FlightSeats(0, "E" + i + j, ECONOMY_TYPE, ECONOMY_PRICE, true);
                  seats.add(seat);
              }
          }
@@ -220,5 +268,17 @@ public class FlightServiceImpl implements FlightService {
 		}else
 			throw new FlightDetailsNotFoundException("Flight details of flight id: " + id + " are not found");
 
+	}
+
+	@Override
+	public List<FlightBookingDetails> paymentstatuschange(String username) {
+    
+		List<FlightBookingDetails> fbdList= flightBookingDetailsRepository.findAll().stream().filter(f->f.getUsername().equalsIgnoreCase(username)).collect(Collectors.toList());
+		List<FlightBookingDetails> fbdUpdatedList=new ArrayList<FlightBookingDetails>();
+		for(FlightBookingDetails fbd:fbdList) {
+			fbd.setPaymentStatus("Payment Done");
+			fbdUpdatedList.add(flightBookingDetailsRepository.save(fbd));
+		}
+		return fbdUpdatedList;
 	}
 }

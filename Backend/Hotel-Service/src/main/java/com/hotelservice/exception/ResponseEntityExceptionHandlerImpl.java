@@ -36,6 +36,14 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
 
+	@ExceptionHandler(HotelBookingDetailsNotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleNotFoundException(HotelBookingDetailsNotFoundException ex,
+			WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDate.now(), ex.getMessage(), "Not Found");
+		log.info("An Exception occured");
+		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
+	
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 

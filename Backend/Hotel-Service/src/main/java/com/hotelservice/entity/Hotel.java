@@ -2,6 +2,8 @@ package com.hotelservice.entity;
 
 import java.util.List;
 
+import com.hotelservice.externalclass.Room;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

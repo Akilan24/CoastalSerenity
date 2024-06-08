@@ -11,7 +11,7 @@ function Password() {
   async function handlePasswordChange() {
     try {
       const response = await axios.put(
-        `http://localhost:8080/HMA/User/updatepassword/${localStorage.getItem(
+        `http://localhost:8080/CS/User/updatepassword/${localStorage.getItem(
           `username`
         )}/${password}`,
         config

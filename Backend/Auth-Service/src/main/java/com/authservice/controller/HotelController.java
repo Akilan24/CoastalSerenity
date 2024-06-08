@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.authservice.ProxyEntity.Hotel;
-import com.authservice.proxyController.HotelProxyController;
+import com.authservice.proxyentity.hotel.Hotel;
+import com.authservice.proxyentity.hotel.HotelProxyController;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/HMA/Hotel")
+@RequestMapping("/CS/Hotel")
 @CrossOrigin("http://localhost:5173")
 public class HotelController {
 	@Autowired

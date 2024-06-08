@@ -21,7 +21,7 @@ function Profile() {
     async function fetchUserDetails() {
       try {
         const response = await axios.get(
-          "http://localhost:8080/HMA/User/getuserbyname/" +
+          "http://localhost:8080/CS/User/getuserbyname/" +
             localStorage.getItem(`username`),
           config
         );
@@ -41,7 +41,7 @@ function Profile() {
     e.preventDefault();
     try {
       const response = await axios.put(
-        "http://localhost:8080/HMA/User/updateuser/" +
+        "http://localhost:8080/CS/User/updateuser/" +
           localStorage.getItem(`username`),
         profile,
         config

@@ -25,7 +25,7 @@ function Hotel() {
     async function fetchCityNames() {
       try {
         const response = await axios.get(
-          "http://localhost:8080/HMA/Hotel/getallhotelcitynames",
+          "http://localhost:8080/CS/Hotel/getallhotelcitynames",
           config
         );
         setCityNames(response.data);
@@ -47,7 +47,7 @@ function Hotel() {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:8080/HMA/BookingDetails/availablerooms/${formData.city}/${formData.roomType}/${formData.checkin}/${formData.checkout}`,
+        `http://localhost:8080/CS/Hotel/HotelBookingDetails/availablerooms/${formData.city}/${formData.roomType}/${formData.checkin}/${formData.checkout}`,
         config
       );
       setHotelRooms(response.data);
@@ -65,13 +65,13 @@ function Hotel() {
     };
     try {
       const response = await axios.post(
-        `http://localhost:8080/HMA/BookingDetails/bookroom/${localStorage.getItem(
+        `http://localhost:8080/CS/Hotel/HotelBookingDetails/bookroom/${localStorage.getItem(
           `username`
         )}`,
         bookingDetails,
         config
       );
-      navigate("/bookingDetails");
+      navigate("/hotelBookingDetails");
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);

@@ -3,7 +3,6 @@ package com.authservice.controller;
 import java.security.SecureRandom;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,18 +16,15 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.authservice.ProxyEntity.Hotel;
 import com.authservice.entity.RefreshToken;
 import com.authservice.entity.Registration;
 import com.authservice.exception.AuthenticationFailedException;
-import com.authservice.proxyController.HotelProxyController;
 import com.authservice.repository.RefreshTokenRepository;
 import com.authservice.repository.UserRepository;
 import com.authservice.request.AuthRequest;
@@ -41,7 +37,7 @@ import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 
 @RestController
-@RequestMapping("/HMA/Auth")
+@RequestMapping("/CS/Auth")
 @CrossOrigin("http://localhost:5173")
 public class AuthController {
 	@Value("${spring.mail.username}")

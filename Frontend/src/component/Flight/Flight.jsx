@@ -7,7 +7,6 @@ import Tabs from "../Tabs/Tabs.jsx";
 import CustomerService from "../Profile/CustomerService/CustomerService.jsx";
 import AccountDetails from "../AccountDetails/AccountDetails.jsx";
 import Password from "../Profile/Password/Password.jsx";
-
 function Flight() {
   const [origins, setOrigins] = useState([]);
   const [destinations, setDestinations] = useState([]);
@@ -37,7 +36,7 @@ function Flight() {
     async function fetchCityNames() {
       try {
         const response = await axios.get(
-          "http://localhost:8080/HMA/Flight/getallcitynames",
+          "http://localhost:8080/CS/Flight/getallcitynames",
           config
         );
         setOrigins(response.data[0]);
@@ -70,7 +69,7 @@ function Flight() {
     try {
       console.log(formData.departure);
       const response = await axios.get(
-        `http://localhost:8080/HMA/Flight/getallavailableflights/${formData.from}/${formData.to}/${formData.departure}/${formData.travellerClass}`,
+        `http://localhost:8080/CS/Flight/getallavailableflights/${formData.from}/${formData.to}/${formData.departure}/${formData.travellerClass}`,
         config
       );
       setFlights(response.data);
@@ -198,7 +197,11 @@ function Flight() {
                 </div>
               </div>
               <div>
-                <button onClick={(e) => navigate(`/bookflight/${bookingid}`)}>
+                <button
+                  onClick={(e) =>
+                    navigate(`/flightSeatsSelection/${flight.flightId}`)
+                  }
+                >
                   BOOK NOW
                 </button>
               </div>

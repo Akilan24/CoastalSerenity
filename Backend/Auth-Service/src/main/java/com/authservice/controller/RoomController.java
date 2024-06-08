@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.authservice.ProxyEntity.Room;
-import com.authservice.proxyController.RoomProxyController;
+import com.authservice.proxyentity.room.Room;
+import com.authservice.proxyentity.room.RoomProxyController;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/HMA/Room")
+@RequestMapping("/CS/Room")
 @CrossOrigin("http://localhost:5173")
 public class RoomController {
 

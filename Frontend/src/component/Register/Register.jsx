@@ -25,7 +25,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/HMA/Auth/register",
+        "http://localhost:8080/CS/Auth/register",
         formData
       );
       window.alert("User registered successfully");

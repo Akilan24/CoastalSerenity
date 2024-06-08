@@ -1,0 +1,144 @@
+h2 {
+  color: #4bad57;
+}
+.seatBooking img {
+  width: 300px;
+}
+.seat {
+  background-color: white;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+.fbd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(139, 181, 195);
+  width: 700px;
+  height: 700px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  border-radius: 25px;
+}
+.body {
+  background-color: white;
+  box-sizing: border-box;
+  height: 1780px;
+  width: 300px;
+}
+#class {
+  color: rgb(153, 7, 183);
+  background-color: rgb(204, 204, 250);
+}
+.body button {
+  font-size: 18px;
+  color: #141eae;
+  background-color: transparent;
+  font-weight: bold;
+}
+.pay-button {
+  margin: 15px;
+}
+#check {
+  margin: 10px;
+}
+.body p {
+  font-size: 18px;
+  color: #141eae;
+}
+.firstclassSeats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2px;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(204, 204, 250);
+}
+
+.businessSeats,
+.economySeats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 2px;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(204, 204, 250);
+}
+
+.fcs {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bs {
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 50px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.es {
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 50px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#as {
+  background-color: #141eae;
+  width: 25px;
+}
+#display {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  left: 415px;
+  top: 250px;
+}
+#display div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#green,
+#blue,
+#red {
+  width: 25px;
+  height: 25px;
+}
+#green {
+  background-color: #4bad57;
+}
+#blue {
+  background-color: #1f78b4;
+}
+#red {
+  background-color: #df5656;
+}

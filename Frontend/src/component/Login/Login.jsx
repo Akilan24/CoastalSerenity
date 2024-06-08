@@ -22,7 +22,7 @@ function Login() {
         password: formData.password,
       };
       const token = await axios.post(
-        "http://localhost:8080/HMA/Auth/login",
+        "http://localhost:8080/CS/Auth/login",
         login
       );
       localStorage.setItem(`accesstoken`, token.data.accessToken);

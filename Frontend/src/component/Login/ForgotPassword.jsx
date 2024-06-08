@@ -14,7 +14,7 @@ function ForgotPassword() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/HMA/Auth/forgotpassword/" + formData
+        "http://localhost:8080/CS/Auth/forgotpassword/" + formData
       );
       console.log("Email send");
       window.alert("Email send");

@@ -20,7 +20,7 @@ function Payment() {
     async function fetchBookingDetails() {
       try {
         const response = await axios.get(
-          `http://localhost:8080/HMA/BookingDetails/getbyid/${value}`,
+          `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyid/${value}`,
           config
         );
         setBookingDetails(response.data);
@@ -58,7 +58,7 @@ function Payment() {
   async function doPayment() {
     try {
       const response = await axios.post(
-        `http://localhost:8080/HMA/Payment/doPayment/${bookingDetails.bookingid}`,
+        `http://localhost:8080/CS/Payment/doPayment/${bookingDetails.bookingid}`,
         {},
         config
       );

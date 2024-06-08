@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.authservice.ProxyEntity.Cab;
-import com.authservice.proxyController.CabProxyController;
+import com.authservice.proxyentity.cab.Cab;
+import com.authservice.proxyentity.cab.CabProxyController;
 
 @RestController
-@RequestMapping("/HMA/Cab")
+@RequestMapping("/CS/Cab")
 @CrossOrigin("http://localhost:5173")
 public class CabController {
 

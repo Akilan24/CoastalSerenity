@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.flightservice.entity.Flight;
 import com.flightservice.entity.FlightBookingDetails;
+import com.flightservice.entity.FlightSeats;
+import com.flightservice.externalclass.Traveller;
 import com.flightservice.service.FlightService;
 
 @RestController
@@ -47,9 +49,9 @@ public class FlightController {
 	public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
 		return new ResponseEntity<>(flightService.saveFlight(flight), HttpStatus.CREATED);
 	}
-	@PostMapping("/savebooking")
-	public ResponseEntity<FlightBookingDetails> bookFlight(@RequestBody FlightBookingDetails flightBookingDetails) {
-		return new ResponseEntity<>(flightService.bookFlight(flightBookingDetails), HttpStatus.CREATED);
+	@PostMapping("/bookflight/{id}/{username}")
+	public ResponseEntity<List<FlightBookingDetails>> bookFlight(@PathVariable long id,@RequestBody List<Traveller> traveller,@RequestBody List<FlightSeats> flightSeats,@PathVariable String username) {
+		return new ResponseEntity<>(flightService.bookFlight(id,traveller,flightSeats,username), HttpStatus.CREATED);
 	}
 
 	@PutMapping("/update/{id}")
@@ -70,6 +72,11 @@ public class FlightController {
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return new ResponseEntity<>(flightService.getAllCityNames(), HttpStatus.OK);
+	}
+	
+	@GetMapping("/paymentstatuschange/{username}")
+	public ResponseEntity<List<FlightBookingDetails>> paymentstatuschange(@PathVariable String username) {
+		return new ResponseEntity<>(flightService.paymentstatuschange(username), HttpStatus.OK);
 	}
 	
 	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")

@@ -55,7 +55,7 @@ public class AuthConfig {
 				return config;
 			}
 		}).and().csrf().disable().exceptionHandling().authenticationEntryPoint(entryPoint).and().authorizeHttpRequests()
-				.requestMatchers("/HMA/Auth/**").permitAll().anyRequest().authenticated().and().sessionManagement()
+				.requestMatchers("/CS/Auth/**").permitAll().anyRequest().authenticated().and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class).build();
 	}

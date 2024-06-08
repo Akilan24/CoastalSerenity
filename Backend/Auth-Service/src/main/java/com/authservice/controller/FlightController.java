@@ -6,7 +6,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,11 +17,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.authservice.ProxyEntity.Flight;
-import com.authservice.proxyController.FlightProxyController;
+import com.authservice.proxyentity.flight.Flight;
+import com.authservice.proxyentity.flight.FlightBookingDetails;
+import com.authservice.proxyentity.flight.FlightProxyController;
+import com.authservice.proxyentity.flight.FlightSeats;
+import com.authservice.proxyentity.user.Traveller;
 
 @RestController
-@RequestMapping("/HMA/Flight")
+@RequestMapping("/CS/Flight")
 @CrossOrigin("http://localhost:5173")
 public class FlightController {
 
@@ -66,5 +68,10 @@ public class FlightController {
 	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")
 	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from,@PathVariable String to,@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure,@PathVariable String travellerClass) {
 		return flightProxy.getAllAvailableFlights(from, to, departure, travellerClass);
+	}
+	
+	@PostMapping("/bookflight/{id}/{username}")
+	public ResponseEntity<List<FlightBookingDetails>> bookFlight(@PathVariable long id,@RequestBody List<Traveller> traveller,@RequestBody List<FlightSeats> flightSeats,@PathVariable String username) {
+            return flightProxy.bookFlight(id, traveller,flightSeats, username);
 	}
 }

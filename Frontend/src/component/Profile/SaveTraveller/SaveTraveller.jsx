@@ -30,7 +30,7 @@ function SaveTraveller() {
     async function fetchTravellers() {
       try {
         const response = await axios.get(
-          `http://localhost:8080/HMA/User/getalltravellers/${localStorage.getItem(
+          `http://localhost:8080/CS/User/getalltravellers/${localStorage.getItem(
             "username"
           )}`,
           config
@@ -46,7 +46,7 @@ function SaveTraveller() {
   async function fetchTravellers() {
     try {
       const response = await axios.get(
-        `http://localhost:8080/HMA/User/getalltravellers/${localStorage.getItem(
+        `http://localhost:8080/CS/User/getalltravellers/${localStorage.getItem(
           "username"
         )}`,
         config
@@ -61,7 +61,7 @@ function SaveTraveller() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:8080/HMA/User/addtraveller/${localStorage.getItem(
+        `http://localhost:8080/CS/User/addtraveller/${localStorage.getItem(
           "username"
         )}`,
         traveller,
@@ -85,7 +85,7 @@ function SaveTraveller() {
   async function getTraveller(e) {
     try {
       const response = await axios.get(
-        `http://localhost:8080/HMA/User/gettraveller/${localStorage.getItem(
+        `http://localhost:8080/CS/User/gettraveller/${localStorage.getItem(
           "username"
         )}/${e.target.value}`,
         config
@@ -108,7 +108,7 @@ function SaveTraveller() {
   async function updateTraveller(e) {
     try {
       const response = await axios.put(
-        `http://localhost:8080/HMA/User/updatetraveller/${localStorage.getItem(
+        `http://localhost:8080/CS/User/updatetraveller/${localStorage.getItem(
           "username"
         )}`,
         traveller,
@@ -124,7 +124,7 @@ function SaveTraveller() {
   async function deleteTraveller(e) {
     try {
       const response = await axios.delete(
-        `http://localhost:8080/HMA/User/deletetraveller/${localStorage.getItem(
+        `http://localhost:8080/CS/User/deletetraveller/${localStorage.getItem(
           "username"
         )}/${e.target.value}`,
         config

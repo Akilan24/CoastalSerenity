@@ -23,7 +23,7 @@ function ResetPassword() {
         password: formData.resetpassword,
       };
       const token = await axios.post(
-        "http://localhost:8080/HMA/Auth/login",
+        "http://localhost:8080/CS/Auth/login",
         login
       );
       localStorage.setItem(
@@ -41,7 +41,7 @@ function ResetPassword() {
         },
       };
       const response = await axios.post(
-        "http://localhost:8080/HMA/User/updatepassword/" +
+        "http://localhost:8080/CS/User/updatepassword/" +
           formData.userid +
           "/" +
           formData.newpassword,

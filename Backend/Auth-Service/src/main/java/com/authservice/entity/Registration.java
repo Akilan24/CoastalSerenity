@@ -2,6 +2,8 @@ package com.authservice.entity;
 
 import java.util.List;
 
+import com.authservice.proxyentity.user.Traveller;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
