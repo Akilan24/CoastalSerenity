@@ -79,6 +79,7 @@ public class CabServiceImpl implements CabService {
 			throw new CabDetailsNotFoundException("Cab details of Cab id: " + id + " are not found");
 
 	}
+
 	@Override
 	public Cab resetStatus(long id) {
 		Optional<Cab> b = cabRepository.findById(id);

@@ -11,26 +11,46 @@ function Payment() {
     },
   };
   const navigate = useNavigate();
-  const [bookingDetails, setBookingDetails] = useState("");
+  const [bookingDetails, setBookingDetails] = useState();
+  const [bookingId, setBookingId] = useState("");
   const [min, setMin] = useState(6);
   const [sec, setSec] = useState(59);
   const [isPaymentAllowed, setIsPaymentAllowed] = useState(true);
 
   useEffect(() => {
-    async function fetchBookingDetails() {
-      try {
-        const response = await axios.get(
-          `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyid/${value}`,
-          config
-        );
-        setBookingDetails(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.log(error.response.data.message);
+    const val = value.split("-");
+    setBookingId(val[1]);
+    if (val[0] === "hotel") {
+      async function fetchBookingDetails() {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyid/${val[1]}`,
+            config
+          );
+          setBookingDetails(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.log(error.response.data.message);
+        }
       }
+      fetchBookingDetails();
     }
-    fetchBookingDetails();
-  }, [value, config]);
+    if (val[0] === "flight") {
+      async function fetchFlightBookingDetails() {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Flight/getflightbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setBookingDetails(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.log(error.response);
+        }
+      }
+      fetchFlightBookingDetails();
+    }
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -58,11 +78,10 @@ function Payment() {
   async function doPayment() {
     try {
       const response = await axios.post(
-        `http://localhost:8080/CS/Payment/doPayment/${bookingDetails.bookingid}`,
-        {},
+        `http://localhost:8080/CS/Payment/doPayment/${val[0]}-${bookingDetails.bookingid}`,
         config
       );
-      navigate("/bookingDetails");
+      navigate(`/myTrips`);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -80,18 +99,17 @@ function Payment() {
         </p>
         <p>
           <span className="label">Booking Id :</span>
-          <span className="value">{bookingDetails.bookingid}</span>
+          <span className="value">{bookingId}</span>
         </p>
         <p>
           <span className="label">Amount :</span>
-          <span className="value">{bookingDetails.amount}</span>
+          <span className="value">{bookingDetails.totalPrice}</span>
         </p>
       </div>
       <div className="display">
         <p className="time">
           {min < 10 ? "0" + min : min}:{sec < 10 ? "0" + sec : sec}
         </p>
-
         <button onClick={doPayment} disabled={!isPaymentAllowed}>
           Pay
         </button>

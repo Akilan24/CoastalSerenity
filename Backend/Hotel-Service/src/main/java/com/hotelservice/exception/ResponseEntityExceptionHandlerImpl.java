@@ -43,7 +43,7 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		log.info("An Exception occured");
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 

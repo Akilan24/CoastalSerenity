@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class TrainBookingStatus {
 
 	private long seatId;
-    private Map<String,Integer> bookingStatus;
+	private Map<String, Integer> bookingStatus;
 }

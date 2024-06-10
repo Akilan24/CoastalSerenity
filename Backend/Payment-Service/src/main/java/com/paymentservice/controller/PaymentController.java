@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,8 +20,8 @@ public class PaymentController {
 	@Autowired
 	private PaymentService paymentService;
 
-	@PostMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable long bookingid) throws Exception {
+	@GetMapping("/doPayment/{bookingid}")
+	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception {
 
 		return new ResponseEntity<>(paymentService.doPayment(bookingid), HttpStatus.OK);
 	}
@@ -43,7 +42,7 @@ public class PaymentController {
 	}
 
 	@GetMapping("/paymentCancel/{paymentid}")
-	public ResponseEntity<String> paymentCancel(@PathVariable long paymentid) {
+	public ResponseEntity<String> paymentCancel(@PathVariable String paymentid) {
 		return new ResponseEntity<>(paymentService.paymentCancel(paymentid), HttpStatus.OK);
 	}
 

@@ -81,11 +81,11 @@ public class TrainServiceImpl implements TrainService {
 	public Train resetStatus(long id) {
 		Optional<Train> b = trainRepository.findById(id);
 		if (b.isPresent()) {
-			Map<String,Integer> map=b.get().getTrainBookingStatus().getBookingStatus();
-			 for (Map.Entry<String, Integer> entry : map.entrySet()) {
-			        entry.setValue(0);
-			    }
-			 b.get().getTrainBookingStatus().setBookingStatus(map);
+			Map<String, Integer> map = b.get().getTrainBookingStatus().getBookingStatus();
+			for (Map.Entry<String, Integer> entry : map.entrySet()) {
+				entry.setValue(0);
+			}
+			b.get().getTrainBookingStatus().setBookingStatus(map);
 			return trainRepository.save(b.get());
 		} else
 			throw new TrainDetailsNotFoundException("Train details of Train id: " + id + " are not found");

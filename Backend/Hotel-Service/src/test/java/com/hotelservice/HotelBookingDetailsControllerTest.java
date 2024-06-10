@@ -5,6 +5,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -39,9 +40,9 @@ class HotelBookingDetailsControllerTest {
 
 	@BeforeEach
 	void setUp() {
-		bookingDetails = new HotelBookingDetails(123456, "John Doe", 101, "HotelName", new Date(), new Date(), 5000.0,"john@gmail.com","7894561230","Bangalore",null,
-				"Payment done");
-
+		bookingDetails = new HotelBookingDetails(123456, "John Doe", 101, "Grand Hotel", new Date(), new Date(), 250.50,
+				"john@example.com", "1234567890", "123 Main Street, City", LocalDateTime.now(), null, "Pending",
+				"john123");
 	}
 
 	@Test

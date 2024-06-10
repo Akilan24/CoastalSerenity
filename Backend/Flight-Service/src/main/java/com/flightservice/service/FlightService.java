@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.flightservice.entity.Flight;
 import com.flightservice.entity.FlightBookingDetails;
-import com.flightservice.entity.FlightSeats;
-import com.flightservice.externalclass.Traveller;
+import com.flightservice.entity.FlightTravellerFlightSeats;
 
 @Service
 public interface FlightService {
@@ -18,21 +17,25 @@ public interface FlightService {
 	Optional<Flight> getFlightById(long id);
 
 	Flight saveFlight(Flight flight);
-	
-	List<FlightBookingDetails> bookFlight(long id,List<Traveller> traveller,List<FlightSeats> flightSeats,String username);
-	
-	List<FlightBookingDetails> paymentstatuschange(String username);
+
+	FlightBookingDetails bookFlight(long id, FlightTravellerFlightSeats ftfs, String username);
+
+	FlightBookingDetails paymentstatuschange(long bookingid);
 
 	Flight updateFlight(long id, Flight flight);
 
 	String deleteFlight(long id);
 
-	Flight resetStatus(long id);
+	FlightBookingDetails resetStatus(long id);
 
 	List<List<String>> getAllCityNames();
 
 	List<Flight> getAllAvailableFlights(String from, String to, Date departure, String travellerClass);
-	
+
 	Flight addSeats(long id);
+
+	FlightBookingDetails getFlightBookingDetailsById(long id);
+
+	List<FlightBookingDetails> getFlightBookingDetailsByUsername(String username);
 
 }

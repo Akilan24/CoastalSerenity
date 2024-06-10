@@ -28,13 +28,15 @@ class PaymentControllerTest {
 	@InjectMocks
 	private PaymentController paymentController;
 
+	String value = "String-123456";
+	String[] id=value.split("-");
+	
 	@Test
 	void testAddPayment() throws Exception {
-		int bookingId = 987654;
 		Payment payment = new Payment(123456, 987654, new Date(), "user123", 5000.0, "Payment Done");
-		when(paymentService.doPayment(bookingId)).thenReturn(payment);
+		when(paymentService.doPayment(id[1])).thenReturn(payment);
 
-		ResponseEntity<Payment> response = paymentController.addPayment(bookingId);
+		ResponseEntity<Payment> response = paymentController.addPayment(id[1]);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(payment, response.getBody());
@@ -77,11 +79,10 @@ class PaymentControllerTest {
 
 	@Test
 	void testPaymentCancel() {
-		long paymentId = 123456;
 		String cancellationMessage = "Payment cancelled successfully";
-		when(paymentService.paymentCancel(paymentId)).thenReturn(cancellationMessage);
+		when(paymentService.paymentCancel(id[1])).thenReturn(cancellationMessage);
 
-		ResponseEntity<String> response = paymentController.paymentCancel(paymentId);
+		ResponseEntity<String> response = paymentController.paymentCancel(id[1]);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(cancellationMessage, response.getBody());

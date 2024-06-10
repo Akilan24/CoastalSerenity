@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.trainservice.entity.Train;
 
-
 @Service
 public interface TrainService {
 	List<Train> getAllTrains();

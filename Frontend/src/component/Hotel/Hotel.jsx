@@ -71,7 +71,7 @@ function Hotel() {
         bookingDetails,
         config
       );
-      navigate("/hotelBookingDetails");
+      navigate(`/hotelBookingDetails/${bookingDetails.hotelname}`);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);

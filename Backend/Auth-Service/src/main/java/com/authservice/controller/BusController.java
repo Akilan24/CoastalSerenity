@@ -1,9 +1,11 @@
 package com.authservice.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,8 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.authservice.proxyentity.bus.Bus;
+import com.authservice.proxyentity.bus.BusBookingDetails;
 import com.authservice.proxyentity.bus.BusProxyController;
-import com.authservice.proxyentity.bus.BusSeat;
+import com.authservice.proxyentity.bus.BusTravellerBusSeats;
 
 @RestController
 @RequestMapping("/CS/Bus")
@@ -37,11 +40,32 @@ public class BusController {
 		return busProxy.getBusBybusId(busId);
 	}
 
+	@PutMapping("/addseats/{busId}")
+	public ResponseEntity<Bus> addseat(@PathVariable long busId) {
+		return busProxy.addseat(busId);
+	}
+	
 	@PostMapping("/save")
 	public ResponseEntity<Bus> createBus(@RequestBody Bus Bus) {
 		return busProxy.createBus(Bus);
 	}
 
+	@PostMapping("/bookBus/{id}/{username}")
+	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id,
+			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username) {
+		return busProxy.bookBus(id, btbs, username);
+	}
+	
+	@GetMapping("/getbusbookingdetailsbyid/{id}")
+	public ResponseEntity<BusBookingDetails> getBusBookingDetailsById(@PathVariable long id) {
+		return busProxy.getBusBookingDetailsById(id);
+	}
+	
+	@GetMapping("/getBusbookingdetailsbyusername/{username}")
+	public ResponseEntity<List<BusBookingDetails>> getBusBookingDetailsByUsername(@PathVariable String username) {
+		return busProxy.getBusBookingDetailsByUsername(username);
+	}
+	
 	@PutMapping("/update/{busId}")
 	public ResponseEntity<Bus> updateBus(@PathVariable long busId, @RequestBody Bus Bus) {
 		return busProxy.updateBus(busId, Bus);
@@ -50,20 +74,27 @@ public class BusController {
 	@DeleteMapping("/delete/{busId}")
 	public ResponseEntity<String> deleteBus(@PathVariable long busId) {
 		return busProxy.deleteBus(busId);
-	}
 
-	@PostMapping("/addseat/{busId}")
-	public ResponseEntity<Bus> addseat(@PathVariable long busId, @RequestBody BusSeat busSeat) {
-		return busProxy.addseat(busId, busSeat);
-	}
-
-	@PutMapping("/updateseat/{busId}")
-	public ResponseEntity<Bus> updateseat(@PathVariable long busId, @RequestBody BusSeat busSeat) {
-		return busProxy.updateBus(busId, null);
 	}
 
 	@PutMapping("/resetstatus/{busId}")
-	public ResponseEntity<Bus> resetstatus(@PathVariable long busId) {
+	public ResponseEntity<BusBookingDetails> resetstatus(@PathVariable long busId) {
 		return busProxy.resetstatus(busId);
+	}
+	
+	@GetMapping("/getallcitynames")
+	public ResponseEntity<List<List<String>>> getAllCityNames() {
+		return busProxy.getAllCityNames();
+	}
+	
+	@GetMapping("/paymentstatuschange/{bookingid}")
+	public ResponseEntity<BusBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
+		return busProxy.paymentstatuschange(bookingid);
+	}
+
+	@GetMapping("/getallavailablebuses/{from}/{to}/{departure}")
+	public ResponseEntity<List<Bus>> getAllAvailableFlights(@PathVariable String from, @PathVariable String to,
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) {
+		return busProxy.getAllAvailableFlights(from, to, departure);
 	}
 }

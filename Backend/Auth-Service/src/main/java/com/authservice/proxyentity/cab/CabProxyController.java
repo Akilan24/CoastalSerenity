@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.authservice.proxyentity.cab.Cab;
 
-@FeignClient(name = "CAB-SERVICE", url = "http://localhost:8089/Cab")
+@FeignClient(name = "CAB-SERVICE", url = "http://localhost:8085/Cab")
 public interface CabProxyController {
 
 	@GetMapping("/getall")

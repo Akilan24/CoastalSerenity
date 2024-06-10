@@ -1,0 +1,113 @@
+select {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0%;
+}
+#busClass select,
+#busClass input,
+#busClass label {
+  width: 250px;
+  height: 50px;
+  font-size: 25px;
+}
+#busClass .formclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(0, 213, 255);
+  border-radius: 0%;
+}
+.divclass {
+  margin-right: 5px;
+}
+
+.formclass #busSearch {
+  background-color: rgb(145, 51, 186);
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formclass {
+  position: sticky;
+}
+
+button {
+  cursor: pointer;
+}
+
+.busDetails .bus {
+  margin-top: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 10%;
+  width: 80%;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid rgb(0, 213, 255);
+}
+.busname {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.busDetails > p {
+  margin-top: 50px;
+}
+.journeyDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.price > p {
+  color: grey;
+}
+.days {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#time {
+  color: black;
+}
+
+#company {
+  color: rgb(145, 51, 186);
+}
+#date {
+  color: grey;
+  font-size: 20px;
+  margin-left: 5px;
+}
+#stopOver,
+#duration,
+#model {
+  color: grey;
+  font-size: 18px;
+}
+#p,
+#count {
+  color: black;
+  font-size: 25px;
+}
+#count {
+  font-size: 18px;
+  font-weight: normal;
+}

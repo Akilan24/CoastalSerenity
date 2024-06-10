@@ -34,8 +34,8 @@ public class RoomServiceTest {
 	@Test
 	void testAddRoomDetails_Success() throws Exception {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+				"9876543210", "9876543211", "http://website.com", "image", null);
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 
 		when(roomRepository.save(room)).thenReturn(room);
 
@@ -46,9 +46,9 @@ public class RoomServiceTest {
 	@Test
 	void testAddRoomDetails_Exception() {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		when(roomRepository.save(room)).thenThrow(new RuntimeException());
 
 		assertThrows(Exception.class, () -> roomService.addRoomDetails(hotel.getHotelId(), room));
@@ -57,9 +57,9 @@ public class RoomServiceTest {
 	@Test
 	void testUpdateRoomDetails_Success() {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		Optional<Room> optionalRoom = Optional.of(room);
 
 		when(roomRepository.findByRoomId(101010)).thenReturn(optionalRoom);
@@ -73,9 +73,9 @@ public class RoomServiceTest {
 	@Test
 	void testUpdateRoomDetails_NotFound() {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		when(roomRepository.findByRoomId(101010)).thenReturn(Optional.empty());
 
 		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.updateRoomDetails(room));
@@ -84,10 +84,10 @@ public class RoomServiceTest {
 	@Test
 	void testUpdateRoomDetails() {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
-		Room existingRoom = new Room(101010, 201, 5000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
+		Room existingRoom = new Room(101010, 201, 5000.00, "Deluxe", "image");
 		when(roomRepository.findByRoomId(room.getRoomId())).thenReturn(Optional.of(existingRoom));
 		when(roomService.updateRoomDetails(room)).thenReturn(existingRoom);
 
@@ -97,10 +97,10 @@ public class RoomServiceTest {
 	@Test
 	void testShowAllRoomDetails_Success() {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		List<Room> rooms = Arrays.asList(new Room(101010, 201, 4000.00, "Deluxe","image"),
-				new Room(101011, 202, 5000.00, "Deluxe","image"));
+		List<Room> rooms = Arrays.asList(new Room(101010, 201, 4000.00, "Deluxe", "image"),
+				new Room(101011, 202, 5000.00, "Deluxe", "image"));
 
 		when(roomRepository.findAll()).thenReturn(rooms);
 
@@ -121,9 +121,9 @@ public class RoomServiceTest {
 	void testShowRoomDetailsById() {
 		long roomId = 101010;
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		when(roomRepository.findByRoomId(roomId)).thenReturn(Optional.of(room));
 		Room result = roomService.showRoomDetailsbyId(roomId);
 		assertEquals(room, result);
@@ -140,10 +140,10 @@ public class RoomServiceTest {
 	void testShowAllRoomDetailsByHotelId() {
 		long hotelId = 101010;
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		List<Room> rooms = Arrays.asList(new Room(101010, 201, 4000.00, "Deluxe","image"),
-				new Room(101011, 202, 5000.00, "Deluxe","image"));
+		List<Room> rooms = Arrays.asList(new Room(101010, 201, 4000.00, "Deluxe", "image"),
+				new Room(101011, 202, 5000.00, "Deluxe", "image"));
 
 		when(roomRepository.findAll()).thenReturn(rooms);
 
@@ -164,8 +164,8 @@ public class RoomServiceTest {
 
 	void testShowRoomDetailBytype() {
 		String type = "Single";
-		Room room1 = new Room(101010, 201, 4000.00, "Deluxe","image");
-		Room room2 = new Room(101011, 201, 5000.00, "Single","image");
+		Room room1 = new Room(101010, 201, 4000.00, "Deluxe", "image");
+		Room room2 = new Room(101011, 201, 5000.00, "Single", "image");
 		List<Room> rooms = Arrays.asList(room1, room2);
 		when(roomRepository.findAll()).thenReturn(
 				rooms.stream().filter(n -> n.getRoomtype().equalsIgnoreCase(type)).collect(Collectors.toList()));
@@ -188,8 +188,8 @@ public class RoomServiceTest {
 	@Test
 	void testShowRoomDetailByPrice() {
 		double price = 5000.0;
-		Room room1 = new Room(101010, 201, 4000.00, "Deluxe","image");
-		Room room2 = new Room(101011, 202, 5000.00, "Deluxe","image");
+		Room room1 = new Room(101010, 201, 4000.00, "Deluxe", "image");
+		Room room2 = new Room(101011, 202, 5000.00, "Deluxe", "image");
 		List<Room> rooms = Arrays.asList(room1, room2);
 		when(roomRepository.findAll())
 				.thenReturn(rooms.stream().filter(n -> n.getRate_per_day() == price).collect(Collectors.toList()));

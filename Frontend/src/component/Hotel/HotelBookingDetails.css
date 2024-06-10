@@ -1,4 +1,4 @@
-.bookingdetails {
+.hotelBookingDetails {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,33 +7,33 @@
   border-radius: 10px;
 }
 
-#logo1 {
+.hotelBookingDetails #logo {
   width: 450px;
   margin-bottom: 20px;
 }
-#input {
+.hotelBookingDetails #input {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 150px;
 }
-.list {
+.hotelBookingDetails .list {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#input p {
+.hotelBookingDetails #input p {
   color: green;
 }
-#guest {
+.hotelBookingDetails #guest {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.details {
+.hotelBookingDetails .details {
   width: 100%;
   max-width: 600px;
   text-align: left;
@@ -43,32 +43,32 @@
   border-radius: 10px;
 }
 
-.details p {
+.hotelBookingDetails .details p {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   line-height: 1.5;
 }
 
-.label {
+.hotelBookingDetails .label {
   font-weight: bold;
   margin-right: 10px;
 }
 
-.value {
+.hotelBookingDetails .value {
   flex: 1;
   text-align: right;
   color: green;
 }
 
-.payment-status {
+.hotelBookingDetails .payment-status {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
 
-.pay-button {
+.hotelBookingDetails .pay {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -78,10 +78,10 @@
   transition: background-color 0.3s ease;
 }
 
-.pay-button:hover {
+.hotelBookingDetails .pay-button:hover {
   background-color: #0056b3;
 }
-#none {
+.hotelBookingDetails #none {
   position: absolute;
   top: 30vh;
 }

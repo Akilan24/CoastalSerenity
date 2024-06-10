@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.authservice.entity.Registration;
-import com.authservice.proxyentity.user.Traveller;
+import com.authservice.entity.Traveller;
 import com.authservice.proxyentity.user.UserProxyController;
 
 import jakarta.validation.Valid;

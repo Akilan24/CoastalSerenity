@@ -20,8 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.authservice.proxyentity.flight.Flight;
 import com.authservice.proxyentity.flight.FlightBookingDetails;
 import com.authservice.proxyentity.flight.FlightProxyController;
-import com.authservice.proxyentity.flight.FlightSeats;
-import com.authservice.proxyentity.user.Traveller;
+import com.authservice.proxyentity.flight.FlightTravellerFlightSeats;
 
 @RestController
 @RequestMapping("/CS/Flight")
@@ -48,7 +47,8 @@ public class FlightController {
 
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Flight> updateFlight(@PathVariable long id, @RequestBody Flight flight) {
-		return flightProxy.updateFlight(id, flight); }
+		return flightProxy.updateFlight(id, flight);
+	}
 
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<String> deleteFlight(@PathVariable long id) {
@@ -64,14 +64,26 @@ public class FlightController {
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return flightProxy.getAllCityNames();
 	}
-	
+
 	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")
-	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from,@PathVariable String to,@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure,@PathVariable String travellerClass) {
+	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from, @PathVariable String to,
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure, @PathVariable String travellerClass) {
 		return flightProxy.getAllAvailableFlights(from, to, departure, travellerClass);
 	}
-	
+
 	@PostMapping("/bookflight/{id}/{username}")
-	public ResponseEntity<List<FlightBookingDetails>> bookFlight(@PathVariable long id,@RequestBody List<Traveller> traveller,@RequestBody List<FlightSeats> flightSeats,@PathVariable String username) {
-            return flightProxy.bookFlight(id, traveller,flightSeats, username);
+	public ResponseEntity<FlightBookingDetails> bookFlight(@PathVariable long id,
+			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username) {
+		return flightProxy.bookFlight(id, ftfs, username);
+	}
+	
+	@GetMapping("/getflightbookingdetailsbyid/{id}")
+	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsById(@PathVariable long id) {
+		return flightProxy.getFlightBookingDetailsById(id);
+	}
+	
+	@GetMapping("/getflightbookingdetailsbyusername/{username}")
+	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username) {
+		return flightProxy.getFlightBookingDetailsByUsername(username);
 	}
 }

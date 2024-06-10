@@ -33,22 +33,27 @@ public class TrainController {
 
 	@GetMapping("/getbyid/{TrainId}")
 	public ResponseEntity<Optional<Train>> getTrainByTrainId(@PathVariable long TrainId) {
-		return trainProxy.getTrainByTrainId(TrainId);	}
+		return trainProxy.getTrainByTrainId(TrainId);
+	}
 
 	@PostMapping("/save")
 	public ResponseEntity<Train> createTrain(@RequestBody Train Train) {
-		return trainProxy.createTrain(Train);	}
+		return trainProxy.createTrain(Train);
+	}
 
 	@PutMapping("/update/{TrainId}")
 	public ResponseEntity<Train> updateTrain(@PathVariable long TrainId, @RequestBody Train Train) {
-		return trainProxy.updateTrain(TrainId, Train);	}
+		return trainProxy.updateTrain(TrainId, Train);
+	}
 
 	@DeleteMapping("/delete/{TrainId}")
 	public ResponseEntity<String> deleteTrain(@PathVariable long TrainId) {
 		return trainProxy.deleteTrain(TrainId);
 	}
+
 	@PutMapping("/resetstatus/{TrainId}")
 	public ResponseEntity<Train> resetstatus(@PathVariable long TrainId) {
-		return trainProxy.resetstatus(TrainId);	}
+		return trainProxy.resetstatus(TrainId);
+	}
 
 }

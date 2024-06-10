@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.busservice.entity.Bus;
 
 @Repository
-public interface BusRepository extends JpaRepository<Bus, Long>{
+public interface BusRepository extends JpaRepository<Bus, Long> {
 
 }

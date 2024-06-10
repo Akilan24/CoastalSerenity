@@ -13,4 +13,3 @@ public interface UserProxy {
 	@GetMapping("/getuserbyname/{username}")
 	public ResponseEntity<Registration> showUserByUserName(@PathVariable String username);
 }
-

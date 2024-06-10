@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.authservice.proxyentity.user.Traveller;
-
 @FeignClient(name = "FLIGHT-SERVICE", url = "http://localhost:8086/Flight")
 public interface FlightProxyController {
 
@@ -41,8 +39,16 @@ public interface FlightProxyController {
 	public ResponseEntity<List<List<String>>> getAllCityNames();
 
 	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")
-	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from,@PathVariable String to,@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure,@PathVariable String travellerClass);
+	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from, @PathVariable String to,
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure, @PathVariable String travellerClass);
 
 	@PostMapping("/bookflight/{id}/{username}")
-	public ResponseEntity<List<FlightBookingDetails>> bookFlight(@PathVariable long id,@RequestBody List<Traveller> traveller,@RequestBody List<FlightSeats> flightSeats,@PathVariable String username);
+	public ResponseEntity<FlightBookingDetails> bookFlight(@PathVariable long id,
+			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username);
+	
+	@GetMapping("/getflightbookingdetailsbyid/{id}")
+	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsById(@PathVariable long id);
+	
+	@GetMapping("/getflightbookingdetailsbyusername/{username}")
+	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username);
 }

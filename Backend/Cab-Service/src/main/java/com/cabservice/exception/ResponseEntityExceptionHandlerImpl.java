@@ -36,7 +36,6 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
 
-
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 

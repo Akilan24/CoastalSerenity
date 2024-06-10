@@ -6,15 +6,12 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 
-import com.authservice.proxyentity.payment.Payment;
-
-@FeignClient(name = "PAYMENT-SERVICE", url = "http://localhost:8085/Payment")
+@FeignClient(name = "PAYMENT-SERVICE", url = "http://localhost:8084/Payment")
 public interface PaymentProxyController {
 
-	@PostMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable long bookingid) throws Exception;
+	@GetMapping("/doPayment/{bookingid}")
+	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception ;
 
 	@GetMapping("/getallpayment")
 	public ResponseEntity<List<Payment>> getallpayments();

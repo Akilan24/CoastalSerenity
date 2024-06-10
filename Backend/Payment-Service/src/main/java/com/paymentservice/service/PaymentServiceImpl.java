@@ -12,8 +12,10 @@ import org.springframework.stereotype.Service;
 
 import com.paymentservice.entity.Payment;
 import com.paymentservice.exception.PaymentDetailsNotFoundException;
-import com.paymentservice.externalclass.BookingDetails;
-import com.paymentservice.proxy.BookingDetailsProxy;
+import com.paymentservice.externalclass.FlightBookingDetails;
+import com.paymentservice.externalclass.HotelBookingDetails;
+import com.paymentservice.proxy.FlightBookingDetailsProxy;
+import com.paymentservice.proxy.HotelBookingDetailsProxy;
 import com.paymentservice.repository.PaymentRepository;
 
 @Service
@@ -22,23 +24,37 @@ public class PaymentServiceImpl implements PaymentService {
 	private PaymentRepository paymentRepository;
 
 	@Autowired
-	BookingDetailsProxy bdproxy;
+	HotelBookingDetailsProxy hbdproxy;
+
+	@Autowired
+	FlightBookingDetailsProxy fbdproxy;
 
 	@Override
-	public Payment doPayment(long bookingid) {
-		BookingDetails bd = bdproxy.getBookingDetails(bookingid);
+	public Payment doPayment(String bookingid) {
+		String[] value = bookingid.split("-");
+		long id = Long.parseLong(value[1]);
 
 		Payment p = new Payment();
 
 		long MIN_ID = 100000;
 		int count = paymentRepository.findAll().size();
 		p.setPaymentid(count == 0 ? MIN_ID : MIN_ID + count);
-		p.setBookingid(bookingid);
+		p.setBookingId(id);
 		p.setPaymentDate(DateNow());
-		p.setUsername(bd.getName());
-		p.setAmount(bd.getAmount());
-		p.setPaymentStatus("Payment Done");
-		bdproxy.paymentstatuschange(bookingid);
+		if (value[0].equalsIgnoreCase("hotel")) {
+			HotelBookingDetails hbd = hbdproxy.getBookingDetails(id);
+			p.setUsername(hbd.getName());
+			p.setAmount(hbd.getAmount());
+			p.setPaymentStatus("Payment Done");
+			hbdproxy.paymentstatuschange(id);
+		} else if (value[0].equalsIgnoreCase("flight")) {
+			FlightBookingDetails fbd = fbdproxy.getFlightBookingDetailsById(id);
+			p.setUsername(fbd.getName());
+			p.setAmount(fbd.getTotalPrice());
+			p.setPaymentStatus("Payment Done");
+			fbdproxy.paymentstatuschange(id);
+		}
+
 		return paymentRepository.save(p);
 	}
 
@@ -74,14 +90,18 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public String paymentCancel(long id) {
-
+	public String paymentCancel(String id) {
+		String[] value =id.split("-");
+		long paymentid = Long.parseLong(value[1]);
 		Payment p;
-		if (paymentRepository.findById(id).isPresent()) {
-			p = paymentRepository.findById(id).get();
+		if (paymentRepository.findById(paymentid).isPresent()) {
+			p = paymentRepository.findById(paymentid).get();
 			p.setPaymentStatus("Payment cancelled and refunded");
 			paymentRepository.save(p);
-			bdproxy.getBookingDetails(p.getBookingid()).setPaymentStatus("Payment cancelled");
+			if(value[1].equalsIgnoreCase("hotel"))
+			    hbdproxy.getBookingDetails(p.getBookingId()).setPaymentStatus("Payment cancelled");
+			else if(value[1].equalsIgnoreCase("flight"))
+			    fbdproxy.getFlightBookingDetailsById(p.getBookingId()).setPaymentStatus("Payment cancelled");
 			return "Payment cancelled and refunded";
 		} else
 			throw new PaymentDetailsNotFoundException("Payment not found");

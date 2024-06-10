@@ -39,5 +39,5 @@ public class Cab {
 	private int totalSeat;
 	private double cabPrice;
 	private boolean bookingStatus;
-	
+
 }

@@ -5,6 +5,7 @@ import "./FlightSeatsSelection.css";
 
 function FlightSeatsSelection() {
   const { value } = useParams();
+  const navigate = useNavigate();
   const [flight, setFlight] = useState(null);
   const [seats, setSeats] = useState([]);
   const [economySeats, setEconomySeats] = useState([]);
@@ -49,6 +50,7 @@ function FlightSeatsSelection() {
 
     fetchFlight();
   }, [value]);
+
   useEffect(() => {
     async function fetchTravellers() {
       try {
@@ -69,19 +71,25 @@ function FlightSeatsSelection() {
 
   const handlePostTravellersAndSeats = async (e, flightid) => {
     e.preventDefault();
+    const ftfs = {
+      traveller: postTravellers,
+      flightSeats: selectedSeats,
+    };
     try {
       const response = await axios.post(
-        `http://localhost:8080/CS/Flight/bookflight/${flightid}`,
-        postTravellers,
-        selectedSeats,
+        `http://localhost:8080/CS/Flight/bookflight/${flightid}/${localStorage.getItem(
+          `username`
+        )}`,
+        ftfs,
         config
       );
       console.log(response.data);
-      navigate(`/payment/${flightid}`);
+      navigate(`/flightBookingDetails/${flight.flightId}`);
     } catch (error) {
       console.log(error.response.data.message);
     }
   };
+
   const handleSelectTraveller = (index, event) => {
     const selectedTraveller = travellers[index];
     if (event.target.checked) {
@@ -106,28 +114,72 @@ function FlightSeatsSelection() {
   }
 
   return (
-    <div className="fbd">
-      <div id="display">
-        <div>
-          <p id="green"></p>
-          <p>Free</p>
-        </div>
-
-        <div>
-          <p id="blue"></p>
-          <p>Selected</p>
-        </div>
-        <div>
-          <p id="red"></p>
-          <p>Booked</p>
-        </div>
-      </div>
+    <div className="fss">
       <div className="seatBooking">
         <img id="logo" src="../cslogo.png" alt="Logo" />
         <div className="seat">
           <h2>Seat Selection</h2>
+          <div id="guest">
+            <p id="check">Add Guest:</p>
+            <div className="list">
+              <div className="travellerList">
+                {travellers.length > 0 ? (
+                  travellers.map((item, index) => (
+                    <div id="st" key={index}>
+                      <div id="input">
+                        <input
+                          type="checkbox"
+                          value={index}
+                          onChange={(event) =>
+                            handleSelectTraveller(index, event)
+                          }
+                        />
+                        <p>{item.name}</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div>
+                    <p id="check">
+                      No Guests are found. Add Guest in the travellers section.
+                    </p>
+                    <button
+                      id="check"
+                      onClick={(e) => navigate("/saveTraveller")}
+                    >
+                      Add
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div>
+                {travellers.length > 0 && (
+                  <div>
+                    <button id="add" onClick={() => navigate("/saveTraveller")}>
+                      Add
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
           <div className="plane">
-            <img src="../FlightLogo/Front.png" alt="Front" />
+            <div id="display">
+              <div>
+                <p id="green"></p>
+                <p>Free</p>
+              </div>
+              <div>
+                <p id="blue"></p>
+                <p>Selected</p>
+              </div>
+              <div>
+                <p id="red"></p>
+                <p>Booked</p>
+              </div>
+            </div>
+            <img src="../src/assets/FlightLogo/Front.png" alt="Front" />
             <div className="body">
               <p id="class">FIRST CLASS</p>
               <div className="firstclassSeats">
@@ -190,32 +242,9 @@ function FlightSeatsSelection() {
                 ))}
               </div>
             </div>
-            <img src="../FlightLogo/Tail.png" alt="Tail" />
+            <img src="../src/assets/FlightLogo/Tail.png" alt="Tail" />
           </div>
-          <div id="guest">
-            <p id="check">Add Guest:</p>
-            <div className="list">
-              {travellers.length > 0 ? (
-                travellers.map((item, index) => (
-                  <div id="st" key={index} className="traveller-item">
-                    <div id="input">
-                      <input
-                        type="checkbox"
-                        value={index}
-                        onChange={(event) =>
-                          handleSelectTraveller(index, event)
-                        }
-                      ></input>
-                      <p>{item.name}</p>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <p id="check">
-                  No Guests are found. Add Guest in the travellers section.
-                </p>
-              )}
-            </div>
+          <div>
             <button
               className="pay-button"
               onClick={(e) => handlePostTravellersAndSeats(e, value)}

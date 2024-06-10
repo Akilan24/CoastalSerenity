@@ -27,22 +27,9 @@ function SaveTraveller() {
   };
 
   useEffect(() => {
-    async function fetchTravellers() {
-      try {
-        const response = await axios.get(
-          `http://localhost:8080/CS/User/getalltravellers/${localStorage.getItem(
-            "username"
-          )}`,
-          config
-        );
-        setTravellers(response.data);
-        console.log(response);
-      } catch (error) {
-        console.log(error.response.data.message);
-      }
-    }
     fetchTravellers();
   }, []);
+
   async function fetchTravellers() {
     try {
       const response = await axios.get(
@@ -57,6 +44,7 @@ function SaveTraveller() {
       console.log(error.response.data.message);
     }
   }
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -76,12 +64,13 @@ function SaveTraveller() {
       });
       setTravellers([...travellers, response.data]);
       console.log(response.data);
-      addTraveller();
+      toggleTravellerForm();
       fetchTravellers();
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
+
   async function getTraveller(e) {
     try {
       const response = await axios.get(
@@ -90,22 +79,17 @@ function SaveTraveller() {
         )}/${e.target.value}`,
         config
       );
-      const traveller = {
-        name: response.data.name,
-        age: response.data.age,
-        gender: response.data.gender,
-        mobile: response.data.mobile,
-        address: response.data.address,
-      };
-      setTraveller(traveller);
+      setTraveller(response.data);
       setUpdate(1);
-      addTraveller();
+      toggleTravellerForm();
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
+
   async function updateTraveller(e) {
+    e.preventDefault();
     try {
       const response = await axios.put(
         `http://localhost:8080/CS/User/updatetraveller/${localStorage.getItem(
@@ -115,12 +99,21 @@ function SaveTraveller() {
         config
       );
       fetchTravellers();
-      navigate("/saveTraveller");
-      console.log(traveller);
+      setTraveller({
+        name: "",
+        age: "",
+        gender: "",
+        mobile: "",
+        address: "",
+      });
+      setUpdate(0);
+      toggleTravellerForm();
+      console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
+
   async function deleteTraveller(e) {
     try {
       const response = await axios.delete(
@@ -129,7 +122,6 @@ function SaveTraveller() {
         )}/${e.target.value}`,
         config
       );
-      navigate("/saveTraveller");
       fetchTravellers();
       console.log(response.data);
     } catch (error) {
@@ -137,7 +129,7 @@ function SaveTraveller() {
     }
   }
 
-  function addTraveller() {
+  function toggleTravellerForm() {
     const element = document.getElementById("tc");
     if (element.style.display === "none") {
       element.style.display = "flex";
@@ -152,8 +144,8 @@ function SaveTraveller() {
       <div className="savedtravellerclass">
         <div>
           <h2>Saved Traveller(s)</h2>
-          {travellers.map((item, _) => (
-            <div id="st" key={item.name} className="traveller-item">
+          {travellers.map((item, index) => (
+            <div id="st" key={index} className="traveller-item">
               <div className="input">
                 <p>
                   <strong>Name:</strong> {item.name}
@@ -168,14 +160,14 @@ function SaveTraveller() {
               <div className="button">
                 <button
                   id="s"
-                  value={item.name}
+                  value={item.travellerId}
                   onClick={(e) => getTraveller(e)}
                 >
                   Edit
                 </button>
                 <button
                   id="c"
-                  value={item.name}
+                  value={item.travellerId}
                   onClick={(e) => deleteTraveller(e)}
                 >
                   Delete
@@ -184,10 +176,10 @@ function SaveTraveller() {
             </div>
           ))}
           <div>
-            <button id="c" onClick={() => navigate("/hotel")}>
+            <button id="c" onClick={() => navigate(-1)}>
               Cancel
             </button>
-            <button id="s" onClick={addTraveller}>
+            <button id="s" onClick={toggleTravellerForm}>
               Add
             </button>
           </div>
@@ -200,7 +192,7 @@ function SaveTraveller() {
         style={{ display: "none" }}
       >
         <div>
-          <h2>Add Traveller</h2>
+          <h2>{update > 0 ? "Update" : "Add"} Traveller</h2>
         </div>
         <div>
           <label htmlFor="name">Name</label>
@@ -262,7 +254,7 @@ function SaveTraveller() {
           </select>
         </div>
         <div id="submit">
-          <button id="c" type="button" onClick={addTraveller}>
+          <button id="c" type="button" onClick={toggleTravellerForm}>
             Cancel
           </button>
           <button id="s" type="submit">

@@ -105,9 +105,12 @@ public class AuthController {
 
 			System.out.println(userRepo.findByUsername(authRequest.getUsername()));
 			Optional<RefreshToken> r = refreshTokenRepo.findByUsername(authRequest.getUsername());
-			List<RefreshToken> refreshTokenList=refreshTokenRepo.findAll().stream().filter(t->t.getUsername().equalsIgnoreCase(authRequest.getUsername())).collect(Collectors.toList());	
-			for(RefreshToken rt:refreshTokenList) {
-				refreshTokenRepo.deleteById(rt.getId());			}
+			List<RefreshToken> refreshTokenList = refreshTokenRepo.findAll().stream()
+					.filter(t -> t.getUsername().equalsIgnoreCase(authRequest.getUsername()))
+					.collect(Collectors.toList());
+			for (RefreshToken rt : refreshTokenList) {
+				refreshTokenRepo.deleteById(rt.getId());
+			}
 			if (r.isPresent()) {
 				refreshTokenRepo.deleteById(r.get().getId());
 			}

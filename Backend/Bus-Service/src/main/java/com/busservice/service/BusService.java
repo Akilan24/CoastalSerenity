@@ -1,12 +1,14 @@
 package com.busservice.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import com.busservice.entity.Bus;
-import com.busservice.entity.BusSeat;
+import com.busservice.entity.BusBookingDetails;
+import com.busservice.entity.BusTravellerBusSeats;
 
 @Service
 public interface BusService {
@@ -16,13 +18,24 @@ public interface BusService {
 
 	Bus saveBus(Bus Bus);
 
+	BusBookingDetails bookBus(long id, BusTravellerBusSeats btbs, String username);
+
+	BusBookingDetails paymentstatuschange(long bookingid);
+
 	Bus updateBus(long id, Bus bus);
 
 	String deleteBus(long id);
 
-	Bus addSeat(long id, BusSeat busSeat);
+	BusBookingDetails resetStatus(long id);
 
-	Bus updateSeat(long id, BusSeat busSeat);
+	List<List<String>> getAllCityNames();
 
-	Bus resetStatus(long id);
+	List<Bus> getAllAvailableBuses(String from, String to, Date departure);
+
+	Bus addSeats(long id);
+
+	BusBookingDetails getBusBookingDetailsById(long id);
+
+	List<BusBookingDetails> getBusBookingDetailsByUsername(String username);
+
 }

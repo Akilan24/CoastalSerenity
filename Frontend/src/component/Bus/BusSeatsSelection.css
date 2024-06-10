@@ -1,0 +1,231 @@
+.bss h2 {
+  color: #4bad57;
+}
+.bss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#logo {
+  padding: 25px;
+}
+.seat {
+  background-color: white;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+.busSeat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 450px;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+.lowerBerth {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 200px;
+  height: 710px;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.upperBerth {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  width: 200px;
+  height: 710px;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.lowerSleeper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.lowerSleeper button {
+  width: 50px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 6px;
+}
+
+.lowerSeat {
+  display: flex;
+  width: 120px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 24px;
+}
+.lowerSeat button {
+  width: 50px;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4.5px;
+}
+.upperSleeper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  top: 22px;
+}
+.upperSleeper button {
+  width: 50px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 6px;
+}
+.upperDoubleSleeper {
+  display: flex;
+  width: 120px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 22px;
+}
+.upperDoubleSleeper button {
+  width: 50px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.busSeat button {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: black;
+}
+.busSeat button p {
+  font-size: 15px;
+  font-weight: 800;
+}
+.bss #input {
+  display: flex;
+  width: fit-content;
+}
+.bss #display {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: sticky;
+  right: 520px;
+  top: 150px;
+}
+
+.bss #display div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bss .bus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(139, 181, 195);
+  width: 700px;
+  height: 800px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  border-radius: 25px;
+  position: relative;
+}
+.bss #display div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#white,
+#blue,
+#grey {
+  width: 25px;
+  height: 25px;
+}
+#white {
+  background-color: white;
+  border: 0.5px solid black;
+  box-sizing: border-box;
+}
+#blue {
+  background-color: #91c4e5;
+}
+#grey {
+  background-color: grey;
+}
+.bss .seatBooking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pay-button {
+  margin-bottom: 15px;
+  background-color: #1f78b4;
+  margin-top: 15px;
+}
+.bss .travellerList {
+  display: flex;
+}
+.bss input {
+  width: 50px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#add {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  background-color: #1f78b4;
+}
+#guest {
+  display: flex;
+  flex-direction: column;
+}
+#check {
+  margin-bottom: 10px;
+}
+#lb {
+  display: flex;
+}
+
+#img {
+  width: 30px;
+  position: relative;
+  left: 50px;
+  top: 5px;
+}

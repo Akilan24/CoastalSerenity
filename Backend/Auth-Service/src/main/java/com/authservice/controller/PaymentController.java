@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,9 +21,8 @@ public class PaymentController {
 	@Autowired
 	private PaymentProxyController paymentProxy;
 
-	@PostMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable long bookingid) throws Exception {
-
+	@GetMapping("/doPayment/{bookingid}")
+	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception  {
 		return paymentProxy.addPayment(bookingid);
 	}
 

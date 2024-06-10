@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HotelRooms {
-	
+
 	private String hotelName;
 	private String address;
 	private String description;

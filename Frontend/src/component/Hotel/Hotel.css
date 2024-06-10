@@ -103,3 +103,8 @@ button {
 .hoteldisplay {
   margin-top: 50px;
 }
+#roombutton button {
+  background-color: rgb(145, 51, 186);
+  color: white;
+  width: 100px;
+}

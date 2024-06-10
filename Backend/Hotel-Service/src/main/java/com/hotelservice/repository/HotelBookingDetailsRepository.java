@@ -15,7 +15,7 @@ public interface HotelBookingDetailsRepository extends JpaRepository<HotelBookin
 	Optional<HotelBookingDetails> findByBookingid(long bookingId);
 
 	Optional<HotelBookingDetails> findByEmail(String email);
-	
+
 	void deleteByBookingid(long bookingId);
 
 }

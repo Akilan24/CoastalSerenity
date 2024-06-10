@@ -37,44 +37,44 @@ function Tabs() {
       <div className="selector">
         <div id="tab">
           <button onClick={(n) => routeTo("/hotel")}>
-            <img id="hotellogo" src="../TabIcons/hotellogo.png" />
+            <img id="hotellogo" src="../src/assets/TabIcons/hotellogo.png" />
             <p>Hotels</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/flight")}>
-            <img id="planelogo" src="../TabIcons/planelogo.png" />
+            <img id="planelogo" src="../src/assets/TabIcons/planelogo.png" />
             <p>Flights</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/train")}>
-            <img id="trainlogo" src="../TabIcons/trainlogo.png" />
+            <img id="trainlogo" src="../src/assets/TabIcons/trainlogo.png" />
             <p>Trains</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/bus")}>
-            <img id="buslogo" src="../TabIcons/buslogo.png" />
+            <img id="buslogo" src="../src/assets/TabIcons/buslogo.png" />
             <p>Buses</p>
           </button>
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/cab")}>
-            <img id="carlogo" src="../TabIcons/carlogo.png" />
+            <img id="carlogo" src="../src/assets/TabIcons/carlogo.png" />
             <p>Cabs</p>
           </button>
         </div>
       </div>
       <div id="tab">
         <button className="login" onClick={accountDetails}>
-          <img id="icon" src="./login.png" />
+          <img id="icon" src="../login.png" />
           Profile
         </button>
       </div>
       <div id="tab">
         <button className="cslogo" onClick={customerCare}>
-          <img id="cslogo" src="./customer.png" />
+          <img id="cslogo" src="../customer.png" />
           <p>Customer Service</p>
         </button>
       </div>

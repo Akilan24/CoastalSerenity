@@ -35,8 +35,8 @@ class RoomControllerTest {
 	@Test
 	void testAddRoom() throws Exception {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+				"9876543210", "9876543211", "http://website.com", "image", null);
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		when(roomService.addRoomDetails(hotel.getHotelId(), room)).thenReturn(room);
 
 		ResponseEntity<Room> response = roomController.addroom(hotel.getHotelId(), room);
@@ -48,10 +48,10 @@ class RoomControllerTest {
 	@Test
 	void testUpdateRoom() {
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
-		Room updatedroom = new Room(101010, 201, 5000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
+		Room updatedroom = new Room(101010, 201, 5000.00, "Deluxe", "image");
 		when(roomService.updateRoomDetails(room)).thenReturn(updatedroom);
 
 		ResponseEntity<Room> response = roomController.updateroom(room);
@@ -73,7 +73,8 @@ class RoomControllerTest {
 
 	@Test
 	void testGetAllRooms() {
-		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe","image"), new Room(202, 0, 5000.00, "Deluxe","image"));
+		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe", "image"),
+				new Room(202, 0, 5000.00, "Deluxe", "image"));
 		when(roomService.showAllRoomDetails()).thenReturn(rooms);
 
 		ResponseEntity<List<Room>> response = roomController.getall();
@@ -85,7 +86,7 @@ class RoomControllerTest {
 	@Test
 	void testGetRoomById() {
 		Integer roomId = 201;
-		Room room = new Room(201, roomId, 4000.00, "Deluxe","image");
+		Room room = new Room(201, roomId, 4000.00, "Deluxe", "image");
 		when(roomService.showRoomDetailsbyId(roomId)).thenReturn(room);
 
 		ResponseEntity<Room> response = roomController.getroom(roomId);
@@ -97,7 +98,8 @@ class RoomControllerTest {
 	@Test
 	void testGetRoomByHotelId() {
 		Integer hotelId = 201;
-		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe","image"), new Room(202, 0, 5000.00, "Deluxe","image"));
+		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe", "image"),
+				new Room(202, 0, 5000.00, "Deluxe", "image"));
 		when(roomService.showAllRoomDetailsByHotelId(hotelId)).thenReturn(rooms);
 
 		ResponseEntity<List<Room>> response = roomController.getroombyhid(hotelId);
@@ -109,7 +111,8 @@ class RoomControllerTest {
 	@Test
 	void testGetRoomByPrice() {
 		Double price = 5000.0;
-		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe","image"), new Room(202, 0, 5000.00, "Deluxe","image"));
+		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe", "image"),
+				new Room(202, 0, 5000.00, "Deluxe", "image"));
 		when(roomService.showRoomDetailByPrice(price)).thenReturn(rooms);
 
 		ResponseEntity<List<Room>> response = roomController.getroom(price);
@@ -121,7 +124,8 @@ class RoomControllerTest {
 	@Test
 	void testGetRoomByType() {
 		String type = "Deluxe";
-		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe","image"), new Room(202, 0, 5000.00, "Deluxe","image"));
+		List<Room> rooms = Arrays.asList(new Room(201, 0, 4000.00, "Deluxe", "image"),
+				new Room(202, 0, 5000.00, "Deluxe", "image"));
 		when(roomService.showRoomDetailBytype(type)).thenReturn(rooms);
 
 		ResponseEntity<List<Room>> response = roomController.getroombytype(type);

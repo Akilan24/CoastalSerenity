@@ -50,6 +50,7 @@ public class TrainController {
 		return new ResponseEntity<>(trainService.deleteTrain(TrainId), HttpStatus.OK);
 
 	}
+
 	@PutMapping("/resetstatus/{TrainId}")
 	public ResponseEntity<Train> resetstatus(@PathVariable long TrainId) {
 		return new ResponseEntity<>(trainService.resetStatus(TrainId), HttpStatus.OK);

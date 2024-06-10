@@ -53,9 +53,9 @@ public class HotelBookingDetailsServiceTest {
 	void testBookRoom() {
 		String userId = "user123";
 		Hotel hotel = new Hotel(101010, "City", "HotelName", "Address", "Description", "email@example.com",
-				"9876543210", "9876543211", "http://website.com","image", null);
+				"9876543210", "9876543211", "http://website.com", "image", null);
 
-		Room room = new Room(101010, 201, 4000.00, "Deluxe","image");
+		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		hotel.setRooms(Arrays.asList(room));
 		HotelBookingDetails bookingDetails = new HotelBookingDetails();
 		bookingDetails.setRoomno(201);
@@ -117,6 +117,7 @@ public class HotelBookingDetailsServiceTest {
 
 		when(bookingDetailsRepository.findByBookingid(bookingId)).thenReturn(Optional.empty());
 
-		assertThrows(HotelBookingDetailsNotFoundException.class, () -> bookingDetailsService.paymentstatuschange(bookingId));
+		assertThrows(HotelBookingDetailsNotFoundException.class,
+				() -> bookingDetailsService.paymentstatuschange(bookingId));
 	}
 }

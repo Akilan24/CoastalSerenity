@@ -22,35 +22,35 @@ import com.cabservice.service.CabService;
 @RequestMapping("/Cab")
 public class CabController {
 
-    @Autowired
-    private CabService cabService;
+	@Autowired
+	private CabService cabService;
 
-    @GetMapping("/getall")
-    public ResponseEntity<List<Cab>> getAllCabs() {
-        return new ResponseEntity<>(cabService.getAllCabs(), HttpStatus.OK);
-    }
+	@GetMapping("/getall")
+	public ResponseEntity<List<Cab>> getAllCabs() {
+		return new ResponseEntity<>(cabService.getAllCabs(), HttpStatus.OK);
+	}
 
-    @GetMapping("/getbyid/{id}")
-    public ResponseEntity<Optional<Cab>> getCabById(@PathVariable long id) {
-        return new ResponseEntity<>(cabService.getCabById(id), HttpStatus.OK);
-  }
+	@GetMapping("/getbyid/{id}")
+	public ResponseEntity<Optional<Cab>> getCabById(@PathVariable long id) {
+		return new ResponseEntity<>(cabService.getCabById(id), HttpStatus.OK);
+	}
 
-    @PostMapping("/save")
-    public ResponseEntity<Cab> createCab(@RequestBody Cab Cab) {
-        return new ResponseEntity<>(cabService.saveCab(Cab), HttpStatus.CREATED);
-    }
+	@PostMapping("/save")
+	public ResponseEntity<Cab> createCab(@RequestBody Cab Cab) {
+		return new ResponseEntity<>(cabService.saveCab(Cab), HttpStatus.CREATED);
+	}
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Cab> updateCab(@PathVariable long id, @RequestBody Cab Cab) {
-        return new ResponseEntity<>(cabService.updateCab(id, Cab), HttpStatus.OK);
-    }
+	@PutMapping("/update/{id}")
+	public ResponseEntity<Cab> updateCab(@PathVariable long id, @RequestBody Cab Cab) {
+		return new ResponseEntity<>(cabService.updateCab(id, Cab), HttpStatus.OK);
+	}
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteCab(@PathVariable long id) {
-        return new ResponseEntity<>(cabService.deleteCab(id),HttpStatus.OK);
-    }
-    
-    @PutMapping("/resetstatus/{id}")
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<String> deleteCab(@PathVariable long id) {
+		return new ResponseEntity<>(cabService.deleteCab(id), HttpStatus.OK);
+	}
+
+	@PutMapping("/resetstatus/{id}")
 	public ResponseEntity<Cab> resetstatus(@PathVariable long id) {
 		return new ResponseEntity<>(cabService.resetStatus(id), HttpStatus.OK);
 	}

@@ -1,10 +1,15 @@
-h2 {
+.fss h2 {
   color: #4bad57;
 }
-.seatBooking img {
+.fss .seatBooking img {
   width: 300px;
 }
-.seat {
+.fss .seatBooking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fss .seat {
   background-color: white;
   width: 900px;
   display: flex;
@@ -14,12 +19,12 @@ h2 {
   margin-bottom: 50px;
   padding-bottom: 30px;
 }
-.fbd {
+.fss {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.plane {
+.fss .plane {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,34 +35,29 @@ h2 {
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
   border-radius: 25px;
+  position: relative;
 }
-.body {
+.fss .body {
   background-color: white;
   box-sizing: border-box;
   height: 1780px;
   width: 300px;
 }
-#class {
+.fss #class {
   color: rgb(153, 7, 183);
   background-color: rgb(204, 204, 250);
 }
-.body button {
+.fss .body button {
   font-size: 18px;
   color: #141eae;
   background-color: transparent;
   font-weight: bold;
 }
-.pay-button {
-  margin: 15px;
-}
-#check {
-  margin: 10px;
-}
-.body p {
+.fss .body p {
   font-size: 18px;
   color: #141eae;
 }
-.firstclassSeats {
+.fss .firstclassSeats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 2px;
@@ -68,8 +68,8 @@ h2 {
   background-color: rgb(204, 204, 250);
 }
 
-.businessSeats,
-.economySeats {
+.fss .businessSeats,
+.fss .economySeats {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 2px;
@@ -80,7 +80,7 @@ h2 {
   background-color: rgb(204, 204, 250);
 }
 
-.fcs {
+.fss .fcs {
   border: 1px solid black;
   height: 50px;
   width: 50px;
@@ -88,7 +88,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.bs {
+.fss .bs {
   border: 1px solid black;
   box-sizing: border-box;
   height: 50px;
@@ -97,7 +97,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.es {
+.fss .es {
   border: 1px solid black;
   box-sizing: border-box;
   height: 50px;
@@ -106,22 +106,18 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-#as {
-  background-color: #141eae;
-  width: 25px;
-}
-#display {
+.fss #display {
   display: flex;
   flex-direction: column;
   width: 150px;
   background-color: white;
   padding: 5px;
   border-radius: 10px;
-  position: absolute;
-  left: 415px;
-  top: 250px;
+  position: sticky;
+  right: 520px;
+  top: 50px;
 }
-#display div {
+.fss #display div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,4 +137,33 @@ h2 {
 }
 #red {
   background-color: #df5656;
+}
+
+.pay-button {
+  margin-bottom: 15px;
+  background-color: #1f78b4;
+  margin-top: 15px;
+}
+.bss .travellerList {
+  display: flex;
+}
+.bss input {
+  width: 50px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#add {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  background-color: #1f78b4;
+}
+#guest {
+  display: flex;
+  flex-direction: column;
+}
+#check {
+  margin-bottom: 10px;
 }

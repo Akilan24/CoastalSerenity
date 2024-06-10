@@ -19,5 +19,5 @@ public class TrainBookingStatus {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long seatId;
-    private Map<String,Integer> bookingStatus;
+	private Map<String, Integer> bookingStatus;
 }

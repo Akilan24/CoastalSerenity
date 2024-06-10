@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FlightPassenger {
 
-	private long flightPassengerId;
+	private int flightPassengerId;
 	@Pattern(regexp = "^[a-zA-Z]{3,20}$", message = "Please provide a Name")
 	private String name;
 	@NotBlank(message = "Please provide a Gender")
@@ -21,4 +21,6 @@ public class FlightPassenger {
 	private String mobile;
 	@NotBlank(message = "Please provide an Address")
 	private String address;
+	private String seatNo;
+	private String seatClass;
 }

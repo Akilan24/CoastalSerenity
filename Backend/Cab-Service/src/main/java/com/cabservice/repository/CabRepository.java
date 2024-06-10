@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.cabservice.entity.Cab;
 
 @Repository
-public interface CabRepository extends JpaRepository<Cab, Long>{
+public interface CabRepository extends JpaRepository<Cab, Long> {
 
 }

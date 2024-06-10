@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.authservice.entity.Registration;
-import com.authservice.proxyentity.user.Traveller;
+import com.authservice.entity.Traveller;
 
 import jakarta.validation.Valid;
 
@@ -51,7 +51,7 @@ public interface UserProxyController {
 
 	@GetMapping("/gettraveller/{username}/{name}")
 	public ResponseEntity<Traveller> gettraveller(@PathVariable String username, @PathVariable String name);
-	
+
 	@DeleteMapping("/deleteuserbyid/{username}")
 	public ResponseEntity<String> remove(@PathVariable String username);
 

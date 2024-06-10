@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 @Entity
 public class FlightSeats {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String seatNumber;
-    private String seatClass;
-    private double price;
-    private boolean available;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	private String seatNumber;
+	private String seatClass;
+	private double price;
+	private boolean available;
 
 }

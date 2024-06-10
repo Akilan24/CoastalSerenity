@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hotelservice.entity.HotelBookingDetails;
 import com.hotelservice.entity.Hotel;
+import com.hotelservice.entity.HotelBookingDetails;
 import com.hotelservice.entity.HotelGuest;
 import com.hotelservice.entity.HotelRooms;
 import com.hotelservice.exception.HotelBookingDetailsNotFoundException;
@@ -42,11 +42,12 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 		System.out.println(bookingdetails.getRoomno());
 		long MIN_id = 100000;
 		int count = bookingrepo.findAll().size();
-		bookingdetails.setBookingid(count == 0 ? MIN_id : MIN_id + count);
+		bookingdetails.setBookingId(count == 0 ? MIN_id : MIN_id + count);
 		Registration user = uproxy.showUserByUserName(username).getBody();
 		bookingdetails.setName(user.getName());
 		bookingdetails.setEmail(user.getEmail());
 		bookingdetails.setPhonenumber(user.getMobile());
+		bookingdetails.setUsername(username);
 		long daysBetween = 0;
 		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
 		daysBetween = daysBetween == 0 ? 1 : daysBetween;
@@ -90,10 +91,10 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public HotelBookingDetails paymentstatuschange(long bookingid) {
-		if (bookingrepo.findByBookingid(bookingid).isPresent()) {
-			HotelBookingDetails bd = bookingrepo.findByBookingid(bookingid).get();
-			bd.setPaymentStatus("Payment done");
-			return bookingrepo.save(bd);
+		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(bookingid);
+		if (bd.isPresent()) {
+			bd.get().setPaymentStatus("Payment done");
+			return bookingrepo.save(bd.get());
 		} else
 			throw new HotelBookingDetailsNotFoundException("Booking details are not found");
 
@@ -144,6 +145,18 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
+	public HotelBookingDetails showBookingDetailsbyUserNameAndHotelName(String userName, String hotelName) {
+		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
+		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
+				.filter(b -> b.getHotelname().equalsIgnoreCase(hotelName)).collect(Collectors.toList());
+		if (!bd.isEmpty()) {
+			return bd.get(0);
+		} else
+			throw new HotelBookingDetailsNotFoundException("Booking details are not found");
+
+	}
+
+	@Override
 	public List<HotelBookingDetails> showBookingDetailsbyUserName(String userName) {
 		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
 		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
@@ -157,9 +170,20 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public HotelBookingDetails addGuest(long bookingId, List<HotelGuest> guest) {
-		Optional<HotelBookingDetails> bd= bookingrepo.findByBookingid(bookingId);
+		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(bookingId);
 		if (!bd.isEmpty()) {
 			bd.get().setHotelGuest(guest);
+			return bookingrepo.save(bd.get());
+		} else
+			throw new HotelBookingDetailsNotFoundException("Booking details are not found");
+
+	}
+
+	@Override
+	public HotelBookingDetails resetStatus(long id) {
+		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(id);
+		if (!bd.isEmpty()) {
+			bd.get().setPaymentStatus("Payment Cancelled & Refunded");;
 			return bookingrepo.save(bd.get());
 		} else
 			throw new HotelBookingDetailsNotFoundException("Booking details are not found");

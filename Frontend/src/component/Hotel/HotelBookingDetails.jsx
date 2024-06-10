@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./HotelBookingDetails.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function HotelBookingDetails() {
-  const [bookingDetailsList, setBookingDetailsList] = useState([]);
+  const { value } = useParams();
+  const [hotelBookingDetails, setHotelBookingDetails] = useState(null);
   const [travellers, setTravellers] = useState([]);
   const [postTravellers, setPostTravellers] = useState([]);
   const config = {
@@ -16,21 +17,21 @@ function HotelBookingDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function fetchBookingDetails() {
+    async function fetchHotelBookingDetails() {
       try {
         const response = await axios.get(
-          `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyusername/${localStorage.getItem(
+          `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyusernameandhotelname/${localStorage.getItem(
             "username"
-          )}`,
+          )}//${value}`,
           config
         );
-        setBookingDetailsList(response.data);
+        setHotelBookingDetails(response.data);
         console.log(response.data);
       } catch (error) {
         console.log(error.response.data.message);
       }
     }
-    fetchBookingDetails();
+    fetchHotelBookingDetails();
   }, []);
 
   useEffect(() => {
@@ -49,18 +50,18 @@ function HotelBookingDetails() {
       }
     }
     fetchTravellers();
-  }, []);
+  }, [config]);
 
-  const handlePostTraveller = async (e, bookingid) => {
+  const handlePostTraveller = async (e, bookingId) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:8080/CS/Hotel/HotelBookingDetails/addguests/${bookingid}`,
+        `http://localhost:8080/CS/Hotel/HotelBookingDetails/addguests/${bookingId}`,
         postTravellers,
         config
       );
       console.log(response.data);
-      navigate(`/payment/${bookingid}`);
+      navigate(`/payment/hotel-${bookingId}`);
     } catch (error) {
       console.log(error.response.data.message);
     }
@@ -78,100 +79,86 @@ function HotelBookingDetails() {
   };
 
   return (
-    <div className="bookingdetails">
-      <img id="logo1" src="./cslogo.png" alt="Logo" />
-      {bookingDetailsList.length > 0 ? (
-        bookingDetailsList.map((bookingDetails, index) => (
-          <div key={index} className="details">
-            <p>
-              <span className="label">Name:</span>
-              <span className="value">{bookingDetails.name}</span>
-            </p>
-            <p>
-              <span className="label">Hotel Name:</span>
-              <span className="value">{bookingDetails.hotelname}</span>
-            </p>
-            <p>
-              <span className="label">Room No:</span>
-              <span className="value">{bookingDetails.roomno}</span>
-            </p>
-            <p>
-              <span className="label">Check-In:</span>
-              <span className="value">{bookingDetails.booked_from}</span>
-            </p>
-            <p>
-              <span className="label">Check-Out:</span>
-              <span className="value">{bookingDetails.booked_to}</span>
-            </p>
-            <p>
-              <span className="label">Email:</span>
-              <span className="value">{bookingDetails.email}</span>
-            </p>
-            <p>
-              <span className="label">Phone Number:</span>
-              <span className="value">{bookingDetails.phonenumber}</span>
-            </p>
-            <p>
-              <span className="label">Hotel Address:</span>
-              <span className="value">{bookingDetails.address}</span>
-            </p>
-            <p>
-              <span className="label">Amount:</span>
-              <span className="value">{bookingDetails.amount}</span>
-            </p>
-            <p>
-              <span className="label">Payment Status:</span>
-              <span className="value">{bookingDetails.paymentStatus}</span>
-            </p>
-            <div className="payment-status">
-              {bookingDetails.paymentStatus === "Payment has to be done" ? (
-                <div id="guest">
-                  <p>Add Guest:</p>
-                  <div className="list">
-                    {travellers.length > 0 ? (
-                      travellers.map((item, index) => (
-                        <div id="st" key={index} className="traveller-item">
-                          <div id="input">
-                            <input
-                              type="checkbox"
-                              value={index}
-                              onChange={(event) =>
-                                handleSelectTraveller(index, event)
-                              }
-                            ></input>
-                            <p>{item.name}</p>
-                          </div>
-                        </div>
-                      ))
-                    ) : (
-                      <p>
-                        No Guests are found. Add Guest in the travellers
-                        section.
-                      </p>
-                    )}
-                  </div>
-                  <button
-                    className="pay-button"
-                    onClick={(e) =>
-                      handlePostTraveller(e, bookingDetails.bookingid)
-                    }
-                  >
-                    Continue
-                  </button>
-                </div>
-              ) : (
-                <button
-                  className="pay-button"
-                  onClick={() => navigate("/hotel")}
-                >
-                  Done
-                </button>
-              )}
+    <div className="hotelBookingDetails">
+      <img id="logo" src="./cslogo.png" alt="Logo" />
+      {hotelBookingDetails && (
+        <div className="details">
+          <p>
+            <span className="label">Name:</span>
+            <span className="value">{hotelBookingDetails.name}</span>
+          </p>
+          <p>
+            <span className="label">Hotel Name:</span>
+            <span className="value">{hotelBookingDetails.hotelname}</span>
+          </p>
+          <p>
+            <span className="label">Room No:</span>
+            <span className="value">{hotelBookingDetails.roomno}</span>
+          </p>
+          <p>
+            <span className="label">Check-In:</span>
+            <span className="value">{hotelBookingDetails.booked_from}</span>
+          </p>
+          <p>
+            <span className="label">Check-Out:</span>
+            <span className="value">{hotelBookingDetails.booked_to}</span>
+          </p>
+          <p>
+            <span className="label">Email:</span>
+            <span className="value">{hotelBookingDetails.email}</span>
+          </p>
+          <p>
+            <span className="label">Phone Number:</span>
+            <span className="value">{hotelBookingDetails.phonenumber}</span>
+          </p>
+          <p>
+            <span className="label">Hotel Address:</span>
+            <span className="value">{hotelBookingDetails.address}</span>
+          </p>
+          <p>
+            <span className="label">Amount:</span>
+            <span className="value">{hotelBookingDetails.amount}</span>
+          </p>
+          <p>
+            <span className="label">Payment Status:</span>
+            <span className="value">{hotelBookingDetails.paymentStatus}</span>
+          </p>
+          {hotelBookingDetails.paymentStatus === "Payment has to be done" && (
+            <div id="guest">
+              <p>Add Guest:</p>
+              <div className="list">
+                {travellers.length > 0 ? (
+                  travellers.map((item, index) => (
+                    <div id="st" key={index} className="traveller-item">
+                      <div id="input">
+                        <input
+                          type="checkbox"
+                          value={index}
+                          onChange={(event) =>
+                            handleSelectTraveller(index, event)
+                          }
+                        ></input>
+                        <p>{item.name}</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p>
+                    No Guests are found. Add Guest in the travellers section.
+                  </p>
+                )}
+              </div>
+              <button
+                className="pay"
+                onClick={(e) =>
+                  handlePostTraveller(e, bookingDetails.bookingId)
+                }
+              >
+                Continue
+              </button>
             </div>
-          </div>
-        ))
-      ) : (
-        <p id="none">No booking details are found.</p>
+          )}
+        </div>
       )}
     </div>
   );

@@ -18,6 +18,6 @@ public interface CabService {
 	Cab updateCab(long id, Cab cab);
 
 	String deleteCab(long id);
-	
+
 	Cab resetStatus(long id);
 }

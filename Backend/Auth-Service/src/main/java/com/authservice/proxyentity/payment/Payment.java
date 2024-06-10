@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Payment {
 
 	private long paymentid;
-	private long bookingid;
+	private long bookingId;
 	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date paymentDate;
 	private String username;

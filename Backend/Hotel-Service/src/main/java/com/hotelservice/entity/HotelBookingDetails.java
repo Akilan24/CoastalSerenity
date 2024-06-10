@@ -1,5 +1,6 @@
 package com.hotelservice.entity;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -21,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class HotelBookingDetails {
 
 	@Id
-	private long bookingid;
+	private long bookingId;
 	private String name;
 	private int roomno;
 	private String hotelname;
@@ -33,9 +34,12 @@ public class HotelBookingDetails {
 	private String email;
 	private String phonenumber;
 	private String address;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private LocalDateTime bookedDate;
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "bookingid", referencedColumnName = "bookingid")
 	private List<HotelGuest> hotelGuest;
 	private String paymentStatus;
+	private String username;
 
 }

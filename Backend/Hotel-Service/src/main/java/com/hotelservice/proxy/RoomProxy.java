@@ -1,6 +1,6 @@
 package com.hotelservice.proxy;
 
-import java.util.List; 
+import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
