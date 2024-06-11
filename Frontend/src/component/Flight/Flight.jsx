@@ -198,6 +198,7 @@ function Flight() {
               </div>
               <div>
                 <button
+                  id="but"
                   onClick={(e) =>
                     navigate(`/flightSeatsSelection/${flight.flightId}`)
                   }

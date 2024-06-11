@@ -11,7 +11,7 @@ function Payment() {
     },
   };
   const navigate = useNavigate();
-  const [bookingDetails, setBookingDetails] = useState();
+  const [bookingDetails, setBookingDetails] = useState({});
   const [bookingId, setBookingId] = useState("");
   const [min, setMin] = useState(6);
   const [sec, setSec] = useState(59);
@@ -50,7 +50,22 @@ function Payment() {
       }
       fetchFlightBookingDetails();
     }
-  }, []);
+    if (val[0] === "bus") {
+      async function fetchBusBookingDetails() {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Bus/getbusbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setBookingDetails(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.log(error.response);
+        }
+      }
+      fetchBusBookingDetails();
+    }
+  }, [value]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -77,8 +92,10 @@ function Payment() {
 
   async function doPayment() {
     try {
+      const val = value.split("-");
       const response = await axios.post(
-        `http://localhost:8080/CS/Payment/doPayment/${val[0]}-${bookingDetails.bookingid}`,
+        `http://localhost:8080/CS/Payment/doPayment/${val[0]}-${bookingDetails.bookingId}`,
+        {},
         config
       );
       navigate(`/myTrips`);
@@ -90,20 +107,20 @@ function Payment() {
 
   return (
     <div className="payment">
-      <img id="logo" src="../cslogo.png" />
+      <img id="logo" src="../cslogo.png" alt="Logo" />
       <h2>Payment Page</h2>
       <div className="paymentDetails">
         <p>
           <span className="label">Name :</span>
-          <span className="value">{bookingDetails.name}</span>
+          <span className="value">{bookingDetails.name || "N/A"}</span>
         </p>
         <p>
           <span className="label">Booking Id :</span>
-          <span className="value">{bookingId}</span>
+          <span className="value">{bookingId || "N/A"}</span>
         </p>
         <p>
           <span className="label">Amount :</span>
-          <span className="value">{bookingDetails.totalPrice}</span>
+          <span className="value">{bookingDetails.totalPrice || "N/A"}</span>
         </p>
       </div>
       <div className="display">

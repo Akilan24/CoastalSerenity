@@ -139,10 +139,10 @@ function SaveTraveller() {
   }
 
   return (
-    <div>
+    <div className="stc">
       <img id="logo" src="./cslogo.png" alt="Logo" />
       <div className="savedtravellerclass">
-        <div>
+        <div id="stdiv">
           <h2>Saved Traveller(s)</h2>
           {travellers.map((item, index) => (
             <div id="st" key={index} className="traveller-item">
@@ -160,14 +160,14 @@ function SaveTraveller() {
               <div className="button">
                 <button
                   id="s"
-                  value={item.travellerId}
+                  value={item.name}
                   onClick={(e) => getTraveller(e)}
                 >
                   Edit
                 </button>
                 <button
                   id="c"
-                  value={item.travellerId}
+                  value={item.name}
                   onClick={(e) => deleteTraveller(e)}
                 >
                   Delete

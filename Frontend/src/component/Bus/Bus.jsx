@@ -186,7 +186,7 @@ function Bus() {
                 </div>
               </div>
               <div>
-                <button
+                <button id="but"
                   onClick={(e) => navigate(`/busSeatsSelection/${bus.busId}`)}
                 >
                   BOOK NOW

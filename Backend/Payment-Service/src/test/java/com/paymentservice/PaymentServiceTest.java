@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -50,7 +51,7 @@ public class PaymentServiceTest {
 		Payment payment = new Payment();
 		payment.setPaymentid(100001);
 		payment.setBookingId(Long.parseLong(id[1]));
-		payment.setPaymentDate(new Date());
+		payment.setPaymentDate(LocalDateTime.now());
 		payment.setUsername("user123");
 		payment.setAmount(5000.0);
 		payment.setPaymentStatus("Payment Done");
@@ -72,7 +73,7 @@ public class PaymentServiceTest {
 		Payment payment = new Payment();
 		payment.setPaymentid(100001);
 		payment.setBookingId(bookingid);
-		payment.setPaymentDate(new Date());
+		payment.setPaymentDate(LocalDateTime.now());
 		payment.setUsername("user123");
 		payment.setAmount(5000.0);
 		payment.setPaymentStatus("Payment Done");
@@ -104,7 +105,7 @@ public class PaymentServiceTest {
 		Payment payment1 = new Payment();
 		payment1.setPaymentid(100001);
 		payment1.setBookingId(123456);
-		payment1.setPaymentDate(new Date());
+		payment1.setPaymentDate(LocalDateTime.now());
 		payment1.setUsername("user123");
 		payment1.setAmount(5000.0);
 		payment1.setPaymentStatus("Payment Done");
@@ -139,7 +140,7 @@ public class PaymentServiceTest {
 		Payment payment = new Payment();
 		payment.setPaymentid(Long.parseLong(id[1]));
 		payment.setBookingId(bookingid);
-		payment.setPaymentDate(new Date());
+		payment.setPaymentDate(LocalDateTime.now());
 		payment.setUsername("user123");
 		payment.setAmount(5000.0);
 		payment.setPaymentStatus("Payment Done");
@@ -169,7 +170,7 @@ public class PaymentServiceTest {
 		Payment payment = new Payment();
 		payment.setPaymentid(id);
 		payment.setBookingId(123456);
-		payment.setPaymentDate(new Date());
+		payment.setPaymentDate(LocalDateTime.now());
 		payment.setUsername("user123");
 		payment.setAmount(5000.0);
 		payment.setPaymentStatus("Payment Done");

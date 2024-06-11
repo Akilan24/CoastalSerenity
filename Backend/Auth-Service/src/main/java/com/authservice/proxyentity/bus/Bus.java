@@ -30,7 +30,7 @@ public class Bus {
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime arrivalTime;
 	private String duration;
-	private String stopOver;
+	private String route;
 	private String nextDay;
 	@ElementCollection
 	private Map<String, Integer> totalSeat;

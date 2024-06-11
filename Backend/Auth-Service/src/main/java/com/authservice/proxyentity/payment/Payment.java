@@ -1,6 +1,6 @@
 package com.authservice.proxyentity.payment;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -15,8 +15,8 @@ public class Payment {
 
 	private long paymentid;
 	private long bookingId;
-	@JsonFormat(pattern = "dd-MM-yyyy")
-	private Date paymentDate;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private LocalDateTime paymentDate;
 	private String username;
 	private double amount;
 	private String paymentStatus;

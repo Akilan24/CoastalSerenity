@@ -19,13 +19,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.hotelservice.controller.HotelBookingDetailsController;
+import com.hotelservice.controller.HotelController;
 import com.hotelservice.entity.HotelBookingDetails;
 import com.hotelservice.repository.HotelBookingDetailsRepository;
 import com.hotelservice.service.HotelBookingDetailsService;
 
 @ExtendWith(MockitoExtension.class)
-class HotelBookingDetailsControllerTest {
+class HotelhotelControllerTest {
 
 	@Mock
 	private HotelBookingDetailsService bookingDetailsService;
@@ -34,7 +34,7 @@ class HotelBookingDetailsControllerTest {
 	private HotelBookingDetailsRepository bookingDetailsRepo;
 
 	@InjectMocks
-	private HotelBookingDetailsController bookingDetailsController;
+	private HotelController hotelController;
 
 	private HotelBookingDetails bookingDetails;
 
@@ -50,7 +50,7 @@ class HotelBookingDetailsControllerTest {
 		List<HotelBookingDetails> bookingDetailsList = new ArrayList<>();
 		bookingDetailsList.add(bookingDetails);
 		when(bookingDetailsService.showAllBookingDetails()).thenReturn(bookingDetailsList);
-		ResponseEntity<List<HotelBookingDetails>> response = bookingDetailsController.listBookingDetails();
+		ResponseEntity<List<HotelBookingDetails>> response = hotelController.listBookingDetails();
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(bookingDetailsList, response.getBody());
 	}
@@ -58,21 +58,21 @@ class HotelBookingDetailsControllerTest {
 	@Test
 	void testGetBookingDetails() {
 		when(bookingDetailsService.showBookingDetailsbyId(123456)).thenReturn(bookingDetails);
-		ResponseEntity<HotelBookingDetails> response = bookingDetailsController.getBookingDetails(123456);
+		ResponseEntity<HotelBookingDetails> response = hotelController.getBookingDetails(123456);
 		assertEquals(bookingDetails, response.getBody());
 	}
 
 	@Test
 	void testPaymentStatusChange() {
 		when(bookingDetailsService.paymentstatuschange(123456)).thenReturn(bookingDetails);
-		ResponseEntity<HotelBookingDetails> response = bookingDetailsController.paymentstatuschange(123456);
+		ResponseEntity<HotelBookingDetails> response = hotelController.paymentstatuschange(123456);
 		assertEquals(bookingDetails, response.getBody());
 	}
 
 	@Test
 	void testBookRoom() {
 		when(bookingDetailsService.BookRoom(anyString(), any(HotelBookingDetails.class))).thenReturn(bookingDetails);
-		ResponseEntity<HotelBookingDetails> response = bookingDetailsController.bookroom("user123", bookingDetails);
+		ResponseEntity<HotelBookingDetails> response = hotelController.bookroom("user123", bookingDetails);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(bookingDetails, response.getBody());
 	}
@@ -80,7 +80,7 @@ class HotelBookingDetailsControllerTest {
 	@Test
 	void testRemove() {
 		when(bookingDetailsService.removeBookingDetails(123456)).thenReturn("Booking details removed successfully");
-		ResponseEntity<String> response = bookingDetailsController.remove(123456);
+		ResponseEntity<String> response = hotelController.remove(123456);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals("Booking details removed successfully", response.getBody());
 	}

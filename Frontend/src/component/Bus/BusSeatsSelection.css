@@ -7,8 +7,10 @@
   align-items: center;
   justify-content: center;
 }
-#logo {
+.bss #logo {
   padding: 25px;
+  width: 450px;
+  margin-bottom: 20px;
 }
 .seat {
   background-color: white;
@@ -198,14 +200,26 @@
 }
 .bss .travellerList {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bss #input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bss input {
   width: 50px;
 }
-.list {
+.bss .list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+    justify-content: center;
+}
+.bss #button {
+  position: relative;
+  top: 6px;
 }
 #add {
   margin-left: 15px;

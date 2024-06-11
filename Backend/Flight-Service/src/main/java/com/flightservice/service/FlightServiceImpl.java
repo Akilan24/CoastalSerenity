@@ -41,7 +41,7 @@ public class FlightServiceImpl implements FlightService {
 
 	@Autowired
 	UserProxy uproxy;
-	
+
 	@Override
 	public List<Flight> getAllFlights() {
 		List<Flight> list = flightRepository.findAll();
@@ -140,19 +140,16 @@ public class FlightServiceImpl implements FlightService {
 	public List<Flight> getAllAvailableFlights(String from, String to, Date departure, String travellerClass) {
 		List<Flight> list = flightRepository.findAll();
 		if (!list.isEmpty()) {
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
 			List<Flight> flightList = list.stream().filter(f -> f.getOrigin().equalsIgnoreCase(from))
 					.filter(f -> f.getDestination().equalsIgnoreCase(to))
-					.filter(f -> f.getFlightBookingStatus().get(travellerClass) > 0).collect(Collectors.toList());
+					.filter(f -> f.getFlightBookingStatus().get(travellerClass) > 0)
+					.filter(bus -> bus.getDepartureTime().toString().split("T")[0]
+							.equalsIgnoreCase(formatter.format(departure)))
+					.collect(Collectors.toList());
 
-			List<Flight> flights = new ArrayList<Flight>();
-			for (Flight f : flightList) {
-				String[] s = f.getDepartureTime().toString().split("T");
-				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-				if (s[0].equalsIgnoreCase(formatter.format(departure))) {
-					flights.add(f);
-				}
-			}
-			return flights;
+			return flightList;
 		} else
 			throw new FlightDetailsNotFoundException("Flight details are not found");
 
@@ -171,7 +168,7 @@ public class FlightServiceImpl implements FlightService {
 		if (flightOptional.isEmpty()) {
 			throw new FlightDetailsNotFoundException("Flight details of flight id: " + id + " are not found");
 		}
-		Map<String,Integer>map=flightOptional.get().getFlightBookingStatus();
+		Map<String, Integer> map = flightOptional.get().getFlightBookingStatus();
 		List<Traveller> travellers = ftfs.getTravellers();
 		List<FlightSeats> flightSeats = ftfs.getFlightSeats();
 		Flight flight = flightOptional.get();
@@ -202,7 +199,7 @@ public class FlightServiceImpl implements FlightService {
 		bookingDetails.setEmail(user.getEmail());
 		bookingDetails.setPhonenumber(user.getMobile());
 		bookingDetails.setUsername(username);
-		
+
 		double totalPrice = 0;
 		List<FlightPassenger> flightPassengerList = new ArrayList<FlightPassenger>();
 		for (int i = 0; i < travellers.size(); i++) {
@@ -221,10 +218,10 @@ public class FlightServiceImpl implements FlightService {
 			FlightSeats fs = flightSeatsRepository.findById(seat.getId()).get();
 			fs.setAvailable(false);
 			flightSeatsRepository.save(fs);
-			
-			for(Map.Entry<String,Integer> me:map.entrySet()) {
-				if(me.getKey().equalsIgnoreCase(seat.getSeatClass())) {
-					map.put(seat.getSeatClass(), me.getValue()-1);
+
+			for (Map.Entry<String, Integer> me : map.entrySet()) {
+				if (me.getKey().equalsIgnoreCase(seat.getSeatClass())) {
+					map.put(seat.getSeatClass(), me.getValue() - 1);
 				}
 			}
 		}
@@ -232,7 +229,7 @@ public class FlightServiceImpl implements FlightService {
 		flightRepository.save(flightOptional.get());
 		bookingDetails.setTotalPrice(totalPrice);
 		bookingDetails.setFlightPassenger(flightPassengerList);
-   
+
 		return flightBookingDetailsRepository.save(bookingDetails);
 
 	}
@@ -318,7 +315,8 @@ public class FlightServiceImpl implements FlightService {
 	@Override
 	public List<FlightBookingDetails> getFlightBookingDetailsByUsername(String username) {
 		List<FlightBookingDetails> flightBookingDetails = flightBookingDetailsRepository.findAll().stream()
-				.filter(f -> f.getUsername().equalsIgnoreCase(username)).collect(Collectors.toList());
+				.filter(f -> f.getUsername().equalsIgnoreCase(username))
+				.sorted((f1, f2) -> f2.getBookedDate().compareTo(f1.getBookedDate())).collect(Collectors.toList());
 		if (!flightBookingDetails.isEmpty())
 			return flightBookingDetails;
 		else

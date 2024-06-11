@@ -1,4 +1,4 @@
-.travellerclass {
+.stc .travellerclass {
   position: absolute;
   top: 20vh;
   left: 35vw;
@@ -12,7 +12,7 @@
   backdrop-filter: blur(10px);
   padding: 10px;
 }
-.savedtravellerclass {
+.stc .savedtravellerclass {
   position: absolute;
   top: 20vh;
   left: 35vw;
@@ -21,48 +21,56 @@
   width: 30%;
   backdrop-filter: blur(10px);
   padding: 10px;
+  margin-top: 30px;
 }
-.savedtravellerclass h2,
-.travellerclass h2 {
+.stc .savedtravellerclass h2,
+.stc .travellerclass h2 {
   color: #4bad57;
 }
-.travellerclass div {
+.stc #logo {
+  padding: 25px;
+  width: 450px;
+  margin-bottom: 20px;
+}
+.stc .travellerclass div {
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
 }
-.travellerclass #submit {
+.stc .travellerclass #submit {
   display: flex;
   flex-direction: row;
 }
-.travellerclass input,
-.travellerclass select {
+.stc .travellerclass input,
+.stc .travellerclass select {
   width: 400px;
 }
-#s {
+.stc #s {
   background-color: rgb(145, 51, 186);
 }
-#c {
+.stc #c {
   background-color: transparent;
   color: black;
 }
 
-#st {
+.stc #st {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
+  padding-left: 10px;
 }
-#st .input {
+.stc #st .input {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-#st .button {
+.stc #st .button {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#st p {
+.stc #st p {
   color: #4a21db;
 }

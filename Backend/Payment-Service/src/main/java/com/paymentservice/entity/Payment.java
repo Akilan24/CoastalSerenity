@@ -1,5 +1,6 @@
 package com.paymentservice.entity;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -19,8 +20,8 @@ public class Payment {
 	@Id
 	private long paymentid;
 	private long bookingId;
-	@JsonFormat(pattern = "dd-MM-yyyy")
-	private Date paymentDate;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private LocalDateTime paymentDate;
 	private String username;
 	private double amount;
 	private String paymentStatus;

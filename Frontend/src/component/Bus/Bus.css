@@ -36,8 +36,9 @@ select {
   position: sticky;
 }
 
-button {
+#but {
   cursor: pointer;
+  width: 100px;
 }
 
 .busDetails .bus {
@@ -53,8 +54,8 @@ button {
   width: 80%;
   height: 100px;
   padding: 10px;
-  border: 2px solid rgb(0, 213, 255);
 }
+
 .busname {
   display: flex;
   flex-direction: column;
@@ -68,12 +69,14 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 60%;
+  margin-right: 5px;
 }
 .price {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  margin: 0px;
 }
 .price > p {
   color: grey;

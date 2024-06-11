@@ -1,0 +1,55 @@
+.busbookingdetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.busbookingdetails .details-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 25px;
+  padding: 30px;
+}
+.busbookingdetails .detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.busbookingdetails .detail-label {
+  flex: 1;
+  font-weight: bold;
+  color: rgb(153, 7, 183);
+  display: flex;
+  justify-content: start;
+}
+.busbookingdetails #logo {
+  padding: 0px;
+  width: 450px;
+  margin-bottom: 20px;
+}
+.busbookingdetails .detail-value {
+  flex: 1;
+  text-align: right;
+  color: #4bad57;
+}
+
+.busbookingdetails button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.busbookingdetails button:hover {
+  background-color: #0056b3;
+}

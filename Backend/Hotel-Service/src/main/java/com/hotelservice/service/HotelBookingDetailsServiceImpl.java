@@ -1,5 +1,6 @@
 package com.hotelservice.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -59,6 +60,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 		bookingdetails.setAddress(hotel.getAddress());
 		bookingdetails.setAmount(daysBetween * amt);
 		bookingdetails.setPaymentStatus("Payment has to be done");
+		bookingdetails.setBookedDate(LocalDateTime.now());
 		return bookingrepo.save(bookingdetails);
 
 	}
@@ -159,8 +161,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	@Override
 	public List<HotelBookingDetails> showBookingDetailsbyUserName(String userName) {
 		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
-		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
-				.collect(Collectors.toList());
+		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email)).sorted((b1, b2) -> b2.getBookedDate().compareTo(b1.getBookedDate()))
+                .collect(Collectors.toList());
 		if (!bd.isEmpty()) {
 			return bd;
 		} else

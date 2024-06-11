@@ -22,7 +22,7 @@ function HotelBookingDetails() {
         const response = await axios.get(
           `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyusernameandhotelname/${localStorage.getItem(
             "username"
-          )}//${value}`,
+          )}/${value}`,
           config
         );
         setHotelBookingDetails(response.data);

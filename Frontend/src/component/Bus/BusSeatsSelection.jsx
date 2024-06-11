@@ -83,14 +83,14 @@ function BusSeatsSelection() {
     };
     try {
       const response = await axios.post(
-        `http://localhost:8080/CS/Bus/bookbus/${busid}/${localStorage.getItem(
+        `http://localhost:8080/CS/Bus/bookBus/${busid}/${localStorage.getItem(
           "username"
         )}`,
         btbs,
         config
       );
       console.log(response.data);
-      navigate(`/busBookingDetails/${bus.busId}`);
+      navigate(`/busBookingDetails/${response.data.busBookingId}`);
     } catch (error) {
       console.log(error.response.data.message);
     }
@@ -158,7 +158,7 @@ function BusSeatsSelection() {
                   </div>
                 )}
               </div>
-              <div>
+              <div id="button">
                 {travellers.length > 0 && (
                   <div>
                     <button id="add" onClick={() => navigate("/saveTraveller")}>
@@ -199,7 +199,7 @@ function BusSeatsSelection() {
                             ? selectedSeats.includes(seat)
                               ? "#91c4e5"
                               : "white"
-                            : "#grey",
+                            : "grey",
                         }}
                         onClick={() => handleSelectSeat(seat)}
                       >
@@ -218,7 +218,7 @@ function BusSeatsSelection() {
                             ? selectedSeats.includes(seat)
                               ? "#91c4e5"
                               : "white"
-                            : "#grey",
+                            : "grey",
                         }}
                         onClick={() => handleSelectSeat(seat)}
                       >
@@ -240,7 +240,7 @@ function BusSeatsSelection() {
                           ? selectedSeats.includes(seat)
                             ? "#91c4e5"
                             : "white"
-                          : "#grey",
+                          : "grey",
                       }}
                       onClick={() => handleSelectSeat(seat)}
                     >
@@ -259,7 +259,7 @@ function BusSeatsSelection() {
                           ? selectedSeats.includes(seat)
                             ? "#91c4e5"
                             : "white"
-                          : "#grey",
+                          : "grey",
                       }}
                       onClick={() => handleSelectSeat(seat)}
                     >

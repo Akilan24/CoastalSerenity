@@ -31,7 +31,7 @@ public class BusBookingDetails {
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime arrivalTime;
 	private String duration;
-	private String stopOver;
+	private String route;
 	private String nextDay;
 	private double totalPrice;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

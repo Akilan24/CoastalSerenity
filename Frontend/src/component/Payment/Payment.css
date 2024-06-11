@@ -10,6 +10,8 @@
   color: #4bad57;
   font-size: 50px;
   font-style: italic;
+  padding: 0%;
+  margin: 15px;
 }
 
 .payment .paymentDetails {
@@ -57,15 +59,14 @@
   cursor: not-allowed;
 }
 
-.payment button:not(:disabled):hover {
-  background-color: #218838;
-}
 .payment .display {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .payment .time {
-  background-color: rgb(191, 28, 28);
+  background-color: white;
   padding: 5px;
   border-radius: 25px;
   display: flex;
@@ -73,10 +74,12 @@
   align-items: center;
 }
 .payment .warning {
-  color: rgb(255, 255, 255);
+  color: rgb(145, 51, 186);
   margin-top: 20px;
+  backdrop-filter: blur(5px);
 }
 .payment #logo {
+  padding: 0px;
   width: 450px;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }

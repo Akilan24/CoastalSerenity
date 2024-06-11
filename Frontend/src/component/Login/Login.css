@@ -47,10 +47,26 @@ button {
 .loginclass h2,
 .forgotclass h2,
 .resetclass h2 {
+ 
   color: #4bad57;
   font-size: 50px;
   font-style: italic;
 }
+.forgotclass h2{
+  margin-top: 25px;
+ margin-bottom: 25px;
+}
+.loginclass h2{
+  margin-top: 25px;
+ margin-bottom: 25px;
+}
 .resetclass h2 {
+  margin-bottom: 0px;
+}
+.loginclass #logo,
+.forgotclass #logo,
+.resetclass #logo {
+  padding: 25px;
+  width: 450px;
   margin-bottom: 0px;
 }

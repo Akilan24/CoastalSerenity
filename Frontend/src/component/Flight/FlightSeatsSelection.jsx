@@ -72,7 +72,7 @@ function FlightSeatsSelection() {
   const handlePostTravellersAndSeats = async (e, flightid) => {
     e.preventDefault();
     const ftfs = {
-      traveller: postTravellers,
+      travellers: postTravellers,
       flightSeats: selectedSeats,
     };
     try {
@@ -84,7 +84,7 @@ function FlightSeatsSelection() {
         config
       );
       console.log(response.data);
-      navigate(`/flightBookingDetails/${flight.flightId}`);
+      navigate(`/flightBookingDetails/${response.data.flightBookingId}`);
     } catch (error) {
       console.log(error.response.data.message);
     }
@@ -152,7 +152,7 @@ function FlightSeatsSelection() {
                   </div>
                 )}
               </div>
-              <div>
+              <div id="button">
                 {travellers.length > 0 && (
                   <div>
                     <button id="add" onClick={() => navigate("/saveTraveller")}>

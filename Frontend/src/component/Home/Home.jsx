@@ -15,7 +15,8 @@ import Payment from "../Payment/Payment.jsx";
 import FlightSeatsSelection from "../Flight/FlightSeatsSelection.jsx";
 import FlightBookingDetails from "../Flight/FlightBookingDetails.jsx";
 import BusSeatsSelection from "../Bus/BusSeatsSelection.jsx";
-import MyTrips from "../Profile/MyTrips/MyTrips.jsx";
+import BusBookingDetails from "../Bus/BusBookingDetails.jsx";
+import MyTrips from "../MyTrips/MyTrips.jsx";
 function Home() {
   return (
     <>
@@ -47,6 +48,10 @@ function Home() {
           <Route
             path="/busSeatsSelection/:value"
             element={<BusSeatsSelection />}
+          />
+          <Route
+            path="/busBookingDetails/:value"
+            element={<BusBookingDetails />}
           />
           <Route path="/payment/:value" element={<Payment />} />
         </Routes>

@@ -33,7 +33,7 @@ function Tabs() {
   }
   return (
     <div className="menu">
-      <img id="logo" src="./cslogo.png" />
+      <img id="tabsLogo" src="./cslogo.png" />
       <div className="selector">
         <div id="tab">
           <button onClick={(n) => routeTo("/hotel")}>

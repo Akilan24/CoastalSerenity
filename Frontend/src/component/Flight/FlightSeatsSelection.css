@@ -138,32 +138,53 @@
 #red {
   background-color: #df5656;
 }
-
+.fss #logo {
+  padding: 25px;
+  width: 450px;
+  margin-bottom: 20px;
+}
 .pay-button {
   margin-bottom: 15px;
   background-color: #1f78b4;
   margin-top: 15px;
 }
-.bss .travellerList {
-  display: flex;
+pay-button {
+  margin-bottom: 15px;
+  background-color: #1f78b4;
+  margin-top: 15px;
 }
-.bss input {
+.fss .travellerList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fss #input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fss input {
   width: 50px;
 }
-.list {
+.fss .list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
-#add {
+.fss #button {
+  position: relative;
+  top: 6px;
+}
+.fss #add {
   margin-left: 15px;
   margin-bottom: 15px;
   background-color: #1f78b4;
 }
-#guest {
+.fss #guest {
   display: flex;
   flex-direction: column;
 }
-#check {
+.fss #check {
   margin-bottom: 10px;
 }

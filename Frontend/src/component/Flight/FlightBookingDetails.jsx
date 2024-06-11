@@ -29,12 +29,20 @@ function FlightBookingDetails() {
     fetchFlightBookingDetails();
   }, [value]);
   const getDuration = (duration) => {
-    const [hours, minutes] = duration.split(":");
+    if (!duration) {
+      return "N/A";
+    }
+    const parts = duration.split(":");
+    if (parts.length !== 2) {
+      return "N/A";
+    }
+    const [hours, minutes] = parts;
     return `${hours}h ${minutes}m`;
   };
+
   return (
     <div className="flightbookingdetails">
-      <img id="logo1" src="../cslogo.png" alt="Logo" />
+      <img id="logo" src="../cslogo.png" alt="Logo" />
       <div className="details-container">
         <div className="detail-img">
           <img src={flightBookingDetails.airlineLogo} alt="Airline Logo" />

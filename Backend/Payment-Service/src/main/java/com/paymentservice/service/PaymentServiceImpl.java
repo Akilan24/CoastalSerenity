@@ -3,6 +3,7 @@ package com.paymentservice.service;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Service;
 
 import com.paymentservice.entity.Payment;
 import com.paymentservice.exception.PaymentDetailsNotFoundException;
+import com.paymentservice.externalclass.BusBookingDetails;
 import com.paymentservice.externalclass.FlightBookingDetails;
 import com.paymentservice.externalclass.HotelBookingDetails;
+import com.paymentservice.proxy.BusBookingDetailsProxy;
 import com.paymentservice.proxy.FlightBookingDetailsProxy;
 import com.paymentservice.proxy.HotelBookingDetailsProxy;
 import com.paymentservice.repository.PaymentRepository;
@@ -29,6 +32,9 @@ public class PaymentServiceImpl implements PaymentService {
 	@Autowired
 	FlightBookingDetailsProxy fbdproxy;
 
+	@Autowired
+	BusBookingDetailsProxy bbdproxy;
+	
 	@Override
 	public Payment doPayment(String bookingid) {
 		String[] value = bookingid.split("-");
@@ -40,7 +46,7 @@ public class PaymentServiceImpl implements PaymentService {
 		int count = paymentRepository.findAll().size();
 		p.setPaymentid(count == 0 ? MIN_ID : MIN_ID + count);
 		p.setBookingId(id);
-		p.setPaymentDate(DateNow());
+		p.setPaymentDate(LocalDateTime.now());
 		if (value[0].equalsIgnoreCase("hotel")) {
 			HotelBookingDetails hbd = hbdproxy.getBookingDetails(id);
 			p.setUsername(hbd.getName());
@@ -51,6 +57,12 @@ public class PaymentServiceImpl implements PaymentService {
 			FlightBookingDetails fbd = fbdproxy.getFlightBookingDetailsById(id);
 			p.setUsername(fbd.getName());
 			p.setAmount(fbd.getTotalPrice());
+			p.setPaymentStatus("Payment Done");
+			fbdproxy.paymentstatuschange(id);
+		}else if (value[0].equalsIgnoreCase("bus")) {
+			BusBookingDetails bbd = bbdproxy.getBusBookingDetailsById(id);
+			p.setUsername(bbd.getName());
+			p.setAmount(bbd.getTotalPrice());
 			p.setPaymentStatus("Payment Done");
 			fbdproxy.paymentstatuschange(id);
 		}

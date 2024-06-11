@@ -20,7 +20,7 @@
   position: relative;
   left: 30px;
 }
-#ptab button {
+#profile #ptab button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -28,7 +28,7 @@
   font-weight: bold;
   color: rgb(145, 51, 186);
 }
-#profile img {
+#profile #imgIcon {
   width: 25px;
   padding-right: 10px;
 }

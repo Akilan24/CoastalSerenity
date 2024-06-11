@@ -27,31 +27,31 @@ function AccountDetails() {
       </div>
       <div id="ptab">
         <button onClick={(n) => routeTo("/profile")}>
-          <img id="img" src="../src/assets/Profile/profile.png" />
+          <img id="imgIcon" src="../src/assets/Profile/profile.png" />
           Profile
         </button>
       </div>
       <div id="ptab">
-        <button onClick={(n) => routeTo("/hotelBookingDetails")}>
-          <img id="img" src="../src/assets/Profile/booking.png" />
+        <button onClick={(n) => routeTo("/myTrips")}>
+          <img id="imgIcon" src="../src/assets/Profile/booking.png" />
           My Trips
         </button>
       </div>
       <div id="ptab">
         <button onClick={changePassword}>
-          <img id="img" src="../src/assets/Profile/password.png" />
+          <img id="imgIcon" src="../src/assets/Profile/password.png" />
           Change Password
         </button>
       </div>
       <div id="ptab">
         <button onClick={(n) => routeTo("/saveTraveller")}>
-          <img id="img" src="../src/assets/Profile/traveller.png" />
+          <img id="imgIcon" src="../src/assets/Profile/traveller.png" />
           Save Travellers
         </button>
       </div>
       <div id="ptab">
         <button onClick={logout}>
-          <img id="img" src="../src/assets/Profile/logout.png" />
+          <img id="imgIcon" src="../src/assets/Profile/logout.png" />
           Logout
         </button>
       </div>
