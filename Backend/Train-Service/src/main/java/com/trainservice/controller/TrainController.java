@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.trainservice.entity.Train;
 import com.trainservice.entity.TrainBookingDetails;
-import com.trainservice.entity.TrainTravellerTrainSeats;
+import com.trainservice.externalclass.Traveller;
 import com.trainservice.service.TrainService;
 
 @RestController
@@ -49,10 +49,10 @@ public class TrainController {
 		return new ResponseEntity<>(trainService.saveTrain(Train), HttpStatus.CREATED);
 	}
 
-	@PostMapping("/bookTrain/{id}/{username}")
+	@PostMapping("/bookTrain/{id}/{username}/{boardingStation}/{seatType}")
 	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody TrainTravellerTrainSeats ttts, @PathVariable String username) {
-		return new ResponseEntity<>(trainService.bookTrain(id, ttts, username), HttpStatus.CREATED);
+			@RequestBody List<Traveller> travellers,@PathVariable String boardingStation,@PathVariable String seatType, @PathVariable String username) {
+		return new ResponseEntity<>(trainService.bookTrain(id, travellers,boardingStation,seatType, username), HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")
@@ -91,7 +91,7 @@ public class TrainController {
 		return new ResponseEntity<>(trainService.paymentstatuschange(bookingid), HttpStatus.OK);
 	}
 
-	@GetMapping("/getallavailableTraines/{from}/{to}/{departure}")
+	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) {
 		return new ResponseEntity<>(trainService.getAllAvailableTrains(from, to, departure),

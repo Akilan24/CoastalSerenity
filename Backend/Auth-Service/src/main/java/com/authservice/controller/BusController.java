@@ -50,10 +50,11 @@ public class BusController {
 		return busProxy.createBus(Bus);
 	}
 
-	@PostMapping("/bookBus/{id}/{username}")
+	@PostMapping("/bookBus/{id}/{username}/{pickUpPoint}/{dropPoint}")
 	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id,
-			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username) {
-		return busProxy.bookBus(id, btbs, username);
+			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username,@PathVariable String pickUpPoint,@PathVariable
+			String dropPoint)  {
+		return busProxy.bookBus(id, btbs, username,pickUpPoint,dropPoint);
 	}
 	
 	@GetMapping("/getbusbookingdetailsbyid/{id}")

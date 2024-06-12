@@ -28,16 +28,6 @@ public class JwtUtility {
 
 	@Value("${jwtExpirationMs}")
 	private int jwtExpirationMs;
-	@Autowired
-	private UserRepository repository;
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-
-	public String saveUser(Registration credential) {
-		credential.setPassword(passwordEncoder.encode(credential.getPassword()));
-		repository.save(credential);
-		return "user added to the system";
-	}
 
 	public String generateToken(Authentication authentication) {
 

@@ -28,9 +28,10 @@ public interface BusProxyController {
 	@PostMapping("/save")
 	public ResponseEntity<Bus> createBus(@RequestBody Bus Bus);
 
-	@PostMapping("/bookBus/{id}/{username}")
-	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id, @RequestBody BusTravellerBusSeats btbs,
-			@PathVariable String username);
+	@PostMapping("/bookBus/{id}/{username}/{pickUpPoint}/{dropPoint}")
+	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id,
+			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username,@PathVariable String pickUpPoint,@PathVariable
+			String dropPoint);
 
 	@GetMapping("/getbusbookingdetailsbyid/{id}")
 	public ResponseEntity<BusBookingDetails> getBusBookingDetailsById(@PathVariable long id);

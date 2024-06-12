@@ -18,7 +18,6 @@ import com.trainservice.entity.Train;
 import com.trainservice.entity.TrainBookingDetails;
 import com.trainservice.entity.TrainPassenger;
 import com.trainservice.entity.TrainSeats;
-import com.trainservice.entity.TrainTravellerTrainSeats;
 import com.trainservice.exception.TrainDetailsNotFoundException;
 import com.trainservice.externalclass.Registration;
 import com.trainservice.externalclass.Traveller;
@@ -140,8 +139,6 @@ public class TrainServiceImpl implements TrainService {
 		if (!list.isEmpty()) {
 			List<Train> TrainList = list.stream().filter(Train -> Train.getOrigin().equalsIgnoreCase(from))
 					.filter(Train -> Train.getDestination().equalsIgnoreCase(to))
-					.filter(Train -> Train.getTrainBookingStatus().values().stream().mapToInt(Integer::intValue)
-							.sum() > 0)
 					.filter(Train -> Train.getDepartureTime().toString().split("T")[0]
 							.equalsIgnoreCase(formatter.format(departure)))
 					.collect(Collectors.toList());
@@ -160,17 +157,16 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public TrainBookingDetails bookTrain(long id, TrainTravellerTrainSeats ttts, String username) {
+	public TrainBookingDetails bookTrain(long id, List<Traveller> travellers, String seatType, String boardingStation,
+			String username) {
 		Optional<Train> TrainOptional = trainRepository.findById(id);
 		if (TrainOptional.isEmpty()) {
 			throw new TrainDetailsNotFoundException("Train details of Train id: " + id + " are not found");
 		}
 		Map<String, Integer> map = TrainOptional.get().getTrainBookingStatus();
-		List<Traveller> travellers = ttts.getTravellers();
-		List<TrainSeats> TrainSeats = ttts.getTrainSeats();
 		Train Train = TrainOptional.get();
 
-		if (travellers.size() != TrainSeats.size()) {
+		if (travellers.size() != travellers.size()) {
 			throw new IllegalArgumentException("The number of travellers must match the number of Train seats.");
 		}
 
@@ -195,30 +191,45 @@ public class TrainServiceImpl implements TrainService {
 		bookingDetails.setPhonenumber(user.getMobile());
 		bookingDetails.setUsername(username);
 		bookingDetails.setBookedDate(LocalDateTime.now());
+		bookingDetails.setBoardingStation(boardingStation);
+		bookingDetails.setSeatType(seatType);
 		double totalPrice = 0;
+		for (Map.Entry<String, Double> me : Train.getSeatPrice().entrySet()) {
+			if (me.getKey().equalsIgnoreCase(seatType)) {
+				totalPrice = me.getValue() * travellers.size();
+			}
+		}
+		bookingDetails.setTotalPrice(totalPrice);
 		List<TrainPassenger> TrainPassengerList = new ArrayList<TrainPassenger>();
 		for (int i = 0; i < travellers.size(); i++) {
 			Traveller traveller = travellers.get(i);
-			TrainSeats seat = TrainSeats.get(i);
 			TrainPassenger passenger = new TrainPassenger();
 			passenger.setAddress(traveller.getAddress());
 			passenger.setGender(traveller.getGender());
 			passenger.setMobile(traveller.getMobile());
 			passenger.setAge(traveller.getAge());
-			passenger.setName(traveller.getName());
-			passenger.setSeatType(seat.getSeatType());
-			passenger.setSeatNo(seat.getSeatNo());
-			TrainPassengerList.add(passenger);
-			totalPrice += seat.getSeatPrice();
-			TrainSeats fs = trainSeatsRepository.findById(seat.getSeatId()).get();
-			fs.setBookingStatus(false);
-			trainSeatsRepository.save(fs);
+			passenger.setSeatType(seatType);
+			passenger.setCoachNo("NA");
+			for (Map.Entry<String, Integer> me : Train.getTrainBookingStatus().entrySet()) {
+				if (me.getKey().equalsIgnoreCase(seatType)) {
+					if (me.getValue() > 0) {
+						passenger.setSeatNo("Seat Confirmed");
+					} else {
+						for (Map.Entry<String, Integer> me1 : Train.getTrainBookingStatus().entrySet()) {
+							if (me1.getKey().equalsIgnoreCase(seatType)) {
+								int no = me1.getValue() + 1;
+								passenger.setSeatNo("WL" + no);
+								Train.getTrainWaitingListStatus().put(seatType, no);
+								trainRepository.save(Train);
+							}
+						}
 
-			for (Map.Entry<String, Integer> me : map.entrySet()) {
-				if (me.getKey().equalsIgnoreCase(seat.getSeatType())) {
-					map.put(seat.getSeatType(), me.getValue() - 1);
+					}
 				}
 			}
+			passenger.setName(traveller.getName());
+			TrainPassengerList.add(passenger);
+
 		}
 		TrainOptional.get().setTrainBookingStatus(map);
 		trainRepository.save(TrainOptional.get());
@@ -275,25 +286,28 @@ public class TrainServiceImpl implements TrainService {
 					seats.add(seat);
 				}
 			}
-			for (int s = TOTAL_COACH_1A+1; s <= TOTAL_COACH_1A+TOTAL_COACH_2A; s++) {
+			for (int s = TOTAL_COACH_1A + 1; s <= TOTAL_COACH_1A + TOTAL_COACH_2A; s++) {
 				for (int i = 1; i <= TOTAL_SEAT_PER_COACH_2A; i++) {
 					TrainSeats seat = new TrainSeats(0, "CS" + i, COACH_TYPE_2A, COACH_PRICE_2A, "S" + s, true);
 					seats.add(seat);
 				}
 			}
-			for (int s = TOTAL_COACH_1A+TOTAL_COACH_2A+1; s <= TOTAL_COACH_1A+TOTAL_COACH_2A+TOTAL_COACH_3A; s++) {
+			for (int s = TOTAL_COACH_1A + TOTAL_COACH_2A + 1; s <= TOTAL_COACH_1A + TOTAL_COACH_2A
+					+ TOTAL_COACH_3A; s++) {
 				for (int i = 1; i <= TOTAL_SEAT_PER_COACH_3A; i++) {
 					TrainSeats seat = new TrainSeats(0, "CS" + i, COACH_TYPE_3A, COACH_PRICE_3A, "S" + s, true);
 					seats.add(seat);
 				}
 			}
-			for (int s = TOTAL_COACH_1A+TOTAL_COACH_2A+TOTAL_COACH_3A+1; s <=TOTAL_COACH_1A+TOTAL_COACH_2A+TOTAL_COACH_3A+TOTAL_COACH_SL; s++) {
+			for (int s = TOTAL_COACH_1A + TOTAL_COACH_2A + TOTAL_COACH_3A + 1; s <= TOTAL_COACH_1A + TOTAL_COACH_2A
+					+ TOTAL_COACH_3A + TOTAL_COACH_SL; s++) {
 				for (int i = 1; i <= TOTAL_SEAT_PER_COACH_SL; i++) {
 					TrainSeats seat = new TrainSeats(0, "CS" + i, COACH_TYPE_SL, COACH_PRICE_SL, "S" + s, true);
 					seats.add(seat);
 				}
 			}
-			for (int s = TOTAL_COACH_1A+TOTAL_COACH_2A+TOTAL_COACH_3A+TOTAL_COACH_SL+1; s <=TOTAL_COACH_1A+TOTAL_COACH_2A+TOTAL_COACH_3A+TOTAL_COACH_SL+TOTAL_COACH_CC; s++) {
+			for (int s = TOTAL_COACH_1A + TOTAL_COACH_2A + TOTAL_COACH_3A + TOTAL_COACH_SL + 1; s <= TOTAL_COACH_1A
+					+ TOTAL_COACH_2A + TOTAL_COACH_3A + TOTAL_COACH_SL + TOTAL_COACH_CC; s++) {
 				for (int i = 1; i <= TOTAL_SEAT_PER_COACH_CC; i++) {
 					TrainSeats seat = new TrainSeats(0, "CS" + i, COACH_TYPE_CC, COACH_PRICE_CC, "S" + s, true);
 					seats.add(seat);

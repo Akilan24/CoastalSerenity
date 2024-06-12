@@ -1,0 +1,169 @@
+select {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0%;
+}
+#trainClass select,
+#trainClass input,
+#trainClass label {
+  width: 250px;
+  height: 50px;
+  font-size: 25px;
+}
+#trainClass .formclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(0, 213, 255);
+  border-radius: 0%;
+}
+#trainClass .divclass {
+  margin-right: 5px;
+}
+#tjs .formclass #trainSearch {
+  background-color: rgb(145, 51, 186);
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tjs .formclass {
+  position: sticky;
+}
+
+#tjs #but {
+  cursor: pointer;
+  width: 100px;
+}
+#tjs .trainDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  height: fit-content;
+}
+.trainSeats {
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.trainDetails .train {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  padding: 20px;
+}
+
+.trainname {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.trainDetails > p {
+  margin-top: 50px;
+}
+#tjs .journeyDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-right: 5px;
+}
+#tjs .price {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin: 0px;
+}
+#tjs .price > p {
+  color: grey;
+}
+#tjs .days {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#tjs #time {
+  color: black;
+}
+#tjs .trainSeats {
+  display: flex;
+  flex-direction: column;
+}
+#tjs .seats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#tjs .seats #type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 130px;
+  height: 100px;
+  font-size: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 3px 2px grey;
+  border-radius: 2px;
+}
+#tjs #type p {
+  color: black;
+  font-weight: normal;
+}
+#tjs #company {
+  font-size: 32px;
+  padding-top: 0px;
+  color: rgb(145, 51, 186);
+}
+#tjs #date {
+  color: grey;
+  font-size: 20px;
+  margin-left: 5px;
+}
+#tjs span {
+  color: #4bad57;
+}
+#tjs #type > #avail {
+  font-size: 14px;
+  color: #4bad57;
+}
+#tjs #type div {
+  display: flex;
+  justify-content: space-around;
+  width: 130px;
+}
+#tjs #stopOver,
+#tjs #duration {
+  color: grey;
+  font-size: 18px;
+}
+#tjs .trainDetails #model {
+  color: grey;
+  font-size: 14px;
+}
+
+#tjs #count {
+  color: black;
+  font-size: 25px;
+}
+#tjs #count {
+  font-size: 18px;
+  font-weight: normal;
+}

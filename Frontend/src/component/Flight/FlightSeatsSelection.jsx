@@ -6,8 +6,6 @@ import "./FlightSeatsSelection.css";
 function FlightSeatsSelection() {
   const { value } = useParams();
   const navigate = useNavigate();
-  const [flight, setFlight] = useState(null);
-  const [seats, setSeats] = useState([]);
   const [economySeats, setEconomySeats] = useState([]);
   const [businessSeats, setBusinessSeats] = useState([]);
   const [firstclassSeats, setFirstclassSeats] = useState([]);
@@ -27,18 +25,17 @@ function FlightSeatsSelection() {
           `http://localhost:8080/CS/Flight/getbyid/${value}`,
           config
         );
-        setFlight(response.data);
-        setSeats(response.data.flightSeats);
+        console.log(response.data);
 
-        const firstClass = response.data.flightSeats.filter(
-          (seat) => seat.seatClass === "firstclass"
-        );
-        const business = response.data.flightSeats.filter(
-          (seat) => seat.seatClass === "business"
-        );
-        const economy = response.data.flightSeats.filter(
-          (seat) => seat.seatClass === "economy"
-        );
+        const firstClass = response.data.flightSeats
+          .filter((seat) => seat.seatClass === "firstclass")
+          .sort((a, b) => a.seatNumber.localeCompare(b.seatNumber));
+        const business = response.data.flightSeats
+          .filter((seat) => seat.seatClass === "business")
+          .sort((a, b) => a.seatNumber.localeCompare(b.seatNumber));
+        const economy = response.data.flightSeats
+          .filter((seat) => seat.seatClass === "economy")
+          .sort((a, b) => a.seatNumber.localeCompare(b.seatNumber));
 
         setFirstclassSeats(firstClass);
         setBusinessSeats(business);

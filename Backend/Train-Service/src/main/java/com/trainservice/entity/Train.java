@@ -24,7 +24,7 @@ public class Train {
 
 	@Id
 	private long trainId;
-	private String pnr;
+	private long pnr;
 	private String trainName;
 	private String origin;
 	private String destination;
@@ -33,7 +33,11 @@ public class Train {
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime arrivalTime;
 	private String duration;
+	private String departOn;
 	private String nextDay;
+	@ElementCollection
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private Map<String,LocalDateTime> boardingStation;
 	@ElementCollection
 	private Map<String, Integer> totalSeat;
 	@ElementCollection
@@ -42,9 +46,11 @@ public class Train {
 	private Map<String, Double> seatPrice;
 	@ElementCollection
 	private Map<String, Integer> trainBookingStatus;
+	@ElementCollection
+	private Map<String, Integer> trainWaitingListStatus;
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "trainId", referencedColumnName = "trainId")
 	private List<TrainSeats> trainSeats;
-	// 1a-18-1 2a-48-2 3a-64-3 sl-72-6 gn-72-4
+	// 1A-18-1 2A-48-2 3A-64-3 SL-72-6 GN-72-4
 
 }

@@ -6,7 +6,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.authservice.entity.Traveller;
 import com.authservice.proxyentity.train.Train;
 import com.authservice.proxyentity.train.TrainBookingDetails;
 import com.authservice.proxyentity.train.TrainProxyController;
-import com.authservice.proxyentity.train.TrainTravellerTrainSeats;
 
 @RestController
 @RequestMapping("/CS/Train")
@@ -51,10 +50,10 @@ public class TrainController {
 		return trainProxy.createTrain(Train);
 	}
 
-	@PostMapping("/bookTrain/{id}/{username}")
+	@PostMapping("/bookTrain/{id}/{username}/{boardingStation}/{seatType}")
 	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody TrainTravellerTrainSeats ttts, @PathVariable String username) {
-		return trainProxy.bookTrain(id, ttts, username);
+			@RequestBody List<Traveller> travellers,@PathVariable String boardingStation,@PathVariable String seatType, @PathVariable String username) {
+		return trainProxy.bookTrain(id, travellers,boardingStation,seatType, username);
 	}
 
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")
@@ -93,7 +92,7 @@ public class TrainController {
 		return trainProxy.paymentstatuschange(bookingid);
 	}
 
-	@GetMapping("/getallavailableTraines/{from}/{to}/{departure}")
+	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) {
 		return trainProxy.getAllAvailableTrains(from, to, departure);

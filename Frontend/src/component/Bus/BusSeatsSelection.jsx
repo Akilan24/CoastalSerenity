@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { parse, format } from "date-fns";
 import { useNavigate, useParams } from "react-router-dom";
 import "./BusSeatsSelection.css";
 
 function BusSeatsSelection() {
   const { value } = useParams();
   const navigate = useNavigate();
-  const [bus, setBus] = useState(null);
-  const [seats, setSeats] = useState([]);
+  const [pickUpPointList, setPickUpPointList] = useState(new Map());
+  const [dropPointList, setDropPointList] = useState(new Map());
+  const [pickUpPoint, setPickUpPoint] = useState("");
+  const [dropPoint, setDropPoint] = useState("");
   const [lowerSleeper, setLowerSleeper] = useState([]);
   const [lowerSeat, setLowerSeat] = useState([]);
   const [upperSleeper, setUpperSleeper] = useState([]);
@@ -29,26 +32,43 @@ function BusSeatsSelection() {
           config
         );
         setBus(response.data);
-        setSeats(response.data.busSeats);
-        console.log(response.data);
+
+        const sortedPickUpPoints = new Map(
+          [...Object.entries(response.data.pickUpPoint)].sort(
+            ([, timeA], [, timeB]) =>
+              parse(timeA, "yyyy-MM-dd HH:mm:ss", new Date()) -
+              parse(timeB, "yyyy-MM-dd HH:mm:ss", new Date())
+          )
+        );
+        setPickUpPointList(sortedPickUpPoints);
+
+        const sortedDropPoints = new Map(
+          [...Object.entries(response.data.dropPoint)].sort(
+            ([, timeA], [, timeB]) =>
+              parse(timeA, "yyyy-MM-dd HH:mm:ss", new Date()) -
+              parse(timeB, "yyyy-MM-dd HH:mm:ss", new Date())
+          )
+        );
+        setDropPointList(sortedDropPoints);
+
         setLowerSleeper(
           response.data.busSeats.filter(
             (seat) => seat.seatType === "lowerSleeper"
           )
-        );
+        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
         setLowerSeat(
           response.data.busSeats.filter((seat) => seat.seatType === "lowerSeat")
-        );
+        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
         setUpperSleeper(
           response.data.busSeats.filter(
             (seat) => seat.seatType === "upperSleeper"
           )
-        );
+        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
         setUpperDoubleSleeper(
           response.data.busSeats.filter(
             (seat) => seat.seatType === "upperDoubleSleeper"
           )
-        );
+        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
       } catch (error) {
         console.log(error.response.data.message);
       }
@@ -85,7 +105,7 @@ function BusSeatsSelection() {
       const response = await axios.post(
         `http://localhost:8080/CS/Bus/bookBus/${busid}/${localStorage.getItem(
           "username"
-        )}`,
+        )}/${pickUpPoint}/${dropPoint}`,
         btbs,
         config
       );
@@ -118,7 +138,10 @@ function BusSeatsSelection() {
       }
     });
   };
-
+  const getDate = (time) => {
+    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
+    return format(parsedDate, "HH:mm,dd MMM");
+  };
   return (
     <div className="bss">
       <div className="seatBooking">
@@ -171,18 +194,50 @@ function BusSeatsSelection() {
           </div>
 
           <div className="bus">
-            <div id="display">
-              <div>
-                <p id="white"></p>
-                <p>Free</p>
+            <div id="contain">
+              <div id="display">
+                <div>
+                  <p id="white"></p>
+                  <p>Free</p>
+                </div>
+                <div>
+                  <p id="blue"></p>
+                  <p>Selected</p>
+                </div>
+                <div>
+                  <p id="grey"></p>
+                  <p>Booked</p>
+                </div>
               </div>
               <div>
-                <p id="blue"></p>
-                <p>Selected</p>
+                <label htmlFor="pickUpPoint">Pickup Point:</label>
+                <select
+                  id="text"
+                  value={pickUpPoint}
+                  onChange={(e) => setPickUpPoint(e.target.value)}
+                >
+                  <option value="">Select Pickup Point</option>
+                  {Array.from(pickUpPointList.entries()).map(([key, value]) => (
+                    <option key={key} value={key}>
+                      {key} - {getDate(value)}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div>
-                <p id="grey"></p>
-                <p>Booked</p>
+                <label htmlFor="dropPoint">Drop Point:</label>
+                <select
+                  id="text"
+                  value={dropPoint}
+                  onChange={(e) => setDropPoint(e.target.value)}
+                >
+                  <option value="">Select Drop Point</option>
+                  {Array.from(dropPointList.entries()).map(([key, value]) => (
+                    <option key={key} value={key}>
+                      {key} - {getDate(value)}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
             <div className="busSeat">

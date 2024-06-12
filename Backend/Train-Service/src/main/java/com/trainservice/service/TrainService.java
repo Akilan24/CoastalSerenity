@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.trainservice.entity.Train;
 import com.trainservice.entity.TrainBookingDetails;
-import com.trainservice.entity.TrainTravellerTrainSeats;
+import com.trainservice.externalclass.Traveller;
 
 @Service
 public interface TrainService {
@@ -18,7 +18,7 @@ public interface TrainService {
 
 	Train saveTrain(Train Train);
 
-	TrainBookingDetails bookTrain(long id, TrainTravellerTrainSeats ttts, String username);
+	TrainBookingDetails bookTrain(long id, List<Traveller> travellers,String boardingStations,String seatType, String username);
 
 	TrainBookingDetails paymentstatuschange(long bookingid);
 

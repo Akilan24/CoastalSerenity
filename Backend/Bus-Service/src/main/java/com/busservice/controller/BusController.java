@@ -49,10 +49,11 @@ public class BusController {
 		return new ResponseEntity<>(BusService.saveBus(Bus), HttpStatus.CREATED);
 	}
 
-	@PostMapping("/bookBus/{id}/{username}")
+	@PostMapping("/bookBus/{id}/{username}/{pickUpPoint}/{dropPoint}")
 	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id,
-			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username) {
-		return new ResponseEntity<>(BusService.bookBus(id, btbs, username), HttpStatus.CREATED);
+			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username,@PathVariable String pickUpPoint,@PathVariable
+			String dropPoint) {
+		return new ResponseEntity<>(BusService.bookBus(id, btbs, username,pickUpPoint,dropPoint), HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/getbusbookingdetailsbyid/{id}")

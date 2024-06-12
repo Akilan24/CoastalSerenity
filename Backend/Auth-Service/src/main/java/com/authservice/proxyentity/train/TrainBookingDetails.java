@@ -20,7 +20,7 @@ public class TrainBookingDetails {
 
 	private long trainBookingId;
 	private String trainName;
-	private String pnr;
+	private long pnr;
 	private String origin;
 	private String destination;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -28,7 +28,9 @@ public class TrainBookingDetails {
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime arrivalTime;
 	private String duration;
+	private String boardingStation;
 	private String nextDay;
+	private String seatType;
 	private double totalPrice;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime bookedDate;

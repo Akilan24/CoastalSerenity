@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.authservice.entity.Traveller;
+
 @FeignClient(name = "TRAIN-SERVICE", url = "http://localhost:8088/Train")
 public interface TrainProxyController {
 
@@ -29,9 +31,9 @@ public interface TrainProxyController {
 	@PostMapping("/save")
 	public ResponseEntity<Train> createTrain(@RequestBody Train Train) ;
 
-	@PostMapping("/bookTrain/{id}/{username}")
+	@PostMapping("/bookTrain/{id}/{username}/{boardingStation}/{seatType}")
 	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody TrainTravellerTrainSeats ttts, @PathVariable String username) ;
+			@RequestBody List<Traveller> travellers,@PathVariable String boardingStation,@PathVariable String seatType, @PathVariable String username) ;
 	
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")
 	public ResponseEntity<TrainBookingDetails> getTrainBookingDetailsById(@PathVariable long id);
@@ -50,7 +52,7 @@ public interface TrainProxyController {
 	
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public ResponseEntity<TrainBookingDetails> paymentstatuschange(@PathVariable long bookingid) ;
-	@GetMapping("/getallavailableTraines/{from}/{to}/{departure}")
+	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) ;
 }

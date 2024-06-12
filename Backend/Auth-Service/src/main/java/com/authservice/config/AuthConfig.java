@@ -6,7 +6,6 @@ import java.util.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -26,7 +25,6 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import com.authservice.service.UserDetailsServiceImpl;
 import com.authservice.utility.EntryPointJwt;
 import com.authservice.utility.TokenFilter;
-import com.google.common.net.HttpHeaders;
 
 import jakarta.servlet.http.HttpServletRequest;
 

@@ -18,7 +18,8 @@ public interface BusService {
 
 	Bus saveBus(Bus Bus);
 
-	BusBookingDetails bookBus(long id, BusTravellerBusSeats btbs, String username);
+	BusBookingDetails bookBus(long id, BusTravellerBusSeats btbs, String username, String pickUpPoint,
+			String dropPoint);
 
 	BusBookingDetails paymentstatuschange(long bookingid);
 

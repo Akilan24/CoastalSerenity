@@ -94,6 +94,8 @@ public class BusServiceImpl implements BusService {
 			long minutes = Long.parseLong(parts[1]);
 			b.get().setArrivalTime(bus.getDepartureTime().plus(Duration.ofHours(hours).plusMinutes(minutes)));
 			b.get().setDepartureTime(bus.getDepartureTime());
+			b.get().setPickUpPoint(bus.getPickUpPoint());
+			b.get().setDropPoint(bus.getDropPoint());
 			b.get().setNextDay(isArrivalNextDay(bus.getDepartureTime(), bus.getArrivalTime()) ? "+1 DAY" : "");
 			b.get().setDestination(bus.getDestination());
 			b.get().setOrigin(bus.getOrigin());
@@ -159,7 +161,8 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public BusBookingDetails bookBus(long id, BusTravellerBusSeats ftfs, String username) {
+	public BusBookingDetails bookBus(long id, BusTravellerBusSeats ftfs, String username, String pickUpPoint,
+			String dropPoint) {
 		Optional<Bus> busOptional = busRepository.findById(id);
 		if (busOptional.isEmpty()) {
 			throw new BusDetailsNotFoundException("Bus details of bus id: " + id + " are not found");
@@ -185,6 +188,14 @@ public class BusServiceImpl implements BusService {
 		bookingDetails.setDepartureTime(bus.getDepartureTime());
 		bookingDetails.setArrivalTime(bus.getArrivalTime());
 		bookingDetails.setDuration(bus.getDuration());
+		for (Map.Entry<String, LocalDateTime> m : bus.getPickUpPoint().entrySet()) {
+			if (m.getKey().equalsIgnoreCase(pickUpPoint))
+				bookingDetails.setPickUpPoint(m.getKey() + "," + m.getValue());
+		}
+		for (Map.Entry<String, LocalDateTime> m : bus.getDropPoint().entrySet()) {
+			if (m.getKey().equalsIgnoreCase(dropPoint))
+				bookingDetails.setDropPoint(m.getKey() + "," + m.getValue());
+		}
 		bookingDetails.setRoute(bus.getRoute());
 		bookingDetails.setNextDay(bus.getNextDay());
 		bookingDetails.setUsername(username);
