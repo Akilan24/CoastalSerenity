@@ -49,10 +49,10 @@ public class TrainController {
 		return new ResponseEntity<>(trainService.saveTrain(Train), HttpStatus.CREATED);
 	}
 
-	@PostMapping("/bookTrain/{id}/{username}/{boardingStation}/{seatType}")
+	@PostMapping("/bookTrain/{id}/{seatType}/{boardingStation}/{username}")
 	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody List<Traveller> travellers,@PathVariable String boardingStation,@PathVariable String seatType, @PathVariable String username) {
-		return new ResponseEntity<>(trainService.bookTrain(id, travellers,boardingStation,seatType, username), HttpStatus.CREATED);
+			@RequestBody List<Traveller> travellers,@PathVariable String seatType,@PathVariable String boardingStation, @PathVariable String username) {
+		return new ResponseEntity<>(trainService.bookTrain(id, travellers,seatType,boardingStation, username), HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")

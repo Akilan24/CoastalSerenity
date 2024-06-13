@@ -43,6 +43,7 @@ function BusBookingDetails() {
   return (
     <div className="busbookingdetails">
       <img id="logo" src="../cslogo.png" alt="Logo" />
+      <h2>Bus Booking Details</h2>
       <div className="details-container">
         <div className="detail-row">
           <span className="detail-label">Bus Company:</span>

@@ -219,7 +219,7 @@ function BusSeatsSelection() {
                   <option value="">Select Pickup Point</option>
                   {Array.from(pickUpPointList.entries()).map(([key, value]) => (
                     <option key={key} value={key}>
-                      {key} - {getDate(value)}
+                      {key}-{getDate(value)}
                     </option>
                   ))}
                 </select>
@@ -227,14 +227,14 @@ function BusSeatsSelection() {
               <div>
                 <label htmlFor="dropPoint">Drop Point:</label>
                 <select
-                  id="text"
+                  id="dropPoint"
                   value={dropPoint}
                   onChange={(e) => setDropPoint(e.target.value)}
                 >
                   <option value="">Select Drop Point</option>
                   {Array.from(dropPointList.entries()).map(([key, value]) => (
                     <option key={key} value={key}>
-                      {key} - {getDate(value)}
+                      {key}-{getDate(value)}
                     </option>
                   ))}
                 </select>

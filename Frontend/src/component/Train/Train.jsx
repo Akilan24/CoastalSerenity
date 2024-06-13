@@ -53,15 +53,14 @@ function Train() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const getTime = (time) => {
-    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
-    return format(parsedDate, "HH:mm");
+  const getTime = (datetime) => {
+    const date = new Date(datetime);
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
   const getDate = (time) => {
     const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
     return format(parsedDate, "dd MMM");
   };
-
   const getDuration = (duration) => {
     const [hours, minutes] = duration.split(":");
     return `${hours}h ${minutes}m`;
@@ -143,7 +142,7 @@ function Train() {
       <div className="trainDetails">
         {trains.length > 0 ? (
           trains.map((train, index) => (
-            <div class="trainSeats">
+            <div key={index} className="trainSeats">
               <div key={index} className="train">
                 <div className="td">
                   <div className="trainname">

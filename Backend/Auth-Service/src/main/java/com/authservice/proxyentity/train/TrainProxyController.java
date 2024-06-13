@@ -31,9 +31,9 @@ public interface TrainProxyController {
 	@PostMapping("/save")
 	public ResponseEntity<Train> createTrain(@RequestBody Train Train) ;
 
-	@PostMapping("/bookTrain/{id}/{username}/{boardingStation}/{seatType}")
+	@PostMapping("/bookTrain/{id}/{seatType}/{boardingStation}/{username}")
 	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody List<Traveller> travellers,@PathVariable String boardingStation,@PathVariable String seatType, @PathVariable String username) ;
+			@RequestBody List<Traveller> travellers,@PathVariable String seatType,@PathVariable String boardingStation, @PathVariable String username) ;
 	
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")
 	public ResponseEntity<TrainBookingDetails> getTrainBookingDetailsById(@PathVariable long id);

@@ -18,6 +18,9 @@
 .flightbookingdetails .detail-img img {
   width: 200px;
 }
+.flightbookingdetails h2 {
+  color: #4bad57;
+}
 .flightbookingdetails .detail-img {
   background-color: #4bad57;
   border-top-left-radius: 22px;

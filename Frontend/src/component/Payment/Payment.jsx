@@ -65,6 +65,21 @@ function Payment() {
       }
       fetchBusBookingDetails();
     }
+    if (val[0] === "train") {
+      async function fetchBusBookingDetails() {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Train/getTrainbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setBookingDetails(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.log(error.response);
+        }
+      }
+      fetchBusBookingDetails();
+    }
   }, [value]);
 
   useEffect(() => {

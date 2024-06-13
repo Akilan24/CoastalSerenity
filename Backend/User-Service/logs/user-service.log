@@ -22,3 +22,999 @@
 2024-06-13 01:48:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 2024-06-13 01:53:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 2024-06-13 01:58:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 02:02:44 [RMI TCP Connection(226)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(206)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(216)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(247)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(213)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(174)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(250)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(238)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(227)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(210)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(236)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(244)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(251)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(248)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(246)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(221)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(211)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(245)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(233)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(217)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(240)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(228)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(252)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(234)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(219)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(249)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(215)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(223)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(253)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:44 [RMI TCP Connection(237)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(212)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(207)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(239)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(224)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(218)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(242)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(225)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(235)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(231)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(220)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(222)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(230)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(208)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(232)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(229)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(243)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(209)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:45 [RMI TCP Connection(254)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:46 [RMI TCP Connection(214)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:46 [RMI TCP Connection(256)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:47 [RMI TCP Connection(255)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:47 [RMI TCP Connection(257)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:48 [RMI TCP Connection(258)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:48 [RMI TCP Connection(259)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:49 [RMI TCP Connection(260)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:50 [RMI TCP Connection(261)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:50 [RMI TCP Connection(262)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:50 [RMI TCP Connection(263)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:50 [RMI TCP Connection(264)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:50 [RMI TCP Connection(265)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:51 [RMI TCP Connection(266)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:54 [RMI TCP Connection(267)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:54 [RMI TCP Connection(268)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:54 [RMI TCP Connection(269)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:54 [RMI TCP Connection(270)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:54 [RMI TCP Connection(271)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:56 [RMI TCP Connection(272)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:56 [RMI TCP Connection(273)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:57 [RMI TCP Connection(274)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:57 [RMI TCP Connection(275)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:57 [RMI TCP Connection(276)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:58 [RMI TCP Connection(277)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:58 [RMI TCP Connection(278)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:58 [RMI TCP Connection(279)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:02:59 [RMI TCP Connection(280)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:01 [RMI TCP Connection(281)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:01 [RMI TCP Connection(282)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:01 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application USER-SERVICE with eureka with status DOWN
+2024-06-13 02:03:01 [RMI TCP Connection(241)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1718224381295, current=DOWN, previous=UP]
+2024-06-13 02:03:01 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081: registering service...
+2024-06-13 02:03:01 [RMI TCP Connection(283)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:01 [RMI TCP Connection(284)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:02 [RMI TCP Connection(285)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:02 [RMI TCP Connection(286)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:03 [RMI TCP Connection(287)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:03 [RMI TCP Connection(288)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:04 [RMI TCP Connection(289)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:04 [RMI TCP Connection(290)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:05 [RMI TCP Connection(291)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:05 [RMI TCP Connection(292)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:07 [RMI TCP Connection(293)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:07 [RMI TCP Connection(294)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:07 [RMI TCP Connection(295)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:08 [RMI TCP Connection(296)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:08 [RMI TCP Connection(297)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:08 [RMI TCP Connection(298)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:09 [RMI TCP Connection(299)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:09 [RMI TCP Connection(300)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:09 [RMI TCP Connection(301)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:09 [RMI TCP Connection(302)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:10 [RMI TCP Connection(303)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:10 [RMI TCP Connection(304)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:10 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081 - registration status: 204
+2024-06-13 02:03:13 [RMI TCP Connection(305)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:13 [RMI TCP Connection(306)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:14 [RMI TCP Connection(307)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:14 [RMI TCP Connection(308)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:14 [RMI TCP Connection(309)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:15 [RMI TCP Connection(310)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:15 [RMI TCP Connection(311)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:15 [RMI TCP Connection(312)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:16 [RMI TCP Connection(313)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(314)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(316)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(317)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(315)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(318)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(319)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [RMI TCP Connection(320)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 02:03:19 [RMI TCP Connection(321)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:19 [RMI TCP Connection(322)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:19 [RMI TCP Connection(323)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:19 [RMI TCP Connection(324)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:20 [RMI TCP Connection(325)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:20 [RMI TCP Connection(326)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:20 [RMI TCP Connection(327)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 02:03:31 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2024-06-13 02:03:36 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Workers not finished.
+2024-06-13 02:03:36 [RMI TCP Connection(241)-127.0.0.1] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Closing channel for unresponsive consumer: Consumer@706ff320: tags=[[]], channel=Cached Rabbit Channel: null, conn: Proxy@55607e6d Shared Rabbit Connection: SimpleConnection@21826d78 [delegate=amqp://rabbitmq@127.0.0.1:5672/, localPort=53071], acknowledgeMode=AUTO local queue size=0
+2024-06-13 02:03:37 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.6TWJ0Rs3TzuJhDY84zMBsA'
+2024-06-13 02:03:33 [DiscoveryClient-1] WARN  c.n.discovery.TimedSupervisorTask - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-13 02:03:53 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'USER-SERVICE.rabbit-306596636.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-13 02:04:05 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-13 02:04:05 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'USER-SERVICE.errorChannel' has 0 subscriber(s).
+2024-06-13 02:04:05 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-06-13 02:04:07 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 02:04:09 [RMI TCP Connection(241)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-13 02:04:10 [RMI TCP Connection(241)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-13 02:04:10 [RMI TCP Connection(241)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-06-13 02:04:11 [RMI TCP Connection(241)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-06-13 02:04:13 [RMI TCP Connection(241)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081 - deregister  status: 200
+2024-06-13 02:04:14 [RMI TCP Connection(241)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2024-06-13 11:57:52 [main] INFO  c.userservice.UserServiceApplication - Starting UserServiceApplication using Java 17.0.9 with PID 9844 (C:\Users\USER\Documents\CoastalSerenity\Backend\User-Service\target\classes started by USER in C:\Users\USER\Documents\CoastalSerenity\Backend\User-Service)
+2024-06-13 11:57:52 [main] INFO  c.userservice.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-13 11:57:52 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:9999/
+2024-06-13 11:57:52 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=USER-SERVICE, profiles=[default], label=null, version=dac9c8b254afc7f1a503f594d40ee87080a4de88, state=null
+2024-06-13 11:57:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 11:57:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 241 ms. Found 2 JPA repository interfaces.
+2024-06-13 11:57:54 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-06-13 11:57:54 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-06-13 11:57:55 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d5826e50-894f-3ff1-a76f-e657f5bd4bf3
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [integrationMbeanExporter] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration' of type [org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rabbitExtendedPropertiesDefaultMappingsProvider' of type [org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration$$Lambda$764/0x000001b90a56cdc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'BindingHandlerAdvise' of type [org.springframework.cloud.stream.config.BindingHandlerAdvise] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$765/0x000001b90a56cfd8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spelConverter' of type [org.springframework.cloud.stream.config.SpelExpressionConverterConfiguration$SpelConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties' of type [org.springframework.boot.autoconfigure.jmx.JmxProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:55 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$RetryInterceptorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$RetryInterceptorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancedRetryFactory' of type [org.springframework.cloud.loadbalancer.blocking.retry.BlockingLoadBalancedRetryFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.RetryLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-13 11:57:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2024-06-13 11:57:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-13 11:57:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-06-13 11:57:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-13 11:57:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4499 ms
+2024-06-13 11:57:57 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 11:57:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-06-13 11:57:57 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-13 11:57:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 11:57:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-13 11:57:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e984100
+2024-06-13 11:57:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-13 11:57:58 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-13 11:57:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 11:58:03 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 11:58:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 11:58:06 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'USER-SERVICE.springCloudBusInput' has 1 subscriber(s).
+2024-06-13 11:58:07 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-06-13 11:58:07 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-13 11:58:07 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 23 endpoint(s) beneath base path '/actuator'
+2024-06-13 11:58:07 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+2024-06-13 11:58:07 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel springCloudBusInput
+2024-06-13 11:58:07 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+2024-06-13 11:58:07 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+2024-06-13 11:58:07 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-13 11:58:07 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'USER-SERVICE.errorChannel' has 1 subscriber(s).
+2024-06-13 11:58:07 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-06-13 11:58:07 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-06-13 11:58:07 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-06-13 11:58:07 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-06-13 11:58:08 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-06-13 11:58:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-06-13 11:58:08 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-13 11:58:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1718260088059 with initial instances count: 3
+2024-06-13 11:58:08 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application USER-SERVICE with eureka with status UP
+2024-06-13 11:58:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1718260088070, current=UP, previous=STARTING]
+2024-06-13 11:58:08 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081: registering service...
+2024-06-13 11:58:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2024-06-13 11:58:08 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2024-06-13 11:58:08 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081 - registration status: 204
+2024-06-13 11:58:08 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: rabbit
+2024-06-13 11:58:08 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Constructing binder child context for rabbit
+2024-06-13 11:58:08 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: rabbit
+2024-06-13 11:58:08 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: springCloudBus.anonymous.slPPc_00SJyDSUJqHyBH3g, bound to: springCloudBus
+2024-06-13 11:58:08 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-13 11:58:09 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#2400673b:0/SimpleConnection@1e68d8f [delegate=amqp://rabbitmq@127.0.0.1:5672/, localPort=60100]
+2024-06-13 11:58:10 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'rabbit-939990235.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-13 11:58:10 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'rabbit-939990235.springCloudBusInput.errors' has 2 subscriber(s).
+2024-06-13 11:58:10 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.springCloudBus.anonymous.slPPc_00SJyDSUJqHyBH3g'
+2024-06-13 11:58:10 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel rabbit-939990235.springCloudBusInput.errors
+2024-06-13 11:58:10 [main] INFO  c.userservice.UserServiceApplication - Started UserServiceApplication in 20.246 seconds (process running for 21.387)
+2024-06-13 11:58:10 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 11:58:10 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-13 11:58:10 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-06-13 12:03:08 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:08:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:13:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:18:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:21:42 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:21:42 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:21:46 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:47 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:21:47 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:21:50 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:21:50 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:21:50 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:21:51 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:21:51 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:51 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:21:51 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:21:51 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:23:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:23:59 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:23:59 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:23:59 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:23:59 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:23:59 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:28:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:28:17 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:28:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:28:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:28:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:28:17 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:30:57 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:30:57 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:30:57 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:30:57 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:30:57 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:31:00 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:31:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:00 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:31:00 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:31:02 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:31:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:02 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:31:02 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:31:03 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:31:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:03 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:31:03 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:31:50 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:31:50 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:50 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:50 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:31:50 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:31:50 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:31:50 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:50 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:31:50 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:31:50 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:32:43 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:32:43 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:32:43 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:32:43 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:32:43 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:32:44 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:32:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:32:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:32:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:32:44 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:33:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:35:17 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:35:17 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:17 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:17 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:35:17 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:35:20 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:35:20 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:20 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:20 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:35:20 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:35:20 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:35:20 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:20 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:20 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:35:20 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:35:37 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:35:37 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:37 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:37 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:35:37 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:35:49 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:35:49 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:49 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:35:49 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:35:49 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:36:05 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:36:05 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:36:05 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:36:05 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:36:05 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:38:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:41:23 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:41:23 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:41:23 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:41:23 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:41:23 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:41:26 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:41:26 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:41:26 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:41:26 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:41:26 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:41:43 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:41:43 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:41:43 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:41:43 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:41:43 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:02 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:02 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:02 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:02 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:02 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:03 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:03 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:03 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:03 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:03 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:04 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:04 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:04 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:04 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:04 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:08 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:08 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:08 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:08 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:08 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:11 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:11 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:11 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:11 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:11 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:19 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:19 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:19 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:19 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:19 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:42:19 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:42:19 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:19 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:42:19 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:42:19 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:43:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:44:13 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:44:13 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:44:13 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:44:13 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:44:13 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:44:17 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:44:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:44:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:44:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:44:17 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:44:21 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:44:21 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:44:21 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:44:21 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:44:21 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:47:46 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:47:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:47:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:47:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:47:46 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:48:06 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:48:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:48:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:48:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:48:06 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:48:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:48:15 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:48:15 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:48:15 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:48:15 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:48:15 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:53:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 12:56:04 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:56:04 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:04 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:04 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:56:04 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:56:06 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:56:06 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:06 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:06 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:56:06 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:56:10 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:56:10 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:10 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:10 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:56:10 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:56:17 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:56:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:56:17 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:56:18 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 12:56:18 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:18 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 12:56:18 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 12:56:18 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 12:58:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:00:46 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:00:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:00:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:00:46 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:00:46 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 13:00:46 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:00:46 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:00:46 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:00:47 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:00:47 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are not found
+2024-06-13 13:01:17 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /addtraveller/{username} called
+2024-06-13 13:01:17 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:01:18 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:01:23 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - insert into traveller (address,age,gender,mobile,name) values (?,?,?,?,?)
+2024-06-13 13:01:26 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - update traveller set username=? where traveller_id=?
+2024-06-13 13:01:26 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 got added
+2024-06-13 13:01:27 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:01:27 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:01:27 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:01:27 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:01:27 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:03:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:08:09 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:13:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:18:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:23:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:25:52 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:25:53 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:25:54 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:25:54 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:25:54 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:25:55 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:25:55 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:25:55 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:25:55 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:25:55 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:27:12 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:27:12 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:27:13 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:27:13 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:27:14 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:28:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:31:10 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:31:10 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:31:10 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:31:10 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:31:10 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:31:11 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:31:11 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:31:11 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:31:11 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:31:11 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:33:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:38:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:43:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:48:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:50:39 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:50:40 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:41 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:41 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:50:41 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:50:43 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:50:43 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:44 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:44 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:50:44 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:50:45 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:50:45 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:45 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:45 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:50:45 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:50:46 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:50:46 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:46 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:50:46 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:50:46 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:53:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 13:54:45 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:54:45 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:54:45 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:54:45 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:54:45 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:54:46 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:54:46 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:54:46 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:54:46 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:54:46 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:57:18 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:57:18 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:57:18 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:57:18 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:57:19 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:57:19 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 13:57:19 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:57:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 13:57:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 13:57:20 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 13:58:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:00:45 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:00:45 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:00:45 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:00:45 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:00:45 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:01:23 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:01:23 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:01:23 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:01:23 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:01:23 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:01:29 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:01:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:01:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:01:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:01:29 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:02:17 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:02:17 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:02:17 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:02:18 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:02:18 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:02:18 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:02:18 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:02:18 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:02:18 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:02:18 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:03:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:06:06 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:06:06 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:06:06 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:06:06 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:06:06 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:06:59 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:06:59 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:06:59 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:06:59 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:06:59 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:08:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:09:04 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:09:04 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:04 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:04 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:09:04 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:09:04 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:09:04 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:04 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:04 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:09:04 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:09:05 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:09:05 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:05 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:09:05 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:05 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:05 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:09:05 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:09:06 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:06 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:09:06 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:09:06 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:09:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:09:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:09:06 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:13:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:14:03 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:14:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:14:04 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:14:04 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:14:04 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:16:28 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:16:28 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:16:28 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:16:28 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:16:28 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:16:57 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:16:57 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:16:57 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:16:57 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:16:57 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:17:00 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:17:00 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:17:00 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:17:00 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:17:00 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:18:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:18:44 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:18:44 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:18:44 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:18:44 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:18:44 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:18:56 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:18:56 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:18:56 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:18:56 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:18:56 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:23:19 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:19 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:19 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:19 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:19 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:21 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:21 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:21 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:21 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:21 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:24 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:24 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:24 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:24 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:24 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:28 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:28 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:28 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:28 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:28 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:29 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:29 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:34 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:34 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:35 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:35 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:35 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:52 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:52 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:52 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:52 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:52 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:53 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:53 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:53 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:53 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:53 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:23:53 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:23:53 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:55 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:23:55 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:23:56 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:24:49 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:24:49 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:24:49 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:24:49 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:24:49 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:24:57 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:24:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:24:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:24:57 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:24:57 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:25:03 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:25:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:25:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:25:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:25:03 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:26:57 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:26:57 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:26:57 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:26:57 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:26:57 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:26:58 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:26:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:26:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:26:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:26:58 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:14 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:15 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:15 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:15 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:15 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:20 [http-nio-8081-exec-10] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:20 [http-nio-8081-exec-10] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:23 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:23 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:23 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:23 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:23 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:31 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:31 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:32 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:32 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:32 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:36 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:36 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:36 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:36 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:36 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:36 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:36 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:36 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:36 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:36 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:46 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:46 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:46 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:46 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:46 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:49 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:49 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:27:50 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:27:50 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:50 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:27:50 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:27:50 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:28:00 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:28:00 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:28:00 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:28:00 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:28:00 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:28:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:28:51 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:28:51 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:28:51 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:28:52 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:28:52 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:29:54 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:29:54 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:29:54 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:29:54 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:29:54 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:29:55 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:29:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:29:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:29:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:29:55 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:31:35 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:31:35 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:35 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:35 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:31:35 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:31:35 [http-nio-8081-exec-4] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:31:35 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:35 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:35 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:31:35 [http-nio-8081-exec-4] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:31:38 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:31:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:31:38 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:31:38 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:31:38 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:39 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:39 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:31:39 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:31:39 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:31:39 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:39 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:39 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:31:39 [http-nio-8081-exec-8] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:31:40 [http-nio-8081-exec-9] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:31:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:31:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:31:40 [http-nio-8081-exec-9] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:32:50 [http-nio-8081-exec-5] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:32:50 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:32:50 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:32:50 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:32:50 [http-nio-8081-exec-5] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:32:50 [http-nio-8081-exec-2] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:32:50 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:32:50 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:32:50 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:32:50 [http-nio-8081-exec-2] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:33:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:33:34 [http-nio-8081-exec-1] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:33:35 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:33:35 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:33:35 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:33:35 [http-nio-8081-exec-1] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:33:35 [http-nio-8081-exec-3] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:33:35 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:33:35 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:33:35 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:33:35 [http-nio-8081-exec-3] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:34:48 [http-nio-8081-exec-6] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:34:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:34:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:34:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:34:49 [http-nio-8081-exec-6] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:34:49 [http-nio-8081-exec-7] INFO  c.u.controller.UserController - /getalltravellers/{username} called
+2024-06-13 14:34:49 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:34:49 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:34:49 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:34:49 [http-nio-8081-exec-7] INFO  c.u.service.UserServiceImpl - Traveller details of username: Akil11 are found
+2024-06-13 14:35:10 [http-nio-8081-exec-8] INFO  c.u.controller.UserController - /getuserbyname/{username} called
+2024-06-13 14:35:10 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:35:11 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select r1_0.username,r1_0.address,r1_0.email,r1_0.gender,r1_0.marital_status,r1_0.mobile,r1_0.name,r1_0.password,r1_0.roles from users r1_0 where r1_0.username=?
+2024-06-13 14:35:17 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - select t1_0.username,t1_0.traveller_id,t1_0.address,t1_0.age,t1_0.gender,t1_0.mobile,t1_0.name from traveller t1_0 where t1_0.username=?
+2024-06-13 14:37:53 [RMI TCP Connection(188)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(194)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(190)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(183)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(193)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(192)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(189)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:53 [RMI TCP Connection(196)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:54 [RMI TCP Connection(198)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:54 [RMI TCP Connection(199)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(197)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(195)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(200)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(202)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(201)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(203)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(205)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(204)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:56 [RMI TCP Connection(206)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:57 [RMI TCP Connection(207)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:57 [RMI TCP Connection(208)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:57 [RMI TCP Connection(209)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:57 [RMI TCP Connection(210)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:58 [RMI TCP Connection(211)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:58 [RMI TCP Connection(212)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:58 [RMI TCP Connection(213)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:59 [RMI TCP Connection(214)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:59 [RMI TCP Connection(215)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:37:59 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application USER-SERVICE with eureka with status DOWN
+2024-06-13 14:37:59 [RMI TCP Connection(191)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1718269679718, current=DOWN, previous=UP]
+2024-06-13 14:37:59 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081: registering service...
+2024-06-13 14:38:00 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081 - registration status: 204
+2024-06-13 14:38:01 [RMI TCP Connection(216)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:02 [RMI TCP Connection(217)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:02 [RMI TCP Connection(218)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:02 [RMI TCP Connection(219)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:03 [RMI TCP Connection(220)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:03 [RMI TCP Connection(221)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:03 [RMI TCP Connection(222)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:03 [RMI TCP Connection(223)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:04 [RMI TCP Connection(224)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:04 [RMI TCP Connection(225)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:04 [RMI TCP Connection(226)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:04 [RMI TCP Connection(227)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:05 [RMI TCP Connection(228)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:05 [RMI TCP Connection(229)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:05 [RMI TCP Connection(230)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:06 [RMI TCP Connection(231)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:06 [RMI TCP Connection(232)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:06 [RMI TCP Connection(233)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:07 [RMI TCP Connection(234)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:07 [RMI TCP Connection(235)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:08 [RMI TCP Connection(236)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:08 [RMI TCP Connection(237)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:09 [RMI TCP Connection(238)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:10 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-13 14:38:11 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2024-06-13 14:38:13 [RMI TCP Connection(239)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:13 [RMI TCP Connection(240)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:13 [RMI TCP Connection(241)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:14 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2024-06-13 14:38:14 [RMI TCP Connection(242)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:14 [RMI TCP Connection(243)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:14 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.slPPc_00SJyDSUJqHyBH3g'
+2024-06-13 14:38:14 [RMI TCP Connection(244)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:15 [RMI TCP Connection(245)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:15 [RMI TCP Connection(246)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:15 [RMI TCP Connection(247)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:15 [RMI TCP Connection(248)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:16 [RMI TCP Connection(249)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:16 [RMI TCP Connection(250)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:16 [RMI TCP Connection(251)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:17 [RMI TCP Connection(252)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:17 [RMI TCP Connection(253)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:17 [RMI TCP Connection(254)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:17 [RMI TCP Connection(255)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:18 [RMI TCP Connection(256)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:18 [RMI TCP Connection(257)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:18 [RMI TCP Connection(258)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:19 [RMI TCP Connection(259)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:19 [RMI TCP Connection(260)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:19 [RMI TCP Connection(261)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:20 [RMI TCP Connection(262)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:20 [RMI TCP Connection(263)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:20 [RMI TCP Connection(264)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:21 [RMI TCP Connection(265)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:21 [RMI TCP Connection(266)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:21 [RMI TCP Connection(267)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:21 [RMI TCP Connection(268)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:21 [RMI TCP Connection(269)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:22 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'USER-SERVICE.rabbit-939990235.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-13 14:38:22 [RMI TCP Connection(270)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:22 [RMI TCP Connection(271)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:22 [RMI TCP Connection(272)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:22 [RMI TCP Connection(273)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:23 [RMI TCP Connection(274)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:23 [RMI TCP Connection(275)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:23 [RMI TCP Connection(276)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:24 [RMI TCP Connection(277)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:24 [RMI TCP Connection(278)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:24 [RMI TCP Connection(279)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:25 [RMI TCP Connection(280)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:25 [RMI TCP Connection(281)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:25 [RMI TCP Connection(282)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:25 [RMI TCP Connection(283)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:26 [RMI TCP Connection(284)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:26 [RMI TCP Connection(285)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:26 [RMI TCP Connection(286)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:26 [RMI TCP Connection(287)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:27 [RMI TCP Connection(288)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:27 [RMI TCP Connection(289)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:28 [RMI TCP Connection(290)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-13 14:38:29 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-13 14:38:29 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'USER-SERVICE.errorChannel' has 0 subscriber(s).
+2024-06-13 14:38:29 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-06-13 14:38:31 [RMI TCP Connection(191)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 14:38:32 [RMI TCP Connection(191)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-13 14:38:32 [RMI TCP Connection(191)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-13 14:38:32 [RMI TCP Connection(191)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-06-13 14:38:35 [RMI TCP Connection(191)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-06-13 14:38:42 [RMI TCP Connection(191)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/Akilan:USER-SERVICE:8081 - deregister  status: 200
+2024-06-13 14:38:42 [RMI TCP Connection(191)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

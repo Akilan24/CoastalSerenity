@@ -192,7 +192,24 @@ public class TrainServiceImpl implements TrainService {
 		bookingDetails.setUsername(username);
 		bookingDetails.setBookedDate(LocalDateTime.now());
 		bookingDetails.setBoardingStation(boardingStation);
-		bookingDetails.setSeatType(seatType);
+		switch(seatType) {
+		case "SL":
+			bookingDetails.setSeatType("SL - Sleeper");
+			break;
+		case "1A":
+			bookingDetails.setSeatType("1A - 1st Class AC");
+			break;
+		case "2A":
+			bookingDetails.setSeatType("2A - 2 Tier AC");
+			break;
+		case "3A":
+			bookingDetails.setSeatType("3A - 3 Tier AC");
+			break;
+		case "CC":
+			bookingDetails.setSeatType("CC - CC Chair Car");
+			break;
+		}
+	
 		double totalPrice = 0;
 		for (Map.Entry<String, Double> me : Train.getSeatPrice().entrySet()) {
 			if (me.getKey().equalsIgnoreCase(seatType)) {
