@@ -61,7 +61,7 @@ function Tabs() {
         </div>
         <div id="tab">
           <button onClick={(n) => routeTo("/cab")}>
-            <img id="carlogo" src="../src/assets/TabIcons/carlogo.png" />
+            <img id="carlogo" src="../src/assets/TabIcons/cablogo.png" />
             <p>Cabs</p>
           </button>
         </div>

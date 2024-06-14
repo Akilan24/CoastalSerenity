@@ -14,14 +14,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.cabservice.entity.BookingRequest;
 import com.cabservice.entity.Cab;
 import com.cabservice.entity.CabBookingDetails;
+import com.cabservice.entity.RentalCab;
+import com.cabservice.entity.RentalPackage;
 import com.cabservice.entity.TripDetails;
 import com.cabservice.exception.CabDetailsNotFoundException;
 import com.cabservice.externalclass.Registration;
 import com.cabservice.proxy.UserProxy;
 import com.cabservice.repository.CabBookingDetailsRepository;
 import com.cabservice.repository.CabRepository;
+import com.cabservice.repository.RentalCabRepository;
+import com.cabservice.repository.RentalPackageRepository;
 import com.cabservice.repository.TripDetailsRepository;
 
 @Service
@@ -35,6 +40,12 @@ public class CabServiceImpl implements CabService {
 
 	@Autowired
 	private TripDetailsRepository tripDetailsRepository;
+
+	@Autowired
+	private RentalCabRepository rentalCabRepository;
+	
+	@Autowired
+	private RentalPackageRepository rentalPackageRepository;
 
 	@Autowired
 	UserProxy uproxy;
@@ -107,7 +118,8 @@ public class CabServiceImpl implements CabService {
 		List<TripDetails> list = tripDetailsRepository.findAll();
 		if (!list.isEmpty()) {
 			List<String> origins = list.stream().map(TripDetails::getOrigin).distinct().collect(Collectors.toList());
-			List<String> destinations = list.stream().map(TripDetails::getDestination).distinct().collect(Collectors.toList());
+			List<String> destinations = list.stream().map(TripDetails::getDestination).distinct()
+					.collect(Collectors.toList());
 			List<List<String>> cityNames = new ArrayList<>();
 			cityNames.add(origins);
 			cityNames.add(destinations);
@@ -125,8 +137,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public CabBookingDetails bookCab(long id, LocalDateTime departureTime, LocalDateTime returnTime, String journeyType,int tripId,
-			String username) {
+	public CabBookingDetails bookCab(long id,String username,BookingRequest bookingRequest) {
 		Optional<Cab> CabOptional = CabRepository.findById(id);
 		if (CabOptional.isEmpty()) {
 			throw new CabDetailsNotFoundException("Cab details of Cab id: " + id + " are not found");
@@ -139,22 +150,21 @@ public class CabServiceImpl implements CabService {
 		CabBookingDetails bookingDetails = new CabBookingDetails();
 		bookingDetails.setCabBookingId(count == 0 ? MIN_ID : MIN_ID + count);
 		bookingDetails.setCabModel(cab.getCabModel());
-		TripDetails trip=tripDetailsRepository.findById(tripId).get();
-		bookingDetails.setOrigin(trip.getOrigin());
-		bookingDetails.setDestination(trip.getDestination());
+		bookingDetails.setOrigin(bookingRequest.getFrom());
+		bookingDetails.setDestination(bookingRequest.getTo());
 		bookingDetails.setCabModel(cab.getCabModel());
-		bookingDetails.setDepartureTime(departureTime);
-		if (journeyType.equalsIgnoreCase("roundTrip")) {
+		bookingDetails.setDepartureTime(bookingRequest.getDepartDate().atTime(bookingRequest.getDepartTime()));
+		if (bookingRequest.getJourneyType().equalsIgnoreCase("roundTrip")) {
 			bookingDetails.setJourneyType("Round Trip");
-			bookingDetails.setReturnTime(returnTime);
-			Duration duration = Duration.between(departureTime, returnTime);
+			bookingDetails.setReturnTime(bookingRequest.getReturnDate().atTime(bookingRequest.getReturnTime()));
+			Duration duration = Duration.between(bookingDetails.getDepartureTime(), bookingDetails.getReturnTime());
 			long totalMinutes = duration.toMinutes();
 			bookingDetails.setDuration(totalMinutes / 60 + "hrs : " + totalMinutes % 60 + "mins");
 			bookingDetails.setCabPrice(cab.getCabPrice() * 2);
 		} else {
 			bookingDetails.setJourneyType("One way");
 			bookingDetails.setCabPrice(cab.getCabPrice());
-			bookingDetails.setDuration(trip.getDuration());
+			bookingDetails.setDuration(bookingRequest.getDuration());
 		}
 		Registration user = uproxy.showUserByUserName(username).getBody();
 		bookingDetails.setName(user.getName());
@@ -245,6 +255,103 @@ public class CabServiceImpl implements CabService {
 			return trip;
 		} else
 			throw new CabDetailsNotFoundException("Trip details of trip id: " + id + " are not found");
+
+	}
+
+	@Override
+	public RentalCab saveRentalCab(RentalCab rentalCab) {
+		return rentalCabRepository.save(rentalCab);
+	}
+
+	@Override
+	public RentalCab updateRentalCab(int rentalCabId, RentalCab rentalCab) {
+		Optional<RentalCab> cab = rentalCabRepository.findById(rentalCabId);
+		if (!cab.isEmpty()) {
+			cab.get().setCabImage(rentalCab.getCabImage());
+			cab.get().setCabType(rentalCab.getCabType());
+			cab.get().setTotalSeat(rentalCab.getTotalSeat());
+			return rentalCabRepository.save(cab.get());
+		} else
+			throw new CabDetailsNotFoundException("RentalCab details of  rental cab id: " + rentalCabId + " are not found");
+
+	}
+
+	@Override
+	public String deleteRentalCab(int rentalCabId) {
+		Optional<RentalCab> cab = rentalCabRepository.findById(rentalCabId);
+		if (!cab.isEmpty()) {
+			rentalCabRepository.deleteById(rentalCabId);
+			return "Cab details of cab model: " + rentalCabId + " are deleted";
+		} else
+			throw new CabDetailsNotFoundException("RentalCab details of  rental cab id: " + rentalCabId + " are not found");
+
+	}
+
+	@Override
+	public List<RentalCab> getAllRentalCab() {
+		List<RentalCab> rentalCabList = rentalCabRepository.findAll();
+		if (!rentalCabList.isEmpty()) {
+			return rentalCabList;
+		} else
+			throw new CabDetailsNotFoundException("RentalCab details are not found");
+
+	}
+
+	@Override
+	public Optional<RentalCab> getRentalCabById(int rentalCabId) {
+		Optional<RentalCab> cab = rentalCabRepository.findById(rentalCabId);
+		if (!cab.isEmpty()) {
+			return cab;
+		} else
+			throw new CabDetailsNotFoundException("RentalCab details of  rental cab id: " + rentalCabId + " are not found");
+
+	}
+
+	@Override
+	public RentalPackage saveRentalPackage(RentalPackage rentalPackage) {
+		return rentalPackageRepository.save(rentalPackage);	}
+
+	@Override
+	public RentalPackage updateRentalPackage(int rentalPackageId, RentalPackage rentalPackage) {
+		Optional<RentalPackage> rental = rentalPackageRepository.findById(rentalPackageId);
+		if (!rental.isEmpty()) {
+			rental.get().setDurationPackage(rentalPackage.getDurationPackage());
+			rental.get().setFrom(rentalPackage.getFrom());
+			return rentalPackageRepository.save(rental.get());
+		} else
+			throw new CabDetailsNotFoundException("RentalPackage details of  rentalPackage id: " + rentalPackageId + " are not found");
+
+	}
+
+	@Override
+	public String deleteRentalPackage(int rentalPackageId) {
+		Optional<RentalPackage> rentalPackage = rentalPackageRepository.findById(rentalPackageId);
+		if (!rentalPackage.isEmpty()) {
+			rentalPackageRepository.deleteById(rentalPackageId);
+			return "RentalPackage details of rentalPackage id: " + rentalPackageId + " are deleted";
+		} else
+			throw new CabDetailsNotFoundException("RentalPackage details of  rentalPackage id: " + rentalPackageId + " are not found");
+
+
+	}
+
+	@Override
+	public List<RentalPackage> getAllRentalPackage() {
+		List<RentalPackage> rentalPackageList = rentalPackageRepository.findAll();
+		if (!rentalPackageList.isEmpty()) {
+			return rentalPackageList;
+		} else
+			throw new CabDetailsNotFoundException("RentalCab details are not found");
+
+	}
+
+	@Override
+	public Optional<RentalPackage> getRentalPackageById(int rentalPackageId) {
+		Optional<RentalPackage> rentalPackage = rentalPackageRepository.findById(rentalPackageId);
+		if (!rentalPackage.isEmpty()) {
+			return rentalPackage;
+		} else
+			throw new CabDetailsNotFoundException("RentalPackage details of  rentalPackage id: " + rentalPackageId + " are not found");
 
 	}
 

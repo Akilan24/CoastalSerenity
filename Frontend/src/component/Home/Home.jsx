@@ -9,6 +9,7 @@ import Hotel from "../Hotel/Hotel.jsx";
 import Flight from "../Flight/Flight.jsx";
 import Bus from "../Bus/Bus.jsx";
 import Train from "../Train/Train.jsx";
+import Cab from "../Cab/Cab.jsx";
 import Profile from "../Profile/Profile.jsx";
 import SaveTraveller from "../Profile/SaveTraveller/SaveTraveller.jsx";
 import HotelBookingDetails from "../Hotel/HotelBookingDetails.jsx";
@@ -16,6 +17,7 @@ import Payment from "../Payment/Payment.jsx";
 import FlightSeatsSelection from "../Flight/FlightSeatsSelection.jsx";
 import FlightBookingDetails from "../Flight/FlightBookingDetails.jsx";
 import TrainBookingDetails from "../Train/TrainBookingDetails.jsx";
+import CabBookingDetails from "../Cab/CabBookingDetails.jsx";
 import BusSeatsSelection from "../Bus/BusSeatsSelection.jsx";
 import BusBookingDetails from "../Bus/BusBookingDetails.jsx";
 import MyTrips from "../MyTrips/MyTrips.jsx";
@@ -59,6 +61,11 @@ function Home() {
           <Route
             path="/trainBookingDetails/:value"
             element={<TrainBookingDetails />}
+          />
+          <Route path="/cab" element={<Cab />} />
+          <Route
+            path="/cabBookingDetails/:value"
+            element={<CabBookingDetails />}
           />
           <Route path="/payment/:value" element={<Payment />} />
         </Routes>

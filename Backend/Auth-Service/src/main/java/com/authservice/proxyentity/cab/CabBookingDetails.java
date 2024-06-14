@@ -1,4 +1,4 @@
-package com.cabservice.entity;
+package com.authservice.proxyentity.cab;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -25,14 +25,14 @@ public class CabBookingDetails {
 	private String cabModel;
 	private String origin;
 	private String destination;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime departureTime;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime returnTime;
 	private String duration;
 	private String journeyType;
 	private double cabPrice;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime bookedDate;
 	private String paymentStatus;
 	private String email;
