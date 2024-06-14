@@ -31,8 +31,8 @@ function BusSeatsSelection() {
           `http://localhost:8080/CS/Bus/getbyid/${value}`,
           config
         );
-        setBus(response.data);
 
+        console.log(response.data);
         const sortedPickUpPoints = new Map(
           [...Object.entries(response.data.pickUpPoint)].sort(
             ([, timeA], [, timeB]) =>
@@ -50,25 +50,24 @@ function BusSeatsSelection() {
           )
         );
         setDropPointList(sortedDropPoints);
-
         setLowerSleeper(
           response.data.busSeats.filter(
             (seat) => seat.seatType === "lowerSleeper"
           )
-        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
+        );
         setLowerSeat(
           response.data.busSeats.filter((seat) => seat.seatType === "lowerSeat")
-        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
+        );
         setUpperSleeper(
           response.data.busSeats.filter(
             (seat) => seat.seatType === "upperSleeper"
           )
-        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
+        );
         setUpperDoubleSleeper(
           response.data.busSeats.filter(
             (seat) => seat.seatType === "upperDoubleSleeper"
           )
-        ).sort((a, b) => a.seatNo.localeCompare(b.seatNo));
+        );
       } catch (error) {
         console.log(error.response.data.message);
       }
@@ -181,7 +180,7 @@ function BusSeatsSelection() {
                   </div>
                 )}
               </div>
-              <div id="button">
+              <div>
                 {travellers.length > 0 && (
                   <div>
                     <button id="add" onClick={() => navigate("/saveTraveller")}>
@@ -194,7 +193,7 @@ function BusSeatsSelection() {
           </div>
 
           <div className="bus">
-            <div id="contain">
+            <div className="contain">
               <div id="display">
                 <div>
                   <p id="white"></p>
@@ -209,22 +208,22 @@ function BusSeatsSelection() {
                   <p>Booked</p>
                 </div>
               </div>
-              <div>
+              <div id="pickUpPoint">
                 <label htmlFor="pickUpPoint">Pickup Point:</label>
                 <select
-                  id="text"
+                  id="pickUpPoint"
                   value={pickUpPoint}
                   onChange={(e) => setPickUpPoint(e.target.value)}
                 >
                   <option value="">Select Pickup Point</option>
                   {Array.from(pickUpPointList.entries()).map(([key, value]) => (
                     <option key={key} value={key}>
-                      {key}-{getDate(value)}
+                      {key} - {getDate(value)}
                     </option>
                   ))}
                 </select>
               </div>
-              <div>
+              <div id="dropPoint">
                 <label htmlFor="dropPoint">Drop Point:</label>
                 <select
                   id="dropPoint"
@@ -234,7 +233,7 @@ function BusSeatsSelection() {
                   <option value="">Select Drop Point</option>
                   {Array.from(dropPointList.entries()).map(([key, value]) => (
                     <option key={key} value={key}>
-                      {key}-{getDate(value)}
+                      {key} - {getDate(value)}
                     </option>
                   ))}
                 </select>
@@ -254,7 +253,7 @@ function BusSeatsSelection() {
                             ? selectedSeats.includes(seat)
                               ? "#91c4e5"
                               : "white"
-                            : "grey",
+                            : "#grey",
                         }}
                         onClick={() => handleSelectSeat(seat)}
                       >
@@ -273,7 +272,7 @@ function BusSeatsSelection() {
                             ? selectedSeats.includes(seat)
                               ? "#91c4e5"
                               : "white"
-                            : "grey",
+                            : "#grey",
                         }}
                         onClick={() => handleSelectSeat(seat)}
                       >
@@ -295,7 +294,7 @@ function BusSeatsSelection() {
                           ? selectedSeats.includes(seat)
                             ? "#91c4e5"
                             : "white"
-                          : "grey",
+                          : "#grey",
                       }}
                       onClick={() => handleSelectSeat(seat)}
                     >
@@ -314,7 +313,7 @@ function BusSeatsSelection() {
                           ? selectedSeats.includes(seat)
                             ? "#91c4e5"
                             : "white"
-                          : "grey",
+                          : "#grey",
                       }}
                       onClick={() => handleSelectSeat(seat)}
                     >

@@ -81,6 +81,7 @@ function HotelBookingDetails() {
   return (
     <div className="hotelBookingDetails">
       <img id="logo" src="./cslogo.png" alt="Logo" />
+      <h2>Hotel Booking Details</h2>
       {hotelBookingDetails && (
         <div className="details">
           <p>

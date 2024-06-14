@@ -7,14 +7,12 @@
   align-items: center;
   justify-content: center;
 }
-.bss #logo {
+#logo {
   padding: 25px;
-  width: 450px;
-  margin-bottom: 20px;
 }
 .seat {
   background-color: white;
-  width: 840px;
+  width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +26,7 @@
   justify-content: space-between;
   width: 450px;
   position: absolute;
-  left: 250px;
+  left: 230px;
   top: 50px;
 }
 .lowerBerth {
@@ -117,7 +115,6 @@
   align-items: center;
   margin-bottom: 10px;
 }
-
 .busSeat button {
   background-color: transparent;
   display: flex;
@@ -135,33 +132,6 @@
   display: flex;
   width: fit-content;
 }
-.bss #display {
-  display: flex;
-  flex-direction: column;
-  width: 150px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 10px;
-  position: sticky;
-  right: 550px;
-}
-#contain {
-  position: relative;
-  right: 280px;
-  width: 220px;
-  top: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 300px;
-  display: flex;
-  margin-left: 25px;
-}
-#dropPoint {
-  width: 200px;
-  background-color: white;
-}
 .bss #display div {
   display: flex;
   flex-direction: row;
@@ -173,7 +143,7 @@
   flex-direction: column;
   align-items: center;
   background-color: rgb(139, 181, 195);
-  width: 800px;
+  width: 80%;
   height: 800px;
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -187,21 +157,21 @@
   justify-content: space-between;
   align-items: center;
 }
-#white,
-#blue,
-#grey {
+.bss #white,
+.bss #blue,
+.bss #grey {
   width: 25px;
   height: 25px;
 }
-#white {
+.bss #white {
   background-color: white;
   border: 0.5px solid black;
   box-sizing: border-box;
 }
-#blue {
+.bss #blue {
   background-color: #91c4e5;
 }
-#grey {
+.bss #grey {
   background-color: grey;
 }
 .bss .seatBooking {
@@ -209,20 +179,13 @@
   flex-direction: column;
   align-items: center;
 }
-.pay-button {
+.bss .pay-button {
   margin-bottom: 15px;
   background-color: #1f78b4;
   margin-top: 15px;
 }
 .bss .travellerList {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bss #input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .bss input {
   width: 50px;
@@ -231,31 +194,65 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
 }
-.bss #button {
-  position: relative;
-  top: 6px;
-}
-#add {
+.bss #add {
   margin-left: 15px;
   margin-bottom: 15px;
   background-color: #1f78b4;
 }
-#guest {
+.bss #guest {
   display: flex;
   flex-direction: column;
 }
-#check {
+.bss #check {
   margin-bottom: 10px;
 }
-#lb {
+.bss #lb {
   display: flex;
 }
 
-#img {
+.bss #img {
   width: 30px;
   position: relative;
   left: 50px;
   top: 5px;
+}
+.bss #logo {
+  padding: 25px;
+  width: 450px;
+  margin-bottom: 20px;
+}
+.bss .contain {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 240px;
+  top: 80px;
+  width: 200px;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+.bss #display {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: sticky;
+  right: 60px;
+  top: 120px;
+}
+.bss #pickUpPoint,
+.bss #dropPoint {
+  display: flex;
+  flex-direction: column;
+}
+.bss #pickUpPoint select,
+.bss #dropPoint select {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

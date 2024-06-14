@@ -36,6 +36,11 @@
 }
 .busbookingdetails h2 {
   color: #4bad57;
+  font-size: 50px;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+  margin-bottom: 5px;
 }
 .busbookingdetails .detail-value {
   flex: 1;

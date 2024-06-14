@@ -45,13 +45,16 @@ public interface TrainProxyController {
 
 	@DeleteMapping("/delete/{TrainId}")
 	public ResponseEntity<String> deleteTrain(@PathVariable long TrainId) ;
+	
 	@PutMapping("/resetstatus/{TrainId}")
 	public ResponseEntity<TrainBookingDetails> resetstatus(@PathVariable long TrainId);
+	
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames() ;
 	
 	@GetMapping("/paymentstatuschange/{bookingid}")
-	public ResponseEntity<TrainBookingDetails> paymentstatuschange(@PathVariable long bookingid) ;
+	public ResponseEntity<TrainBookingDetails> paymentstatuschange(@PathVariable long bookingid);
+	
 	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) ;

@@ -212,7 +212,7 @@ public class TrainServiceImpl implements TrainService {
 	
 		double totalPrice = 0;
 		for (Map.Entry<String, Double> me : Train.getSeatPrice().entrySet()) {
-			if (me.getKey().equalsIgnoreCase(seatType)) {
+			if (me.getKey().equalsIgnoreCase(bookingDetails.getSeatType())) {
 				totalPrice = me.getValue() * travellers.size();
 			}
 		}

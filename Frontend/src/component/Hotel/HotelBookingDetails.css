@@ -11,6 +11,14 @@
   width: 450px;
   margin-bottom: 20px;
 }
+.hotelBookingDetails h2 {
+  color: #4bad57;
+  font-size: 50px;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+  margin-bottom: 5px;
+}
 .hotelBookingDetails #input {
   display: flex;
   flex-direction: row;

@@ -1,12 +1,18 @@
 #register {
-  margin: 5px;
+  margin: 4px;
 }
-
+.register #logo {
+  padding: 0px;
+  padding-top: 25px;
+  width: 450px;
+  margin-bottom: 0px;
+}
 .registerclass {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-top: 5px;
   border-radius: 25px;
   width: 30%;
 }
@@ -14,7 +20,7 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .register label {

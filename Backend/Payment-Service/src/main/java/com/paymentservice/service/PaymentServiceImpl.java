@@ -16,9 +16,11 @@ import com.paymentservice.exception.PaymentDetailsNotFoundException;
 import com.paymentservice.externalclass.BusBookingDetails;
 import com.paymentservice.externalclass.FlightBookingDetails;
 import com.paymentservice.externalclass.HotelBookingDetails;
+import com.paymentservice.externalclass.TrainBookingDetails;
 import com.paymentservice.proxy.BusBookingDetailsProxy;
 import com.paymentservice.proxy.FlightBookingDetailsProxy;
 import com.paymentservice.proxy.HotelBookingDetailsProxy;
+import com.paymentservice.proxy.TrainBookingDetailsProxy;
 import com.paymentservice.repository.PaymentRepository;
 
 @Service
@@ -34,7 +36,10 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Autowired
 	BusBookingDetailsProxy bbdproxy;
-	
+
+	@Autowired
+	TrainBookingDetailsProxy tbdproxy;
+
 	@Override
 	public Payment doPayment(String bookingid) {
 		String[] value = bookingid.split("-");
@@ -59,8 +64,14 @@ public class PaymentServiceImpl implements PaymentService {
 			p.setAmount(fbd.getTotalPrice());
 			p.setPaymentStatus("Payment Done");
 			fbdproxy.paymentstatuschange(id);
-		}else if (value[0].equalsIgnoreCase("bus")) {
+		} else if (value[0].equalsIgnoreCase("bus")) {
 			BusBookingDetails bbd = bbdproxy.getBusBookingDetailsById(id);
+			p.setUsername(bbd.getName());
+			p.setAmount(bbd.getTotalPrice());
+			p.setPaymentStatus("Payment Done");
+			fbdproxy.paymentstatuschange(id);
+		} else if (value[0].equalsIgnoreCase("train")) {
+			TrainBookingDetails bbd = tbdproxy.getTrainBookingDetailsById(id);
 			p.setUsername(bbd.getName());
 			p.setAmount(bbd.getTotalPrice());
 			p.setPaymentStatus("Payment Done");
@@ -103,17 +114,22 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public String paymentCancel(String id) {
-		String[] value =id.split("-");
+		String[] value = id.split("-");
 		long paymentid = Long.parseLong(value[1]);
 		Payment p;
 		if (paymentRepository.findById(paymentid).isPresent()) {
 			p = paymentRepository.findById(paymentid).get();
 			p.setPaymentStatus("Payment cancelled and refunded");
 			paymentRepository.save(p);
-			if(value[1].equalsIgnoreCase("hotel"))
-			    hbdproxy.getBookingDetails(p.getBookingId()).setPaymentStatus("Payment cancelled");
-			else if(value[1].equalsIgnoreCase("flight"))
-			    fbdproxy.getFlightBookingDetailsById(p.getBookingId()).setPaymentStatus("Payment cancelled");
+			if (value[0].equalsIgnoreCase("hotel"))
+				hbdproxy.getBookingDetails(p.getBookingId()).setPaymentStatus("Payment cancelled and refunded");
+			else if (value[0].equalsIgnoreCase("flight"))
+				fbdproxy.getFlightBookingDetailsById(p.getBookingId())
+						.setPaymentStatus("Payment cancelled and refunded");
+			else if (value[0].equalsIgnoreCase("train"))
+				tbdproxy.getTrainBookingDetailsById(p.getBookingId())
+						.setPaymentStatus("Payment cancelled and refunded");
+
 			return "Payment cancelled and refunded";
 		} else
 			throw new PaymentDetailsNotFoundException("Payment not found");
