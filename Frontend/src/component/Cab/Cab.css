@@ -65,3 +65,6 @@
   display: flex;
   flex-direction: column;
 }
+.Rental #when {
+  width: fit-content;
+}

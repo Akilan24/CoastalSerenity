@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name = "CAB-SERVICE", url = "http://localhost:8085/Cab")
 public interface CabProxyController {
@@ -25,7 +26,8 @@ public interface CabProxyController {
 	ResponseEntity<Cab> createCab(@RequestBody Cab cab);
 
 	@PostMapping("/bookCab/{id}/{username}")
-	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable long id,@PathVariable String username,@RequestBody BookingRequest bookingRequest);
+	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable long id, @PathVariable String username,
+			@RequestBody BookingRequest bookingRequest);
 
 	@GetMapping("/getCabbookingdetailsbyid/{id}")
 	ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id);
@@ -47,6 +49,13 @@ public interface CabProxyController {
 
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable("bookingid") long bookingid);
+
+	@GetMapping("/getCabDetailsAndTripDetails")
+	ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
+			@RequestParam String to);
+
+	@GetMapping("/getRentalCabAndRentalPackageDetails")
+	ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from);
 
 	@PostMapping("/saveTrip")
 	ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip);
@@ -81,6 +90,9 @@ public interface CabProxyController {
 
 	@PostMapping("/saveRentalPackage")
 	ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage);
+
+	@GetMapping("/getallRentalcitynames")
+	public ResponseEntity<List<String>> getAllRentalCityNames();
 
 	@PutMapping("/updateRentalPackage/{rentalPackageId}")
 	ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId,

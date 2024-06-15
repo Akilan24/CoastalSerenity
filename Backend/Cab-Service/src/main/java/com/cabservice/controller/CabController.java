@@ -1,6 +1,5 @@
 package com.cabservice.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,12 +13,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cabservice.entity.BookingDetails;
 import com.cabservice.entity.BookingRequest;
 import com.cabservice.entity.Cab;
-import com.cabservice.entity.CabBookingDetails;
+import com.cabservice.entity.CabDetailsTripDetails;
 import com.cabservice.entity.RentalCab;
+import com.cabservice.entity.RentalCabsRentalPackageDetails;
 import com.cabservice.entity.RentalPackage;
 import com.cabservice.entity.TripDetails;
 import com.cabservice.service.CabService;
@@ -47,18 +49,18 @@ public class CabController {
 	}
 
 	@PostMapping("/bookCab/{id}/{username}")
-	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable long id,@PathVariable String username,@RequestBody BookingRequest bookingRequest) {
-		return new ResponseEntity<>(cabService.bookCab(id,username,bookingRequest),
-				HttpStatus.CREATED);
+	public ResponseEntity<BookingDetails> bookCab(@PathVariable long id, @PathVariable String username,
+			@RequestBody BookingRequest bookingRequest) {
+		return new ResponseEntity<>(cabService.bookCab(id, username, bookingRequest), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/getCabbookingdetailsbyid/{id}")
-	public ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable long id) {
+	public ResponseEntity<BookingDetails> getCabBookingDetailsById(@PathVariable long id) {
 		return new ResponseEntity<>(cabService.getCabBookingDetailsById(id), HttpStatus.OK);
 	}
 
 	@GetMapping("/getCabbookingdetailsbyusername/{username}")
-	public ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable String username) {
+	public ResponseEntity<List<BookingDetails>> getCabBookingDetailsByUsername(@PathVariable String username) {
 		return new ResponseEntity<>(cabService.getCabBookingDetailsByUsername(username), HttpStatus.OK);
 	}
 
@@ -73,7 +75,7 @@ public class CabController {
 	}
 
 	@PutMapping("/resetstatus/{id}")
-	public ResponseEntity<CabBookingDetails> resetstatus(@PathVariable long id) {
+	public ResponseEntity<BookingDetails> resetstatus(@PathVariable long id) {
 		return new ResponseEntity<>(cabService.resetStatus(id), HttpStatus.OK);
 	}
 
@@ -83,10 +85,20 @@ public class CabController {
 	}
 
 	@GetMapping("/paymentstatuschange/{bookingid}")
-	public ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
+	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return new ResponseEntity<>(cabService.paymentstatuschange(bookingid), HttpStatus.OK);
 	}
 
+	@GetMapping("/getCabDetailsAndTripDetails")
+	public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from, @RequestParam String to) {
+		return new ResponseEntity<>(cabService.getCabDetailsAndTripDetails(from,to), HttpStatus.OK);
+	}
+
+	@GetMapping("/getRentalCabAndRentalPackageDetails")
+	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from) {
+		return new ResponseEntity<>(cabService.getRentalCabAndRentalPackageDetails(from), HttpStatus.OK);
+	}
+	
 	@PostMapping("/saveTrip")
 	public ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip) {
 		return new ResponseEntity<>(cabService.saveTrip(trip), HttpStatus.CREATED);
@@ -106,12 +118,12 @@ public class CabController {
 	public ResponseEntity<List<TripDetails>> getAllTrip() {
 		return new ResponseEntity<>(cabService.getAllTrips(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getTripbyId/{tripId}")
 	public ResponseEntity<Optional<TripDetails>> getTripById(@PathVariable int tripId) {
 		return new ResponseEntity<>(cabService.getTripDetailById(tripId), HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/saveRentalCab")
 	public ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab) {
 		return new ResponseEntity<>(cabService.saveRentalCab(rentalCab), HttpStatus.CREATED);
@@ -131,19 +143,25 @@ public class CabController {
 	public ResponseEntity<List<RentalCab>> getAllRentalCab() {
 		return new ResponseEntity<>(cabService.getAllRentalCab(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getRentalCabbyId/{rentalCabId}")
 	public ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable int rentalCabId) {
 		return new ResponseEntity<>(cabService.getRentalCabById(rentalCabId), HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/saveRentalPackage")
 	public ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage) {
 		return new ResponseEntity<>(cabService.saveRentalPackage(rentalPackage), HttpStatus.CREATED);
 	}
 
+	@GetMapping("/getallRentalcitynames")
+	public ResponseEntity<List<String>> getAllRentalCityNames() {
+		return new ResponseEntity<>(cabService.getAllRentalCityNames(), HttpStatus.OK);
+	}
+
 	@PutMapping("/updateRentalPackage/{rentalPackageId}")
-	public ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable int rentalPackageId, @RequestBody RentalPackage rentalPackage) {
+	public ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable int rentalPackageId,
+			@RequestBody RentalPackage rentalPackage) {
 		return new ResponseEntity<>(cabService.updateRentalPackage(rentalPackageId, rentalPackage), HttpStatus.OK);
 	}
 
@@ -156,7 +174,7 @@ public class CabController {
 	public ResponseEntity<List<RentalPackage>> getAllRentalPackage() {
 		return new ResponseEntity<>(cabService.getAllRentalPackage(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getRentalPackagebyId/{rentalPackageId}")
 	public ResponseEntity<Optional<RentalPackage>> getrentalPackageIdById(@PathVariable int rentalPackageId) {
 		return new ResponseEntity<>(cabService.getRentalPackageById(rentalPackageId), HttpStatus.OK);

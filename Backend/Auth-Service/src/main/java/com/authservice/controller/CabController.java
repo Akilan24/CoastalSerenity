@@ -13,13 +13,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.authservice.proxyentity.cab.BookingRequest;
 import com.authservice.proxyentity.cab.Cab;
 import com.authservice.proxyentity.cab.CabBookingDetails;
+import com.authservice.proxyentity.cab.CabDetailsTripDetails;
 import com.authservice.proxyentity.cab.CabProxyController;
 import com.authservice.proxyentity.cab.RentalCab;
+import com.authservice.proxyentity.cab.RentalCabsRentalPackageDetails;
 import com.authservice.proxyentity.cab.RentalPackage;
 import com.authservice.proxyentity.cab.TripDetails;
 
@@ -85,7 +88,17 @@ public class CabController {
 	    ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable("bookingid") long bookingid){
 	    	return cabProxy.paymentstatuschange(bookingid);
 	    }
+	    
+	    @GetMapping("/getCabDetailsAndTripDetails")
+		public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from, @RequestParam String to){
+	    	return cabProxy.getCabDetailsAndTripDetails(from, to);
+	    }
 
+	    @GetMapping("/getRentalCabAndRentalPackageDetails")
+		public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from) {
+			return cabProxy.getRentalCabAndRentalPackageDetails(from);
+		}
+	    
 	    @PostMapping("/saveTrip")
 	    ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip){
 	    	return cabProxy.saveTrip(trip);
@@ -141,6 +154,11 @@ public class CabController {
 	    	return cabProxy.saveRentalPackage(rentalPackage);
 	    }
 
+	    @GetMapping("/getallRentalcitynames")
+		public ResponseEntity<List<String>> getAllRentalCityNames() {
+			return cabProxy.getAllRentalCityNames();
+		}
+	    
 	    @PutMapping("/updateRentalPackage/{rentalPackageId}")
 	    ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId, @RequestBody RentalPackage rentalPackage){
 	    	return cabProxy.updateRentalPackage(rentalPackageId, rentalPackage);

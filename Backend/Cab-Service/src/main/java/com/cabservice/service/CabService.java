@@ -5,10 +5,12 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.cabservice.entity.BookingDetails;
 import com.cabservice.entity.BookingRequest;
 import com.cabservice.entity.Cab;
-import com.cabservice.entity.CabBookingDetails;
+import com.cabservice.entity.CabDetailsTripDetails;
 import com.cabservice.entity.RentalCab;
+import com.cabservice.entity.RentalCabsRentalPackageDetails;
 import com.cabservice.entity.RentalPackage;
 import com.cabservice.entity.TripDetails;
 
@@ -20,22 +22,22 @@ public interface CabService {
 
 	Cab saveCab(Cab Cab);
 
-	CabBookingDetails bookCab(long id,String username,BookingRequest bookingRequest);
+	BookingDetails bookCab(long id, String username, BookingRequest bookingRequest);
 
-	CabBookingDetails paymentstatuschange(long bookingid);
+	BookingDetails paymentstatuschange(long bookingid);
 
 	Cab updateCab(long id, Cab Cab);
 
 	String deleteCab(long id);
-	
-	CabBookingDetails resetStatus(long id);
+
+	BookingDetails resetStatus(long id);
 
 	List<List<String>> getAllCityNames();
 
-	CabBookingDetails getCabBookingDetailsById(long id);
+	BookingDetails getCabBookingDetailsById(long id);
 
-	List<CabBookingDetails> getCabBookingDetailsByUsername(String username);
-	
+	List<BookingDetails> getCabBookingDetailsByUsername(String username);
+
 	TripDetails saveTrip(TripDetails trip);
 
 	TripDetails updateTrip(int id, TripDetails tripDetails);
@@ -45,7 +47,7 @@ public interface CabService {
 	List<TripDetails> getAllTrips();
 
 	Optional<TripDetails> getTripDetailById(int id);
-	
+
 	RentalCab saveRentalCab(RentalCab rentalCab);
 
 	RentalCab updateRentalCab(int rentalCabId, RentalCab rentalCab);
@@ -55,8 +57,10 @@ public interface CabService {
 	List<RentalCab> getAllRentalCab();
 
 	Optional<RentalCab> getRentalCabById(int rentalCabId);
-	
+
 	RentalPackage saveRentalPackage(RentalPackage rentalPackage);
+
+	List<String> getAllRentalCityNames();
 
 	RentalPackage updateRentalPackage(int rentalPackageId, RentalPackage rentalPackage);
 
@@ -65,5 +69,9 @@ public interface CabService {
 	List<RentalPackage> getAllRentalPackage();
 
 	Optional<RentalPackage> getRentalPackageById(int rentalPackageId);
+
+	CabDetailsTripDetails getCabDetailsAndTripDetails(String from, String to);
+
+	RentalCabsRentalPackageDetails getRentalCabAndRentalPackageDetails(String from);
 
 }

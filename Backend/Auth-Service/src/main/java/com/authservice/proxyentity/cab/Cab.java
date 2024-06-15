@@ -1,7 +1,5 @@
 package com.authservice.proxyentity.cab;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,10 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Cab {
 
-	@Id
 	private long cabId;
 	private String cabModel;
 	private String cabType;

@@ -18,6 +18,7 @@ public class BookingRequest {
     private String to;
     private String journeyType;
     private String duration;
+    private String rentalPackage;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate departDate;
     @JsonFormat(pattern = "HH:mm")
