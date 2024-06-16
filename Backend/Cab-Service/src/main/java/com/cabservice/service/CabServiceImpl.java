@@ -6,13 +6,12 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cabservice.entity.BookingDetails;
+import com.cabservice.entity.CabBookingDetails;
 import com.cabservice.entity.BookingRequest;
 import com.cabservice.entity.Cab;
 import com.cabservice.entity.CabDetailsTripDetails;
@@ -103,8 +102,8 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public BookingDetails resetStatus(long id) {
-		Optional<BookingDetails> fbd = CabBookingDetailsRepository.findById(id);
+	public CabBookingDetails resetStatus(long id) {
+		Optional<CabBookingDetails> fbd = CabBookingDetailsRepository.findById(id);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment Cancelled & Refunded");
 			return CabBookingDetailsRepository.save(fbd.get());
@@ -137,7 +136,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public BookingDetails bookCab(long id,String username,BookingRequest bookingRequest) {
+	public CabBookingDetails bookCab(long id,String username,BookingRequest bookingRequest) {
 		Optional<Cab> CabOptional = CabRepository.findById(id);
 		if (CabOptional.isEmpty()) {
 			throw new CabDetailsNotFoundException("Cab details of Cab id: " + id + " are not found");
@@ -147,7 +146,7 @@ public class CabServiceImpl implements CabService {
 		long MIN_ID = 100000;
 		int count = CabBookingDetailsRepository.findAll().size();
 
-		BookingDetails bookingDetails = new BookingDetails();
+		CabBookingDetails bookingDetails = new CabBookingDetails();
 		bookingDetails.setCabBookingId(count == 0 ? MIN_ID : MIN_ID + count);
 		bookingDetails.setCabModel(cab.getCabModel());
 		bookingDetails.setOrigin(bookingRequest.getFrom());
@@ -172,13 +171,14 @@ public class CabServiceImpl implements CabService {
 		bookingDetails.setPhonenumber(user.getMobile());
 		bookingDetails.setUsername(username);
 		bookingDetails.setBookedDate(LocalDateTime.now());
+		bookingDetails.setPaymentStatus("Payment has to be done");
 		return CabBookingDetailsRepository.save(bookingDetails);
 
 	}
 
 	@Override
-	public BookingDetails paymentstatuschange(long bookingid) {
-		Optional<BookingDetails> fbd = CabBookingDetailsRepository.findById(bookingid);
+	public CabBookingDetails paymentstatuschange(long bookingid) {
+		Optional<CabBookingDetails> fbd = CabBookingDetailsRepository.findById(bookingid);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment done");
 			return CabBookingDetailsRepository.save(fbd.get());
@@ -188,8 +188,8 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public BookingDetails getCabBookingDetailsById(long id) {
-		Optional<BookingDetails> CabBookingDetails = CabBookingDetailsRepository.findById(id);
+	public CabBookingDetails getCabBookingDetailsById(long id) {
+		Optional<CabBookingDetails> CabBookingDetails = CabBookingDetailsRepository.findById(id);
 		if (!CabBookingDetails.isEmpty())
 			return CabBookingDetails.get();
 		else
@@ -198,8 +198,8 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public List<BookingDetails> getCabBookingDetailsByUsername(String username) {
-		List<BookingDetails> CabBookingDetails = CabBookingDetailsRepository.findAll().stream()
+	public List<CabBookingDetails> getCabBookingDetailsByUsername(String username) {
+		List<CabBookingDetails> CabBookingDetails = CabBookingDetailsRepository.findAll().stream()
 				.filter(f -> f.getUsername().equalsIgnoreCase(username))
 				.sorted((f1, f2) -> f2.getBookedDate().compareTo(f1.getBookedDate())).collect(Collectors.toList());
 		if (!CabBookingDetails.isEmpty())
@@ -316,7 +316,7 @@ public class CabServiceImpl implements CabService {
 		Optional<RentalPackage> rental = rentalPackageRepository.findById(rentalPackageId);
 		if (!rental.isEmpty()) {
 			rental.get().setDurationPackage(rentalPackage.getDurationPackage());
-			rental.get().setFrom(rentalPackage.getFrom());
+			rental.get().setOrigin(rentalPackage.getOrigin());
 			return rentalPackageRepository.save(rental.get());
 		} else
 			throw new CabDetailsNotFoundException("RentalPackage details of  rentalPackage id: " + rentalPackageId + " are not found");
@@ -361,7 +361,7 @@ public class CabServiceImpl implements CabService {
 		if (!rentalPackageList.isEmpty()) {
 			List<String> cityList=new ArrayList<String>();
 			for(RentalPackage rp: rentalPackageList) {
-				cityList.add(rp.getFrom());
+				cityList.add(rp.getOrigin());
 				}
 			return cityList;
 		} else
@@ -394,7 +394,7 @@ public class CabServiceImpl implements CabService {
 		List<RentalCab> list = rentalCabRepository.findAll();
 		if (!list.isEmpty()) {
 			rcrp.setRentalCabs(list);
-		   List<RentalPackage> rentalPackageList= rentalPackageRepository.findAll().stream().filter(t->t.getFrom().equalsIgnoreCase(from)).collect(Collectors.toList());
+		   List<RentalPackage> rentalPackageList= rentalPackageRepository.findAll().stream().filter(t->t.getOrigin().equalsIgnoreCase(from)).collect(Collectors.toList());
 		   if(!rentalPackageList.isEmpty()) {
 			   rcrp.setRentalPackage(rentalPackageList.get(0));
 			   return rcrp;

@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class BookingDetails {
+public class CabBookingDetails {
 
 	@Id
 	private long cabBookingId;

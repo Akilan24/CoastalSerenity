@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cabservice.entity.BookingDetails;
 import com.cabservice.entity.BookingRequest;
 import com.cabservice.entity.Cab;
+import com.cabservice.entity.CabBookingDetails;
 import com.cabservice.entity.CabDetailsTripDetails;
 import com.cabservice.entity.RentalCab;
 import com.cabservice.entity.RentalCabsRentalPackageDetails;
@@ -49,18 +49,18 @@ public class CabController {
 	}
 
 	@PostMapping("/bookCab/{id}/{username}")
-	public ResponseEntity<BookingDetails> bookCab(@PathVariable long id, @PathVariable String username,
+	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable long id, @PathVariable String username,
 			@RequestBody BookingRequest bookingRequest) {
 		return new ResponseEntity<>(cabService.bookCab(id, username, bookingRequest), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/getCabbookingdetailsbyid/{id}")
-	public ResponseEntity<BookingDetails> getCabBookingDetailsById(@PathVariable long id) {
+	public ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable long id) {
 		return new ResponseEntity<>(cabService.getCabBookingDetailsById(id), HttpStatus.OK);
 	}
 
 	@GetMapping("/getCabbookingdetailsbyusername/{username}")
-	public ResponseEntity<List<BookingDetails>> getCabBookingDetailsByUsername(@PathVariable String username) {
+	public ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable String username) {
 		return new ResponseEntity<>(cabService.getCabBookingDetailsByUsername(username), HttpStatus.OK);
 	}
 
@@ -75,7 +75,7 @@ public class CabController {
 	}
 
 	@PutMapping("/resetstatus/{id}")
-	public ResponseEntity<BookingDetails> resetstatus(@PathVariable long id) {
+	public ResponseEntity<CabBookingDetails> resetstatus(@PathVariable long id) {
 		return new ResponseEntity<>(cabService.resetStatus(id), HttpStatus.OK);
 	}
 
@@ -85,7 +85,7 @@ public class CabController {
 	}
 
 	@GetMapping("/paymentstatuschange/{bookingid}")
-	public ResponseEntity<BookingDetails> paymentstatuschange(@PathVariable long bookingid) {
+	public ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return new ResponseEntity<>(cabService.paymentstatuschange(bookingid), HttpStatus.OK);
 	}
 

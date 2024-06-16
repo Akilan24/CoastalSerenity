@@ -68,3 +68,47 @@
 .Rental #when {
   width: fit-content;
 }
+.cabDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+#detail {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  width: 50%;
+  height: 140px;
+}
+.cabDetail {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 140px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.cabDetail #type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+li {
+  width: 10px;
+}
+#book {
+  background-color: rgb(145, 51, 186);
+}
+#type p {
+  color: grey;
+}
+#model {
+  font-size: 30px;
+  color: black;
+}

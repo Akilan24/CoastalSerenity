@@ -12,12 +12,12 @@ function Cab() {
   const [origins, setOrigins] = useState([]);
   const [destinations, setDestinations] = useState([]);
   const [cabs, setCabs] = useState([]);
-  const [trip, setTrip] = useState();
+  const [trip, setTrip] = useState(null);
   const [tripType, setTripType] = useState("Outstation");
   const [rentalCities, setRentalCities] = useState([]);
   const [rentalCabs, setRentalCabs] = useState([]);
-  const [rentalPackage, setRentalPackage] = useState();
-  const [when, setWhen] = useState();
+  const [rentalPackage, setRentalPackage] = useState(null);
+  const [when, setWhen] = useState("Now");
   const [formData, setFormData] = useState({
     from: "",
     to: "",
@@ -27,7 +27,7 @@ function Cab() {
     departDate: getDefaultDate(),
     departTime: getCurrentTime(),
     returnDate: getDefaultDate(),
-    returnTime: getCurrentTime(),
+    returnTime: getReturnTime(),
   });
   const navigate = useNavigate();
   const config = {
@@ -51,6 +51,14 @@ function Cab() {
     return `${hours}:${minutes}`;
   }
 
+  function getReturnTime() {
+    const now = new Date();
+    now.setHours(now.getHours() + 6);
+    now.setMinutes(now.getMinutes() + 6);
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    return `${hours}:${minutes}`;
+  }
   useEffect(() => {
     async function fetchCityNames() {
       if (tripType === "Outstation") {
@@ -59,8 +67,8 @@ function Cab() {
             "http://localhost:8080/CS/Cab/getallcitynames",
             config
           );
-          setOrigins(response.data[0]);
-          setDestinations(response.data[1]);
+          setOrigins(response.data[0] || []);
+          setDestinations(response.data[1] || []);
           console.log(response.data);
         } catch (error) {
           console.log(error.response.data.message);
@@ -71,7 +79,7 @@ function Cab() {
             "http://localhost:8080/CS/Cab/getallRentalcitynames",
             config
           );
-          setRentalCities(response.data);
+          setRentalCities(response.data || []);
           console.log(response.data);
         } catch (error) {
           console.log(error.response.data.message);
@@ -79,70 +87,71 @@ function Cab() {
       }
     }
     fetchCityNames();
-  }, []);
+  }, [tripType]);
 
   async function fetchCabDetailsAndTripDetails(e) {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:8080/CS/Cab/getCabDetailsAndTripDetails/${formData.from}/${formData.to}`,
-        config
+        `http://localhost:8080/CS/Cab/getCabDetailsAndTripDetails`,
+        {
+          params: {
+            from: formData.from,
+            to: formData.to,
+          },
+          headers: config.headers,
+        }
       );
-      setCabs(response.data[0]);
-      setTrip(response.data[1]);
-      setFormData({ ...formData, duration: response.data[1].duration });
+      setCabs(response.data.cabs);
+      setTrip(response.data.tripDetails);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
+
   async function fetchRentalCabAndRentalPackageDetails(e) {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:8080/CS/Cab/getRentalCabAndRentalPackageDetails/${formData.from}`,
-        config
+        `http://localhost:8080/CS/Cab/getRentalCabAndRentalPackageDetails`,
+        {
+          params: {
+            from: formData.from,
+          },
+          headers: config.headers,
+        }
       );
-      setRentalCabs(response.data[0]);
-      setRentalPackage(response.data[1]);
-      setFormData({ ...formData, duration: response.data[1].duration });
+      setRentalCabs(response.data.rentalCabs || []);
+      setRentalPackage(response.data.rentalPackage || null);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
+
   async function handleBooking(id) {
     try {
-      const response = await axios.get(
+      console.log(formData.departDate);
+      console.log(formData.departTime);
+      const response = await axios.post(
         `http://localhost:8080/CS/Cab/bookCab/${id}/${localStorage.getItem(
           "username"
         )}`,
         formData,
         config
       );
+      navigate(`/cabBookingDetails/${response.data.cabBookingId}`);
+
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const getTime = (datetime) => {
-    const date = new Date(datetime);
-    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  };
-
-  const getDate = (time) => {
-    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
-    return format(parsedDate, "dd MMM");
-  };
-
-  const getDuration = (duration) => {
-    const [hours, minutes] = duration.split(":");
-    return `${hours}h ${minutes}m`;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   return (
@@ -153,7 +162,7 @@ function Cab() {
           <div>
             <input
               type="radio"
-              name="Outstation"
+              name="tripType"
               value="Outstation"
               checked={tripType === "Outstation"}
               onChange={(e) => setTripType(e.target.value)}
@@ -163,7 +172,7 @@ function Cab() {
           <div>
             <input
               type="radio"
-              name="Rental"
+              name="tripType"
               value="Rental"
               checked={tripType === "Rental"}
               onChange={(e) => setTripType(e.target.value)}
@@ -246,7 +255,7 @@ function Cab() {
                 </div>
                 {formData.journeyType === "Round-Trip" && (
                   <div className="divclass">
-                    <label htmlFor="returnDate">returnDate:</label>
+                    <label htmlFor="returnDate">Return:</label>
                     <div className="dateTime">
                       <input
                         type="date"
@@ -277,12 +286,23 @@ function Cab() {
                 cabs.map((cab, index) => (
                   <div key={index} className="cabDetail">
                     <img src={cab.cabImage} alt="Cab" />
-                    <p>{cab.cabModel}</p>
-                    <p>{cab.cabType}</p>
-                    <p>{cab.totalSeat}</p>
-                    <p>{cab.cabPrice * trip.distance}</p>
-                    <button onClick={(e) => handleBooking(cab.cabId)}>
-                      SELECT
+                    <div id="detail">
+                      <p id="model">{cab.cabModel}</p>
+                      <div id="type">
+                        <p>{cab.cabType}</p>
+                        <p>
+                          <li></li>
+                        </p>
+                        <p>{trip.distance} kms</p>
+                        <p>
+                          <li></li>
+                        </p>
+                        <p>{cab.totalSeat} seats</p>
+                      </div>
+                      <p>&#8377;{cab.cabPrice * trip.distance}</p>
+                    </div>
+                    <button id="book" onClick={() => handleBooking(cab.cabId)}>
+                      Book
                     </button>
                   </div>
                 ))
@@ -325,8 +345,15 @@ function Cab() {
                     value={formData.rentalPackage}
                     onChange={handleChange}
                   >
-                    <option value="Now">Now</option>
-                    <option value="Later">Scheduled for Later</option>
+                    <option value="1_hrs_15_kms">1 hrs 10 kms</option>
+                    <option value="1_hrs_15_kms">1 hrs 15 kms</option>
+                    <option value="2_hrs_20_kms">2 hrs 20 kms</option>
+                    <option value="2_hrs_25_kms">2 hrs 25 kms</option>
+                    <option value="3_hrs_30_kms">3 hrs 30 kms</option>
+                    <option value="4_hrs_40_kms">4 hrs 40 kms</option>
+                    <option value="5_hrs_50_kms">5 hrs 50 kms</option>
+                    <option value="6_hrs_60_kms">6 hrs 60 kms</option>
+                    <option value="7_hrs_70_kms">7 hrs 70 kms</option>
                   </select>
                 </div>
                 <div className="divclass">
@@ -375,17 +402,28 @@ function Cab() {
                 cabs.map((cab, index) => (
                   <div key={index} className="cabDetail">
                     <img src={cab.cabImage} alt="Cab" />
-                    <p>{cab.cabModel}</p>
-                    <p>{cab.cabType}</p>
-                    <p>{cab.totalSeat}</p>
-                    <p>{cab.cabPrice * trip.distance}</p>
-                    <button onClick={(e) => handleBooking(cab.cabId)}>
-                      SELECT
+                    <div id="detail">
+                      <p id="model">{cab.cabModel}</p>
+                      <div id="type">
+                        <p>{cab.cabType}</p>
+                        <p>
+                          <li></li>
+                        </p>
+                        <p>{trip.distance} kms</p>
+                        <p>
+                          <li></li>
+                        </p>
+                        <p>{cab.totalSeat} seats</p>
+                      </div>
+                      <p>&#8377;{}</p>
+                    </div>
+                    <button id="book" onClick={() => handleBooking(cab.cabId)}>
+                      Book
                     </button>
                   </div>
                 ))
               ) : (
-                <p id="no">No available cabs found.</p>
+                <p id="no">No available rental cabs found.</p>
               )}
             </div>
           </div>

@@ -108,7 +108,9 @@ function BusBookingDetails() {
         </div>
         <div className="detail-row">
           <span className="detail-label">Total Price:</span>
-          <span className="detail-value">{busBookingDetails.totalPrice}</span>
+          <span className="detail-value">
+            &#8377;{busBookingDetails.totalPrice}
+          </span>
         </div>
       </div>
       <button onClick={() => navigate(`/payment/bus-${value}`)}>

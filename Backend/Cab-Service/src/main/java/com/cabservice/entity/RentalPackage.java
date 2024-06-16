@@ -23,7 +23,7 @@ public class RentalPackage {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int rentalPackageId;
-	private String From;
+	private String origin;
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "rentalPackageId", referencedColumnName = "rentalPackageId")
 	private List<RentalPrice> durationPackage;

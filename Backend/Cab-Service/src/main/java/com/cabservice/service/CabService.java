@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.cabservice.entity.BookingDetails;
+import com.cabservice.entity.CabBookingDetails;
 import com.cabservice.entity.BookingRequest;
 import com.cabservice.entity.Cab;
 import com.cabservice.entity.CabDetailsTripDetails;
@@ -22,21 +22,21 @@ public interface CabService {
 
 	Cab saveCab(Cab Cab);
 
-	BookingDetails bookCab(long id, String username, BookingRequest bookingRequest);
+	CabBookingDetails bookCab(long id, String username, BookingRequest bookingRequest);
 
-	BookingDetails paymentstatuschange(long bookingid);
+	CabBookingDetails paymentstatuschange(long bookingid);
 
 	Cab updateCab(long id, Cab Cab);
 
 	String deleteCab(long id);
 
-	BookingDetails resetStatus(long id);
+	CabBookingDetails resetStatus(long id);
 
 	List<List<String>> getAllCityNames();
 
-	BookingDetails getCabBookingDetailsById(long id);
+	CabBookingDetails getCabBookingDetailsById(long id);
 
-	List<BookingDetails> getCabBookingDetailsByUsername(String username);
+	List<CabBookingDetails> getCabBookingDetailsByUsername(String username);
 
 	TripDetails saveTrip(TripDetails trip);
 

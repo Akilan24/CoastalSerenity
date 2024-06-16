@@ -120,7 +120,7 @@ function FlightBookingDetails() {
         <div className="detail-row">
           <span className="detail-label">Total Price:</span>
           <span className="detail-value">
-            {flightBookingDetails.totalPrice}
+            &#8377;{flightBookingDetails.totalPrice}
           </span>
         </div>
       </div>
