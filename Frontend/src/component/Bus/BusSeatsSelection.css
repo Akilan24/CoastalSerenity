@@ -218,9 +218,10 @@
   top: 5px;
 }
 .bss #logo {
-  padding: 25px;
+  padding: 0px;
   width: 450px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .bss .contain {
   display: flex;

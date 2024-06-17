@@ -3,9 +3,9 @@ package com.cabservice.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.cabservice.entity.RentalCab;
+import com.cabservice.entity.RentalCabBookingDetails;
 
 @Repository
-public interface RentalCabRepository extends JpaRepository<RentalCab, Long> {
+public interface RentalCabBookingDetailsRepository extends JpaRepository<RentalCabBookingDetails, Long> {
 
 }

@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RentalPackage {
 
+
 	private int rentalPackageId;
 	private String origin;
 	@OneToMany(cascade = CascadeType.ALL)

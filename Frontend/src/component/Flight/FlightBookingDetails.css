@@ -69,6 +69,7 @@
   padding: 0px;
   width: 450px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .flightbookingdetails button:hover {
   background-color: #0056b3;

@@ -21,6 +21,7 @@ import com.cabservice.entity.Cab;
 import com.cabservice.entity.CabBookingDetails;
 import com.cabservice.entity.CabDetailsTripDetails;
 import com.cabservice.entity.RentalCab;
+import com.cabservice.entity.RentalCabBookingDetails;
 import com.cabservice.entity.RentalCabsRentalPackageDetails;
 import com.cabservice.entity.RentalPackage;
 import com.cabservice.entity.TripDetails;
@@ -54,6 +55,12 @@ public class CabController {
 		return new ResponseEntity<>(cabService.bookCab(id, username, bookingRequest), HttpStatus.CREATED);
 	}
 
+	@PostMapping("/bookRentalCab/{id}/{username}")
+	public ResponseEntity<RentalCabBookingDetails> bookRentalCab(@PathVariable long id, @PathVariable String username,
+			@RequestBody BookingRequest bookingRequest) {
+		return new ResponseEntity<>(cabService.bookRentalCab(id, username, bookingRequest), HttpStatus.CREATED);
+	}
+	
 	@GetMapping("/getCabbookingdetailsbyid/{id}")
 	public ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable long id) {
 		return new ResponseEntity<>(cabService.getCabBookingDetailsById(id), HttpStatus.OK);
@@ -64,6 +71,16 @@ public class CabController {
 		return new ResponseEntity<>(cabService.getCabBookingDetailsByUsername(username), HttpStatus.OK);
 	}
 
+	@GetMapping("/getRentalCabbookingdetailsbyid/{id}")
+	public ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsById(@PathVariable long id) {
+		return new ResponseEntity<>(cabService.getRentalCabBookingDetailsById(id), HttpStatus.OK);
+	}
+
+	@GetMapping("/getRentalCabbookingdetailsbyusername/{username}")
+	public ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(@PathVariable String username) {
+		return new ResponseEntity<>(cabService.getRentalCabBookingDetailsByUsername(username), HttpStatus.OK);
+	}
+	
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Cab> updateCab(@PathVariable long id, @RequestBody Cab Cab) {
 		return new ResponseEntity<>(cabService.updateCab(id, Cab), HttpStatus.OK);
@@ -74,29 +91,39 @@ public class CabController {
 		return new ResponseEntity<>(cabService.deleteCab(id), HttpStatus.OK);
 	}
 
-	@PutMapping("/resetstatus/{id}")
-	public ResponseEntity<CabBookingDetails> resetstatus(@PathVariable long id) {
-		return new ResponseEntity<>(cabService.resetStatus(id), HttpStatus.OK);
+	@PutMapping("/resetstatusCab/{id}")
+	public ResponseEntity<CabBookingDetails> resetstatusCab(@PathVariable long id) {
+		return new ResponseEntity<>(cabService.resetStatusCab(id), HttpStatus.OK);
 	}
 
+	@PutMapping("/resetstatusRentalCab/{id}")
+	public ResponseEntity<RentalCabBookingDetails> resetstatusRentalCab(@PathVariable long id) {
+		return new ResponseEntity<>(cabService.resetStatusRentalCab(id), HttpStatus.OK);
+	}
+	
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return new ResponseEntity<>(cabService.getAllCityNames(), HttpStatus.OK);
 	}
 
-	@GetMapping("/paymentstatuschange/{bookingid}")
-	public ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
-		return new ResponseEntity<>(cabService.paymentstatuschange(bookingid), HttpStatus.OK);
+	@GetMapping("/paymentstatuschangeCab/{bookingid}")
+	public ResponseEntity<CabBookingDetails> paymentstatuschangeCab(@PathVariable long bookingid) {
+		return new ResponseEntity<>(cabService.paymentstatuschangeCab(bookingid), HttpStatus.OK);
 	}
 
+	@GetMapping("/paymentstatuschangRentalCab/{bookingid}")
+	public ResponseEntity<RentalCabBookingDetails> paymentstatuschangeRentalCab(@PathVariable long bookingid) {
+		return new ResponseEntity<>(cabService.paymentstatuschangeRentalCab(bookingid), HttpStatus.OK);
+	}
+	
 	@GetMapping("/getCabDetailsAndTripDetails")
 	public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from, @RequestParam String to) {
 		return new ResponseEntity<>(cabService.getCabDetailsAndTripDetails(from,to), HttpStatus.OK);
 	}
 
 	@GetMapping("/getRentalCabAndRentalPackageDetails")
-	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from) {
-		return new ResponseEntity<>(cabService.getRentalCabAndRentalPackageDetails(from), HttpStatus.OK);
+	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from,@RequestParam String packageName) {
+		return new ResponseEntity<>(cabService.getRentalCabAndRentalPackageDetails(from,packageName), HttpStatus.OK);
 	}
 	
 	@PostMapping("/saveTrip")
@@ -130,12 +157,12 @@ public class CabController {
 	}
 
 	@PutMapping("/updateRentalCab/{rentalCabId}")
-	public ResponseEntity<RentalCab> updateRentalCab(@PathVariable int rentalCabId, @RequestBody RentalCab rentalCab) {
+	public ResponseEntity<RentalCab> updateRentalCab(@PathVariable long rentalCabId, @RequestBody RentalCab rentalCab) {
 		return new ResponseEntity<>(cabService.updateRentalCab(rentalCabId, rentalCab), HttpStatus.OK);
 	}
 
 	@DeleteMapping("/deleteRentalCab/{rentalCabId}")
-	public ResponseEntity<String> deleteRentalCab(@PathVariable int rentalCabId) {
+	public ResponseEntity<String> deleteRentalCab(@PathVariable long rentalCabId) {
 		return new ResponseEntity<>(cabService.deleteRentalCab(rentalCabId), HttpStatus.OK);
 	}
 
@@ -145,7 +172,7 @@ public class CabController {
 	}
 
 	@GetMapping("/getRentalCabbyId/{rentalCabId}")
-	public ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable int rentalCabId) {
+	public ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable long rentalCabId) {
 		return new ResponseEntity<>(cabService.getRentalCabById(rentalCabId), HttpStatus.OK);
 	}
 

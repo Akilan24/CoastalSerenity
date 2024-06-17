@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { parse, format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import "./Cab.css";
 import Tabs from "../Tabs/Tabs.jsx";
@@ -16,7 +15,7 @@ function Cab() {
   const [tripType, setTripType] = useState("Outstation");
   const [rentalCities, setRentalCities] = useState([]);
   const [rentalCabs, setRentalCabs] = useState([]);
-  const [rentalPackage, setRentalPackage] = useState(null);
+  const [rentalPrice, setRentalPrice] = useState(new Map());
   const [when, setWhen] = useState("Now");
   const [formData, setFormData] = useState({
     from: "",
@@ -59,6 +58,7 @@ function Cab() {
     const minutes = String(now.getMinutes()).padStart(2, "0");
     return `${hours}:${minutes}`;
   }
+
   useEffect(() => {
     async function fetchCityNames() {
       if (tripType === "Outstation") {
@@ -104,6 +104,10 @@ function Cab() {
       );
       setCabs(response.data.cabs);
       setTrip(response.data.tripDetails);
+      setFormData((prevData) => ({
+        ...prevData,
+        duration: response.data.tripDetails.duration,
+      }));
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -118,24 +122,41 @@ function Cab() {
         {
           params: {
             from: formData.from,
+            packageName: formData.rentalPackage,
           },
           headers: config.headers,
         }
       );
       setRentalCabs(response.data.rentalCabs || []);
-      setRentalPackage(response.data.rentalPackage || null);
+      const packagePrice = new Map([...Object.entries(response.data.cabPrice)]);
+      setRentalPrice(packagePrice);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
   }
 
-  async function handleBooking(id) {
+  async function handleCabBooking(id) {
     try {
-      console.log(formData.departDate);
-      console.log(formData.departTime);
       const response = await axios.post(
         `http://localhost:8080/CS/Cab/bookCab/${id}/${localStorage.getItem(
+          "username"
+        )}`,
+        formData,
+        config
+      );
+      navigate(`/cabBookingDetails/${response.data.cabBookingId}`);
+
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  }
+
+  async function handleRentalCabBooking(id) {
+    try {
+      const response = await axios.post(
+        `http://localhost:8080/CS/Cab/bookRentalCab/${id}/${localStorage.getItem(
           "username"
         )}`,
         formData,
@@ -301,7 +322,10 @@ function Cab() {
                       </div>
                       <p>&#8377;{cab.cabPrice * trip.distance}</p>
                     </div>
-                    <button id="book" onClick={() => handleBooking(cab.cabId)}>
+                    <button
+                      id="book"
+                      onClick={() => handleCabBooking(cab.cabId)}
+                    >
                       Book
                     </button>
                   </div>
@@ -345,7 +369,8 @@ function Cab() {
                     value={formData.rentalPackage}
                     onChange={handleChange}
                   >
-                    <option value="1_hrs_15_kms">1 hrs 10 kms</option>
+                    <option value="">Select Package</option>
+                    <option value="1_hrs_10_kms">1 hrs 10 kms</option>
                     <option value="1_hrs_15_kms">1 hrs 15 kms</option>
                     <option value="2_hrs_20_kms">2 hrs 20 kms</option>
                     <option value="2_hrs_25_kms">2 hrs 25 kms</option>
@@ -398,8 +423,8 @@ function Cab() {
               </form>
             </div>
             <div className="cabDetails">
-              {cabs.length > 0 ? (
-                cabs.map((cab, index) => (
+              {rentalCabs.length > 0 ? (
+                rentalCabs.map((cab, index) => (
                   <div key={index} className="cabDetail">
                     <img src={cab.cabImage} alt="Cab" />
                     <div id="detail">
@@ -409,15 +434,14 @@ function Cab() {
                         <p>
                           <li></li>
                         </p>
-                        <p>{trip.distance} kms</p>
-                        <p>
-                          <li></li>
-                        </p>
                         <p>{cab.totalSeat} seats</p>
                       </div>
-                      <p>&#8377;{}</p>
+                      <p>&#8377;{rentalPrice.get(cab.cabType)}</p>
                     </div>
-                    <button id="book" onClick={() => handleBooking(cab.cabId)}>
+                    <button
+                      id="book"
+                      onClick={() => handleRentalCabBooking(cab.rentalCabId)}
+                    >
                       Book
                     </button>
                   </div>

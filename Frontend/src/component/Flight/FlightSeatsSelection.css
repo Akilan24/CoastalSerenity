@@ -139,9 +139,10 @@
   background-color: #df5656;
 }
 .fss #logo {
-  padding: 25px;
+  padding: 0px;
   width: 450px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .pay-button {
   margin-bottom: 15px;

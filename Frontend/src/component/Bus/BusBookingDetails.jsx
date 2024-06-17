@@ -107,7 +107,19 @@ function BusBookingDetails() {
           </span>
         </div>
         <div className="detail-row">
-          <span className="detail-label">Total Price:</span>
+          <span className="detail-label">Booked Date:</span>
+          <span className="detail-value">
+            {getDuration(busBookingDetails.bookedDate)}
+          </span>
+        </div>
+        <div className="detail-row">
+          <span className="detail-label">Payment Status:</span>
+          <span className="detail-value">
+            {getDuration(busBookingDetails.paymentStatus)}
+          </span>
+        </div>
+        <div className="detail-row">
+          <span className="detail-label">Amount:</span>
           <span className="detail-value">
             &#8377;{busBookingDetails.totalPrice}
           </span>

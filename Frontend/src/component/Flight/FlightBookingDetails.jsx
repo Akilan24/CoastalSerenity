@@ -118,7 +118,19 @@ function FlightBookingDetails() {
           </span>
         </div>
         <div className="detail-row">
-          <span className="detail-label">Total Price:</span>
+          <span className="detail-label">Booked Date:</span>
+          <span className="detail-value">
+            {getDuration(flightBookingDetails.bookedDate)}
+          </span>
+        </div>
+        <div className="detail-row">
+          <span className="detail-label">Payment Status:</span>
+          <span className="detail-value">
+            {getDuration(flightBookingDetails.paymentStatus)}
+          </span>
+        </div>
+        <div className="detail-row">
+          <span className="detail-label">Amount:</span>
           <span className="detail-value">
             &#8377;{flightBookingDetails.totalPrice}
           </span>

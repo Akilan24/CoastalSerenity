@@ -1,6 +1,7 @@
 package com.authservice.proxyentity.cab;
 
 import java.util.List;
+import java.util.Map;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RentalCabsRentalPackageDetails {
 
-	List<RentalCab> rentalCabs;
-	RentalPackage rentalPackage;
+	private List<RentalCab> rentalCabs;
+	private Map<String,Double> cabPrice;
 }

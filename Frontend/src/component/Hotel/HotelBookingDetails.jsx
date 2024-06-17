@@ -117,12 +117,12 @@ function HotelBookingDetails() {
             <span className="value">{hotelBookingDetails.address}</span>
           </p>
           <p>
-            <span className="label">Amount:</span>
-            <span className="value">{hotelBookingDetails.amount}</span>
-          </p>
-          <p>
             <span className="label">Payment Status:</span>
             <span className="value">{hotelBookingDetails.paymentStatus}</span>
+          </p>
+          <p>
+            <span className="label">Amount:</span>
+            <span className="value">{hotelBookingDetails.amount}</span>
           </p>
           {hotelBookingDetails.paymentStatus === "Payment has to be done" && (
             <div id="guest">

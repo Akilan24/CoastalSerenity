@@ -170,9 +170,10 @@
   font-weight: normal;
 }
 .trainBookingDetails #logo {
-  padding: 25px;
+  padding: 0px;
   width: 450px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .trainBookingDetails .list {
   display: flex;

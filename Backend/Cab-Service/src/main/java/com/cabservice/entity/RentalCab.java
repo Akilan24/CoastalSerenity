@@ -15,8 +15,7 @@ import lombok.NoArgsConstructor;
 public class RentalCab {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int rentalCabId;
+	private long rentalCabId;
 	private String cabModel;
 	private String cabType;
 	private String cabImage;

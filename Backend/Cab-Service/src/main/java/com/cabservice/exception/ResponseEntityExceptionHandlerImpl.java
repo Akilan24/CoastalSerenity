@@ -36,6 +36,39 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
 
+	@ExceptionHandler(RentalCabDetailsNotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleNotFoundException(RentalCabDetailsNotFoundException ex,
+			WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDate.now(), ex.getMessage(), "Not Found");
+		log.info("An Exception occured");
+		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
+	
+	
+	@ExceptionHandler(CabBookingDetailsNotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleNotFoundException(CabBookingDetailsNotFoundException ex,
+			WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDate.now(), ex.getMessage(), "Not Found");
+		log.info("An Exception occured");
+		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(RentalCabBookingDetailsNotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleNotFoundException(RentalCabBookingDetailsNotFoundException ex,
+			WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDate.now(), ex.getMessage(), "Not Found");
+		log.info("An Exception occured");
+		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(RentalPackageDetailsNotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleNotFoundException(RentalPackageDetailsNotFoundException ex,
+			WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(LocalDate.now(), ex.getMessage(), "Not Found");
+		log.info("An Exception occured");
+		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
+	
 	@ExceptionHandler(TripDetailsNotFoundException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(TripDetailsNotFoundException ex,
 			WebRequest request) {

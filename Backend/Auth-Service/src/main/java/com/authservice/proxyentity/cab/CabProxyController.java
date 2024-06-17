@@ -26,14 +26,24 @@ public interface CabProxyController {
 	ResponseEntity<Cab> createCab(@RequestBody Cab cab);
 
 	@PostMapping("/bookCab/{id}/{username}")
-	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable long id, @PathVariable String username,
+	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable String id, @PathVariable String username,
 			@RequestBody BookingRequest bookingRequest);
 
+	@PostMapping("/bookRentalCab/{id}/{username}")
+	public ResponseEntity<RentalCabBookingDetails> bookRentalCab(@PathVariable long id, @PathVariable String username,
+			@RequestBody BookingRequest bookingRequest);
+	
 	@GetMapping("/getCabbookingdetailsbyid/{id}")
 	ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id);
 
 	@GetMapping("/getCabbookingdetailsbyusername/{username}")
 	ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable("username") String username);
+
+	@GetMapping("/getRentalCabbookingdetailsbyid/{id}")
+	ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsById(@PathVariable("id") long id);
+
+	@GetMapping("/getRentalCabbookingdetailsbyusername/{username}")
+	ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(@PathVariable("username") String username);
 
 	@PutMapping("/update/{id}")
 	ResponseEntity<Cab> updateCab(@PathVariable("id") long id, @RequestBody Cab cab);
@@ -41,21 +51,27 @@ public interface CabProxyController {
 	@DeleteMapping("/delete/{id}")
 	ResponseEntity<String> deleteCab(@PathVariable("id") long id);
 
-	@PutMapping("/resetstatus/{id}")
-	ResponseEntity<CabBookingDetails> resetstatus(@PathVariable("id") long id);
+	@PutMapping("/resetstatusCab/{id}")
+	ResponseEntity<CabBookingDetails> resetstatusCab(@PathVariable("id") long id);
+	
+	@PutMapping("/resetstatusRentalCab/{id}")
+	ResponseEntity<CabBookingDetails> resetstatusRentalCab(@PathVariable("id") long id);
 
 	@GetMapping("/getallcitynames")
 	ResponseEntity<List<List<String>>> getAllCityNames();
 
-	@GetMapping("/paymentstatuschange/{bookingid}")
-	ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable("bookingid") long bookingid);
+	@GetMapping("/paymentstatuschangeCab/{bookingid}")
+	ResponseEntity<CabBookingDetails> paymentstatuschangeCab(@PathVariable("bookingid") long bookingid);
+	
+	@GetMapping("/paymentstatuschangeRentalCab/{bookingid}")
+	ResponseEntity<CabBookingDetails> paymentstatuschangeRentalCab(@PathVariable("bookingid") long bookingid);
 
 	@GetMapping("/getCabDetailsAndTripDetails")
 	ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
 			@RequestParam String to);
 
 	@GetMapping("/getRentalCabAndRentalPackageDetails")
-	ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from);
+	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from,@RequestParam String packageName);
 
 	@PostMapping("/saveTrip")
 	ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip);

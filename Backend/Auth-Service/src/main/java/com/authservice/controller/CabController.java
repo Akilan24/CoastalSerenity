@@ -22,6 +22,7 @@ import com.authservice.proxyentity.cab.CabBookingDetails;
 import com.authservice.proxyentity.cab.CabDetailsTripDetails;
 import com.authservice.proxyentity.cab.CabProxyController;
 import com.authservice.proxyentity.cab.RentalCab;
+import com.authservice.proxyentity.cab.RentalCabBookingDetails;
 import com.authservice.proxyentity.cab.RentalCabsRentalPackageDetails;
 import com.authservice.proxyentity.cab.RentalPackage;
 import com.authservice.proxyentity.cab.TripDetails;
@@ -34,148 +35,169 @@ public class CabController {
 	@Autowired
 	private CabProxyController cabProxy;
 
-	 @GetMapping("/getall")
-	    ResponseEntity<List<Cab>> getAllCabs(){
+	@GetMapping("/getall")
+	ResponseEntity<List<Cab>> getAllCabs() {
 		return cabProxy.getAllCabs();
-	 }
+	}
 
-	    @GetMapping("/getbyid/{id}")
-	    ResponseEntity<Optional<Cab>> getCabById(@PathVariable("id") long id){
-	    	return cabProxy.getCabById(id);
-	    }
+	@GetMapping("/getbyid/{id}")
+	ResponseEntity<Optional<Cab>> getCabById(@PathVariable("id") long id) {
+		return cabProxy.getCabById(id);
+	}
 
-	    @PostMapping("/save")
-	    ResponseEntity<Cab> createCab(@RequestBody Cab cab){
-	    	return cabProxy.createCab(cab);
-	    }
+	@PostMapping("/save")
+	ResponseEntity<Cab> createCab(@RequestBody Cab cab) {
+		return cabProxy.createCab(cab);
+	}
 
-	    @PostMapping("/bookCab/{id}/{username}")
-		public ResponseEntity<CabBookingDetails> bookCab(@PathVariable long id,@PathVariable String username,@RequestBody BookingRequest bookingRequest) {
-			return cabProxy.bookCab(id, username,bookingRequest);
-		}
+	@PostMapping("/bookCab/{id}/{username}")
+	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable String id, @PathVariable String username,
+			@RequestBody BookingRequest bookingRequest) {
+		return cabProxy.bookCab(id, username, bookingRequest);
+	}
 
-	    @GetMapping("/getCabbookingdetailsbyid/{id}")
-	    ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id){
-	    	return cabProxy.getCabBookingDetailsById(id);
-	    }
+	@PostMapping("/bookRentalCab/{id}/{username}")
+	public ResponseEntity<RentalCabBookingDetails> bookRentalCab(@PathVariable long id, @PathVariable String username,
+			@RequestBody BookingRequest bookingRequest) {
+		return cabProxy.bookRentalCab(id, username, bookingRequest);
+	}
 
-	    @GetMapping("/getCabbookingdetailsbyusername/{username}")
-	    ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable("username") String username){
-	    	return cabProxy.getCabBookingDetailsByUsername(username);
-	    }
+	@GetMapping("/getCabbookingdetailsbyid/{id}")
+	ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id) {
+		return cabProxy.getCabBookingDetailsById(id);
+	}
 
-	    @PutMapping("/update/{id}")
-	    ResponseEntity<Cab> updateCab(@PathVariable("id") long id, @RequestBody Cab cab){
-	    	return cabProxy.updateCab(id, cab);
-	    }
+	@GetMapping("/getCabbookingdetailsbyusername/{username}")
+	ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable("username") String username) {
+		return cabProxy.getCabBookingDetailsByUsername(username);
+	}
 
-	    @DeleteMapping("/delete/{id}")
-	    ResponseEntity<String> deleteCab(@PathVariable("id") long id){
-	    	return cabProxy.deleteCab(id);
-	    }
+	@PutMapping("/update/{id}")
+	ResponseEntity<Cab> updateCab(@PathVariable("id") long id, @RequestBody Cab cab) {
+		return cabProxy.updateCab(id, cab);
+	}
 
-	    @PutMapping("/resetstatus/{id}")
-	    ResponseEntity<CabBookingDetails> resetstatus(@PathVariable("id") long id){
-	    	return cabProxy.resetstatus(id);
-	    }
+	@DeleteMapping("/delete/{id}")
+	ResponseEntity<String> deleteCab(@PathVariable("id") long id) {
+		return cabProxy.deleteCab(id);
+	}
 
-	    @GetMapping("/getallcitynames")
-	    ResponseEntity<List<List<String>>> getAllCityNames(){
-	    	return cabProxy.getAllCityNames();
-	    }
+	@PutMapping("/resetstatusCab/{id}")
+	ResponseEntity<CabBookingDetails> resetstatusCab(@PathVariable("id") long id) {
+		return cabProxy.resetstatusCab(id);
+	}
 
-	    @GetMapping("/paymentstatuschange/{bookingid}")
-	    ResponseEntity<CabBookingDetails> paymentstatuschange(@PathVariable("bookingid") long bookingid){
-	    	return cabProxy.paymentstatuschange(bookingid);
-	    }
-	    
-	    @GetMapping("/getCabDetailsAndTripDetails")
-		public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from, @RequestParam String to){
-	    	return cabProxy.getCabDetailsAndTripDetails(from, to);
-	    }
+	@PutMapping("/resetstatusRentalCab/{id}")
+	ResponseEntity<CabBookingDetails> resetstatusRentalCab(@PathVariable("id") long id) {
+		return cabProxy.resetstatusRentalCab(id);
+	}
 
-	    @GetMapping("/getRentalCabAndRentalPackageDetails")
-		public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from) {
-			return cabProxy.getRentalCabAndRentalPackageDetails(from);
-		}
-	    
-	    @PostMapping("/saveTrip")
-	    ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip){
-	    	return cabProxy.saveTrip(trip);
-	    }
+	@GetMapping("/getallcitynames")
+	ResponseEntity<List<List<String>>> getAllCityNames() {
+		return cabProxy.getAllCityNames();
+	}
 
-	    @PutMapping("/updateTrip/{tripId}")
-	    ResponseEntity<TripDetails> updateTrip(@PathVariable("tripId") int tripId, @RequestBody TripDetails trip){
-	    	return cabProxy.updateTrip(tripId, trip);
-	    }
+	@GetMapping("/paymentstatuschangeCab/{bookingid}")
+	ResponseEntity<CabBookingDetails> paymentstatuschangeCab(@PathVariable("bookingid") long bookingid) {
+		return cabProxy.paymentstatuschangeCab(bookingid);
+	}
 
-	    @DeleteMapping("/deleteTrip/{tripId}")
-	    ResponseEntity<String> deleteTrip(@PathVariable("tripId") int tripId){
-	    	return cabProxy.deleteTrip(tripId);
-	    }
+	@GetMapping("/paymentstatuschangeRentalCab/{bookingid}")
+	ResponseEntity<CabBookingDetails> paymentstatuschangeRentalCab(@PathVariable("bookingid") long bookingid) {
+		return cabProxy.paymentstatuschangeRentalCab(bookingid);
+	}
 
-	    @GetMapping("/getAllTrip")
-	    ResponseEntity<List<TripDetails>> getAllTrip(){
-	    	return cabProxy.getAllTrip();
-	    }
+	@GetMapping("/getCabDetailsAndTripDetails")
+	public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
+			@RequestParam String to) {
+		return cabProxy.getCabDetailsAndTripDetails(from, to);
+	}
 
-	    @GetMapping("/getTripbyId/{tripId}")
-	    ResponseEntity<Optional<TripDetails>> getTripById(@PathVariable("tripId") int tripId){
-	    	return cabProxy.getTripById(tripId);
-	    }
+	@GetMapping("/getRentalCabAndRentalPackageDetails")
+	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from,
+			@RequestParam String packageName) {
+		return cabProxy.getRentalCabAndRentalPackageDetails(from, packageName);
+	}
 
-	    @PostMapping("/saveRentalCab")
-	    ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab){
-	    	return cabProxy.saveRentalCab(rentalCab);
-	    }
+	@PostMapping("/saveTrip")
+	ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip) {
+		return cabProxy.saveTrip(trip);
+	}
 
-	    @PutMapping("/updateRentalCab/{rentalCabId}")
-	    ResponseEntity<RentalCab> updateRentalCab(@PathVariable("rentalCabId") int rentalCabId, @RequestBody RentalCab rentalCab){
-	    	return cabProxy.updateRentalCab(rentalCabId, rentalCab);
-	    }
+	@PutMapping("/updateTrip/{tripId}")
+	ResponseEntity<TripDetails> updateTrip(@PathVariable("tripId") int tripId, @RequestBody TripDetails trip) {
+		return cabProxy.updateTrip(tripId, trip);
+	}
 
-	    @DeleteMapping("/deleteRentalCab/{rentalCabId}")
-	    ResponseEntity<String> deleteRentalCab(@PathVariable("rentalCabId") int rentalCabId){
-	    	return cabProxy.deleteRentalCab(rentalCabId);
-	    }
+	@DeleteMapping("/deleteTrip/{tripId}")
+	ResponseEntity<String> deleteTrip(@PathVariable("tripId") int tripId) {
+		return cabProxy.deleteTrip(tripId);
+	}
 
-	    @GetMapping("/getAllRentalCab")
-	    ResponseEntity<List<RentalCab>> getAllRentalCab(){
-	    	return cabProxy.getAllRentalCab();
-	    }
+	@GetMapping("/getAllTrip")
+	ResponseEntity<List<TripDetails>> getAllTrip() {
+		return cabProxy.getAllTrip();
+	}
 
-	    @GetMapping("/getRentalCabbyId/{rentalCabId}")
-	    ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable("rentalCabId") int rentalCabId){
-	    	return cabProxy.getRentalCabById(rentalCabId);
-	    }
+	@GetMapping("/getTripbyId/{tripId}")
+	ResponseEntity<Optional<TripDetails>> getTripById(@PathVariable("tripId") int tripId) {
+		return cabProxy.getTripById(tripId);
+	}
 
-	    @PostMapping("/saveRentalPackage")
-	    ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage){
-	    	return cabProxy.saveRentalPackage(rentalPackage);
-	    }
+	@PostMapping("/saveRentalCab")
+	ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab) {
+		return cabProxy.saveRentalCab(rentalCab);
+	}
 
-	    @GetMapping("/getallRentalcitynames")
-		public ResponseEntity<List<String>> getAllRentalCityNames() {
-			return cabProxy.getAllRentalCityNames();
-		}
-	    
-	    @PutMapping("/updateRentalPackage/{rentalPackageId}")
-	    ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId, @RequestBody RentalPackage rentalPackage){
-	    	return cabProxy.updateRentalPackage(rentalPackageId, rentalPackage);
-	    }
+	@PutMapping("/updateRentalCab/{rentalCabId}")
+	ResponseEntity<RentalCab> updateRentalCab(@PathVariable("rentalCabId") int rentalCabId,
+			@RequestBody RentalCab rentalCab) {
+		return cabProxy.updateRentalCab(rentalCabId, rentalCab);
+	}
 
-	    @DeleteMapping("/deleteRentalPackage/{rentalPackageId}")
-	    ResponseEntity<String> deleteRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId){
-	    	return cabProxy.deleteRentalPackage(rentalPackageId);
-	    }
+	@DeleteMapping("/deleteRentalCab/{rentalCabId}")
+	ResponseEntity<String> deleteRentalCab(@PathVariable("rentalCabId") int rentalCabId) {
+		return cabProxy.deleteRentalCab(rentalCabId);
+	}
 
-	    @GetMapping("/getAllRentalPackage")
-	    ResponseEntity<List<RentalPackage>> getAllRentalPackage(){
-	    	return cabProxy.getAllRentalPackage();
-	    }
+	@GetMapping("/getAllRentalCab")
+	ResponseEntity<List<RentalCab>> getAllRentalCab() {
+		return cabProxy.getAllRentalCab();
+	}
 
-	    @GetMapping("/getRentalPackagebyId/{rentalPackageId}")
-	    ResponseEntity<Optional<RentalPackage>> getRentalPackageById(@PathVariable("rentalPackageId") int rentalPackageId){
-	    	return cabProxy.getRentalPackageById(rentalPackageId);
-	    }
+	@GetMapping("/getRentalCabbyId/{rentalCabId}")
+	ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable("rentalCabId") int rentalCabId) {
+		return cabProxy.getRentalCabById(rentalCabId);
+	}
+
+	@PostMapping("/saveRentalPackage")
+	ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage) {
+		return cabProxy.saveRentalPackage(rentalPackage);
+	}
+
+	@GetMapping("/getallRentalcitynames")
+	public ResponseEntity<List<String>> getAllRentalCityNames() {
+		return cabProxy.getAllRentalCityNames();
+	}
+
+	@PutMapping("/updateRentalPackage/{rentalPackageId}")
+	ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId,
+			@RequestBody RentalPackage rentalPackage) {
+		return cabProxy.updateRentalPackage(rentalPackageId, rentalPackage);
+	}
+
+	@DeleteMapping("/deleteRentalPackage/{rentalPackageId}")
+	ResponseEntity<String> deleteRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId) {
+		return cabProxy.deleteRentalPackage(rentalPackageId);
+	}
+
+	@GetMapping("/getAllRentalPackage")
+	ResponseEntity<List<RentalPackage>> getAllRentalPackage() {
+		return cabProxy.getAllRentalPackage();
+	}
+
+	@GetMapping("/getRentalPackagebyId/{rentalPackageId}")
+	ResponseEntity<Optional<RentalPackage>> getRentalPackageById(@PathVariable("rentalPackageId") int rentalPackageId) {
+		return cabProxy.getRentalPackageById(rentalPackageId);
+	}
 }

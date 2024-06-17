@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cab {
 
+
 	private long cabId;
 	private String cabModel;
 	private String cabType;
