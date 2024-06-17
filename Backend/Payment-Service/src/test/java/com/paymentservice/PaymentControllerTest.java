@@ -30,11 +30,11 @@ class PaymentControllerTest {
 	private PaymentController paymentController;
 
 	String value = "String-123456";
-	String[] id=value.split("-");
-	
+	String[] id = value.split("-");
+
 	@Test
 	void testAddPayment() throws Exception {
-		Payment payment = new Payment(123456, 987654,LocalDateTime.now() , "user123", 5000.0, "Payment Done");
+		Payment payment = new Payment(123456, 987654, LocalDateTime.now(), "user123", 5000.0, "Payment Done");
 		when(paymentService.doPayment(id[1])).thenReturn(payment);
 
 		ResponseEntity<Payment> response = paymentController.addPayment(id[1]);
@@ -69,7 +69,7 @@ class PaymentControllerTest {
 	@Test
 	void testGetPaymentByPaymentId() {
 		long paymentId = 123456;
-		Payment payment = new Payment(123456, 987654,LocalDateTime.now(), "user123", 5000.0, "Payment Done");
+		Payment payment = new Payment(123456, 987654, LocalDateTime.now(), "user123", 5000.0, "Payment Done");
 		when(paymentService.getPaymentbyPaymentId(paymentId)).thenReturn(payment);
 
 		ResponseEntity<Payment> response = paymentController.getpaymentbypaymentid(paymentId);

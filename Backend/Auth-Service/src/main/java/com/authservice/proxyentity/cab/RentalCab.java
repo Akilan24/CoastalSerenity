@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RentalCab {
 
-
 	private long rentalCabId;
 	private String cabModel;
 	private String cabType;

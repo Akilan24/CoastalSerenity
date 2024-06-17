@@ -621,3 +621,612 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2024-06-18 03:10:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-65] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
 2024-06-18 03:10:37 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 2024-06-18 03:10:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-65] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@171869de: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:10:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-66] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:10:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-66] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-66] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@45ff565b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-67] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:16 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-67] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:16 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-67] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@71620852: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:16 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-68] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:21 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-68] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:21 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-68] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@32a250f9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:21 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-69] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:26 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-69] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:26 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-69] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1866166e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:26 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-70] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:31 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-70] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:31 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-70] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5fb6e4f8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:31 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-71] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:36 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-71] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:36 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-71] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@32825fab: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:36 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-72] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-72] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-72] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7837ce74: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-73] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-73] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-73] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5684521c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-74] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-74] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-74] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@591a2b59: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-75] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:11:56 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-75] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:11:56 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-75] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@442375e1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:11:56 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-76] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:01 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-76] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:01 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-76] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3d448d54: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:01 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-77] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:06 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-77] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:06 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-77] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7fb26ff9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:06 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-78] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-78] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-78] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@76db05e3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-79] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:16 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-79] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:16 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-79] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@618bdd08: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:16 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-80] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:21 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-80] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:21 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-80] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@818fcd5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:21 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-81] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:27 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-81] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:27 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-81] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@aa3a9ba: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:27 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-82] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:32 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-82] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:32 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-82] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@40e32c43: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:32 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-83] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-83] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-83] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1f8e193b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-84] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-84] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-84] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2bed7fa5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-85] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:47 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-85] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:47 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-85] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@62fd209f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:47 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-86] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:52 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-86] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:52 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-86] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3b7df101: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:52 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-87] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:12:57 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-87] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:12:57 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-87] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@48a3e939: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:12:57 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-88] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:02 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-88] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:02 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-88] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@34489889: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:02 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-89] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:07 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-89] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:07 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-89] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@71cdca76: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:07 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-90] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:12 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-90] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:12 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-90] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@75ff32b3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:12 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-91] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:18 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-91] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:18 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-91] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6b1086f4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:18 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-92] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:23 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-92] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:23 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-92] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@243f29f1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:23 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-93] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:28 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-93] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:28 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-93] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4733199f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:28 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-94] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:33 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-94] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:33 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-94] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5ed07e47: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:33 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-95] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:38 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-95] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:38 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-95] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@81006d5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:38 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-96] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:44 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-96] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:44 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-96] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@a03ade3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:44 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-97] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:49 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-97] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:49 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-97] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4ce0214b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:49 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-98] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:54 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-98] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:54 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-98] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1423966c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:54 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-99] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:13:59 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-99] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:13:59 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-99] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@370aebb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:13:59 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-100] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:04 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-100] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:04 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-100] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7a807b25: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:04 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-101] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:10 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-101] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:10 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-101] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@60a8794e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:10 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-102] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:15 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-102] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:15 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-102] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1010904b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:15 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-103] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:20 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-103] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:20 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-103] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@e13205c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:20 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-104] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:25 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-104] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:25 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-104] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3cd1191a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:25 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-105] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:30 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-105] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:30 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-105] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@117c52a4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:30 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-106] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:35 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-106] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:35 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-106] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@648a0fa6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:35 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-107] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-107] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-107] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@204d8f8a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-108] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-108] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-108] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7cd3d6f4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-109] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-109] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-109] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@cb4c454: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-110] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:14:56 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-110] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:14:56 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-110] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5b68e720: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:14:56 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-111] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:01 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-111] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:01 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-111] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@14817ba: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:01 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-112] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:06 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-112] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:06 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-112] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1842f6da: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:06 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-113] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-113] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-113] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5d4077a1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:11 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-114] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:17 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-114] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:17 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-114] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5adf3685: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:17 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-115] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:22 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-115] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:22 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-115] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1226796e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:22 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-116] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:27 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-116] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:27 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-116] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@62f6d064: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:27 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-117] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:32 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-117] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:32 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-117] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@9ebbde3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:32 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-118] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:37 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 03:15:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-118] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-118] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7d8ebb6e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:37 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-119] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-119] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-119] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@8f34136: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:42 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-120] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:47 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-120] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:47 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-120] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6c952c69: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:47 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-121] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:53 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-121] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:53 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-121] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@14a260b5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:53 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-122] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:15:58 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-122] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:15:58 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-122] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5ff2be24: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:15:58 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-123] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:03 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-123] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:03 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-123] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@54983630: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:03 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-124] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:08 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-124] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:08 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-124] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5c9d7fbc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:08 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-125] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:13 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-125] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:13 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-125] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@300d5b3a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:13 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-126] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:18 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-126] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:18 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-126] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@16b71b05: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:18 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-127] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:23 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-127] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:23 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-127] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5f529951: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:23 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-128] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:29 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-128] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:29 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-128] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1d9b0166: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:29 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-129] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:34 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-129] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:34 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-129] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@20de6d5e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:34 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-130] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:39 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-130] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:39 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-130] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2f62efd9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:39 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-131] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:44 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-131] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:44 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-131] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4554b293: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:44 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-132] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:49 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-132] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:49 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-132] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@327d007b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:49 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-133] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:54 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-133] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:54 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-133] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2562c464: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:54 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-134] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:16:59 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-134] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:16:59 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-134] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@24294ef3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:16:59 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-135] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:05 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-135] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:05 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-135] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3f4fcec0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:05 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-136] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:10 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-136] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:10 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-136] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6ad25e01: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:10 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-137] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:15 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-137] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:15 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-137] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@37d96f8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:15 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-138] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:20 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-138] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:20 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-138] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@364e4e19: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:20 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-139] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:25 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-139] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:25 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-139] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@56fa9815: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:25 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-140] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:30 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-140] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:30 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-140] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3e816f98: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:30 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-141] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:35 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-141] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:35 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-141] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4b44ea3e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:35 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-142] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-142] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-142] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@63ad7fb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:41 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-143] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-143] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-143] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3b4c5ff9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:46 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-144] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-144] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 03:17:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-144] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2a6eefd2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 03:17:51 [springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw-145] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 03:17:54 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:54 [RMI TCP Connection(108)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:55 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application API-GATEWAY with eureka with status DOWN
+2024-06-18 03:17:55 [RMI TCP Connection(109)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1718660875064, current=DOWN, previous=UP]
+2024-06-18 03:17:55 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/Akilan:API-GATEWAY:8080: registering service...
+2024-06-18 03:17:55 [RMI TCP Connection(110)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:55 [RMI TCP Connection(111)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:55 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/Akilan:API-GATEWAY:8080 - registration status: 204
+2024-06-18 03:17:55 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2024-06-18 03:17:55 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2024-06-18 03:17:55 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.dl4JhTw3TQKQxb391DYyWw'
+2024-06-18 03:17:55 [RMI TCP Connection(112)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:55 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'API-GATEWAY.rabbit-903151311.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-18 03:17:55 [RMI TCP Connection(113)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:55 [RMI TCP Connection(114)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:56 [RMI TCP Connection(115)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:56 [RMI TCP Connection(116)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] WARN  o.s.c.s.DefaultLifecycleProcessor - Failed to stop bean 'reactorResourceFactory'
+reactor.core.Exceptions$ReactiveException: java.lang.InterruptedException
+	at reactor.core.Exceptions.propagate(Exceptions.java:410)
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:96)
+	at reactor.core.publisher.Mono.block(Mono.java:1779)
+	at org.springframework.http.client.ReactorResourceFactory.stop(ReactorResourceFactory.java:251)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:361)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:487)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:317)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:218)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1139)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1048)
+	at java.base/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:230)
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:91)
+	... 51 common frames omitted
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'API-GATEWAY.errorChannel' has 0 subscriber(s).
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] WARN  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator stop interrupted
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: Connection pool shut down
+2024-06-18 03:17:56 [RMI TCP Connection(109)-127.0.0.1] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2024-06-18 03:17:57 [RMI TCP Connection(109)-127.0.0.1] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: Connection pool shut down
+2024-06-18 03:17:57 [RMI TCP Connection(109)-127.0.0.1] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_API-GATEWAY/Akilan:API-GATEWAY:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 03:17:57 [RMI TCP Connection(109)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

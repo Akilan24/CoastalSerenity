@@ -33,7 +33,7 @@ public class Train {
 	private String nextDay;
 	@ElementCollection
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Map<String,LocalDateTime> boardingStation;
+	private Map<String, LocalDateTime> boardingStation;
 	@ElementCollection
 	private Map<String, Integer> totalSeat;
 	@ElementCollection

@@ -192,7 +192,7 @@ public class TrainServiceImpl implements TrainService {
 		bookingDetails.setUsername(username);
 		bookingDetails.setBookedDate(LocalDateTime.now());
 		bookingDetails.setBoardingStation(boardingStation);
-		switch(seatType) {
+		switch (seatType) {
 		case "SL":
 			bookingDetails.setSeatType("SL - Sleeper");
 			break;
@@ -209,7 +209,7 @@ public class TrainServiceImpl implements TrainService {
 			bookingDetails.setSeatType("CC - CC Chair Car");
 			break;
 		}
-	
+
 		double totalPrice = 0;
 		for (Map.Entry<String, Double> me : Train.getSeatPrice().entrySet()) {
 			if (me.getKey().equalsIgnoreCase(bookingDetails.getSeatType())) {
@@ -231,6 +231,7 @@ public class TrainServiceImpl implements TrainService {
 				if (me.getKey().equalsIgnoreCase(seatType)) {
 					if (me.getValue() > 0) {
 						passenger.setSeatNo("Seat Confirmed");
+						map.put(seatType, me.getValue() - 1);
 					} else {
 						for (Map.Entry<String, Integer> me1 : Train.getTrainBookingStatus().entrySet()) {
 							if (me1.getKey().equalsIgnoreCase(seatType)) {
@@ -251,6 +252,7 @@ public class TrainServiceImpl implements TrainService {
 		TrainOptional.get().setTrainBookingStatus(map);
 		trainRepository.save(TrainOptional.get());
 		bookingDetails.setTotalPrice(totalPrice);
+		bookingDetails.setBookedDate(LocalDateTime.now());
 		bookingDetails.setTrainPassenger(TrainPassengerList);
 
 		return trainBookingDetailsRepository.save(bookingDetails);

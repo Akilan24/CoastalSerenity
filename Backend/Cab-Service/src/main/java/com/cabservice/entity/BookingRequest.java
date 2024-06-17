@@ -14,18 +14,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BookingRequest {
 
-    private String from;
-    private String to;
-    private String journeyType;
-    private String duration;
-    private int distance;
-    private String rentalPackage;
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate departDate;
-    @JsonFormat(pattern = "HH:mm")
-    private LocalTime departTime;
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate returnDate;
-    @JsonFormat(pattern = "HH:mm")
-    private LocalTime returnTime;
+	private String from;
+	private String to;
+	private String journeyType;
+	private String duration;
+	private int distance;
+	private String rentalPackage;
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	private LocalDate departDate;
+	@JsonFormat(pattern = "HH:mm")
+	private LocalTime departTime;
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	private LocalDate returnDate;
+	@JsonFormat(pattern = "HH:mm")
+	private LocalTime returnTime;
 }

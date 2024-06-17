@@ -45,10 +45,10 @@ public interface FlightProxyController {
 	@PostMapping("/bookflight/{id}/{username}")
 	public ResponseEntity<FlightBookingDetails> bookFlight(@PathVariable long id,
 			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username);
-	
+
 	@GetMapping("/getflightbookingdetailsbyid/{id}")
 	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsById(@PathVariable long id);
-	
+
 	@GetMapping("/getflightbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username);
 }

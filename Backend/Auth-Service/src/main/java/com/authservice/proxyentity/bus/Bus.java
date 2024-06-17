@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Bus {
 
-
 	private long busId;
 	private String busModel;
 	private String busCompany;
@@ -32,10 +31,10 @@ public class Bus {
 	private String duration;
 	@ElementCollection
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Map<String,LocalDateTime> pickUpPoint;
+	private Map<String, LocalDateTime> pickUpPoint;
 	@ElementCollection
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Map<String,LocalDateTime> dropPoint;
+	private Map<String, LocalDateTime> dropPoint;
 	private String route;
 	private String nextDay;
 	@ElementCollection

@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BusSeats {
 
-
 	private long seatId;
 	private String seatNo;
 	private String seatType;

@@ -22,5 +22,5 @@ public class RentalPrice {
 	private int rentalPriceId;
 	private String packageName;
 	@ElementCollection
-	private Map<String,Double> cabPrice;
+	private Map<String, Double> cabPrice;
 }

@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 public class RentalCabsRentalPackageDetails {
 
 	private List<RentalCab> rentalCabs;
-	private Map<String,Double> cabPrice;
+	private Map<String, Double> cabPrice;
 }

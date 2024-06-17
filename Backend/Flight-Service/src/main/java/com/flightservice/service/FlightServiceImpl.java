@@ -229,7 +229,7 @@ public class FlightServiceImpl implements FlightService {
 		flightRepository.save(flightOptional.get());
 		bookingDetails.setTotalPrice(totalPrice);
 		bookingDetails.setFlightPassenger(flightPassengerList);
-        bookingDetails.setBookedDate(LocalTimeDate.now());
+		bookingDetails.setBookedDate(LocalDateTime.now());
 		return flightBookingDetailsRepository.save(bookingDetails);
 
 	}

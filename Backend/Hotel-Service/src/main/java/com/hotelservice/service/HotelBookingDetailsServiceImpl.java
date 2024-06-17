@@ -161,8 +161,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	@Override
 	public List<HotelBookingDetails> showBookingDetailsbyUserName(String userName) {
 		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
-		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email)).sorted((b1, b2) -> b2.getBookedDate().compareTo(b1.getBookedDate()))
-                .collect(Collectors.toList());
+		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
+				.sorted((b1, b2) -> b2.getBookedDate().compareTo(b1.getBookedDate())).collect(Collectors.toList());
 		if (!bd.isEmpty()) {
 			return bd;
 		} else
@@ -185,7 +185,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	public HotelBookingDetails resetStatus(long id) {
 		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(id);
 		if (!bd.isEmpty()) {
-			bd.get().setPaymentStatus("Payment Cancelled & Refunded");;
+			bd.get().setPaymentStatus("Payment Cancelled & Refunded");
+			;
 			return bookingrepo.save(bd.get());
 		} else
 			throw new HotelBookingDetailsNotFoundException("Booking details are not found");

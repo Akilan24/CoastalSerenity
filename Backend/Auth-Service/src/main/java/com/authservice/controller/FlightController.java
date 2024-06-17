@@ -76,12 +76,12 @@ public class FlightController {
 			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username) {
 		return flightProxy.bookFlight(id, ftfs, username);
 	}
-	
+
 	@GetMapping("/getflightbookingdetailsbyid/{id}")
 	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsById(@PathVariable long id) {
 		return flightProxy.getFlightBookingDetailsById(id);
 	}
-	
+
 	@GetMapping("/getflightbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username) {
 		return flightProxy.getFlightBookingDetailsByUsername(username);

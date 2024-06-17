@@ -16,7 +16,7 @@ public interface HotelBookingDetailsProxy {
 
 	@PutMapping("/HotelBookingDetails/paymentstatuschangebybid/{bookingid}")
 	public HotelBookingDetails paymentstatuschange(@PathVariable long bookingid);
-	
+
 	@PutMapping("/HotelBookingDetails/resetstatus/{id}")
 	public ResponseEntity<HotelBookingDetails> resetstatus(@PathVariable long id);
 }

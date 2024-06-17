@@ -30,14 +30,14 @@ import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
 	@Value("${spring.mail.username}")
 	String fromEmail;
 
 	@Autowired
 	PasswordEncoder passwordEncoder;
-	
+
 	@Autowired
 	private AuthenticationManager authenticationManager;
 
@@ -55,14 +55,14 @@ public class UserServiceImpl implements UserService{
 
 	@Autowired
 	private JavaMailSender mailSender;
-	
+
 	@Override
 	public String saveUser(Registration user) {
-		if(!userRepo.findById(user.getUsername()).isPresent()) {
-		user.setPassword(passwordEncoder.encode(user.getPassword()));
-		userRepo.save(user);
-		return "user added to the system";}
-		else {
+		if (!userRepo.findById(user.getUsername()).isPresent()) {
+			user.setPassword(passwordEncoder.encode(user.getPassword()));
+			userRepo.save(user);
+			return "user added to the system";
+		} else {
 			throw new UserAlreadyFoundException("Username already taken. Try another.");
 		}
 	}
@@ -153,7 +153,7 @@ public class UserServiceImpl implements UserService{
 		}
 
 	}
-	
+
 	public static String generatePassword(int minLength, int maxLength) {
 		String CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
 		String CHAR_UPPER = CHAR_LOWER.toUpperCase();

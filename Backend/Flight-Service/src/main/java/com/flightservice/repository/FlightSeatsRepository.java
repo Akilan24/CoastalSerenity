@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.flightservice.entity.FlightSeats;
 
 @Repository
-public interface FlightSeatsRepository extends JpaRepository<FlightSeats, Long>{
+public interface FlightSeatsRepository extends JpaRepository<FlightSeats, Long> {
 
 }

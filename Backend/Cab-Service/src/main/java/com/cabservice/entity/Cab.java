@@ -19,5 +19,5 @@ public class Cab {
 	private String cabImage;
 	private int totalSeat;
 	private double cabPrice;
-    
+
 }

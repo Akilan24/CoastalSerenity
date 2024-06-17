@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TrainBookingDetails {
 
-
 	private long trainBookingId;
 	private String trainName;
 	private long pnr;

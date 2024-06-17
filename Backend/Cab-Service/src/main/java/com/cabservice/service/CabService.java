@@ -24,11 +24,11 @@ public interface CabService {
 	Cab saveCab(Cab Cab);
 
 	CabBookingDetails bookCab(long id, String username, BookingRequest bookingRequest);
-	
+
 	RentalCabBookingDetails bookRentalCab(long id, String username, BookingRequest bookingRequest);
 
 	CabBookingDetails paymentstatuschangeCab(long bookingid);
-	
+
 	RentalCabBookingDetails paymentstatuschangeRentalCab(long bookingid);
 
 	Cab updateCab(long id, Cab Cab);
@@ -36,7 +36,7 @@ public interface CabService {
 	String deleteCab(long id);
 
 	CabBookingDetails resetStatusCab(long id);
-	
+
 	RentalCabBookingDetails resetStatusRentalCab(long id);
 
 	List<List<String>> getAllCityNames();
@@ -48,7 +48,7 @@ public interface CabService {
 	RentalCabBookingDetails getRentalCabBookingDetailsById(long id);
 
 	List<RentalCabBookingDetails> getRentalCabBookingDetailsByUsername(String username);
-	
+
 	TripDetails saveTrip(TripDetails trip);
 
 	TripDetails updateTrip(int id, TripDetails tripDetails);
@@ -83,6 +83,6 @@ public interface CabService {
 
 	CabDetailsTripDetails getCabDetailsAndTripDetails(String from, String to);
 
-	RentalCabsRentalPackageDetails getRentalCabAndRentalPackageDetails(String from,String packageName);
+	RentalCabsRentalPackageDetails getRentalCabAndRentalPackageDetails(String from, String packageName);
 
 }

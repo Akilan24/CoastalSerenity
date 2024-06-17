@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface PaymentProxyController {
 
 	@GetMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception ;
+	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception;
 
 	@GetMapping("/getallpayment")
 	public ResponseEntity<List<Payment>> getallpayments();

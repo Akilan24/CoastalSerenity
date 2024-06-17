@@ -43,8 +43,7 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		log.info("An Exception occured");
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
-	
-	
+
 	@ExceptionHandler(CabBookingDetailsNotFoundException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(CabBookingDetailsNotFoundException ex,
 			WebRequest request) {
@@ -52,7 +51,7 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		log.info("An Exception occured");
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@ExceptionHandler(RentalCabBookingDetailsNotFoundException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(RentalCabBookingDetailsNotFoundException ex,
 			WebRequest request) {
@@ -60,7 +59,7 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		log.info("An Exception occured");
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@ExceptionHandler(RentalPackageDetailsNotFoundException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(RentalPackageDetailsNotFoundException ex,
 			WebRequest request) {
@@ -68,7 +67,7 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		log.info("An Exception occured");
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@ExceptionHandler(TripDetailsNotFoundException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(TripDetailsNotFoundException ex,
 			WebRequest request) {
@@ -76,7 +75,7 @@ public class ResponseEntityExceptionHandlerImpl extends ResponseEntityExceptionH
 		log.info("An Exception occured");
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 

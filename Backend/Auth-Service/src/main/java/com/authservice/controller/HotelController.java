@@ -32,7 +32,7 @@ public class HotelController {
 
 	@Autowired
 	HotelProxyController hotelProxyController;
-	
+
 	@GetMapping("/getallhotel")
 	public ResponseEntity<List<Hotel>> getHotels() {
 		return hotelProxyController.getHotels();
@@ -78,7 +78,7 @@ public class HotelController {
 	public ResponseEntity<String> deletehotel(@PathVariable Long id) {
 		return hotelProxyController.deletehotel(id);
 	}
-	
+
 	@GetMapping("/HotelBookingDetails/getall")
 	public ResponseEntity<List<HotelBookingDetails>> listBookingDetails() {
 		return hotelProxyController.listBookingDetails();
@@ -97,15 +97,16 @@ public class HotelController {
 	}
 
 	@GetMapping("/HotelBookingDetails/getbyusername/{username}/{hotelName}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,@PathVariable String hotelName) {
-		return hotelProxyController.getBookingDetailsbyusernameandhotelname(username,hotelName);
+	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,
+			@PathVariable String hotelName) {
+		return hotelProxyController.getBookingDetailsbyusernameandhotelname(username, hotelName);
 	}
 
 	@GetMapping("/HotelBookingDetails/getbyusername/{username}")
 	public ResponseEntity<List<HotelBookingDetails>> getBookingDetailsbyusername(@PathVariable String username) {
 		return hotelProxyController.getBookingDetailsbyusername(username);
 	}
-	
+
 	@PutMapping("/HotelBookingDetails/paymentstatuschangebybid/{bookingid}")
 	public ResponseEntity<HotelBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return hotelProxyController.paymentstatuschange(bookingid);

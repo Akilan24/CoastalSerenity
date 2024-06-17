@@ -38,11 +38,11 @@ public class PaymentServiceTest {
 	PaymentServiceImpl paymentService;
 
 	String value = "String-123456";
-	String[] id=value.split("-");
-	
+	String[] id = value.split("-");
+
 	@Test
 	void testDoPayment() {
-		
+
 		HotelBookingDetails bookingDetails = new HotelBookingDetails();
 		bookingDetails.setName("user123");
 		bookingDetails.setAmount(100.0);
@@ -135,7 +135,7 @@ public class PaymentServiceTest {
 
 	@Test
 	void testPaymentCancel() {
-		
+
 		int bookingid = 123456;
 		Payment payment = new Payment();
 		payment.setPaymentid(Long.parseLong(id[1]));
@@ -156,7 +156,7 @@ public class PaymentServiceTest {
 
 	@Test
 	void testPaymentCancel_NotFound() {
-		
+
 		when(paymentRepository.findById(Long.parseLong(id[1]))).thenReturn(Optional.empty());
 
 		assertThrows(PaymentDetailsNotFoundException.class, () -> {

@@ -16,7 +16,7 @@ public interface FlightBookingDetailsProxy {
 
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public ResponseEntity<FlightBookingDetails> paymentstatuschange(@PathVariable long bookingid);
-	
+
 	@PutMapping("/resetstatus/{id}")
 	public FlightBookingDetails resetstatus(@PathVariable long id);
 }

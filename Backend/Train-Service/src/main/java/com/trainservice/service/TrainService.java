@@ -18,7 +18,8 @@ public interface TrainService {
 
 	Train saveTrain(Train Train);
 
-	TrainBookingDetails bookTrain(long id, List<Traveller> travellers,String boardingStations,String seatType, String username);
+	TrainBookingDetails bookTrain(long id, List<Traveller> travellers, String boardingStations, String seatType,
+			String username);
 
 	TrainBookingDetails paymentstatuschange(long bookingid);
 

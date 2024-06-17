@@ -44,29 +44,28 @@ public class BusController {
 	public ResponseEntity<Bus> addseat(@PathVariable long busId) {
 		return busProxy.addseat(busId);
 	}
-	
+
 	@PostMapping("/save")
 	public ResponseEntity<Bus> createBus(@RequestBody Bus Bus) {
 		return busProxy.createBus(Bus);
 	}
 
 	@PostMapping("/bookBus/{id}/{username}/{pickUpPoint}/{dropPoint}")
-	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id,
-			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username,@PathVariable String pickUpPoint,@PathVariable
-			String dropPoint)  {
-		return busProxy.bookBus(id, btbs, username,pickUpPoint,dropPoint);
+	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id, @RequestBody BusTravellerBusSeats btbs,
+			@PathVariable String username, @PathVariable String pickUpPoint, @PathVariable String dropPoint) {
+		return busProxy.bookBus(id, btbs, username, pickUpPoint, dropPoint);
 	}
-	
+
 	@GetMapping("/getbusbookingdetailsbyid/{id}")
 	public ResponseEntity<BusBookingDetails> getBusBookingDetailsById(@PathVariable long id) {
 		return busProxy.getBusBookingDetailsById(id);
 	}
-	
+
 	@GetMapping("/getBusbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<BusBookingDetails>> getBusBookingDetailsByUsername(@PathVariable String username) {
 		return busProxy.getBusBookingDetailsByUsername(username);
 	}
-	
+
 	@PutMapping("/update/{busId}")
 	public ResponseEntity<Bus> updateBus(@PathVariable long busId, @RequestBody Bus Bus) {
 		return busProxy.updateBus(busId, Bus);
@@ -82,12 +81,12 @@ public class BusController {
 	public ResponseEntity<BusBookingDetails> resetstatus(@PathVariable long busId) {
 		return busProxy.resetstatus(busId);
 	}
-	
+
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return busProxy.getAllCityNames();
 	}
-	
+
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public ResponseEntity<BusBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return busProxy.paymentstatuschange(bookingid);

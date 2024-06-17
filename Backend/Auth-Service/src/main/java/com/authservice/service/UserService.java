@@ -13,12 +13,12 @@ import jakarta.mail.MessagingException;
 public interface UserService {
 
 	public String saveUser(Registration user);
-	
+
 	public Boolean forgotpassword(String toEmail) throws MessagingException;
-	
-	public JwtResponse login( AuthRequest authRequest); 
-	
-	public String logout(AuthRequest authRequest,String refreshToken);
-	
+
+	public JwtResponse login(AuthRequest authRequest);
+
+	public String logout(AuthRequest authRequest, String refreshToken);
+
 	public JwtResponse refreshToken(RefreshTokenRequest refreshTokenRequest);
 }

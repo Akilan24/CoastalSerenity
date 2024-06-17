@@ -51,9 +51,9 @@ public class TrainController {
 	}
 
 	@PostMapping("/bookTrain/{id}/{seatType}/{boardingStation}/{username}")
-	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody List<Traveller> travellers,@PathVariable String seatType,@PathVariable String boardingStation, @PathVariable String username)  {
-		return trainProxy.bookTrain(id, travellers,seatType,boardingStation, username);
+	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id, @RequestBody List<Traveller> travellers,
+			@PathVariable String seatType, @PathVariable String boardingStation, @PathVariable String username) {
+		return trainProxy.bookTrain(id, travellers, seatType, boardingStation, username);
 	}
 
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")

@@ -15,7 +15,7 @@ public interface BusBookingDetailsProxy {
 
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public BusBookingDetails paymentstatuschange(@PathVariable long bookingid);
-	
+
 	@PutMapping("/resetstatus/{busId}")
-	public BusBookingDetails resetstatus(@PathVariable long busId) ;
+	public BusBookingDetails resetstatus(@PathVariable long busId);
 }

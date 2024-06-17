@@ -23,4 +23,3 @@ public class TrainSeats {
 	private String coachNo;
 	private boolean bookingStatus;
 }
-   

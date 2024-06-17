@@ -39,7 +39,10 @@ function BusBookingDetails() {
     const [hours, minutes] = parts;
     return `${hours}h ${minutes}m`;
   };
-
+  const getDate = (time) => {
+    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
+    return format(parsedDate, "dd MMM yyyy");
+  };
   return (
     <div className="busbookingdetails">
       <img id="logo" src="../cslogo.png" alt="Logo" />
@@ -109,7 +112,7 @@ function BusBookingDetails() {
         <div className="detail-row">
           <span className="detail-label">Booked Date:</span>
           <span className="detail-value">
-            {getDuration(busBookingDetails.bookedDate)}
+            {getDate(busBookingDetails.bookedDate)}
           </span>
         </div>
         <div className="detail-row">

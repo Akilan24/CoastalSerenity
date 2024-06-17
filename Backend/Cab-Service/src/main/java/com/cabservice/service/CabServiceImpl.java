@@ -46,7 +46,7 @@ public class CabServiceImpl implements CabService {
 
 	@Autowired
 	private RentalCabBookingDetailsRepository rentalCabBookingDetailsRepository;
-	
+
 	@Autowired
 	private TripDetailsRepository tripDetailsRepository;
 
@@ -121,7 +121,7 @@ public class CabServiceImpl implements CabService {
 			throw new CabDetailsNotFoundException("Cab details of Cab id: " + id + " are not found");
 
 	}
-	
+
 	@Override
 	public RentalCabBookingDetails resetStatusRentalCab(long id) {
 		Optional<RentalCabBookingDetails> rcbd = rentalCabBookingDetailsRepository.findById(id);
@@ -179,7 +179,7 @@ public class CabServiceImpl implements CabService {
 			Duration duration = Duration.between(bookingDetails.getDepartureTime(), bookingDetails.getReturnTime());
 			long totalMinutes = duration.toMinutes();
 			bookingDetails.setDuration(totalMinutes / 60 + "hrs : " + totalMinutes % 60 + "mins");
-			bookingDetails.setCabPrice(cab.getCabPrice() * (bookingRequest.getDistance()*2));
+			bookingDetails.setCabPrice(cab.getCabPrice() * (bookingRequest.getDistance() * 2));
 		} else {
 			bookingDetails.setJourneyType("One way");
 			bookingDetails.setCabPrice(cab.getCabPrice() * bookingRequest.getDistance());
@@ -212,7 +212,7 @@ public class CabServiceImpl implements CabService {
 		bookingDetails.setRentalCabModel(rentalCab.getCabModel());
 		bookingDetails.setOrigin(bookingRequest.getFrom());
 		bookingDetails.setDepartureTime(bookingRequest.getDepartDate().atTime(bookingRequest.getDepartTime()));
-		bookingDetails.setPackageType(bookingRequest.getRentalPackage().replaceAll("_"," "));
+		bookingDetails.setPackageType(bookingRequest.getRentalPackage().replaceAll("_", " "));
 		Registration user = uproxy.showUserByUserName(username).getBody();
 		bookingDetails.setName(user.getName());
 		bookingDetails.setEmail(user.getEmail());
@@ -224,7 +224,6 @@ public class CabServiceImpl implements CabService {
 
 	}
 
-	
 	@Override
 	public CabBookingDetails paymentstatuschangeCab(long bookingid) {
 		Optional<CabBookingDetails> fbd = CabBookingDetailsRepository.findById(bookingid);
@@ -235,7 +234,7 @@ public class CabServiceImpl implements CabService {
 			throw new CabDetailsNotFoundException("Cab details of Cab id: " + bookingid + " are not found");
 
 	}
-	
+
 	@Override
 	public RentalCabBookingDetails paymentstatuschangeRentalCab(long bookingid) {
 		Optional<RentalCabBookingDetails> fbd = rentalCabBookingDetailsRepository.findById(bookingid);
@@ -243,7 +242,8 @@ public class CabServiceImpl implements CabService {
 			fbd.get().setPaymentStatus("Payment done");
 			return rentalCabBookingDetailsRepository.save(fbd.get());
 		} else
-			throw new RentalCabDetailsNotFoundException("RentalCab details of RentalCab id: " + bookingid + " are not found");
+			throw new RentalCabDetailsNotFoundException(
+					"RentalCab details of RentalCab id: " + bookingid + " are not found");
 
 	}
 
@@ -265,17 +265,19 @@ public class CabServiceImpl implements CabService {
 		if (!CabBookingDetails.isEmpty())
 			return CabBookingDetails;
 		else
-			throw new CabBookingDetailsNotFoundException("Cab Bookingdetails of Username: " + username + " are not found");
+			throw new CabBookingDetailsNotFoundException(
+					"Cab Bookingdetails of Username: " + username + " are not found");
 
 	}
-	
+
 	@Override
 	public RentalCabBookingDetails getRentalCabBookingDetailsById(long id) {
 		Optional<RentalCabBookingDetails> rentalCabBookingDetails = rentalCabBookingDetailsRepository.findById(id);
 		if (!rentalCabBookingDetails.isEmpty())
 			return rentalCabBookingDetails.get();
 		else
-			throw new RentalCabBookingDetailsNotFoundException("RentalCab Bookingdetails of Booking id: " + id + " are not found");
+			throw new RentalCabBookingDetailsNotFoundException(
+					"RentalCab Bookingdetails of Booking id: " + id + " are not found");
 
 	}
 
@@ -287,10 +289,10 @@ public class CabServiceImpl implements CabService {
 		if (!RentalCabBookingDetails.isEmpty())
 			return RentalCabBookingDetails;
 		else
-			throw new RentalCabBookingDetailsNotFoundException("RentalCab Bookingdetails of Username: " + username + " are not found");
+			throw new RentalCabBookingDetailsNotFoundException(
+					"RentalCab Bookingdetails of Username: " + username + " are not found");
 
 	}
-	
 
 	@Override
 	public TripDetails saveTrip(TripDetails trip) {

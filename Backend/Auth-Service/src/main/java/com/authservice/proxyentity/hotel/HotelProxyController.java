@@ -60,8 +60,8 @@ public interface HotelProxyController {
 	public ResponseEntity<HotelBookingDetails> getBookingDetails(@PathVariable long bookingid);
 
 	@GetMapping("/HotelBookingDetails/getbyusername/{username}/{hotelName}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(
-			@PathVariable String username, @PathVariable String hotelName);
+	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,
+			@PathVariable String hotelName);
 
 	@GetMapping("/HotelBookingDetails/getbyusername/{username}")
 	public ResponseEntity<List<HotelBookingDetails>> getBookingDetailsbyusername(@PathVariable String username);

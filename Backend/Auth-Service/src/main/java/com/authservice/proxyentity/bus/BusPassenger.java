@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BusPassenger {
 
-	
 	private int busPassengerId;
 	@Pattern(regexp = "^[a-zA-Z]{3,20}$", message = "Please provide a Name")
 	private String name;

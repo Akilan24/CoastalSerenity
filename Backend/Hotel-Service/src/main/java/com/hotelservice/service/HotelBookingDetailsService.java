@@ -21,7 +21,7 @@ public interface HotelBookingDetailsService {
 
 	public HotelBookingDetails showBookingDetailsbyId(long bookingId);
 
-	public HotelBookingDetails showBookingDetailsbyUserNameAndHotelName(String userName,String hotelName);
+	public HotelBookingDetails showBookingDetailsbyUserNameAndHotelName(String userName, String hotelName);
 
 	public List<HotelBookingDetails> showBookingDetailsbyUserName(String userName);
 

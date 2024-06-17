@@ -34,7 +34,7 @@ public class HotelController {
 
 	@Autowired
 	HotelBookingDetailsService hotelBookingDetailsService;
-	
+
 	@GetMapping("/getallhotel")
 	public ResponseEntity<List<Hotel>> getHotels() {
 		return new ResponseEntity<>(hotelService.getHotels(), HttpStatus.OK);
@@ -80,7 +80,7 @@ public class HotelController {
 	public ResponseEntity<String> deletehotel(@PathVariable Long id) {
 		return new ResponseEntity<>(hotelService.deletehotel(id), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/HotelBookingDetails/getall")
 	public ResponseEntity<List<HotelBookingDetails>> listBookingDetails() {
 		return new ResponseEntity<>(hotelBookingDetailsService.showAllBookingDetails(), HttpStatus.OK);
@@ -90,7 +90,8 @@ public class HotelController {
 	public ResponseEntity<List<HotelRooms>> checkRoomAvailability(@PathVariable String city,
 			@PathVariable String roomtype, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date ToDate) {
-		return new ResponseEntity<>(hotelBookingDetailsService.AvailableRoom(roomtype, city, fromDate, ToDate), HttpStatus.OK);
+		return new ResponseEntity<>(hotelBookingDetailsService.AvailableRoom(roomtype, city, fromDate, ToDate),
+				HttpStatus.OK);
 	}
 
 	@GetMapping("/HotelBookingDetails/getbyid/{bookingid}")
@@ -99,15 +100,18 @@ public class HotelController {
 	}
 
 	@GetMapping("/HotelBookingDetails/getbyusernameandhotelname/{username}/{hotelName}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,@PathVariable String hotelName) {
-		return new ResponseEntity<>(hotelBookingDetailsService.showBookingDetailsbyUserNameAndHotelName(username,hotelName), HttpStatus.OK);
+	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,
+			@PathVariable String hotelName) {
+		return new ResponseEntity<>(
+				hotelBookingDetailsService.showBookingDetailsbyUserNameAndHotelName(username, hotelName),
+				HttpStatus.OK);
 	}
 
 	@GetMapping("/HotelBookingDetails/getbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<HotelBookingDetails>> getBookingDetailsbyusername(@PathVariable String username) {
 		return new ResponseEntity<>(hotelBookingDetailsService.showBookingDetailsbyUserName(username), HttpStatus.OK);
 	}
-	
+
 	@PutMapping("/HotelBookingDetails/paymentstatuschangebybid/{bookingid}")
 	public ResponseEntity<HotelBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return new ResponseEntity<>(hotelBookingDetailsService.paymentstatuschange(bookingid), HttpStatus.OK);
@@ -129,7 +133,7 @@ public class HotelController {
 			@RequestBody List<HotelGuest> guest) {
 		return new ResponseEntity<>(hotelBookingDetailsService.addGuest(bookingid, guest), HttpStatus.OK);
 	}
-	
+
 	@PutMapping("/HotelBookingDetails/resetstatus/{id}")
 	public ResponseEntity<HotelBookingDetails> resetstatus(@PathVariable long id) {
 		return new ResponseEntity<>(hotelBookingDetailsService.resetStatus(id), HttpStatus.OK);

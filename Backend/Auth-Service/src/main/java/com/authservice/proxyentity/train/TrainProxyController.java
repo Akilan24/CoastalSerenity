@@ -20,42 +20,43 @@ import com.authservice.entity.Traveller;
 public interface TrainProxyController {
 
 	@GetMapping("/getall")
-	public ResponseEntity<List<Train>> getAllTrain() ;
+	public ResponseEntity<List<Train>> getAllTrain();
 
 	@GetMapping("/getbyid/{TrainId}")
 	public ResponseEntity<Optional<Train>> getTrainByTrainId(@PathVariable long TrainId);
 
 	@PutMapping("/addseats/{TrainId}")
 	public ResponseEntity<Train> addseat(@PathVariable long TrainId);
-	
+
 	@PostMapping("/save")
-	public ResponseEntity<Train> createTrain(@RequestBody Train Train) ;
+	public ResponseEntity<Train> createTrain(@RequestBody Train Train);
 
 	@PostMapping("/bookTrain/{id}/{seatType}/{boardingStation}/{username}")
-	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody List<Traveller> travellers,@PathVariable String seatType,@PathVariable String boardingStation, @PathVariable String username) ;
-	
+	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id, @RequestBody List<Traveller> travellers,
+			@PathVariable String seatType, @PathVariable String boardingStation, @PathVariable String username);
+
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")
 	public ResponseEntity<TrainBookingDetails> getTrainBookingDetailsById(@PathVariable long id);
-	
+
 	@GetMapping("/getTrainbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<TrainBookingDetails>> getTrainBookingDetailsByUsername(@PathVariable String username);
+
 	@PutMapping("/update/{TrainId}")
-	public ResponseEntity<Train> updateTrain(@PathVariable long TrainId, @RequestBody Train Train) ;
+	public ResponseEntity<Train> updateTrain(@PathVariable long TrainId, @RequestBody Train Train);
 
 	@DeleteMapping("/delete/{TrainId}")
-	public ResponseEntity<String> deleteTrain(@PathVariable long TrainId) ;
-	
+	public ResponseEntity<String> deleteTrain(@PathVariable long TrainId);
+
 	@PutMapping("/resetstatus/{TrainId}")
 	public ResponseEntity<TrainBookingDetails> resetstatus(@PathVariable long TrainId);
-	
+
 	@GetMapping("/getallcitynames")
-	public ResponseEntity<List<List<String>>> getAllCityNames() ;
-	
+	public ResponseEntity<List<List<String>>> getAllCityNames();
+
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public ResponseEntity<TrainBookingDetails> paymentstatuschange(@PathVariable long bookingid);
-	
+
 	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
-			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) ;
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure);
 }

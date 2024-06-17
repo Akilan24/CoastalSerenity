@@ -43,29 +43,28 @@ public class BusController {
 	public ResponseEntity<Bus> addseat(@PathVariable long busId) {
 		return new ResponseEntity<>(BusService.addSeats(busId), HttpStatus.CREATED);
 	}
-	
+
 	@PostMapping("/save")
 	public ResponseEntity<Bus> createBus(@RequestBody Bus Bus) {
 		return new ResponseEntity<>(BusService.saveBus(Bus), HttpStatus.CREATED);
 	}
 
 	@PostMapping("/bookBus/{id}/{username}/{pickUpPoint}/{dropPoint}")
-	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id,
-			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username,@PathVariable String pickUpPoint,@PathVariable
-			String dropPoint) {
-		return new ResponseEntity<>(BusService.bookBus(id, btbs, username,pickUpPoint,dropPoint), HttpStatus.CREATED);
+	public ResponseEntity<BusBookingDetails> bookBus(@PathVariable long id, @RequestBody BusTravellerBusSeats btbs,
+			@PathVariable String username, @PathVariable String pickUpPoint, @PathVariable String dropPoint) {
+		return new ResponseEntity<>(BusService.bookBus(id, btbs, username, pickUpPoint, dropPoint), HttpStatus.CREATED);
 	}
-	
+
 	@GetMapping("/getbusbookingdetailsbyid/{id}")
 	public ResponseEntity<BusBookingDetails> getBusBookingDetailsById(@PathVariable long id) {
 		return new ResponseEntity<>(BusService.getBusBookingDetailsById(id), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getBusbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<BusBookingDetails>> getBusBookingDetailsByUsername(@PathVariable String username) {
 		return new ResponseEntity<>(BusService.getBusBookingDetailsByUsername(username), HttpStatus.OK);
 	}
-	
+
 	@PutMapping("/update/{busId}")
 	public ResponseEntity<Bus> updateBus(@PathVariable long busId, @RequestBody Bus Bus) {
 		return new ResponseEntity<>(BusService.updateBus(busId, Bus), HttpStatus.OK);
@@ -81,12 +80,12 @@ public class BusController {
 	public ResponseEntity<BusBookingDetails> resetstatus(@PathVariable long busId) {
 		return new ResponseEntity<>(BusService.resetStatus(busId), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return new ResponseEntity<>(BusService.getAllCityNames(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public ResponseEntity<BusBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return new ResponseEntity<>(BusService.paymentstatuschange(bookingid), HttpStatus.OK);
@@ -95,7 +94,6 @@ public class BusController {
 	@GetMapping("/getallavailablebuses/{from}/{to}/{departure}")
 	public ResponseEntity<List<Bus>> getAllAvailableFlights(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) {
-		return new ResponseEntity<>(BusService.getAllAvailableBuses(from, to, departure),
-				HttpStatus.OK);
+		return new ResponseEntity<>(BusService.getAllAvailableBuses(from, to, departure), HttpStatus.OK);
 	}
 }

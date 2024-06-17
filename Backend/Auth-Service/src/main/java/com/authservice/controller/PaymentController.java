@@ -22,7 +22,7 @@ public class PaymentController {
 	private PaymentProxyController paymentProxy;
 
 	@GetMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception  {
+	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception {
 		return paymentProxy.addPayment(bookingid);
 	}
 

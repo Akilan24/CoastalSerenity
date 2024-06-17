@@ -43,28 +43,29 @@ public class TrainController {
 	public ResponseEntity<Train> addseat(@PathVariable long TrainId) {
 		return new ResponseEntity<>(trainService.addSeats(TrainId), HttpStatus.CREATED);
 	}
-	
+
 	@PostMapping("/save")
 	public ResponseEntity<Train> createTrain(@RequestBody Train Train) {
 		return new ResponseEntity<>(trainService.saveTrain(Train), HttpStatus.CREATED);
 	}
 
 	@PostMapping("/bookTrain/{id}/{seatType}/{boardingStation}/{username}")
-	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id,
-			@RequestBody List<Traveller> travellers,@PathVariable String seatType,@PathVariable String boardingStation, @PathVariable String username) {
-		return new ResponseEntity<>(trainService.bookTrain(id, travellers,seatType,boardingStation, username), HttpStatus.CREATED);
+	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id, @RequestBody List<Traveller> travellers,
+			@PathVariable String seatType, @PathVariable String boardingStation, @PathVariable String username) {
+		return new ResponseEntity<>(trainService.bookTrain(id, travellers, seatType, boardingStation, username),
+				HttpStatus.CREATED);
 	}
-	
+
 	@GetMapping("/getTrainbookingdetailsbyid/{id}")
 	public ResponseEntity<TrainBookingDetails> getTrainBookingDetailsById(@PathVariable long id) {
 		return new ResponseEntity<>(trainService.getTrainBookingDetailsById(id), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getTrainbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<TrainBookingDetails>> getTrainBookingDetailsByUsername(@PathVariable String username) {
 		return new ResponseEntity<>(trainService.getTrainBookingDetailsByUsername(username), HttpStatus.OK);
 	}
-	
+
 	@PutMapping("/update/{TrainId}")
 	public ResponseEntity<Train> updateTrain(@PathVariable long TrainId, @RequestBody Train Train) {
 		return new ResponseEntity<>(trainService.updateTrain(TrainId, Train), HttpStatus.OK);
@@ -80,12 +81,12 @@ public class TrainController {
 	public ResponseEntity<TrainBookingDetails> resetstatus(@PathVariable long TrainId) {
 		return new ResponseEntity<>(trainService.resetStatus(TrainId), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getallcitynames")
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
 		return new ResponseEntity<>(trainService.getAllCityNames(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/paymentstatuschange/{bookingid}")
 	public ResponseEntity<TrainBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
 		return new ResponseEntity<>(trainService.paymentstatuschange(bookingid), HttpStatus.OK);
@@ -94,7 +95,6 @@ public class TrainController {
 	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) {
-		return new ResponseEntity<>(trainService.getAllAvailableTrains(from, to, departure),
-				HttpStatus.OK);
+		return new ResponseEntity<>(trainService.getAllAvailableTrains(from, to, departure), HttpStatus.OK);
 	}
 }

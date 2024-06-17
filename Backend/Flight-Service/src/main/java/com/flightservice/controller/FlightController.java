@@ -59,12 +59,12 @@ public class FlightController {
 	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsById(@PathVariable long id) {
 		return new ResponseEntity<>(flightService.getFlightBookingDetailsById(id), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getflightbookingdetailsbyusername/{username}")
 	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username) {
 		return new ResponseEntity<>(flightService.getFlightBookingDetailsByUsername(username), HttpStatus.OK);
 	}
-		
+
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Flight> updateFlight(@PathVariable long id, @RequestBody Flight flight) {
 		return new ResponseEntity<>(flightService.updateFlight(id, flight), HttpStatus.OK);
