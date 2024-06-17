@@ -22,60 +22,60 @@
   justify-content: space-around;
   align-items: center;
 }
-.type {
+#cjs .type {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.type [type="radio"] {
+#cjs .type [type="radio"] {
   width: 50px;
 }
-.type div {
+#cjs .type div {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   width: 180px;
 }
-.divclass [type="date"],
-.divclass [type="time"] {
+#cjs .divclass [type="date"],
+#cjs .divclass [type="time"] {
   width: 170px;
 }
-#time {
+#cjs #time {
   display: flex;
   flex-direction: column;
 }
-#no {
+#cjs #no {
   position: relative;
   top: 80px;
 }
-.tripTypeSelection {
+#cjs .tripTypeSelection {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(213, 210, 210);
 }
-.tripTypeSelection div {
+#cjs .tripTypeSelection div {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 250px;
 }
-.dateTime {
+#cjs .dateTime {
   display: flex;
   flex-direction: column;
 }
-.Rental #when {
+#cjs .Rental #when {
   width: fit-content;
 }
-.cabDetails {
+#cjs .cabDetails {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
 }
-#detail {
+#cjs #detail {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -83,7 +83,7 @@
   width: 50%;
   height: 140px;
 }
-.cabDetail {
+#cjs .cabDetail {
   display: flex;
   background-color: white;
   justify-content: space-around;
@@ -93,22 +93,22 @@
   border-radius: 20px;
   margin-bottom: 15px;
 }
-.cabDetail #type {
+#cjs .cabDetail #type {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-li {
+#cjs li {
   width: 10px;
 }
-#book {
+#cjs #book {
   background-color: rgb(145, 51, 186);
 }
-#type p {
+#cjs #type p {
   color: grey;
 }
-#model {
+#cjs #model {
   font-size: 30px;
   color: black;
 }

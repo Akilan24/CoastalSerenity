@@ -190,12 +190,20 @@
 .bss input {
   width: 50px;
 }
+.bss #input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bss .list {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .bss #add {
+  margin-top: 10px;
   margin-left: 15px;
   margin-bottom: 15px;
   background-color: #1f78b4;

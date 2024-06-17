@@ -173,16 +173,16 @@ public class CabServiceImpl implements CabService {
 		bookingDetails.setDestination(bookingRequest.getTo());
 		bookingDetails.setCabModel(cab.getCabModel());
 		bookingDetails.setDepartureTime(bookingRequest.getDepartDate().atTime(bookingRequest.getDepartTime()));
-		if (bookingRequest.getJourneyType().equalsIgnoreCase("roundTrip")) {
+		if (bookingRequest.getJourneyType().equalsIgnoreCase("Round-Trip")) {
 			bookingDetails.setJourneyType("Round Trip");
 			bookingDetails.setReturnTime(bookingRequest.getReturnDate().atTime(bookingRequest.getReturnTime()));
 			Duration duration = Duration.between(bookingDetails.getDepartureTime(), bookingDetails.getReturnTime());
 			long totalMinutes = duration.toMinutes();
 			bookingDetails.setDuration(totalMinutes / 60 + "hrs : " + totalMinutes % 60 + "mins");
-			bookingDetails.setCabPrice(cab.getCabPrice() * 2);
+			bookingDetails.setCabPrice(cab.getCabPrice() * (bookingRequest.getDistance()*2));
 		} else {
 			bookingDetails.setJourneyType("One way");
-			bookingDetails.setCabPrice(cab.getCabPrice());
+			bookingDetails.setCabPrice(cab.getCabPrice() * bookingRequest.getDistance());
 			bookingDetails.setDuration(bookingRequest.getDuration());
 		}
 		Registration user = uproxy.showUserByUserName(username).getBody();
@@ -355,6 +355,7 @@ public class CabServiceImpl implements CabService {
 		if (!cab.isEmpty()) {
 			cab.get().setCabImage(rentalCab.getCabImage());
 			cab.get().setCabType(rentalCab.getCabType());
+			cab.get().setFuelType(rentalCab.getFuelType());
 			cab.get().setTotalSeat(rentalCab.getTotalSeat());
 			return rentalCabRepository.save(cab.get());
 		} else

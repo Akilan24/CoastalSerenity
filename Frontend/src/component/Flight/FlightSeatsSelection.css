@@ -149,7 +149,7 @@
   background-color: #1f78b4;
   margin-top: 15px;
 }
-pay-button {
+.pay-button {
   margin-bottom: 15px;
   background-color: #1f78b4;
   margin-top: 15px;
@@ -169,15 +169,17 @@ pay-button {
 }
 .fss .list {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .fss #button {
   position: relative;
   top: 6px;
 }
 .fss #add {
+  margin-top: 10px;
   margin-left: 15px;
   margin-bottom: 15px;
   background-color: #1f78b4;

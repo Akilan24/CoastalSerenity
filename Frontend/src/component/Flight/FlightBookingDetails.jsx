@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { parse, format } from "date-fns";
 import { useNavigate, useParams } from "react-router-dom";
 import "./FlightBookingDetails.css";
 
@@ -39,7 +40,10 @@ function FlightBookingDetails() {
     const [hours, minutes] = parts;
     return `${hours}h ${minutes}m`;
   };
-
+  const getDate = (time) => {
+    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
+    return format(parsedDate, "dd MMM yyyy");
+  };
   return (
     <div className="flightbookingdetails">
       <img id="logo" src="../cslogo.png" alt="Logo" />
@@ -68,7 +72,6 @@ function FlightBookingDetails() {
             {flightBookingDetails.destination}
           </span>
         </div>
-
         <div className="detail-row">
           <span className="detail-label">Passenger Names:</span>
           <span className="detail-value">
@@ -120,13 +123,13 @@ function FlightBookingDetails() {
         <div className="detail-row">
           <span className="detail-label">Booked Date:</span>
           <span className="detail-value">
-            {getDuration(flightBookingDetails.bookedDate)}
+            {getDate(flightBookingDetails.bookedDate)}
           </span>
         </div>
         <div className="detail-row">
           <span className="detail-label">Payment Status:</span>
           <span className="detail-value">
-            {getDuration(flightBookingDetails.paymentStatus)}
+            {flightBookingDetails.paymentStatus}
           </span>
         </div>
         <div className="detail-row">

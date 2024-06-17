@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class RentalCabBookingDetails {
 
 	private long rentalCabBookingId;
-	private String RentalCabModel;
+	private String rentalCabModel;
 	private String origin;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
 	private LocalDateTime departureTime;

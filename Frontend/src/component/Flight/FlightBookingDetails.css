@@ -10,13 +10,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   background-color: white;
   border-radius: 25px;
   border: 2px solid #4bad57;
 }
 .flightbookingdetails .detail-img img {
-  width: 200px;
+  width: 180px;
 }
 .flightbookingdetails h2 {
   color: #4bad57;
@@ -30,6 +30,7 @@
   background-color: #4bad57;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

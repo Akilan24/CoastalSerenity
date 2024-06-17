@@ -1,12 +1,10 @@
 .trainBookingDetails .trainClass select {
-  width: 250px;
   height: 50px;
   font-size: 25px;
-  width: 300px;
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
   padding: 0%;
-  width: 300px;
+  width: 250px;
   box-shadow: 2px 2px 3px 2px grey;
 }
 .trainBookingDetails {
@@ -29,7 +27,7 @@
 }
 .trainBookingDetails .trainClass {
   background-color: white;
-  width: 80%;
+  width: 70%;
   height: 460px;
   padding: 10px;
   display: flex;
@@ -130,7 +128,7 @@
   font-weight: normal;
 }
 .trainBookingDetails #company {
-  font-size: 32px;
+  font-size: 35px;
   padding-top: 0px;
   color: rgb(145, 51, 186);
 }
@@ -177,8 +175,10 @@
 }
 .trainBookingDetails .list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .trainBookingDetails #input {
   display: flex;
@@ -190,4 +190,10 @@
 }
 .trainBookingDetails #add {
   margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  background-color: #1f78b4;
+}
+.trainBookingDetails #check {
+  margin-bottom: 10px;
 }

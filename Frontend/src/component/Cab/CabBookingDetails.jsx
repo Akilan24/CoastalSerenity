@@ -6,8 +6,8 @@ import "./CabBookingDetails.css";
 
 function CabBookingDetails() {
   const { value } = useParams();
-  const [cabBookingDetails, setCabBookingDetails] = useState();
-  const [rentalCabBookingDetails, setRentalCabBookingDetails] = useState();
+  const [cabBookingDetails, setCabBookingDetails] = useState("");
+  const [rentalCabBookingDetails, setRentalCabBookingDetails] = useState("");
   const navigate = useNavigate();
   const config = {
     headers: {
@@ -18,44 +18,32 @@ function CabBookingDetails() {
 
   useEffect(() => {
     async function fetchCabBookingDetails() {
-      try {
-        const response = await axios.get(
-          `http://localhost:8080/CS/Train/getbyid/${val[1]}`,
-          config
-        );
-        setCabBookingDetails(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.log(error.response);
+      if (val[0] === "cab") {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Cab/getCabbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setCabBookingDetails(response.data);
+          console.log(response);
+        } catch (error) {
+          console.log(error.response.data.message);
+        }
+      } else {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Cab/getRentalCabbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setRentalCabBookingDetails(response.data);
+          console.log(response);
+        } catch (error) {
+          console.log(error.response.data.message);
+        }
       }
     }
     fetchCabBookingDetails();
   }, [value]);
-
-  async function handleCabBookingDetails() {
-    try {
-      const response = await axios.post(
-        `http://localhost:8080/CS/Cab/getCabbookingdetailsbyid/${val[1]}`,
-        config
-      );
-      console.log(response);
-    } catch (error) {
-      console.log(error.response.data.message);
-    }
-  }
-
-  async function handleRentalCabBookingDetails() {
-    try {
-      const response = await axios.post(
-        `http://localhost:8080/CS/Cab/getRentalCabbookingdetailsbyid/${val[1]}`,
-        config
-      );
-      navigate(`/payment/rentalCab-${response.data.trainBookingId}`);
-      console.log(response);
-    } catch (error) {
-      console.log(error.response.data.message);
-    }
-  }
 
   const getDuration = (duration) => {
     const [hours, minutes] = duration.split(":");
@@ -72,46 +60,41 @@ function CabBookingDetails() {
   };
 
   const getDate1 = (time) => {
-    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
-    return format(parsedDate, "HH:mm(dd MMM)");
+    const parsedDate = parse(time, "yyyy-MM-dd HH:mm", new Date());
+    return format(parsedDate, "dd MMM yyyy");
   };
   return (
     <div className="cabBookingDetails">
       <img id="logo" src="../cslogo.png" alt="Logo" />
       <h2>Cab Booking Details</h2>
-      {cabBookingDetails ? <div className="cabClass"></div> : <p></p>}
-      {rentalCabBookingDetails ? (
+      {cabBookingDetails && (
         <>
-          <div className="rentalCabClass">
+          <div className="cabClass">
             <div className="detail-row">
               <span className="detail-label">Cab Model:</span>
-              <span className="detail-value">
-                &#8377;{cabBookingDetails.cabModel}
-              </span>
+              <span className="detail-value">{cabBookingDetails.cabModel}</span>
             </div>
             <div className="detail-row">
               <span className="detail-label"> Origin:</span>
-              <span className="detail-value">
-                &#8377;{cabBookingDetails.origin}
-              </span>
+              <span className="detail-value">{cabBookingDetails.origin}</span>
             </div>
             <div className="detail-row">
               <span className="detail-label">Destination:</span>
               <span className="detail-value">
-                &#8377;{cabBookingDetails.destination}
+                {cabBookingDetails.destination}
               </span>
             </div>
             <div className="detail-row">
               <span className="detail-label">Departure:</span>
               <span className="detail-value">
-                &#8377;{cabBookingDetails.depatureTime}
+                {cabBookingDetails.departureTime}
               </span>
             </div>
             {cabBookingDetails.journeyType === "Round-Trip" && (
               <div className="detail-row">
                 <span className="detail-label">Return:</span>
                 <span className="detail-value">
-                  &#8377;{cabBookingDetails.returnTime}
+                  {cabBookingDetails.returnTime}
                 </span>
               </div>
             )}
@@ -119,34 +102,91 @@ function CabBookingDetails() {
             <div className="detail-row">
               <span className="detail-label">Journey Type:</span>
               <span className="detail-value">
-                &#8377;{cabBookingDetails.journeyType}
+                {cabBookingDetails.journeyType}
               </span>
             </div>
             <div className="detail-row">
               <span className="detail-label">Booked Date:</span>
               <span className="detail-value">
-                &#8377;{cabBookingDetails.bookedDate}
+                {getDate1(cabBookingDetails.bookedDate)}
               </span>
             </div>
             <div className="detail-row">
               <span className="detail-label">Payment Status:</span>
               <span className="detail-value">
-                {getDuration(cabBookingDetails.paymentStatus)}
+                {cabBookingDetails.paymentStatus}
               </span>
             </div>
             <div className="detail-row">
               <span className="detail-label">Amount:</span>
               <span className="detail-value">
-                {getDuration(cabBookingDetails.cabPrice)}
+                &#8377;{cabBookingDetails.cabPrice}
               </span>
             </div>
           </div>
-          <button onClick={() => navigate(`/payment/cab-${value}`)}>
+          <button
+            onClick={() =>
+              navigate(`/payment/cab-${cabBookingDetails.cabBookingId}`)
+            }
+          >
             Continue
           </button>
         </>
-      ) : (
-        <p></p>
+      )}
+      {rentalCabBookingDetails && (
+        <>
+          <div className="rentalCabClass">
+            <div className="detail-row">
+              <span className="detail-label">Cab Model:</span>
+              <span className="detail-value">
+                {cabBookingDetails.rentalCabModel}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label"> Origin:</span>
+              <span className="detail-value">{cabBookingDetails.origin}</span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Departure:</span>
+              <span className="detail-value">
+                {cabBookingDetails.depatureTime}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Package Type:</span>
+              <span className="detail-value">
+                {cabBookingDetails.packageType}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Booked Date:</span>
+              <span className="detail-value">
+                {getDate1(cabBookingDetails.bookedDate)}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Payment Status:</span>
+              <span className="detail-value">
+                {cabBookingDetails.paymentStatus}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Amount:</span>
+              <span className="detail-value">
+                &#8377;{cabBookingDetails.rentalCabPrice}
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={() =>
+              navigate(
+                `/payment/rentalCab-${cabBookingDetails.rentalCabBookingId}`
+              )
+            }
+          >
+            Continue
+          </button>
+        </>
       )}
     </div>
   );

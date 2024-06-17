@@ -122,7 +122,7 @@ function Flight() {
             <div className="divclass">
               <label htmlFor="departure">Departure:</label>
               <input
-                type="time"
+                type="date"
                 name="departure"
                 id="departure"
                 value={formData.departure}

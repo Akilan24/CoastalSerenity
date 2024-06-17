@@ -21,12 +21,13 @@ function Cab() {
     from: "",
     to: "",
     journeyType: "One-Way",
+    distance: "",
     duration: "",
     rentalPackage: "",
     departDate: getDefaultDate(),
     departTime: getCurrentTime(),
     returnDate: getDefaultDate(),
-    returnTime: getReturnTime(),
+    returnTime: getCurrentTime(),
   });
   const navigate = useNavigate();
   const config = {
@@ -45,15 +46,6 @@ function Cab() {
 
   function getCurrentTime() {
     const now = new Date();
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    return `${hours}:${minutes}`;
-  }
-
-  function getReturnTime() {
-    const now = new Date();
-    now.setHours(now.getHours() + 6);
-    now.setMinutes(now.getMinutes() + 6);
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
     return `${hours}:${minutes}`;
@@ -107,6 +99,7 @@ function Cab() {
       setFormData((prevData) => ({
         ...prevData,
         duration: response.data.tripDetails.duration,
+        distance: response.data.tripDetails.distance,
       }));
       console.log(response.data);
     } catch (error) {
@@ -145,7 +138,7 @@ function Cab() {
         formData,
         config
       );
-      navigate(`/cabBookingDetails/${response.data.cabBookingId}`);
+      navigate(`/cabBookingDetails/cab-${response.data.cabBookingId}`);
 
       console.log(response.data);
     } catch (error) {
@@ -162,7 +155,7 @@ function Cab() {
         formData,
         config
       );
-      navigate(`/cabBookingDetails/${response.data.cabBookingId}`);
+      navigate(`/cabBookingDetails/rentalCab-${response.data.cabBookingId}`);
 
       console.log(response.data);
     } catch (error) {
@@ -431,6 +424,10 @@ function Cab() {
                       <p id="model">{cab.cabModel}</p>
                       <div id="type">
                         <p>{cab.cabType}</p>
+                        <p>
+                          <li></li>
+                        </p>
+                        <p>{cab.fuelType}</p>
                         <p>
                           <li></li>
                         </p>

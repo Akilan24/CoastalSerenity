@@ -5,7 +5,11 @@ select {
 }
 #travellerClass select,
 #travellerClass input {
-  width: 200px;
+  width: 250px;
+  font-size: 25px;
+}
+#travellerClass #departure{
+  width: 170px;
 }
 #travellerClass .formclass {
   display: flex;
