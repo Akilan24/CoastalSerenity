@@ -16,10 +16,10 @@ import HotelBookingDetails from "../Hotel/HotelBookingDetails.jsx";
 import Payment from "../Payment/Payment.jsx";
 import FlightSeatsSelection from "../Flight/FlightSeatsSelection.jsx";
 import FlightBookingDetails from "../Flight/FlightBookingDetails.jsx";
-import TrainBookingDetails from "../Train/TrainBookingDetails.jsx";
 import CabBookingDetails from "../Cab/CabBookingDetails.jsx";
 import BusSeatsSelection from "../Bus/BusSeatsSelection.jsx";
 import BusBookingDetails from "../Bus/BusBookingDetails.jsx";
+import TrainBookingDetails from "../Train/TrainBookingDetails.jsx";
 import MyTrips from "../MyTrips/MyTrips.jsx";
 function Home() {
   return (
@@ -34,6 +34,7 @@ function Home() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/saveTraveller" element={<SaveTraveller />} />
           <Route path="/myTrips" element={<MyTrips />} />
+          <Route path="/myTrips/:value" element={<MyTrips />} />
           <Route path="/hotel" element={<Hotel />} />
           <Route
             path="/hotelBookingDetails/:value"

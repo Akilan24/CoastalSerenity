@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./HotelBookingDetails.css";
 import { useNavigate, useParams } from "react-router-dom";
-
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 function HotelBookingDetails() {
   const { value } = useParams();
+  const [bookingId, setBookingId] = useState("");
   const [hotelBookingDetails, setHotelBookingDetails] = useState(null);
   const [travellers, setTravellers] = useState([]);
   const [postTravellers, setPostTravellers] = useState([]);
@@ -13,8 +15,26 @@ function HotelBookingDetails() {
       Authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
     },
   };
-
+  const downloadPDF = () => {
+    const capture = document.querySelector(".hotelBookingDetails");
+    html2canvas(capture).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+      pdf.save("HotelBookingDetails.pdf");
+    });
+  };
   const navigate = useNavigate();
+  useEffect(() => {
+    if (value.includes("-")) {
+      setBookingId(value.split("-")[1]);
+    } else {
+      setBookingId(value);
+    }
+  }, [value]);
 
   useEffect(() => {
     async function fetchHotelBookingDetails() {
@@ -22,7 +42,7 @@ function HotelBookingDetails() {
         const response = await axios.get(
           `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyusernameandhotelname/${localStorage.getItem(
             "username"
-          )}/${value}`,
+          )}/${bookingId}`,
           config
         );
         setHotelBookingDetails(response.data);
@@ -77,6 +97,11 @@ function HotelBookingDetails() {
       );
     }
   };
+  const getDate = (time) => {
+    if (!time) return "N/A";
+    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
+    return format(parsedDate, "dd MMM yyyy");
+  };
 
   return (
     <div className="hotelBookingDetails">
@@ -116,13 +141,34 @@ function HotelBookingDetails() {
             <span className="label">Hotel Address:</span>
             <span className="value">{hotelBookingDetails.address}</span>
           </p>
+          {value.split("-") && (
+            <p>
+              <span className="label">Guest Names:</span>
+              <span className="value">
+                {hotelBookingDetails.hotelGuest &&
+                  hotelBookingDetails.hotelGuest.map((guest, index) => (
+                    <span key={index}>
+                      {guest.name}
+                      {index < hotelBookingDetails.hotelGuest.length - 1 &&
+                        ", "}
+                    </span>
+                  ))}
+              </span>
+            </p>
+          )}
           <p>
             <span className="label">Payment Status:</span>
             <span className="value">{hotelBookingDetails.paymentStatus}</span>
           </p>
           <p>
+            <span className="label">Booked Date:</span>
+            <span className="value">
+              {getDate(hotelBookingDetails.bookedDate)}
+            </span>
+          </p>
+          <p>
             <span className="label">Amount:</span>
-            <span className="value">{hotelBookingDetails.amount}</span>
+            <span className="value">{hotelBookingDetails.totalPrice}</span>
           </p>
           {hotelBookingDetails.paymentStatus === "Payment has to be done" && (
             <div id="guest">
@@ -152,13 +198,23 @@ function HotelBookingDetails() {
               <button
                 className="pay"
                 onClick={(e) =>
-                  handlePostTraveller(e, bookingDetails.bookingId)
+                  handlePostTraveller(e, bookingDetails.hotelBookingId)
                 }
               >
                 Continue
               </button>
             </div>
           )}
+        </div>
+      )}
+      {value.includes("-") && (
+        <div className="detail-button">
+          <button id="back" onClick={() => navigate(-1)}>
+            Back
+          </button>
+          <button id="print" onClick={downloadPDF}>
+            Print
+          </button>
         </div>
       )}
     </div>

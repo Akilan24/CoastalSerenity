@@ -812,3 +812,1128 @@ java.net.SocketException: An established connection was aborted by the software 
 2024-06-18 03:16:53 [RMI TCP Connection(220)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
 2024-06-18 03:16:53 [RMI TCP Connection(221)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
 2024-06-18 03:16:54 [RMI TCP Connection(122)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 11:09:01 [main] INFO  c.busservice.BusServiceApplication - Starting BusServiceApplication using Java 17.0.9 with PID 13776 (C:\Users\USER\Documents\CoastalSerenity\Backend\Bus-Service\target\classes started by USER in C:\Users\USER\Documents\CoastalSerenity\Backend\Bus-Service)
+2024-06-18 11:09:01 [main] INFO  c.busservice.BusServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 11:09:01 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:9999/
+2024-06-18 11:09:01 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=BUS-SERVICE, profiles=[default], label=null, version=dac9c8b254afc7f1a503f594d40ee87080a4de88, state=null
+2024-06-18 11:09:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 11:09:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 168 ms. Found 3 JPA repository interfaces.
+2024-06-18 11:09:03 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-06-18 11:09:03 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-06-18 11:09:03 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5caeba8c-b397-3cbd-a1cf-c8d36acb3fcf
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [integrationMbeanExporter] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration' of type [org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rabbitExtendedPropertiesDefaultMappingsProvider' of type [org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration$$Lambda$765/0x0000024281572ea8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'BindingHandlerAdvise' of type [org.springframework.cloud.stream.config.BindingHandlerAdvise] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$766/0x00000242815730c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spelConverter' of type [org.springframework.cloud.stream.config.SpelExpressionConverterConfiguration$SpelConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties' of type [org.springframework.boot.autoconfigure.jmx.JmxProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [integrationMbeanExporter]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$RetryInterceptorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$RetryInterceptorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancedRetryFactory' of type [org.springframework.cloud.loadbalancer.blocking.retry.BlockingLoadBalancedRetryFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.RetryLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-18 11:09:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8087 (http)
+2024-06-18 11:09:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 11:09:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-06-18 11:09:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 11:09:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3256 ms
+2024-06-18 11:09:05 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 11:09:05 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-06-18 11:09:05 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 11:09:05 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 11:09:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 11:09:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b30e3e
+2024-06-18 11:09:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 11:09:06 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 11:09:07 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 11:09:07 [main] DEBUG org.hibernate.SQL - create table bus (bus_id bigint not null, arrival_time timestamp(6), bus_company varchar(255), bus_model varchar(255), departure_time timestamp(6), destination varchar(255), duration varchar(255), next_day varchar(255), origin varchar(255), route varchar(255), primary key (bus_id))
+2024-06-18 11:09:08 [main] DEBUG org.hibernate.SQL - create table bus_bus_booking_status (bus_bus_id bigint not null, bus_booking_status integer, bus_booking_status_key varchar(255) not null, primary key (bus_bus_id, bus_booking_status_key))
+2024-06-18 11:09:08 [main] DEBUG org.hibernate.SQL - create table bus_drop_point (bus_bus_id bigint not null, drop_point timestamp(6), drop_point_key varchar(255) not null, primary key (bus_bus_id, drop_point_key))
+2024-06-18 11:09:08 [main] DEBUG org.hibernate.SQL - create table bus_pick_up_point (bus_bus_id bigint not null, pick_up_point timestamp(6), pick_up_point_key varchar(255) not null, primary key (bus_bus_id, pick_up_point_key))
+2024-06-18 11:09:08 [main] DEBUG org.hibernate.SQL - create table bus_seat_price (bus_bus_id bigint not null, seat_price float(53), seat_price_key varchar(255) not null, primary key (bus_bus_id, seat_price_key))
+2024-06-18 11:09:08 [main] DEBUG org.hibernate.SQL - create table bus_total_seat (bus_bus_id bigint not null, total_seat integer, total_seat_key varchar(255) not null, primary key (bus_bus_id, total_seat_key))
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - create table bus_booking_details (bus_booking_id bigint not null, arrival_time timestamp(6), booked_date timestamp(6), bus_company varchar(255), bus_model varchar(255), departure_time timestamp(6), destination varchar(255), drop_point varchar(255), duration varchar(255), email varchar(255), name varchar(255), next_day varchar(255), origin varchar(255), payment_status varchar(255), phonenumber varchar(255), pick_up_point varchar(255), route varchar(255), total_price float(53) not null, username varchar(255), primary key (bus_booking_id))
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - create table bus_passenger (bus_passenger_id serial not null, address varchar(255), age integer not null, gender varchar(255), mobile varchar(255), name varchar(255), seat_class varchar(255), seat_no varchar(255), bus_booking_id bigint, primary key (bus_passenger_id))
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - create table bus_seats (seat_id bigserial not null, booking_status boolean not null, seat_no varchar(255), seat_price float(53) not null, seat_type varchar(255), bus_id bigint, primary key (seat_id))
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_bus_booking_status add constraint FKommv7d19e4t0jot423l44bhms foreign key (bus_bus_id) references bus
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_drop_point add constraint FKfytcj7ynkwj7ugn1b02se0jlp foreign key (bus_bus_id) references bus
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_pick_up_point add constraint FKrx7m1d31mq3wun3honvmua78o foreign key (bus_bus_id) references bus
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_seat_price add constraint FKffwxgg4798xh8dg3culkp9dy4 foreign key (bus_bus_id) references bus
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_total_seat add constraint FK3ky2ukilrxrhf49c6fivfmrfs foreign key (bus_bus_id) references bus
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_passenger add constraint FKbtc6ytq77r0y8we9yf8j6h3ka foreign key (bus_booking_id) references bus_booking_details
+2024-06-18 11:09:09 [main] DEBUG org.hibernate.SQL - alter table if exists bus_seats add constraint FK3iy0qppw88lkmijpvdh96l11q foreign key (bus_id) references bus
+2024-06-18 11:09:11 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 11:09:11 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 11:09:14 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'BUS-SERVICE.springCloudBusInput' has 1 subscriber(s).
+2024-06-18 11:09:15 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-06-18 11:09:15 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-18 11:09:15 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 23 endpoint(s) beneath base path '/actuator'
+2024-06-18 11:09:15 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+2024-06-18 11:09:15 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel springCloudBusInput
+2024-06-18 11:09:15 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+2024-06-18 11:09:15 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+2024-06-18 11:09:15 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-18 11:09:15 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'BUS-SERVICE.errorChannel' has 1 subscriber(s).
+2024-06-18 11:09:15 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-06-18 11:09:15 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-06-18 11:09:15 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-06-18 11:09:15 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1718689155894 with initial instances count: 6
+2024-06-18 11:09:15 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application BUS-SERVICE with eureka with status UP
+2024-06-18 11:09:15 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1718689155908, current=UP, previous=STARTING]
+2024-06-18 11:09:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087: registering service...
+2024-06-18 11:09:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8087 (http) with context path ''
+2024-06-18 11:09:15 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8087
+2024-06-18 11:09:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087 - registration status: 204
+2024-06-18 11:09:16 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: rabbit
+2024-06-18 11:09:16 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Constructing binder child context for rabbit
+2024-06-18 11:09:16 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: rabbit
+2024-06-18 11:09:16 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg, bound to: springCloudBus
+2024-06-18 11:09:16 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:09:16 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#5b3063b7:0/SimpleConnection@6391313a [delegate=amqp://rabbitmq@127.0.0.1:5672/, localPort=59861]
+2024-06-18 11:09:16 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'rabbit-262822187.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-18 11:09:16 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'rabbit-262822187.springCloudBusInput.errors' has 2 subscriber(s).
+2024-06-18 11:09:16 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg'
+2024-06-18 11:09:16 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel rabbit-262822187.springCloudBusInput.errors
+2024-06-18 11:09:16 [main] INFO  c.busservice.BusServiceApplication - Started BusServiceApplication in 17.485 seconds (process running for 18.559)
+2024-06-18 11:09:17 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-18 11:09:17 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-18 11:09:17 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-06-18 11:14:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route,bs1_0.bus_id,bs1_0.seat_id,bs1_0.booking_status,bs1_0.seat_no,bs1_0.seat_price,bs1_0.seat_type from bus b1_0 left join bus_seats bs1_0 on b1_0.bus_id=bs1_0.bus_id where b1_0.bus_id=?
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus (arrival_time,bus_company,bus_model,departure_time,destination,duration,next_day,origin,route,bus_id) values (?,?,?,?,?,?,?,?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_bus_booking_status (bus_bus_id,bus_booking_status_key,bus_booking_status) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_bus_booking_status (bus_bus_id,bus_booking_status_key,bus_booking_status) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_bus_booking_status (bus_bus_id,bus_booking_status_key,bus_booking_status) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_bus_booking_status (bus_bus_id,bus_booking_status_key,bus_booking_status) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_drop_point (bus_bus_id,drop_point_key,drop_point) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_drop_point (bus_bus_id,drop_point_key,drop_point) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_pick_up_point (bus_bus_id,pick_up_point_key,pick_up_point) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_pick_up_point (bus_bus_id,pick_up_point_key,pick_up_point) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_seat_price (bus_bus_id,seat_price_key,seat_price) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_seat_price (bus_bus_id,seat_price_key,seat_price) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_seat_price (bus_bus_id,seat_price_key,seat_price) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_seat_price (bus_bus_id,seat_price_key,seat_price) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_total_seat (bus_bus_id,total_seat_key,total_seat) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_total_seat (bus_bus_id,total_seat_key,total_seat) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_total_seat (bus_bus_id,total_seat_key,total_seat) values (?,?,?)
+2024-06-18 11:16:38 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - insert into bus_total_seat (bus_bus_id,total_seat_key,total_seat) values (?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0 where b1_0.bus_id=?
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select sp1_0.bus_bus_id,sp1_0.seat_price_key,sp1_0.seat_price from bus_seat_price sp1_0 where sp1_0.bus_bus_id=?
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:46 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - insert into bus_seats (booking_status,seat_no,seat_price,seat_type) values (?,?,?,?)
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=null where bus_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - update bus_seats set bus_id=? where seat_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select pup1_0.bus_bus_id,pup1_0.pick_up_point_key,pup1_0.pick_up_point from bus_pick_up_point pup1_0 where pup1_0.bus_bus_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select dp1_0.bus_bus_id,dp1_0.drop_point_key,dp1_0.drop_point from bus_drop_point dp1_0 where dp1_0.bus_bus_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select ts1_0.bus_bus_id,ts1_0.total_seat_key,ts1_0.total_seat from bus_total_seat ts1_0 where ts1_0.bus_bus_id=?
+2024-06-18 11:16:47 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select bbs1_0.bus_bus_id,bbs1_0.bus_booking_status_key,bbs1_0.bus_booking_status from bus_bus_booking_status bbs1_0 where bbs1_0.bus_bus_id=?
+2024-06-18 11:19:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:24:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:29:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:34:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:39:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:44:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:48:43 [http-nio-8087-exec-7] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:48:44 [http-nio-8087-exec-5] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:48:43 [http-nio-8087-exec-6] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:49:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:49:17 [http-nio-8087-exec-8] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:49:17 [http-nio-8087-exec-9] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:50:22 [http-nio-8087-exec-2] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:50:26 [http-nio-8087-exec-1] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:51:30 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:51:31 [http-nio-8087-exec-10] DEBUG org.hibernate.SQL - select b1_0.bus_id,b1_0.arrival_time,b1_0.bus_company,b1_0.bus_model,b1_0.departure_time,b1_0.destination,b1_0.duration,b1_0.next_day,b1_0.origin,b1_0.route from bus b1_0
+2024-06-18 11:51:34 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select bbs1_0.bus_bus_id,bbs1_0.bus_booking_status_key,bbs1_0.bus_booking_status from bus_bus_booking_status bbs1_0 where bbs1_0.bus_bus_id=?
+2024-06-18 11:51:34 [http-nio-8087-exec-10] DEBUG org.hibernate.SQL - select bbs1_0.bus_bus_id,bbs1_0.bus_booking_status_key,bbs1_0.bus_booking_status from bus_bus_booking_status bbs1_0 where bbs1_0.bus_bus_id=?
+2024-06-18 11:51:37 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select pup1_0.bus_bus_id,pup1_0.pick_up_point_key,pup1_0.pick_up_point from bus_pick_up_point pup1_0 where pup1_0.bus_bus_id=?
+2024-06-18 11:51:37 [http-nio-8087-exec-10] DEBUG org.hibernate.SQL - select pup1_0.bus_bus_id,pup1_0.pick_up_point_key,pup1_0.pick_up_point from bus_pick_up_point pup1_0 where pup1_0.bus_bus_id=?
+2024-06-18 11:51:40 [http-nio-8087-exec-10] DEBUG org.hibernate.SQL - select dp1_0.bus_bus_id,dp1_0.drop_point_key,dp1_0.drop_point from bus_drop_point dp1_0 where dp1_0.bus_bus_id=?
+2024-06-18 11:54:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:54:34 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3f1e530c: tags=[[amq.ctag-6btKlrQd7egmtJ4LAYpulw]], channel=Cached Rabbit Channel: AMQChannel(amqp://rabbitmq@127.0.0.1:5672/,1), conn: Proxy@4433e4e2 Shared Rabbit Connection: SimpleConnection@6391313a [delegate=amqp://rabbitmq@127.0.0.1:5672/, localPort=59861], acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:51:38 [http-nio-8087-exec-3] DEBUG org.hibernate.SQL - select dp1_0.bus_bus_id,dp1_0.drop_point_key,dp1_0.drop_point from bus_drop_point dp1_0 where dp1_0.bus_bus_id=?
+2024-06-18 11:54:49 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-2] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:55:03 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@55fd9ffa: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:55:03 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-3] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:55:08 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-3] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5c25ff9d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:55:08 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-4] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:55:13 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-4] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@525a4d57: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:57:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-5] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:56:59 [DiscoveryClient-0] WARN  c.n.discovery.TimedSupervisorTask - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:54:55 [http-nio-8087-exec-3] WARN  c.zaxxer.hikari.pool.ProxyConnection - HikariPool-1 - Connection org.postgresql.jdbc.PgConnection@59ccac30 marked as broken because of SQLSTATE(57P01), ErrorCode(0)
+org.postgresql.util.PSQLException: FATAL: terminating connection due to administrator command
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:181)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.CollectionLoaderSingleKey.load(CollectionLoaderSingleKey.java:120)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.initialize(AbstractCollectionPersister.java:680)
+	at org.hibernate.event.internal.DefaultInitializeCollectionEventListener.onInitializeCollection(DefaultInitializeCollectionEventListener.java:67)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.initializeCollection(SessionImpl.java:1712)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$initialize$3(AbstractPersistentCollection.java:615)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:613)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$readSize$0(AbstractPersistentCollection.java:162)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:148)
+	at org.hibernate.collection.spi.PersistentMap.isEmpty(PersistentMap.java:135)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:752)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:145)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:107)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:399)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1568)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:483)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:245)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:54:55 [http-nio-8087-exec-10] WARN  c.zaxxer.hikari.pool.ProxyConnection - HikariPool-1 - Connection org.postgresql.jdbc.PgConnection@7cd7cf5e marked as broken because of SQLSTATE(57P01), ErrorCode(0)
+org.postgresql.util.PSQLException: FATAL: terminating connection due to administrator command
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:181)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.CollectionLoaderSingleKey.load(CollectionLoaderSingleKey.java:120)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.initialize(AbstractCollectionPersister.java:680)
+	at org.hibernate.event.internal.DefaultInitializeCollectionEventListener.onInitializeCollection(DefaultInitializeCollectionEventListener.java:67)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.initializeCollection(SessionImpl.java:1712)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$initialize$3(AbstractPersistentCollection.java:615)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:613)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$readSize$0(AbstractPersistentCollection.java:162)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:148)
+	at org.hibernate.collection.spi.PersistentMap.isEmpty(PersistentMap.java:135)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:752)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:145)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:107)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:399)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1568)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:483)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:245)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:57:56 [http-nio-8087-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 57P01
+2024-06-18 11:57:56 [http-nio-8087-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 57P01
+2024-06-18 11:57:57 [http-nio-8087-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - FATAL: terminating connection due to administrator command
+2024-06-18 11:57:57 [http-nio-8087-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - FATAL: terminating connection due to administrator command
+2024-06-18 11:57:57 [http-nio-8087-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08006
+2024-06-18 11:57:57 [http-nio-8087-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - An I/O error occurred while sending to the backend.
+2024-06-18 11:57:57 [http-nio-8087-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08006
+2024-06-18 11:57:57 [http-nio-8087-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - An I/O error occurred while sending to the backend.
+2024-06-18 11:58:01 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-5] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:01 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-5] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@213b569a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:01 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-6] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-6] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-6] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@23692fad: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-7] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:11 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-7] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:11 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-7] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2b4f9ebd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:11 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-8] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:16 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-8] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:16 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-8] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@40aa7a61: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:16 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-9] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-9] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-9] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1a6ecb2c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-10] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-10] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-10] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@71b13270: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-11] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:32 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-11] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:32 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-11] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@49fe870f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:32 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-12] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:37 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-12] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:37 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-12] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2a492608: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:37 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-13] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:42 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-13] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:42 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-13] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3ad4c803: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:42 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-14] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-14] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-14] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@170804f6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-15] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-15] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-15] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@64b3cf47: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-16] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:58:58 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-16] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:58:58 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-16] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7cf0f559: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:58:58 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-17] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:03 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-17] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:03 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-17] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@52f3fa90: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:03 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-18] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:08 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-18] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:08 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-18] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3baa9366: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:08 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-19] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:12 [http-nio-8087-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failure while trying to resolve exception [org.springframework.http.converter.HttpMessageNotWritableException]
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:485)
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:337)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.sendServerError(DefaultHandlerExceptionResolver.java:662)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotWritable(DefaultHandlerExceptionResolver.java:608)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:238)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1357)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:59:12 [http-nio-8087-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failure while trying to resolve exception [org.springframework.http.converter.HttpMessageNotWritableException]
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:485)
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:337)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.sendServerError(DefaultHandlerExceptionResolver.java:662)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotWritable(DefaultHandlerExceptionResolver.java:608)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:238)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1357)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:59:13 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-19] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:13 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-19] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@181995a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:13 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-20] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:21 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-20] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:21 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-20] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@20da568: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:15 [http-nio-8087-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: JDBC exception executing SQL [select dp1_0.bus_bus_id,dp1_0.drop_point_key,dp1_0.drop_point from bus_drop_point dp1_0 where dp1_0.bus_bus_id=?] [FATAL: terminating connection due to administrator command] [n/a]] with root cause
+org.postgresql.util.PSQLException: FATAL: terminating connection due to administrator command
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:181)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.CollectionLoaderSingleKey.load(CollectionLoaderSingleKey.java:120)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.initialize(AbstractCollectionPersister.java:680)
+	at org.hibernate.event.internal.DefaultInitializeCollectionEventListener.onInitializeCollection(DefaultInitializeCollectionEventListener.java:67)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.initializeCollection(SessionImpl.java:1712)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$initialize$3(AbstractPersistentCollection.java:615)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:613)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$readSize$0(AbstractPersistentCollection.java:162)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:148)
+	at org.hibernate.collection.spi.PersistentMap.isEmpty(PersistentMap.java:135)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:752)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:145)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:107)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:399)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1568)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:483)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:245)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:59:15 [http-nio-8087-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: JDBC exception executing SQL [select dp1_0.bus_bus_id,dp1_0.drop_point_key,dp1_0.drop_point from bus_drop_point dp1_0 where dp1_0.bus_bus_id=?] [FATAL: terminating connection due to administrator command] [n/a]] with root cause
+org.postgresql.util.PSQLException: FATAL: terminating connection due to administrator command
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:181)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.CollectionLoaderSingleKey.load(CollectionLoaderSingleKey.java:120)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.initialize(AbstractCollectionPersister.java:680)
+	at org.hibernate.event.internal.DefaultInitializeCollectionEventListener.onInitializeCollection(DefaultInitializeCollectionEventListener.java:67)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.initializeCollection(SessionImpl.java:1712)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$initialize$3(AbstractPersistentCollection.java:615)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:613)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.lambda$readSize$0(AbstractPersistentCollection.java:162)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:264)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:148)
+	at org.hibernate.collection.spi.PersistentMap.isEmpty(PersistentMap.java:135)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:752)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:145)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:107)
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:399)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1568)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:483)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:245)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-06-18 11:59:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-21] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-21] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-21] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@f9c7c95: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:28 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-22] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:33 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-22] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:33 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-22] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4150648b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:33 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-23] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:38 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-23] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:38 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-23] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@411d8149: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:38 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-24] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-24] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-24] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1997a529: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-25] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:48 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-25] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:48 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-25] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5ebc743d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:48 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-26] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:50 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 11:59:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-26] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-26] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@68ba62fd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-27] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 11:59:59 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-27] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 11:59:59 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-27] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@31e84235: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 11:59:59 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-28] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:00:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-28] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:00:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-28] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@ceebe61: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:00:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-29] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:00:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-29] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:00:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-29] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3f13cd1a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:00:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-30] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:00:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-30] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:00:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-30] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@449d58bf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:00:43 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s317ms161µs200ns).
+2024-06-18 12:00:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-31] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:00:49 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-31] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:00:49 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-31] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7c1d9852: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:00:49 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-32] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:00:54 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-32] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:00:54 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-32] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7e00f57d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:00:54 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-33] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:00:59 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-33] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:00:59 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-33] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1dcfe403: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:00:59 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-34] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-34] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-34] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@20514b23: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-35] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-35] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-35] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@76bc44c1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-36] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:14 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-36] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:14 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-36] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@141411cd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:14 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-37] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:19 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-37] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:19 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-37] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7903bdac: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:19 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-38] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:25 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-38] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:25 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-38] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@59c19b11: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:25 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-39] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:30 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-39] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:30 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-39] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3e301549: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:30 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-40] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:35 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-40] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:35 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-40] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6580b8ae: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:35 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-41] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:40 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-41] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:40 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-41] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7f521f85: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:40 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-42] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:45 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-42] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:45 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-42] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7b85e1c8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:45 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-43] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:50 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-43] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:50 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-43] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@67dc82a2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:50 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-44] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:01:55 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-44] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:01:55 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-44] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@cc4a5fd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:01:55 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-45] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:00 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-45] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:00 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-45] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@70461c6b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:00 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-46] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-46] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-46] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2536c8cd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-47] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:11 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-47] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:11 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-47] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3bb0b116: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:11 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-48] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:16 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-48] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:16 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-48] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@fba82e7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:16 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-49] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:21 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-49] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:21 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-49] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3ac434eb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:21 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-50] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:26 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-50] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:26 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-50] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3d1893dd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:26 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-51] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:31 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-51] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:31 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-51] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6d9417e6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:31 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-52] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:36 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-52] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:36 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-52] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@17d9c4f1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:36 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-53] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:41 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-53] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:41 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-53] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3c85a540: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:41 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-54] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-54] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-54] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5f4f2e09: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-55] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-55] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-55] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@16b9b9a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-56] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:02:57 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-56] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:02:57 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-56] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@75fcd922: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:02:57 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-57] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:02 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-57] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:02 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-57] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@50f58c57: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:02 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-58] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:07 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-58] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:07 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-58] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@16cf1eb4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:07 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-59] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:12 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-59] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:12 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-59] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@ffc780b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:12 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-60] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:17 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-60] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:17 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-60] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@59583c76: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:17 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-61] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:23 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-61] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:23 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-61] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@fb900a5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:23 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-62] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:28 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-62] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:28 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-62] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4be95968: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:28 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-63] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:33 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-63] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:33 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-63] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@61b01f0d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:33 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-64] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:38 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-64] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:38 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-64] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7266bc78: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:38 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-65] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-65] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-65] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2c97ed53: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:43 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-66] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:48 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-66] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:48 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-66] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2ecd4229: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:48 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-67] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-67] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-67] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@417fa14: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:53 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-68] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:03:58 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-68] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:03:58 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-68] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2231b20b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:03:58 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-69] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-69] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-69] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@31a51efa: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:04 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-70] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-70] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-70] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@39e1bbce: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:09 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-71] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:14 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-71] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:14 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-71] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@615aa83b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:14 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-72] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:19 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-72] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:19 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-72] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6fc8acc0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:19 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-73] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:24 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-73] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:24 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-73] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@60a41c85: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:24 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-74] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:29 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-74] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:29 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-74] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@72734e45: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:29 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-75] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:34 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-75] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:34 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-75] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@19147343: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:34 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-76] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:40 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-76] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:40 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-76] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3f73aa04: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:40 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-77] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:45 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-77] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:45 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-77] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1d8d076b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:45 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-78] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:50 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-78] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:50 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-78] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5914b673: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:50 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-79] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:04:50 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-18 12:04:55 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-79] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:04:55 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-79] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@16bdd251: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:04:55 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-80] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:00 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-80] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:00 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-80] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2dc12a8c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:00 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-81] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:05 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-81] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:05 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-81] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4fcc5db: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:05 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-82] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:10 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-82] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:10 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-82] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1a92aec9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:10 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-83] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:15 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-83] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:15 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-83] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5e5a4576: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:15 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-84] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:20 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-84] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:20 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-84] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3cbc0cd4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:20 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-85] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:25 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-85] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:25 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-85] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1716d36: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:25 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-86] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:31 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-86] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:31 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-86] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@44f9111c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:31 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-87] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:36 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-87] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:36 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-87] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@c24ec7d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:36 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-88] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:41 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-88] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:41 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-88] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@300c7444: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:41 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-89] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:46 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-89] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:46 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-89] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3930d604: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:46 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-90] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:51 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-90] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:51 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-90] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@74ddd03c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:51 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-91] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:05:56 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-91] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:05:56 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-91] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5744f333: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:05:56 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-92] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:01 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-92] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:01 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-92] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6ee997c4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:01 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-93] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-93] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-93] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@65c6085c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:06 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-94] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:12 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-94] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:12 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-94] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3e574252: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:12 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-95] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:17 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-95] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:17 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-95] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5174b3c0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:17 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-96] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-96] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-96] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3905ccb2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:22 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-97] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-97] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-97] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4b5e6644: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:27 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-98] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:32 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-98] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:32 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-98] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5b559acc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:32 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-99] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:37 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-99] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:37 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-99] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2a302e84: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:37 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-100] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:42 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-100] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:42 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-100] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@560353e5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:42 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-101] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-101] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-101] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3a85e4ef: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:47 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-102] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-102] WARN  o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2024-06-18 12:06:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-102] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@72af6c81: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-06-18 12:06:52 [springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg-103] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2024-06-18 12:06:55 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 12:06:55 [RMI TCP Connection(58)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 12:06:55 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application BUS-SERVICE with eureka with status DOWN
+2024-06-18 12:06:55 [RMI TCP Connection(55)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1718692615826, current=DOWN, previous=UP]
+2024-06-18 12:06:55 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087: registering service...
+2024-06-18 12:06:55 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2024-06-18 12:06:55 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2024-06-18 12:06:55 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.J9y-UraZQjiQTlDjSzxVyg'
+2024-06-18 12:06:55 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BUS-SERVICE/Akilan:BUS-SERVICE:8087 - registration status: 204
+2024-06-18 12:06:56 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'BUS-SERVICE.rabbit-262822187.springCloudBusInput.errors' has 1 subscriber(s).
+2024-06-18 12:06:56 [RMI TCP Connection(59)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 12:06:56 [RMI TCP Connection(60)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 12:06:56 [RMI TCP Connection(61)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-06-18 12:06:56 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-18 12:06:56 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'BUS-SERVICE.errorChannel' has 0 subscriber(s).
+2024-06-18 12:06:56 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-06-18 12:06:56 [RMI TCP Connection(55)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 12:06:56 [RMI TCP Connection(55)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...

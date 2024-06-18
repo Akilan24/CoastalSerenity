@@ -3,9 +3,11 @@ import axios from "axios";
 import { parse, format } from "date-fns";
 import { useNavigate, useParams } from "react-router-dom";
 import "./TrainBookingDetails.css";
-
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 function TrainBookingDetails() {
   const { value } = useParams();
+  const [bookingId, setBookingId] = useState("");
   const [train, setTrain] = useState(null);
   const [boardingStation, setBoardingStation] = useState(new Map());
   const [boarding, setBoarding] = useState("");
@@ -19,13 +21,19 @@ function TrainBookingDetails() {
     },
   };
   const val = value.split("-");
-
+  useEffect(() => {
+    if (value.includes("-")) {
+      setBookingId(value.split("-")[1]);
+    } else {
+      setBookingId(value);
+    }
+  }, [value]);
   useEffect(() => {
     setSeatType(val[0]);
     async function fetchTrain() {
       try {
         const response = await axios.get(
-          `http://localhost:8080/CS/Train/getbyid/${val[1]}`,
+          `http://localhost:8080/CS/Train/getbyid/${bookingId}`,
           config
         );
         setTrain(response.data);
@@ -77,9 +85,9 @@ function TrainBookingDetails() {
   async function handleBooking() {
     try {
       const response = await axios.post(
-        `http://localhost:8080/CS/Train/bookTrain/${
-          val[1]
-        }/${seatType}/${boarding}/${localStorage.getItem("username")}`,
+        `http://localhost:8080/CS/Train/bookTrain/${bookingId}/${seatType}/${boarding}/${localStorage.getItem(
+          "username"
+        )}`,
         postTravellers,
         config
       );
@@ -108,199 +116,299 @@ function TrainBookingDetails() {
     const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
     return format(parsedDate, "HH:mm(dd MMM)");
   };
+  const getDate2 = (time) => {
+    if (!time) return "N/A";
+    const parsedDate = parse(time, "yyyy-MM-dd HH:mm:ss", new Date());
+    return format(parsedDate, "dd MMM yyyy");
+  };
+  const downloadPDF = () => {
+    const capture = document.querySelector(".trainContainer");
+    html2canvas(capture).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+      pdf.save("TrainBookingDetails.pdf");
+    });
+  };
   return (
     <div className="trainBookingDetails">
-      <img id="logo" src="../cslogo.png" alt="Logo" />
-      <h2>Train Booking Details</h2>
-      <div className="trainClass">
-        {train ? (
-          <>
-            <div className="train">
-              <div className="td">
-                <div className="trainname">
-                  <p id="company">{train.trainName}</p>
-                  <p id="model">
-                    #{train.pnr}&nbsp;&nbsp;|&nbsp;&nbsp;Depart on:&nbsp;
-                    <span>{train.departOn}</span>
-                  </p>
-                </div>
-              </div>
-              <div className="journeyDetails">
-                <div>
-                  <div className="days">
-                    <p id="time">{getTime(train.departureTime)}</p>
-                    <p id="date">{getDate(train.departureTime)}</p>
-                  </div>
-                  <p>{train.origin}</p>
-                </div>
-                <div>
-                  <p id="duration">{getDuration(train.duration)}</p>
-                  <hr />
-                  <p id="stopOver">{train.stopOver}</p>
-                </div>
-                <div>
-                  <div className="days">
-                    <div>
-                      <p id="time">{getTime(train.arrivalTime)}</p>
-                    </div>
-                    <p id="date">{getDate(train.arrivalTime)}</p>
-                  </div>
-                  <p>{train.destination}</p>
-                </div>
-              </div>
+      <div className="trainContainer">
+        <img id="logo" src="../cslogo.png" alt="Logo" />
+        <h2>Train Booking Details</h2>
+        {value.includes("-") ? (
+          <div className="details-container">
+            <div className="detail-row">
+              <span className="detail-label">Train Name:</span>
+              <span className="detail-value">{train.trainName}</span>
             </div>
-            <div className="contain">
-              <div className="seatType">
-                {val[0] === "SL" && (
-                  <div id="type">
-                    <div>
-                      <p>SL</p>
-                      <p>&#8377; {train.seatPrice["SL - Sleeper"]}</p>
-                    </div>
-                    {train.trainBookingStatus["SL - Sleeper"] > 0 ? (
-                      <p id="avail">
-                        AVAILABLE {train.trainBookingStatus["SL - Sleeper"]}
-                      </p>
-                    ) : (
-                      <p>no</p>
-                    )}
-                  </div>
-                )}
-                {val[0] === "1A" && (
-                  <div id="type">
-                    <div>
-                      <p>1A</p>
-                      <p>&#8377; {train.seatPrice["1A - 1st Class AC"]}</p>
-                    </div>
-                    {train.trainBookingStatus["1A - 1st Class AC"] > 0 ? (
-                      <p id="avail">
-                        AVAILABLE{" "}
-                        {train.trainBookingStatus["1A - 1st Class AC"]}
-                      </p>
-                    ) : (
-                      <p>no</p>
-                    )}
-                  </div>
-                )}
-                {val[0] === "2A" && (
-                  <div id="type">
-                    <div>
-                      <p>2A</p>
-                      <p>&#8377; {train.seatPrice["2A - 2 Tier AC"]}</p>
-                    </div>
-                    {train.trainBookingStatus["2A - 2 Tier AC"] > 0 ? (
-                      <p id="avail">
-                        AVAILABLE {train.trainBookingStatus["2A - 2 Tier AC"]}
-                      </p>
-                    ) : (
-                      <p>no</p>
-                    )}
-                  </div>
-                )}
-                {val[0] === "3A" && (
-                  <div id="type">
-                    <div>
-                      <p>3A</p>
-                      <p>&#8377; {train.seatPrice["3A - 3 Tier AC"]}</p>
-                    </div>
-                    {train.trainBookingStatus["3A - 3 Tier AC"] > 0 ? (
-                      <p id="avail">
-                        AVAILABLE {train.trainBookingStatus["3A - 3 Tier AC"]}
-                      </p>
-                    ) : (
-                      <p>no</p>
-                    )}
-                  </div>
-                )}
-                {val[0] === "CC" && (
-                  <div id="type">
-                    <div>
-                      <p>CC</p>
-                      <p>&#8377; {train.seatPrice["CC - CC Chair Car"]}</p>
-                    </div>
-                    {train.trainBookingStatus["CC - CC Chair Car"] > 0 ? (
-                      <p id="avail">
-                        AVAILABLE{" "}
-                        {train.trainBookingStatus["CC - CC Chair Car"]}
-                      </p>
-                    ) : (
-                      <p>no</p>
-                    )}
-                  </div>
-                )}
-              </div>
-              <div className="boarding">
-                <label htmlFor="boarding">Boarding Station:</label>
-                <select
-                  id="boarding"
-                  value={boarding}
-                  onChange={(e) => setBoarding(e.target.value)}
-                >
-                  <option value="">Select Boarding Station</option>
-                  {Array.from(boardingStation.entries()).map(([key, value]) => (
-                    <option key={key} value={key}>
-                      {key},{getDate1(value)}
-                    </option>
+            <div className="detail-row">
+              <span className="detail-label">PNR:</span>
+              <span className="detail-value">{train.pnr}</span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Origin:</span>
+              <span className="detail-value">
+                {flightBookingDetails.origin}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Destination:</span>
+              <span className="detail-value">
+                {flightBookingDetails.destination}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Passenger Names:</span>
+              <span className="detail-value">
+                {train.trainPassenger &&
+                  train.trainPassenger.map((passenger, index) => (
+                    <span key={index}>
+                      {passenger.name}
+                      {index < train.trainPassenger.length - 1 && ", "}
+                    </span>
                   ))}
-                </select>
-              </div>
+              </span>
             </div>
-            <div id="guest">
-              <p id="check">Add Guest:</p>
-              <div className="list">
-                <div className="travellerList">
-                  {travellers.length > 0 ? (
-                    travellers.map((item, index) => (
-                      <div id="st" key={index}>
-                        <div id="input">
-                          <input
-                            type="checkbox"
-                            value={index}
-                            onChange={(event) =>
-                              handleSelectTraveller(index, event)
-                            }
-                          />
-                          <p>{item.name}</p>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <div>
-                      <p id="check">
-                        No Guests are found. Add Guest in the travellers
-                        section.
-                      </p>
-                      <button
-                        id="check"
-                        onClick={(e) => navigate("/saveTraveller")}
-                      >
-                        Add
-                      </button>
-                    </div>
-                  )}
-                </div>
-                <div id="button">
-                  {travellers.length > 0 && (
-                    <div>
-                      <button
-                        id="add"
-                        onClick={() => navigate("/saveTraveller")}
-                      >
-                        Add
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
+            <div className="detail-row">
+              <span className="detail-label">Departure Time:</span>
+              <span className="detail-value">
+                {flightBookingDetails.departureTime}
+              </span>
             </div>
-            <button id="pay" onClick={handleBooking}>
-              PAY & BOOK NOW
-            </button>
-          </>
+            <div className="detail-row">
+              <span className="detail-label">Arrival Time:</span>
+              <span className="detail-value">
+                {flightBookingDetails.arrivalTime}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Duration:</span>
+              <span className="detail-value">
+                {getDuration(flightBookingDetails.duration)}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Booked Date:</span>
+              <span className="detail-value">
+                {getDate2(flightBookingDetails.bookedDate)}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Payment Status:</span>
+              <span className="detail-value">
+                {flightBookingDetails.paymentStatus}
+              </span>
+            </div>
+            <div className="detail-row">
+              <span className="detail-label">Amount:</span>
+              <span className="detail-value">
+                &#8377;{flightBookingDetails.totalPrice}
+              </span>
+            </div>
+          </div>
         ) : (
-          <p>Loading...</p>
+          <div className="trainClass">
+            {train && (
+              <>
+                <div className="train">
+                  <div className="td">
+                    <div className="trainname">
+                      <p id="company">{train.trainName}</p>
+                      <p id="model">
+                        #{train.pnr}&nbsp;&nbsp;|&nbsp;&nbsp;Depart on:&nbsp;
+                        <span>{train.departOn}</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="journeyDetails">
+                    <div>
+                      <div className="days">
+                        <p id="time">{getTime(train.departureTime)}</p>
+                        <p id="date">{getDate(train.departureTime)}</p>
+                      </div>
+                      <p>{train.origin}</p>
+                    </div>
+                    <div>
+                      <p id="duration">{getDuration(train.duration)}</p>
+                      <hr />
+                      <p id="stopOver">{train.stopOver}</p>
+                    </div>
+                    <div>
+                      <div className="days">
+                        <div>
+                          <p id="time">{getTime(train.arrivalTime)}</p>
+                        </div>
+                        <p id="date">{getDate(train.arrivalTime)}</p>
+                      </div>
+                      <p>{train.destination}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="contain">
+                  <div className="seatType">
+                    {val[0] === "SL" && (
+                      <div id="type">
+                        <div>
+                          <p>SL</p>
+                          <p>&#8377; {train.seatPrice["SL"]}</p>
+                        </div>
+                        {train.trainBookingStatus["SL"] > 0 ? (
+                          <p id="avail">
+                            AVAILABLE {train.trainBookingStatus["SL"]}
+                          </p>
+                        ) : (
+                          <p>no</p>
+                        )}
+                      </div>
+                    )}
+                    {val[0] === "1A" && (
+                      <div id="type">
+                        <div>
+                          <p>1A</p>
+                          <p>&#8377; {train.seatPrice["1A"]}</p>
+                        </div>
+                        {train.trainBookingStatus["1A"] > 0 ? (
+                          <p id="avail">
+                            AVAILABLE {train.trainBookingStatus["1A"]}
+                          </p>
+                        ) : (
+                          <p>no</p>
+                        )}
+                      </div>
+                    )}
+                    {val[0] === "2A" && (
+                      <div id="type">
+                        <div>
+                          <p>2A</p>
+                          <p>&#8377; {train.seatPrice["2A"]}</p>
+                        </div>
+                        {train.trainBookingStatus["2A"] > 0 ? (
+                          <p id="avail">
+                            AVAILABLE {train.trainBookingStatus["2A"]}
+                          </p>
+                        ) : (
+                          <p>no</p>
+                        )}
+                      </div>
+                    )}
+                    {val[0] === "3A" && (
+                      <div id="type">
+                        <div>
+                          <p>3A</p>
+                          <p>&#8377; {train.seatPrice["3A"]}</p>
+                        </div>
+                        {train.trainBookingStatus["3A"] > 0 ? (
+                          <p id="avail">
+                            AVAILABLE {train.trainBookingStatus["3A"]}
+                          </p>
+                        ) : (
+                          <p>no</p>
+                        )}
+                      </div>
+                    )}
+                    {val[0] === "CC" && (
+                      <div id="type">
+                        <div>
+                          <p>CC</p>
+                          <p>&#8377; {train.seatPrice["CC"]}</p>
+                        </div>
+                        {train.trainBookingStatus["CC"] > 0 ? (
+                          <p id="avail">
+                            AVAILABLE {train.trainBookingStatus["CC"]}
+                          </p>
+                        ) : (
+                          <p>no</p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  <div className="boarding">
+                    <label htmlFor="boarding">Boarding Station:</label>
+                    <select
+                      id="boarding"
+                      value={boarding}
+                      onChange={(e) => setBoarding(e.target.value)}
+                    >
+                      <option value="">Select Boarding Station</option>
+                      {Array.from(boardingStation.entries()).map(
+                        ([key, value]) => (
+                          <option key={key} value={key}>
+                            {key},{getDate1(value)}
+                          </option>
+                        )
+                      )}
+                    </select>
+                  </div>
+                </div>
+                <div id="guest">
+                  <p id="check">Add Guest :</p>
+                  <div className="list">
+                    <div className="travellerList">
+                      {travellers.length > 0 ? (
+                        travellers.map((item, index) => (
+                          <div id="st" key={index}>
+                            <div id="input">
+                              <input
+                                type="checkbox"
+                                value={index}
+                                onChange={(event) =>
+                                  handleSelectTraveller(index, event)
+                                }
+                              />
+                              <p>{item.name}</p>
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <div>
+                          <p id="check">
+                            No Guests are found. Add Guest in the travellers
+                            section.
+                          </p>
+                          <button
+                            id="check"
+                            onClick={(e) => navigate("/saveTraveller")}
+                          >
+                            Add
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                    <div id="button">
+                      {travellers.length > 0 && (
+                        <div>
+                          <button
+                            id="add"
+                            onClick={() => navigate("/saveTraveller")}
+                          >
+                            Add
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <button id="pay" onClick={handleBooking}>
+                  PAY & BOOK NOW
+                </button>
+              </>
+            )}
+          </div>
         )}
       </div>
+      {value.includes("-") && (
+        <div className="detail-button">
+          <button id="back" onClick={() => navigate(-1)}>
+            Back
+          </button>
+          <button id="print" onClick={downloadPDF}>
+            Print
+          </button>
+        </div>
+      )}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import "./Payment.css";
 
 function Payment() {
   const { value } = useParams();
+  const val = value.split("-");
   const config = {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
@@ -12,16 +13,13 @@ function Payment() {
   };
   const navigate = useNavigate();
   const [bookingDetails, setBookingDetails] = useState({});
-  const [bookingId, setBookingId] = useState("");
   const [min, setMin] = useState(6);
   const [sec, setSec] = useState(59);
   const [isPaymentAllowed, setIsPaymentAllowed] = useState(true);
 
   useEffect(() => {
-    const val = value.split("-");
-    setBookingId(val[1]);
     if (val[0] === "hotel") {
-      async function fetchBookingDetails() {
+      async function fetchHotelBookingDetails() {
         try {
           const response = await axios.get(
             `http://localhost:8080/CS/Hotel/HotelBookingDetails/getbyid/${val[1]}`,
@@ -33,7 +31,7 @@ function Payment() {
           console.log(error.response.data.message);
         }
       }
-      fetchBookingDetails();
+      fetchHotelBookingDetails();
     }
     if (val[0] === "flight") {
       async function fetchFlightBookingDetails() {
@@ -66,7 +64,7 @@ function Payment() {
       fetchBusBookingDetails();
     }
     if (val[0] === "train") {
-      async function fetchBusBookingDetails() {
+      async function fetchTrainBookingDetails() {
         try {
           const response = await axios.get(
             `http://localhost:8080/CS/Train/getTrainbookingdetailsbyid/${val[1]}`,
@@ -78,7 +76,37 @@ function Payment() {
           console.log(error.response);
         }
       }
-      fetchBusBookingDetails();
+      fetchTrainBookingDetails();
+    }
+    if (val[0] === "cab") {
+      async function fetchCabBookingDetails() {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Cab/getCabbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setBookingDetails(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.log(error.response);
+        }
+      }
+      fetchCabBookingDetails();
+    }
+    if (val[0] === "rentalCab") {
+      async function fetchRentalCabBookingDetails() {
+        try {
+          const response = await axios.get(
+            `http://localhost:8080/CS/Cab/getRentalCabbookingdetailsbyid/${val[1]}`,
+            config
+          );
+          setBookingDetails(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.log(error.response);
+        }
+      }
+      fetchRentalCabBookingDetails();
     }
   }, [value]);
 
@@ -107,13 +135,11 @@ function Payment() {
 
   async function doPayment() {
     try {
-      const val = value.split("-");
-      const response = await axios.post(
-        `http://localhost:8080/CS/Payment/doPayment/${val[0]}-${bookingDetails.bookingId}`,
-        {},
+      const response = await axios.get(
+        `http://localhost:8080/CS/Payment/doPayment/${val[0]}-${val[1]}`,
         config
       );
-      navigate(`/myTrips`);
+      navigate(`/${val[0]}BookingDetails/${val[0]}-${val[1]}`);
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -131,7 +157,15 @@ function Payment() {
         </p>
         <p>
           <span className="label">Booking Id :</span>
-          <span className="value">{bookingId || "N/A"}</span>
+          <span className="value">
+            {bookingDetails.hotelBookingId ||
+              bookingDetails.flightBookingId ||
+              bookingDetails.busBookingId ||
+              bookingDetails.trainBookingId ||
+              bookingDetails.cabBookingId ||
+              bookingDetails.rentalCabBookingId ||
+              "N/A"}
+          </span>
         </p>
         <p>
           <span className="label">Amount :</span>

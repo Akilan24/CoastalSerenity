@@ -93,3 +93,18 @@
   position: absolute;
   top: 30vh;
 }
+.hotelBookingDetails .detail-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+}
+.hotelBookingDetails #back {
+  color: black;
+  background-color: white;
+}
+.hotelBookingDetails #print {
+  color: white;
+  background-color: rgb(153, 7, 183);
+}

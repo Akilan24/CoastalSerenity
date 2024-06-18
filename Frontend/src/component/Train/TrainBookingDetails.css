@@ -197,3 +197,60 @@
 .trainBookingDetails #check {
   margin-bottom: 10px;
 }
+.trainBookingDetails .detail-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+}
+.trainBookingDetails #back {
+  color: black;
+  background-color: white;
+}
+.trainBookingDetails #print {
+  color: white;
+  background-color: rgb(153, 7, 183);
+}
+.trainBookingDetails .details-container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  background-color: white;
+  border-radius: 26px;
+  border: 2px solid #4bad57;
+}
+.trainBookingDetails .trainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+}
+.trainBookingDetails .detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.trainBookingDetails .detail-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+}
+.trainBookingDetails .detail-label {
+  flex: 1;
+  font-weight: bold;
+  color: rgb(153, 7, 183);
+  display: flex;
+  justify-content: start;
+  padding-left: 30px;
+}
+.trainBookingDetails .detail-value {
+  flex: 1;
+  text-align: right;
+  color: #4bad57;
+  padding-right: 30px;
+}

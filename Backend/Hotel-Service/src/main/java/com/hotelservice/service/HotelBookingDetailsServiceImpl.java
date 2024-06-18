@@ -43,14 +43,13 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 		System.out.println(bookingdetails.getRoomno());
 		long MIN_id = 100000;
 		int count = bookingrepo.findAll().size();
-		bookingdetails.setBookingId(count == 0 ? MIN_id : MIN_id + count);
+		bookingdetails.setHotelBookingId(count == 0 ? MIN_id : MIN_id + count);
 		Registration user = uproxy.showUserByUserName(username).getBody();
 		bookingdetails.setName(user.getName());
 		bookingdetails.setEmail(user.getEmail());
 		bookingdetails.setPhonenumber(user.getMobile());
 		bookingdetails.setUsername(username);
-		long daysBetween = 0;
-		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
+		long daysBetween = 0;		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
 		daysBetween = daysBetween == 0 ? 1 : daysBetween;
 		Hotel hotel = hrepo.findAll().stream()
 				.filter(h -> h.getHotelName().equalsIgnoreCase(bookingdetails.getHotelname()))
@@ -58,7 +57,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 		double amt = hotel.getRooms().stream().filter(r -> r.getRoom_no() == bookingdetails.getRoomno())
 				.collect(Collectors.toList()).get(0).getRate_per_day();
 		bookingdetails.setAddress(hotel.getAddress());
-		bookingdetails.setAmount(daysBetween * amt);
+		bookingdetails.setTotalPrice(daysBetween * amt);
 		bookingdetails.setPaymentStatus("Payment has to be done");
 		bookingdetails.setBookedDate(LocalDateTime.now());
 		return bookingrepo.save(bookingdetails);

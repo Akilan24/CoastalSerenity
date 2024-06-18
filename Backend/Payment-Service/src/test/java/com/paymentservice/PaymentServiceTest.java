@@ -8,7 +8,6 @@ import static org.mockito.Mockito.when;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -77,7 +76,7 @@ public class PaymentServiceTest {
 		payment.setUsername("user123");
 		payment.setAmount(5000.0);
 		payment.setPaymentStatus("Payment Done");
-		when(paymentRepository.findByBookingid(bookingid)).thenReturn(Optional.of(payment));
+		when(paymentRepository.findByBookingId(bookingid)).thenReturn(Optional.of(payment));
 
 		Payment result = paymentService.getPaymentbyBookingId(bookingid);
 
@@ -92,7 +91,7 @@ public class PaymentServiceTest {
 	@Test
 	void testGetPaymentbyBookingId_NotFound() {
 		int bookingid = 123456;
-		when(paymentRepository.findByBookingid(bookingid)).thenReturn(Optional.empty());
+		when(paymentRepository.findByBookingId(bookingid)).thenReturn(Optional.empty());
 
 		assertThrows(PaymentDetailsNotFoundException.class, () -> {
 			paymentService.getPaymentbyBookingId(bookingid);

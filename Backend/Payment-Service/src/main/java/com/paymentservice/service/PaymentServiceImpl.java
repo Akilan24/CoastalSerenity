@@ -14,10 +14,13 @@ import org.springframework.stereotype.Service;
 import com.paymentservice.entity.Payment;
 import com.paymentservice.exception.PaymentDetailsNotFoundException;
 import com.paymentservice.externalclass.BusBookingDetails;
+import com.paymentservice.externalclass.CabBookingDetails;
 import com.paymentservice.externalclass.FlightBookingDetails;
 import com.paymentservice.externalclass.HotelBookingDetails;
+import com.paymentservice.externalclass.RentalCabBookingDetails;
 import com.paymentservice.externalclass.TrainBookingDetails;
 import com.paymentservice.proxy.BusBookingDetailsProxy;
+import com.paymentservice.proxy.CabBookingDetailsProxy;
 import com.paymentservice.proxy.FlightBookingDetailsProxy;
 import com.paymentservice.proxy.HotelBookingDetailsProxy;
 import com.paymentservice.proxy.TrainBookingDetailsProxy;
@@ -39,6 +42,9 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Autowired
 	TrainBookingDetailsProxy tbdproxy;
+	
+	@Autowired
+	CabBookingDetailsProxy cbdproxy;
 
 	@Override
 	public Payment doPayment(String bookingid) {
@@ -76,6 +82,18 @@ public class PaymentServiceImpl implements PaymentService {
 			p.setAmount(bbd.getTotalPrice());
 			p.setPaymentStatus("Payment Done");
 			fbdproxy.paymentstatuschange(id);
+		}else if (value[0].equalsIgnoreCase("cab")) {
+			CabBookingDetails cbd = cbdproxy.getCabBookingDetailsById(id);
+			p.setUsername(cbd.getName());
+			p.setAmount(cbd.getCabPrice());
+			p.setPaymentStatus("Payment Done");  
+			cbdproxy.paymentstatuschangeCab(id);
+		}else if (value[0].equalsIgnoreCase("rentalCab")) {
+			RentalCabBookingDetails rbd = cbdproxy.getRentalCabBookingDetailsById(id);
+			p.setUsername(rbd.getName());
+			p.setAmount(rbd.getRentalCabPrice());
+			p.setPaymentStatus("Payment Done");
+			cbdproxy.paymentstatuschangeRentalCab(id);
 		}
 
 		return paymentRepository.save(p);
@@ -83,8 +101,8 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public Payment getPaymentbyBookingId(long bookingid) {
-		if (paymentRepository.findByBookingid(bookingid).isPresent())
-			return paymentRepository.findByBookingid(bookingid).get();
+		if (paymentRepository.findByBookingId(bookingid).isPresent())
+			return paymentRepository.findByBookingId(bookingid).get();
 		else
 			throw new PaymentDetailsNotFoundException("Payment not found");
 

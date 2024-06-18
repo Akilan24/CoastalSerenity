@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class HotelBookingDetails {
 
 	@Id
-	private long bookingId;
+	private long hotelBookingId;
 	private String name;
 	private int roomno;
 	private String hotelname;
@@ -30,7 +30,7 @@ public class HotelBookingDetails {
 	private Date booked_from;
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date booked_to;
-	private double amount;
+	private double totalPrice;
 	private String email;
 	private String phonenumber;
 	private String address;

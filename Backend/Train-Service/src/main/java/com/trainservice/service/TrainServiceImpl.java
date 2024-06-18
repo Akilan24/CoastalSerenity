@@ -212,7 +212,7 @@ public class TrainServiceImpl implements TrainService {
 
 		double totalPrice = 0;
 		for (Map.Entry<String, Double> me : Train.getSeatPrice().entrySet()) {
-			if (me.getKey().equalsIgnoreCase(bookingDetails.getSeatType())) {
+			if (me.getKey().equalsIgnoreCase(seatType)) {
 				totalPrice = me.getValue() * travellers.size();
 			}
 		}
@@ -232,13 +232,13 @@ public class TrainServiceImpl implements TrainService {
 					if (me.getValue() > 0) {
 						passenger.setSeatNo("Seat Confirmed");
 						map.put(seatType, me.getValue() - 1);
+						map.entrySet().stream().forEach(m->m.getValue());
 					} else {
 						for (Map.Entry<String, Integer> me1 : Train.getTrainBookingStatus().entrySet()) {
 							if (me1.getKey().equalsIgnoreCase(seatType)) {
 								int no = me1.getValue() + 1;
 								passenger.setSeatNo("WL" + no);
 								Train.getTrainWaitingListStatus().put(seatType, no);
-								trainRepository.save(Train);
 							}
 						}
 
@@ -249,9 +249,8 @@ public class TrainServiceImpl implements TrainService {
 			TrainPassengerList.add(passenger);
 
 		}
-		TrainOptional.get().setTrainBookingStatus(map);
-		trainRepository.save(TrainOptional.get());
-		bookingDetails.setTotalPrice(totalPrice);
+		Train.setTrainBookingStatus(map);
+		trainRepository.save(Train);
 		bookingDetails.setBookedDate(LocalDateTime.now());
 		bookingDetails.setTrainPassenger(TrainPassengerList);
 
@@ -265,27 +264,27 @@ public class TrainServiceImpl implements TrainService {
 		int TOTAL_COACH_1A = 1;
 		int TOTAL_SEAT_PER_COACH_1A = 18;
 		double COACH_PRICE_1A = 0;
-		String COACH_TYPE_1A = "1A - 1st Class AC";
+		String COACH_TYPE_1A = "1A";
 
 		int TOTAL_COACH_2A = 2;
 		int TOTAL_SEAT_PER_COACH_2A = 48;
 		double COACH_PRICE_2A = 0;
-		String COACH_TYPE_2A = "2A - 2 Tier AC";
+		String COACH_TYPE_2A = "2A";
 
 		int TOTAL_COACH_3A = 3;
 		int TOTAL_SEAT_PER_COACH_3A = 64;
 		double COACH_PRICE_3A = 0;
-		String COACH_TYPE_3A = "3A - 3 Tier AC";
+		String COACH_TYPE_3A = "3A";
 
 		int TOTAL_COACH_SL = 6;
 		int TOTAL_SEAT_PER_COACH_SL = 72;
 		double COACH_PRICE_SL = 0;
-		String COACH_TYPE_SL = "SL - Sleeper";
+		String COACH_TYPE_SL = "SL";
 
 		int TOTAL_COACH_CC = 2;
 		int TOTAL_SEAT_PER_COACH_CC = 78;
 		double COACH_PRICE_CC = 0;
-		String COACH_TYPE_CC = "CC - AC Chair Car";
+		String COACH_TYPE_CC = "CC";
 
 		Optional<Train> Train = trainRepository.findById(id);
 		if (Train.isPresent()) {

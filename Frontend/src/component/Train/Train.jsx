@@ -186,12 +186,10 @@ function Train() {
                 >
                   <div>
                     <p>SL</p>
-                    <p>&#8377; {train.seatPrice["SL - Sleeper"]}</p>
+                    <p>&#8377; {train.seatPrice["SL"]}</p>
                   </div>
-                  {train.trainBookingStatus["SL - Sleeper"] > 0 ? (
-                    <p id="avail">
-                      AVAILABLE {train.trainBookingStatus["SL - Sleeper"]}
-                    </p>
+                  {train.trainBookingStatus["SL"] > 0 ? (
+                    <p id="avail">AVAILABLE {train.trainBookingStatus["SL"]}</p>
                   ) : (
                     <p>no</p>
                   )}
@@ -204,12 +202,10 @@ function Train() {
                 >
                   <div>
                     <p>1A</p>
-                    <p>&#8377; {train.seatPrice["1A - 1st Class AC"]}</p>
+                    <p>&#8377; {train.seatPrice["1A"]}</p>
                   </div>
-                  {train.trainBookingStatus["1A - 1st Class AC"] > 0 ? (
-                    <p id="avail">
-                      AVAILABLE {train.trainBookingStatus["1A - 1st Class AC"]}
-                    </p>
+                  {train.trainBookingStatus["1A"] > 0 ? (
+                    <p id="avail">AVAILABLE {train.trainBookingStatus["1A"]}</p>
                   ) : (
                     <p>no</p>
                   )}
@@ -222,12 +218,10 @@ function Train() {
                 >
                   <div>
                     <p>2A</p>
-                    <p>&#8377; {train.seatPrice["2A - 2 Tier AC"]}</p>
+                    <p>&#8377; {train.seatPrice["2A"]}</p>
                   </div>
-                  {train.trainBookingStatus["2A - 2 Tier AC"] > 0 ? (
-                    <p id="avail">
-                      AVAILABLE {train.trainBookingStatus["2A - 2 Tier AC"]}
-                    </p>
+                  {train.trainBookingStatus["2A"] > 0 ? (
+                    <p id="avail">AVAILABLE {train.trainBookingStatus["2A"]}</p>
                   ) : (
                     <p>no</p>
                   )}
@@ -240,12 +234,10 @@ function Train() {
                 >
                   <div>
                     <p>3A</p>
-                    <p>&#8377; {train.seatPrice["3A - 3 Tier AC"]}</p>
+                    <p>&#8377; {train.seatPrice["3A"]}</p>
                   </div>
-                  {train.trainBookingStatus["3A - 3 Tier AC"] > 0 ? (
-                    <p id="avail">
-                      AVAILABLE {train.trainBookingStatus["3A - 3 Tier AC"]}
-                    </p>
+                  {train.trainBookingStatus["3A"] > 0 ? (
+                    <p id="avail">AVAILABLE {train.trainBookingStatus["3A"]}</p>
                   ) : (
                     <p>no</p>
                   )}
@@ -258,12 +250,10 @@ function Train() {
                 >
                   <div>
                     <p>CC</p>
-                    <p>&#8377; {train.seatPrice["CC - AC Chair Car"]}</p>
+                    <p>&#8377; {train.seatPrice["CC"]}</p>
                   </div>
-                  {train.trainBookingStatus["CC - AC Chair Car"] > 0 ? (
-                    <p id="avail">
-                      AVAILABLE {train.trainBookingStatus["CC - AC Chair Car"]}
-                    </p>
+                  {train.trainBookingStatus["CC"] > 0 ? (
+                    <p id="avail">AVAILABLE {train.trainBookingStatus["CC"]}</p>
                   ) : (
                     <p>no</p>
                   )}

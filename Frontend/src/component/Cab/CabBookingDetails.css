@@ -18,6 +18,21 @@
   margin-bottom: 20px;
   margin-top: 10px;
 }
+.cabBookingDetails .detail-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+}
+.cabBookingDetails #back {
+  color: black;
+  background-color: white;
+}
+.cabBookingDetails #print {
+  color: white;
+  background-color: rgb(153, 7, 183);
+}
 .cabBookingDetails .detail-row {
   display: flex;
   justify-content: space-between;
@@ -39,14 +54,20 @@
   color: #4bad57;
   padding-right: 30px;
 }
-.cabBookingDetails .cabClass {
+.cabBookingDetails .details-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 600px;
+  width: 700px;
   background-color: white;
   border-radius: 25px;
   border: 2px solid #4bad57;
+}
+.cabBookingDetails .cabContainer {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
 }
 .cabBookingDetails button {
   margin-top: 20px;

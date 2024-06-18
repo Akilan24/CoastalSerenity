@@ -11,6 +11,7 @@
 
 .profileclass h2 {
   color: #4bad57;
+  margin-bottom: 5px;
 }
 .profileclass div {
   display: flex;
@@ -31,4 +32,13 @@
 #c {
   background-color: transparent;
   color: black;
+}
+.profile #logo {
+  padding: 0px;
+  width: 450px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.profile select {
+  width: 400px;
 }

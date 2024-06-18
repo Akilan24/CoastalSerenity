@@ -54,7 +54,7 @@ function Profile() {
     }
   }
   return (
-    <div>
+    <div className="profile">
       <img id="logo" src="./cslogo.png" />
       <form className="profileclass" onSubmit={handleSubmit}>
         <div>
@@ -117,13 +117,18 @@ function Profile() {
         </div>
         <div>
           <label htmlFor="maritalStatus">Marital Status</label>
-          <input
-            type="text"
-            name="maritalStatus"
+          <select
+            className="maritalStatus"
             id="maritalStatus"
+            name="maritalStatus"
             value={profile.maritalStatus}
             onChange={handleprofileChange}
-          />
+          >
+            <option value="">Select Marital Status</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Widowed">Widowed</option>
+          </select>
         </div>
         <div id="submit">
           <button id="c" type="button" onClick={(n) => navigate("/hotel")}>
