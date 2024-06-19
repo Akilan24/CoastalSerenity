@@ -69,7 +69,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public Optional<Cab> getCabById(long id) {
+	public Optional<Cab> getCabByCabId(long id) {
 		Optional<Cab> Cab = CabRepository.findById(id);
 		if (!Cab.isEmpty())
 			return Cab;
@@ -86,7 +86,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public String deleteCab(long id) {
+	public String deleteCabByCabId(long id) {
 		Optional<Cab> Cab = CabRepository.findById(id);
 		if (!Cab.isEmpty()) {
 			CabRepository.deleteById(id);
@@ -97,7 +97,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public Cab updateCab(long id, Cab cab) {
+	public Cab updateCabByCabId(long id, Cab cab) {
 		Optional<Cab> f = CabRepository.findById(id);
 		if (!f.isEmpty()) {
 			f.get().setCabModel(cab.getCabModel());
@@ -112,7 +112,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public CabBookingDetails resetStatusCab(long id) {
+	public CabBookingDetails cancelPaymentByCabBookingId(long id) {
 		Optional<CabBookingDetails> cbd = CabBookingDetailsRepository.findById(id);
 		if (cbd.isPresent()) {
 			cbd.get().setPaymentStatus("Payment Cancelled & Refunded");
@@ -123,7 +123,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public RentalCabBookingDetails resetStatusRentalCab(long id) {
+	public RentalCabBookingDetails cancelPaymentByRentalCabBookingId(long id) {
 		Optional<RentalCabBookingDetails> rcbd = rentalCabBookingDetailsRepository.findById(id);
 		if (rcbd.isPresent()) {
 			rcbd.get().setPaymentStatus("Payment Cancelled & Refunded");
@@ -156,7 +156,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public CabBookingDetails bookCab(long id, String username, BookingRequest bookingRequest) {
+	public CabBookingDetails bookCabByCabId(long id, String username, BookingRequest bookingRequest) {
 		Optional<Cab> CabOptional = CabRepository.findById(id);
 		if (CabOptional.isEmpty()) {
 			throw new CabDetailsNotFoundException("Cab details of Cab id: " + id + " are not found");
@@ -185,7 +185,7 @@ public class CabServiceImpl implements CabService {
 			bookingDetails.setCabPrice(cab.getCabPrice() * bookingRequest.getDistance());
 			bookingDetails.setDuration(bookingRequest.getDuration());
 		}
-		Registration user = uproxy.showUserByUserName(username).getBody();
+		Registration user = uproxy.showUserByUserName(username);
 		bookingDetails.setName(user.getName());
 		bookingDetails.setEmail(user.getEmail());
 		bookingDetails.setPhonenumber(user.getMobile());
@@ -197,7 +197,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public RentalCabBookingDetails bookRentalCab(long id, String username, BookingRequest bookingRequest) {
+	public RentalCabBookingDetails bookRentalCabByRentalCabId(long id, String username, BookingRequest bookingRequest) {
 		Optional<RentalCab> rentalCabOptional = rentalCabRepository.findById(id);
 		if (rentalCabOptional.isEmpty()) {
 			throw new RentalCabDetailsNotFoundException("RentalCab details of RentalCab id: " + id + " are not found");
@@ -213,7 +213,7 @@ public class CabServiceImpl implements CabService {
 		bookingDetails.setOrigin(bookingRequest.getFrom());
 		bookingDetails.setDepartureTime(bookingRequest.getDepartDate().atTime(bookingRequest.getDepartTime()));
 		bookingDetails.setPackageType(bookingRequest.getRentalPackage().replaceAll("_", " "));
-		Registration user = uproxy.showUserByUserName(username).getBody();
+		Registration user = uproxy.showUserByUserName(username);
 		bookingDetails.setName(user.getName());
 		bookingDetails.setEmail(user.getEmail());
 		bookingDetails.setPhonenumber(user.getMobile());
@@ -225,7 +225,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public CabBookingDetails paymentstatuschangeCab(long bookingid) {
+	public CabBookingDetails paymentStatusChangeByCabBookingId(long bookingid) {
 		Optional<CabBookingDetails> fbd = CabBookingDetailsRepository.findById(bookingid);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment done");
@@ -236,7 +236,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public RentalCabBookingDetails paymentstatuschangeRentalCab(long bookingid) {
+	public RentalCabBookingDetails paymentStatusChangeByRentalCabBookingId(long bookingid) {
 		Optional<RentalCabBookingDetails> fbd = rentalCabBookingDetailsRepository.findById(bookingid);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment done");
@@ -248,7 +248,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public CabBookingDetails getCabBookingDetailsById(long id) {
+	public CabBookingDetails getCabBookingDetailsByCabBookingId(long id) {
 		Optional<CabBookingDetails> CabBookingDetails = CabBookingDetailsRepository.findById(id);
 		if (!CabBookingDetails.isEmpty())
 			return CabBookingDetails.get();
@@ -271,7 +271,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public RentalCabBookingDetails getRentalCabBookingDetailsById(long id) {
+	public RentalCabBookingDetails getRentalCabBookingDetailsByRentalCabBookingId(long id) {
 		Optional<RentalCabBookingDetails> rentalCabBookingDetails = rentalCabBookingDetailsRepository.findById(id);
 		if (!rentalCabBookingDetails.isEmpty())
 			return rentalCabBookingDetails.get();
@@ -300,7 +300,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public TripDetails updateTrip(int id, TripDetails tripDetails) {
+	public TripDetails updateTripByTripId(int id, TripDetails tripDetails) {
 
 		Optional<TripDetails> trip = tripDetailsRepository.findById(id);
 		if (trip.isPresent()) {
@@ -314,7 +314,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public String deleteTrip(int id) {
+	public String deleteTripByTripId(int id) {
 		Optional<TripDetails> trip = tripDetailsRepository.findById(id);
 		if (trip.isPresent()) {
 			tripDetailsRepository.deleteById(id);
@@ -334,7 +334,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public Optional<TripDetails> getTripDetailById(int id) {
+	public Optional<TripDetails> getTripByTripId(int id) {
 		Optional<TripDetails> trip = tripDetailsRepository.findById(id);
 		if (trip.isPresent()) {
 			return trip;
@@ -352,7 +352,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public RentalCab updateRentalCab(long rentalCabId, RentalCab rentalCab) {
+	public RentalCab updateRentalCabByRentalCabId(long rentalCabId, RentalCab rentalCab) {
 		Optional<RentalCab> cab = rentalCabRepository.findById(rentalCabId);
 		if (!cab.isEmpty()) {
 			cab.get().setCabImage(rentalCab.getCabImage());
@@ -367,7 +367,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public String deleteRentalCab(long rentalCabId) {
+	public String deleteRentalCabByRentalCabId(long rentalCabId) {
 		Optional<RentalCab> cab = rentalCabRepository.findById(rentalCabId);
 		if (!cab.isEmpty()) {
 			rentalCabRepository.deleteById(rentalCabId);
@@ -389,7 +389,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public Optional<RentalCab> getRentalCabById(long rentalCabId) {
+	public Optional<RentalCab> getRentalCabByRentalCabId(long rentalCabId) {
 		Optional<RentalCab> cab = rentalCabRepository.findById(rentalCabId);
 		if (!cab.isEmpty()) {
 			return cab;
@@ -405,7 +405,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public RentalPackage updateRentalPackage(int rentalPackageId, RentalPackage rentalPackage) {
+	public RentalPackage updateRentalPackageByRentalPackageId(int rentalPackageId, RentalPackage rentalPackage) {
 		Optional<RentalPackage> rental = rentalPackageRepository.findById(rentalPackageId);
 		if (!rental.isEmpty()) {
 			rental.get().setDurationPackage(rentalPackage.getDurationPackage());
@@ -418,7 +418,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public String deleteRentalPackage(int rentalPackageId) {
+	public String deleteRentalPackageByRentalPackageId(int rentalPackageId) {
 		Optional<RentalPackage> rentalPackage = rentalPackageRepository.findById(rentalPackageId);
 		if (!rentalPackage.isEmpty()) {
 			rentalPackageRepository.deleteById(rentalPackageId);
@@ -440,7 +440,7 @@ public class CabServiceImpl implements CabService {
 	}
 
 	@Override
-	public Optional<RentalPackage> getRentalPackageById(int rentalPackageId) {
+	public Optional<RentalPackage> getRentalPackageByByRentalPackageId(int rentalPackageId) {
 		Optional<RentalPackage> rentalPackage = rentalPackageRepository.findById(rentalPackageId);
 		if (!rentalPackage.isEmpty()) {
 			return rentalPackage;

@@ -39,7 +39,7 @@ public class RoomServiceTest {
 
 		when(roomRepository.save(room)).thenReturn(room);
 
-		assertEquals(room, roomService.addRoomDetails(hotel.getHotelId(), room));
+		assertEquals(room, roomService.addRoomDetailsByHotelId(hotel.getHotelId(), room));
 		verify(roomRepository, times(1)).save(room);
 	}
 
@@ -51,7 +51,7 @@ public class RoomServiceTest {
 		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		when(roomRepository.save(room)).thenThrow(new RuntimeException());
 
-		assertThrows(Exception.class, () -> roomService.addRoomDetails(hotel.getHotelId(), room));
+		assertThrows(Exception.class, () -> roomService.addRoomDetailsByHotelId(hotel.getHotelId(), room));
 	}
 
 	@Test
@@ -125,7 +125,7 @@ public class RoomServiceTest {
 
 		Room room = new Room(101010, 201, 4000.00, "Deluxe", "image");
 		when(roomRepository.findByRoomId(roomId)).thenReturn(Optional.of(room));
-		Room result = roomService.showRoomDetailsbyId(roomId);
+		Room result = roomService.showRoomDetailsByRoomId(roomId);
 		assertEquals(room, result);
 	}
 
@@ -133,7 +133,7 @@ public class RoomServiceTest {
 	void testShowRoomDetailsById_RoomNotFound() {
 		long roomId = 101010;
 		when(roomRepository.findByRoomId(roomId)).thenReturn(Optional.empty());
-		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.showRoomDetailsbyId(roomId));
+		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.showRoomDetailsByRoomId(roomId));
 	}
 
 	@Test
@@ -170,7 +170,7 @@ public class RoomServiceTest {
 		when(roomRepository.findAll()).thenReturn(
 				rooms.stream().filter(n -> n.getRoomtype().equalsIgnoreCase(type)).collect(Collectors.toList()));
 
-		List<Room> result = roomService.showRoomDetailBytype(type);
+		List<Room> result = roomService.showRoomDetailByRoomType(type);
 
 		assertEquals(1, result.size());
 		assertEquals(room1, result.get(0));
@@ -181,7 +181,7 @@ public class RoomServiceTest {
 		String type = "Single";
 		when(roomRepository.findAll()).thenReturn(Arrays.asList());
 
-		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.showRoomDetailBytype(type));
+		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.showRoomDetailByRoomType(type));
 
 	}
 
@@ -194,7 +194,7 @@ public class RoomServiceTest {
 		when(roomRepository.findAll())
 				.thenReturn(rooms.stream().filter(n -> n.getRate_per_day() == price).collect(Collectors.toList()));
 
-		List<Room> result = roomService.showRoomDetailByPrice(price);
+		List<Room> result = roomService.showRoomDetailByRoomPrice(price);
 
 		assertEquals(1, result.size());
 		assertEquals(room2, result.get(0));
@@ -205,7 +205,7 @@ public class RoomServiceTest {
 		double price = 5000.0;
 		when(roomRepository.findAll()).thenReturn(Arrays.asList());
 
-		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.showRoomDetailByPrice(price));
+		assertThrows(RoomDetailsNotFoundException.class, () -> roomService.showRoomDetailByRoomPrice(price));
 
 	}
 }

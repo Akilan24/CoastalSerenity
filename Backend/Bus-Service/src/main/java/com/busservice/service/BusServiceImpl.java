@@ -51,7 +51,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public Optional<Bus> getBusById(long id) {
+	public Optional<Bus> getBusByBusId(long id) {
 		Optional<Bus> Bus = busRepository.findById(id);
 		if (!Bus.isEmpty())
 			return Bus;
@@ -73,7 +73,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public String deleteBus(long id) {
+	public String deleteBusByBusId(long id) {
 		Optional<Bus> Bus = busRepository.findById(id);
 		if (!Bus.isEmpty()) {
 			busRepository.deleteById(id);
@@ -84,7 +84,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public Bus updateBus(long id, Bus bus) {
+	public Bus updateBusByBusId(long id, Bus bus) {
 		Optional<Bus> b = busRepository.findById(id);
 		if (!b.isEmpty()) {
 			b.get().setBusCompany(bus.getBusCompany());
@@ -110,7 +110,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public BusBookingDetails resetStatus(long id) {
+	public BusBookingDetails cancelPaymentByBusBookingId(long id) {
 		Optional<BusBookingDetails> fbd = busBookingDetailsRepository.findById(id);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment Cancelled & Refunded");
@@ -161,7 +161,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public BusBookingDetails bookBus(long id, BusTravellerBusSeats ftfs, String username, String pickUpPoint,
+	public BusBookingDetails bookBusByBusId(long id, BusTravellerBusSeats ftfs, String username, String pickUpPoint,
 			String dropPoint) {
 		Optional<Bus> busOptional = busRepository.findById(id);
 		if (busOptional.isEmpty()) {
@@ -200,7 +200,7 @@ public class BusServiceImpl implements BusService {
 		bookingDetails.setNextDay(bus.getNextDay());
 		bookingDetails.setUsername(username);
 		bookingDetails.setPaymentStatus("Payment has to be done");
-		Registration user = uproxy.showUserByUserName(username).getBody();
+		Registration user = uproxy.showUserByUserName(username);
 		bookingDetails.setName(user.getName());
 		bookingDetails.setEmail(user.getEmail());
 		bookingDetails.setPhonenumber(user.getMobile());
@@ -241,7 +241,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public Bus addSeats(long id) {
+	public Bus addSeatsByBusId(long id) {
 		int LOWER_SLEEPER_ROWS = 6;
 		int LOWER_SLEEPER_COLUMNS = 1;
 		double LOWER_SLEEPER_PRICE = 0;
@@ -311,7 +311,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public BusBookingDetails paymentstatuschange(long bookingid) {
+	public BusBookingDetails paymentStatusChangeByBusBookingId(long bookingid) {
 		Optional<BusBookingDetails> fbd = busBookingDetailsRepository.findById(bookingid);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment done");
@@ -322,7 +322,7 @@ public class BusServiceImpl implements BusService {
 	}
 
 	@Override
-	public BusBookingDetails getBusBookingDetailsById(long id) {
+	public BusBookingDetails getBusBookingDetailsByBusBookingId(long id) {
 		Optional<BusBookingDetails> busBookingDetails = busBookingDetailsRepository.findById(id);
 		if (!busBookingDetails.isEmpty())
 			return busBookingDetails.get();

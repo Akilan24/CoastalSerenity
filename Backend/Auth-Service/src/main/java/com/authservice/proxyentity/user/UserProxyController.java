@@ -7,52 +7,56 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.authservice.constant.UserConstant;
 import com.authservice.entity.Registration;
 import com.authservice.entity.Traveller;
 
 import jakarta.validation.Valid;
 
-@FeignClient(name = "USER-SERVICE", url = "http://localhost:8081/User")
+@FeignClient(name = UserConstant.SERVICE, url = UserConstant.URL)
 public interface UserProxyController {
 
-	@GetMapping("/getallusers")
-	public ResponseEntity<List<Registration>> listUser();
+	@GetMapping(UserConstant.USER)
+	public ResponseEntity<List<Registration>> listAllUser();
 
-	@GetMapping("/getalltravellers/{username}")
-	public ResponseEntity<List<Traveller>> getalltravellersbyusername(@PathVariable String username);
+	@GetMapping(UserConstant.GET_ALL_TRAVELLERS)
+	public ResponseEntity<List<Traveller>> getAllTravellersByUsername(@PathVariable String username);
 
-	@GetMapping("/addtraveller/{username}")
-	public ResponseEntity<String> addtraveller(@PathVariable String username, @RequestBody @Valid Traveller t);
+	@PostMapping(UserConstant.ADD_TRAVELLER_BY_USERNAME)
+	public ResponseEntity<String> addTravellerByUsername(@PathVariable String username, @RequestBody Traveller t);
 
-	@PutMapping("/updatetraveller/{username}")
-	public ResponseEntity<String> updatetraveller(@PathVariable String username, @RequestBody @Valid Traveller t);
+	@PutMapping(UserConstant.UPDATE_TRAVELLER_BY_USERNAME)
+	public ResponseEntity<String> updateTravellerByUsername(@PathVariable String username, @RequestBody Traveller t);
 
-	@DeleteMapping("/deletetraveller/{username}/{name}")
-	public ResponseEntity<String> deletetraveller(@PathVariable String username, @PathVariable String name);
+	@GetMapping(UserConstant.GET_TRAVELLER_BY_NAME)
+	public ResponseEntity<Traveller> getTravellerByTravellerName(@PathVariable String username,
+			@PathVariable String name);
 
-	@PutMapping("/updateuser/{username}")
-	public ResponseEntity<Registration> updateuser(@PathVariable String username,
+	@DeleteMapping(UserConstant.DELETE_TRAVELLER_BY_NAME)
+	public ResponseEntity<String> deleteTravellerByTravellerName(@PathVariable String username,
+			@PathVariable String name);
+
+	@PutMapping(UserConstant.UPDATE_USER_BY_USERNAME)
+	public ResponseEntity<Registration> updateUserByUsername(@PathVariable String username,
 			@RequestBody @Valid Registration user);
 
-	@PutMapping("/updatepassword/{username}/{password}")
-	public ResponseEntity<String> updatepassword(@PathVariable String username, @PathVariable @Valid String password);
+	@PutMapping(UserConstant.UPDATE_USER_PASSWORD_BY_USERNAME)
+	public ResponseEntity<String> updatePasswordByUsername(@PathVariable String username,
+			@PathVariable @Valid String password);
 
-	@GetMapping("/getuserbyname/{username}")
+	@GetMapping(UserConstant.GET_USER_BY_USERNAME)
 	public ResponseEntity<Registration> showUserByUserName(@PathVariable String username);
 
-	@GetMapping("/getuserbyemail/{email}")
+	@GetMapping(UserConstant.GET_USER_BY_EMAIL)
 	public ResponseEntity<Registration> showUserByEmail(@PathVariable String email);
 
-	@GetMapping("/getuserbymobile/{mobile}")
+	@GetMapping(UserConstant.GET_USER_BY_MOBILE)
 	public ResponseEntity<Registration> showUserByMobileNumber(@PathVariable String mobile);
 
-	@GetMapping("/gettraveller/{username}/{name}")
-	public ResponseEntity<Traveller> gettraveller(@PathVariable String username, @PathVariable String name);
-
-	@DeleteMapping("/deleteuserbyid/{username}")
-	public ResponseEntity<String> remove(@PathVariable String username);
-
+	@DeleteMapping(UserConstant.DELETE_USER_BY_USERNAME)
+	public ResponseEntity<String> deleteUserByUsername(@PathVariable String username);
 }

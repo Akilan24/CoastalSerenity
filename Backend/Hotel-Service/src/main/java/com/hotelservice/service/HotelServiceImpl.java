@@ -19,7 +19,7 @@ public class HotelServiceImpl implements HotelService {
 	private HotelRepository hrepo;
 
 	@Override
-	public List<Hotel> getHotels() throws HotelDetailsNotFoundException {
+	public List<Hotel> getAllHotel() throws HotelDetailsNotFoundException {
 		List<Hotel> list = hrepo.findAll();
 		if (list.isEmpty())
 			throw new HotelDetailsNotFoundException("Hotel details are not found");
@@ -27,7 +27,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Set<String> getHotelCityNames() {
+	public Set<String> getAllHotelCityNames() {
 		List<Hotel> list = hrepo.findAll();
 		if (list.isEmpty())
 			throw new HotelDetailsNotFoundException("Hotel details are not found");
@@ -51,7 +51,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Hotel gethotelByHotelId(long id) throws HotelDetailsNotFoundException {
+	public Hotel getHotelByHotelId(long id) throws HotelDetailsNotFoundException {
 		if (hrepo.findByHotelId(id).isPresent()) {
 			Hotel h = hrepo.findByHotelId(id).get();
 			return h;
@@ -60,7 +60,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Hotel addhotel(Hotel h) throws Exception {
+	public Hotel addHotel(Hotel h) throws Exception {
 		try {
 			long MIN_ID = 100000;
 			int count = hrepo.findAll().size();
@@ -73,7 +73,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Hotel updatehotel(Hotel ht) throws HotelDetailsNotFoundException {
+	public Hotel updateHotel(Hotel ht) throws HotelDetailsNotFoundException {
 		if (hrepo.findByHotelId(ht.getHotelId()).isPresent()) {
 			Hotel h = hrepo.findByHotelId(ht.getHotelId()).get();
 			h.setHotelName(ht.getHotelName());
@@ -92,7 +92,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public String deletehotel(long hid) throws HotelDetailsNotFoundException {
+	public String deleteHotelByHotelId(long hid) throws HotelDetailsNotFoundException {
 		if (hrepo.findByHotelId(hid).isPresent()) {
 			hrepo.deleteByHotelId(hid);
 			return "Hotel details are deleted";
@@ -101,7 +101,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Hotel gethotelByHotelName(String hotelName) {
+	public Hotel getHotelByHotelName(String hotelName) {
 		if (hrepo.findByHotelName(hotelName).isPresent()) {
 			return hrepo.findByHotelName(hotelName).get();
 		} else
@@ -109,7 +109,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public List<Hotel> gethotelByCity(String city) {
+	public List<Hotel> getAllHotelByCity(String city) {
 		if (hrepo.findAllByCity(city).isPresent()) {
 			return hrepo.findAllByCity(city).get();
 		} else

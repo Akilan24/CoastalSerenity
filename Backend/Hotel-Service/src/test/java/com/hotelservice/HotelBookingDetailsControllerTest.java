@@ -50,22 +50,22 @@ class HotelhotelControllerTest {
 		List<HotelBookingDetails> bookingDetailsList = new ArrayList<>();
 		bookingDetailsList.add(bookingDetails);
 		when(bookingDetailsService.showAllBookingDetails()).thenReturn(bookingDetailsList);
-		ResponseEntity<List<HotelBookingDetails>> response = hotelController.listBookingDetails();
+		ResponseEntity<List<HotelBookingDetails>> response = hotelController.listHotelBookingDetails();
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(bookingDetailsList, response.getBody());
 	}
 
 	@Test
 	void testGetBookingDetails() {
-		when(bookingDetailsService.showBookingDetailsbyId(123456)).thenReturn(bookingDetails);
-		ResponseEntity<HotelBookingDetails> response = hotelController.getBookingDetails(123456);
+		when(bookingDetailsService.showHotelBookingDetailsByHotelBookingId(123456)).thenReturn(bookingDetails);
+		ResponseEntity<HotelBookingDetails> response = hotelController.showHotelBookingDetailsByHotelBookingId(123456);
 		assertEquals(bookingDetails, response.getBody());
 	}
 
 	@Test
 	void testPaymentStatusChange() {
-		when(bookingDetailsService.paymentstatuschange(123456)).thenReturn(bookingDetails);
-		ResponseEntity<HotelBookingDetails> response = hotelController.paymentstatuschange(123456);
+		when(bookingDetailsService.paymentStatusChangeByHotelBookingId(123456)).thenReturn(bookingDetails);
+		ResponseEntity<HotelBookingDetails> response = hotelController.paymentStatusChangeByHotelBookingId(123456);
 		assertEquals(bookingDetails, response.getBody());
 	}
 
@@ -79,8 +79,8 @@ class HotelhotelControllerTest {
 
 	@Test
 	void testRemove() {
-		when(bookingDetailsService.removeBookingDetails(123456)).thenReturn("Booking details removed successfully");
-		ResponseEntity<String> response = hotelController.remove(123456);
+		when(bookingDetailsService.removeHotelBookingDetailsByHotelBookingId(123456)).thenReturn("Booking details removed successfully");
+		ResponseEntity<String> response = hotelController.removeHotelBookingDetailsByHotelBookingId(123456);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals("Booking details removed successfully", response.getBody());
 	}

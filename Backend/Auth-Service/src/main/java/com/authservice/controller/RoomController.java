@@ -14,58 +14,60 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.authservice.constant.RoomConstant;
 import com.authservice.proxyentity.room.Room;
 import com.authservice.proxyentity.room.RoomProxyController;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/CS/Room")
-@CrossOrigin("http://localhost:5173")
+@RequestMapping(RoomConstant.ROOM)
+@CrossOrigin(RoomConstant.CROSS_ORIGIN)
 public class RoomController {
 
 	@Autowired
 	RoomProxyController roomProxy;
 
-	@PostMapping("/addroom/{hid}")
-	public ResponseEntity<Room> addroom(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception {
-		return roomProxy.addroom(hid, room);
+	@PostMapping(RoomConstant.ADD_ROOM_BY_HOTEL_ID)
+	public ResponseEntity<Room> addRoomByHotelId(@PathVariable long hid, @RequestBody @Valid Room room)
+			throws Exception {
+		return roomProxy.addRoomByHotelId(hid, room);
 
 	}
 
-	@PutMapping("/updateroom")
-	public ResponseEntity<Room> updateroom(@RequestBody @Valid Room room) {
-		return roomProxy.updateroom(room);
+	@PutMapping(RoomConstant.UPDATE_ROOM)
+	public ResponseEntity<Room> updateRoom(@RequestBody @Valid Room room) {
+		return roomProxy.updateRoom(room);
 	}
 
-	@DeleteMapping("/deleteroombyid/{id}")
-	public ResponseEntity<String> deleteroom(@PathVariable Integer id) {
-		return roomProxy.deleteroom(id);
+	@DeleteMapping(RoomConstant.DELETE_ROOM_BY_HOTEL_ID)
+	public ResponseEntity<String> deleteRoomByRoomId(@PathVariable Integer id) {
+		return roomProxy.deleteRoomByRoomId(id);
 	}
 
-	@GetMapping("/getallroom")
-	public ResponseEntity<List<Room>> getall() {
-		return roomProxy.getall();
+	@GetMapping(RoomConstant.GET_ALL_ROOM)
+	public ResponseEntity<List<Room>> getAllRoom() {
+		return roomProxy.getAllRoom();
 	}
 
-	@GetMapping("/getroombyid/{id}")
-	public ResponseEntity<Room> getroom(@PathVariable Integer id) {
-		return roomProxy.getroom(id);
+	@GetMapping(RoomConstant.GET_ROOM_BY_ROOM_ID)
+	public ResponseEntity<Room> getRoomByRoomId(@PathVariable Integer id) {
+		return roomProxy.getRoomByRoomId(id);
 	}
 
-	@GetMapping("/getroombyhotelid/{hid}")
-	public ResponseEntity<List<Room>> getroombyhid(@PathVariable Integer hid) {
-		return roomProxy.getroombyhid(hid);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_HOTEL_ID)
+	public ResponseEntity<List<Room>> getRoomsByHotelId(@PathVariable Integer hid) {
+		return roomProxy.getRoomsByHotelId(hid);
 	}
 
-	@GetMapping("/getroombyprice/{price}")
-	public ResponseEntity<List<Room>> getroom(@PathVariable Double price) {
-		return roomProxy.getroom(price);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_PRICE)
+	public ResponseEntity<List<Room>> getRoomsByRoomPrice(@PathVariable Double price) {
+		return roomProxy.getRoomsByRoomPrice(price);
 	}
 
-	@GetMapping("/getroombyroomtype/{type}")
-	public ResponseEntity<List<Room>> getroombytype(@PathVariable String type) {
-		return roomProxy.getroombytype(type);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_TYPE)
+	public ResponseEntity<List<Room>> getRoomsByRoomType(@PathVariable String type) {
+		return roomProxy.getRoomsByRoomType(type);
 	}
 
 }

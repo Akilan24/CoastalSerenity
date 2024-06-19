@@ -6,17 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
+import com.paymentservice.constant.FlightProxyConstant;
 import com.paymentservice.externalclass.FlightBookingDetails;
 
-@FeignClient(name = "FLIGHT-SERVICE", url = "http://localhost:8086/Flight")
+@FeignClient(name = FlightProxyConstant.SERVICE, url = FlightProxyConstant.URL)
 public interface FlightBookingDetailsProxy {
 
-	@GetMapping("/getflightbookingdetailsbyid/{id}")
+	@GetMapping(FlightProxyConstant.GET_FLIGHT_BOOKING_DETAILS_BY_FLIGHT_BOOKING_ID)
 	public FlightBookingDetails getFlightBookingDetailsById(@PathVariable long id);
 
-	@GetMapping("/paymentstatuschange/{bookingid}")
+	@GetMapping(FlightProxyConstant.PAYMENT_STATUS_CHANGE_BY_FLIGHT_BOOKING_ID)
 	public ResponseEntity<FlightBookingDetails> paymentstatuschange(@PathVariable long bookingid);
 
-	@PutMapping("/resetstatus/{id}")
+	@PutMapping(FlightProxyConstant.CANCEL_PAYMENT_BY_FLIGHT_BOOKING_ID)
 	public FlightBookingDetails resetstatus(@PathVariable long id);
 }

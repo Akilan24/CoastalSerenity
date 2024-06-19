@@ -9,19 +9,19 @@ import com.roomservice.entity.Room;
 @Service
 public interface RoomService {
 
-	public Room addRoomDetails(long hid, Room room) throws Exception;
+	public Room addRoomDetailsByHotelId(long hid, Room room) throws Exception;
 
 	public Room updateRoomDetails(Room room);
 
-	public String removeRoomDetails(long roomId);
+	public String removeRoomDetailsByRoomId(long roomId);
 
 	public List<Room> showAllRoomDetails();
 
 	public List<Room> showAllRoomDetailsByHotelId(long hid);
 
-	public Room showRoomDetailsbyId(long roomId);
+	public Room showRoomDetailsByRoomId(long roomId);
 
-	public List<Room> showRoomDetailBytype(String type);
+	public List<Room> showRoomDetailByRoomType(String type);
 
-	public List<Room> showRoomDetailByPrice(double price);
+	public List<Room> showRoomDetailByRoomPrice(double price);
 }

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hotelservice.constant.HotelConstant;
 import com.hotelservice.entity.Hotel;
 import com.hotelservice.entity.HotelBookingDetails;
 import com.hotelservice.entity.HotelGuest;
@@ -25,9 +26,11 @@ import com.hotelservice.service.HotelBookingDetailsService;
 import com.hotelservice.service.HotelService;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/Hotel")
+@Slf4j
+@RequestMapping(HotelConstant.HOTEL)
 public class HotelController {
 	@Autowired
 	private HotelService hotelService;
@@ -35,108 +38,127 @@ public class HotelController {
 	@Autowired
 	HotelBookingDetailsService hotelBookingDetailsService;
 
-	@GetMapping("/getallhotel")
-	public ResponseEntity<List<Hotel>> getHotels() {
-		return new ResponseEntity<>(hotelService.getHotels(), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_ALL_HOTEL)
+	public ResponseEntity<List<Hotel>> getAllHotel() {
+		log.info("getAllHotel controller called");
+		return new ResponseEntity<>(hotelService.getAllHotel(), HttpStatus.OK);
 	}
 
-	@GetMapping("/getallhotelnamesbycity/{city}")
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_NAMES_BY_CITY)
 	public ResponseEntity<List<String>> getHotelNamesByCity(@PathVariable String city) {
+		log.info("getHotelNamesByCity controller called");
 		return new ResponseEntity<>(hotelService.getHotelNamesByCity(city), HttpStatus.OK);
 	}
 
-	@GetMapping("/getallhotelcitynames")
-	public ResponseEntity<Set<String>> getHotelCityNames() {
-		return new ResponseEntity<>(hotelService.getHotelCityNames(), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_CITY_NAMES)
+	public ResponseEntity<Set<String>> getAllHotelCityNames() {
+		log.info("getAllHotelCityNames controller called");
+		return new ResponseEntity<>(hotelService.getAllHotelCityNames(), HttpStatus.OK);
 	}
 
-	@GetMapping("/gethotelbyid/{id}")
-	public ResponseEntity<Hotel> gethotelbyid(@PathVariable Long id) {
-		return new ResponseEntity<>(hotelService.gethotelByHotelId(id), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_HOTEL_BY_HOTEL_ID)
+	public ResponseEntity<Hotel> getHotelByHotelId(@PathVariable Long id) {
+		log.info("getHotelByHotelId controller called");
+		return new ResponseEntity<>(hotelService.getHotelByHotelId(id), HttpStatus.OK);
 	}
 
-	@GetMapping("/gethotelbyhotelname/{hotelname}")
-	public ResponseEntity<Hotel> gethotelbyhotelname(@PathVariable String hotelname) {
-		return new ResponseEntity<>(hotelService.gethotelByHotelName(hotelname), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_HOTEL_BY_HOTEL_NAME)
+	public ResponseEntity<Hotel> getHotelByHotelName(@PathVariable String hotelname) {
+		log.info("getHotelByHotelName controller called");
+		return new ResponseEntity<>(hotelService.getHotelByHotelName(hotelname), HttpStatus.OK);
 	}
 
-	@GetMapping("/gethotelbycityname/{cityname}")
-	public ResponseEntity<List<Hotel>> gethotelbycityname(@PathVariable String cityname) {
-		return new ResponseEntity<>(hotelService.gethotelByCity(cityname), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_BY_CITY_NAME)
+	public ResponseEntity<List<Hotel>> getAllHotelByCity(@PathVariable String cityname) {
+		log.info("getAllHotelByCity controller called");
+		return new ResponseEntity<>(hotelService.getAllHotelByCity(cityname), HttpStatus.OK);
 	}
 
-	@PostMapping("/addhotel")
-	public ResponseEntity<Hotel> addhotel(@RequestBody @Valid Hotel htl) throws Exception {
-		return new ResponseEntity<>(hotelService.addhotel(htl), HttpStatus.OK);
+	@PostMapping(HotelConstant.ADD_HOTEL)
+	public ResponseEntity<Hotel> addHotel(@RequestBody @Valid Hotel htl) throws Exception {
+		log.info("addHotel controller called");
+		return new ResponseEntity<>(hotelService.addHotel(htl), HttpStatus.OK);
 	}
 
-	@PutMapping("/updatehotel")
-	public ResponseEntity<Hotel> updatehotel(@RequestBody @Valid Hotel ht) {
-		return new ResponseEntity<>(hotelService.updatehotel(ht), HttpStatus.OK);
+	@PutMapping(HotelConstant.UPDATE_HOTEL)
+	public ResponseEntity<Hotel> updateHotel(@RequestBody @Valid Hotel ht) {
+		log.info("updateHotel controller called");
+		return new ResponseEntity<>(hotelService.updateHotel(ht), HttpStatus.OK);
 
 	}
 
-	@DeleteMapping("/deletebyid/{id}")
-	public ResponseEntity<String> deletehotel(@PathVariable Long id) {
-		return new ResponseEntity<>(hotelService.deletehotel(id), HttpStatus.OK);
+	@DeleteMapping(HotelConstant.DELETE_HOTEL_BY_HOTEL_ID)
+	public ResponseEntity<String> deleteHotelByHotelId(@PathVariable Long id) {
+		log.info("deleteHotelByHotelId controller called");
+		return new ResponseEntity<>(hotelService.deleteHotelByHotelId(id), HttpStatus.OK);
 	}
 
-	@GetMapping("/HotelBookingDetails/getall")
-	public ResponseEntity<List<HotelBookingDetails>> listBookingDetails() {
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_BOOKING_DETAILS)
+	public ResponseEntity<List<HotelBookingDetails>> listHotelBookingDetails() {
+		log.info("listBookingDetails controller called");
 		return new ResponseEntity<>(hotelBookingDetailsService.showAllBookingDetails(), HttpStatus.OK);
 	}
 
-	@GetMapping("/HotelBookingDetails/availablerooms/{city}/{roomtype}/{fromDate}/{ToDate}")
+	@GetMapping(HotelConstant.GET_ALL_AVAILABLE_ROOMS)
 	public ResponseEntity<List<HotelRooms>> checkRoomAvailability(@PathVariable String city,
 			@PathVariable String roomtype, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date ToDate) {
+		log.info("checkRoomAvailability controller called");
 		return new ResponseEntity<>(hotelBookingDetailsService.AvailableRoom(roomtype, city, fromDate, ToDate),
 				HttpStatus.OK);
 	}
 
-	@GetMapping("/HotelBookingDetails/getbyid/{bookingid}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetails(@PathVariable long bookingid) {
-		return new ResponseEntity<>(hotelBookingDetailsService.showBookingDetailsbyId(bookingid), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_ID)
+	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid) {
+		log.info("showBookingDetailsByHotelBookingId controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.showHotelBookingDetailsByHotelBookingId(bookingid), HttpStatus.OK);
 	}
 
-	@GetMapping("/HotelBookingDetails/getbyusernameandhotelname/{username}/{hotelName}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,
+	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME_AND_HOTELNAME)
+	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByUserNameAndHotelName(@PathVariable String username,
 			@PathVariable String hotelName) {
+		log.info("showBookingDetailsByUserNameAndHotelName controller called");
 		return new ResponseEntity<>(
-				hotelBookingDetailsService.showBookingDetailsbyUserNameAndHotelName(username, hotelName),
+				hotelBookingDetailsService.showHotelBookingDetailsByUserNameAndHotelName(username, hotelName),
 				HttpStatus.OK);
 	}
 
-	@GetMapping("/HotelBookingDetails/getbookingdetailsbyusername/{username}")
-	public ResponseEntity<List<HotelBookingDetails>> getBookingDetailsbyusername(@PathVariable String username) {
-		return new ResponseEntity<>(hotelBookingDetailsService.showBookingDetailsbyUserName(username), HttpStatus.OK);
+	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME)
+	public ResponseEntity<List<HotelBookingDetails>> showHotelBookingDetailsByUserName(@PathVariable String username) {
+		log.info("showBookingDetailsByUserName controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.showHotelBookingDetailsByUserName(username), HttpStatus.OK);
 	}
 
-	@PutMapping("/HotelBookingDetails/paymentstatuschangebybid/{bookingid}")
-	public ResponseEntity<HotelBookingDetails> paymentstatuschange(@PathVariable long bookingid) {
-		return new ResponseEntity<>(hotelBookingDetailsService.paymentstatuschange(bookingid), HttpStatus.OK);
+	@PutMapping(HotelConstant.PAYMENT_STATUS_CHANGE_BY_HOTEL_BOOKING_ID)
+	public ResponseEntity<HotelBookingDetails> paymentStatusChangeByHotelBookingId(@PathVariable long bookingid) {
+		log.info("paymentStatusChangeByHotelBookingId controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.paymentStatusChangeByHotelBookingId(bookingid), HttpStatus.OK);
 	}
 
-	@PostMapping("/HotelBookingDetails/bookroom/{username}")
+	@PostMapping(HotelConstant.BOOK_ROOM_BY_USERNAME)
 	public ResponseEntity<HotelBookingDetails> bookroom(@PathVariable String username,
 			@RequestBody HotelBookingDetails bd) {
+		log.info("bookroom controller called");
 		return new ResponseEntity<>(hotelBookingDetailsService.BookRoom(username, bd), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/HotelBookingDetails/deletebyid/{bookingid}")
-	public ResponseEntity<String> remove(@PathVariable long bookingid) {
-		return new ResponseEntity<>(hotelBookingDetailsService.removeBookingDetails(bookingid), HttpStatus.OK);
+	@DeleteMapping(HotelConstant.DELETE_HOTEL_BOOKING_DETAILS_BY_HOTEL_BOOKING_ID)
+	public ResponseEntity<String> removeHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid) {
+		log.info("removeBookingDetailsByHotelBookingId controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.removeHotelBookingDetailsByHotelBookingId(bookingid), HttpStatus.OK);
 	}
 
-	@PostMapping("/HotelBookingDetails/addguests/{bookingid}")
+	@PostMapping(HotelConstant.ADD_GUEST_BY_BOOKING_ID)
 	public ResponseEntity<HotelBookingDetails> addGuest(@PathVariable long bookingid,
 			@RequestBody List<HotelGuest> guest) {
+		log.info("addGuest controller called");
 		return new ResponseEntity<>(hotelBookingDetailsService.addGuest(bookingid, guest), HttpStatus.OK);
 	}
 
-	@PutMapping("/HotelBookingDetails/resetstatus/{id}")
-	public ResponseEntity<HotelBookingDetails> resetstatus(@PathVariable long id) {
-		return new ResponseEntity<>(hotelBookingDetailsService.resetStatus(id), HttpStatus.OK);
+	@PutMapping(HotelConstant.CANCEL_PAYMENT_BY_HOTEL_BOOKING_ID)
+	public ResponseEntity<HotelBookingDetails> cancelPaymentByHotelBookingId(@PathVariable long id) {
+		log.info("cancelPaymentByHotelBookingId controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.cancelPaymentByHotelBookingId(id), HttpStatus.OK);
 	}
 
 }

@@ -56,7 +56,7 @@ public class PaymentServiceTest {
 		payment.setPaymentStatus("Payment Done");
 		when(paymentRepository.save(any())).thenReturn(payment);
 
-		Payment result = paymentService.doPayment(value);
+		Payment result = paymentService.doPaymentByBookingId(value);
 
 		assertNotNull(result);
 		assertEquals(100001, result.getPaymentid());
@@ -112,7 +112,7 @@ public class PaymentServiceTest {
 
 		when(paymentRepository.findAll()).thenReturn(paymentList);
 
-		List<Payment> result = paymentService.getallpayment();
+		List<Payment> result = paymentService.getAllPayment();
 
 		assertNotNull(result);
 		assertEquals(1, result.size());
@@ -128,7 +128,7 @@ public class PaymentServiceTest {
 		when(paymentRepository.findAll()).thenReturn(new ArrayList<>());
 
 		assertThrows(PaymentDetailsNotFoundException.class, () -> {
-			paymentService.getallpayment();
+			paymentService.getAllPayment();
 		});
 	}
 
@@ -146,7 +146,7 @@ public class PaymentServiceTest {
 		when(paymentRepository.findById(Long.parseLong(id[1]))).thenReturn(Optional.of(payment));
 		when(hbdproxy.getBookingDetails(bookingid)).thenReturn(new HotelBookingDetails());
 
-		String result = paymentService.paymentCancel(id[1]);
+		String result = paymentService.cancelPaymentByPaymentId(id[1]);
 
 		assertNotNull(result);
 		assertEquals("Payment cancelled and refunded", result);
@@ -159,7 +159,7 @@ public class PaymentServiceTest {
 		when(paymentRepository.findById(Long.parseLong(id[1]))).thenReturn(Optional.empty());
 
 		assertThrows(PaymentDetailsNotFoundException.class, () -> {
-			paymentService.paymentCancel(id[1]);
+			paymentService.cancelPaymentByPaymentId(id[1]);
 		});
 	}
 

@@ -43,7 +43,7 @@ public class FlightServiceImpl implements FlightService {
 	UserProxy uproxy;
 
 	@Override
-	public List<Flight> getAllFlights() {
+	public List<Flight> getAllFlight() {
 		List<Flight> list = flightRepository.findAll();
 		if (!list.isEmpty())
 			return list;
@@ -52,7 +52,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public Optional<Flight> getFlightById(long id) {
+	public Optional<Flight> getFlightByFlightId(long id) {
 		Optional<Flight> flight = flightRepository.findById(id);
 		if (!flight.isEmpty())
 			return flight;
@@ -74,7 +74,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public String deleteFlight(long id) {
+	public String deleteFlightByFlightId(long id) {
 		Optional<Flight> flight = flightRepository.findById(id);
 		if (!flight.isEmpty()) {
 			flightRepository.deleteById(id);
@@ -85,7 +85,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public Flight updateFlight(long id, Flight flight) {
+	public Flight updateFlightByFlightId(long id, Flight flight) {
 		Optional<Flight> f = flightRepository.findById(id);
 		if (!f.isEmpty()) {
 			f.get().setAirline(flight.getAirline());
@@ -110,7 +110,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public FlightBookingDetails resetStatus(long id) {
+	public FlightBookingDetails cancelPaymentByFlightBookingId(long id) {
 		Optional<FlightBookingDetails> fbd = flightBookingDetailsRepository.findById(id);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment Cancelled & Refunded");
@@ -194,7 +194,7 @@ public class FlightServiceImpl implements FlightService {
 		bookingDetails.setNextDay(flight.getNextDay());
 		bookingDetails.setUsername(username);
 		bookingDetails.setPaymentStatus("Payment has to be done");
-		Registration user = uproxy.showUserByUserName(username).getBody();
+		Registration user = uproxy.showUserByUserName(username);
 		bookingDetails.setName(user.getName());
 		bookingDetails.setEmail(user.getEmail());
 		bookingDetails.setPhonenumber(user.getMobile());
@@ -235,7 +235,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public Flight addSeats(long id) {
+	public Flight addSeatsByFlightId(long id) {
 		int FIRST_CLASS_ROWS = 4;
 		int FIRST_CLASS_COLUMNS = 4;
 		double FIRST_CLASS_PRICE = 0;
@@ -292,7 +292,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public FlightBookingDetails paymentstatuschange(long bookingid) {
+	public FlightBookingDetails paymentStatusChangeByFlightBookingId(long bookingid) {
 		Optional<FlightBookingDetails> fbd = flightBookingDetailsRepository.findById(bookingid);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment done");
@@ -303,7 +303,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public FlightBookingDetails getFlightBookingDetailsById(long id) {
+	public FlightBookingDetails getFlightBookingDetailsByFlightBookingId(long id) {
 		Optional<FlightBookingDetails> flightBookingDetails = flightBookingDetailsRepository.findById(id);
 		if (!flightBookingDetails.isEmpty())
 			return flightBookingDetails.get();

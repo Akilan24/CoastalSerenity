@@ -33,7 +33,7 @@ class UserControllerTest {
 				"Password@111", "user", "9876543210", "123 Main Street", "male", "Single", null));
 		when(userService.ShowAllUser()).thenReturn(userList);
 
-		ResponseEntity<List<Registration>> response = userController.listUser();
+		ResponseEntity<List<Registration>> response = userController.listAllUser();
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(userList, response.getBody());
@@ -45,9 +45,9 @@ class UserControllerTest {
 
 		Registration user = new Registration("Joe123", "Johnjoe", "johnjoe@example.com", "Password@111", "user",
 				"9876543210", "123 Main Street", "male", "Single", null);
-		when(userService.updateUser(username, user)).thenReturn(user);
+		when(userService.updateUserByUserName(username, user)).thenReturn(user);
 
-		ResponseEntity<Registration> response = userController.updateuser(username, user);
+		ResponseEntity<Registration> response = userController.updateUserByUsername(username, user);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(user, response.getBody());
@@ -58,9 +58,9 @@ class UserControllerTest {
 		String username = "Joe123";
 		String newPassword = "NewPassword@123";
 		String expectedMessage = "Password updated successfully for username: " + username;
-		when(userService.updateUserpasswordbyusername(username, newPassword)).thenReturn(expectedMessage);
+		when(userService.updateUserPasswordByUserName(username, newPassword)).thenReturn(expectedMessage);
 
-		ResponseEntity<String> response = userController.updatepassword(username, newPassword);
+		ResponseEntity<String> response = userController.updatePasswordByUsername(username, newPassword);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(expectedMessage, response.getBody());
@@ -112,9 +112,9 @@ class UserControllerTest {
 	void testRemove() {
 		String username = "Joe123";
 		String expectedMessage = "User removed successfully with username: " + username;
-		when(userService.removeUser(username)).thenReturn(expectedMessage);
+		when(userService.removeUserByUserName(username)).thenReturn(expectedMessage);
 
-		ResponseEntity<String> response = userController.remove(username);
+		ResponseEntity<String> response = userController.deleteUserByUsername(username);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(expectedMessage, response.getBody());

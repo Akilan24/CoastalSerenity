@@ -3,18 +3,18 @@ package com.hotelservice.proxy;
 import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.hotelservice.constant.RoomProxyConstant;
 import com.hotelservice.externalclass.Room;
 
-@FeignClient(name = "room-service", url = "http://localhost:8083/Room")
+@FeignClient(name = RoomProxyConstant.SERVICE, url =RoomProxyConstant.URL)
 public interface RoomProxy {
 
-	@GetMapping("/getbyid/{id}")
+	@GetMapping(RoomProxyConstant.GET_ROOM_BY_ROOM_ID)
 	public Room getroom(@PathVariable Integer id);
 
-	@GetMapping("/getallroom")
-	public ResponseEntity<List<Room>> getall();
+	@GetMapping(RoomProxyConstant.GET_ALL_ROOM)
+	public List<Room> getall();
 }

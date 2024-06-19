@@ -44,7 +44,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 		long MIN_id = 100000;
 		int count = bookingrepo.findAll().size();
 		bookingdetails.setHotelBookingId(count == 0 ? MIN_id : MIN_id + count);
-		Registration user = uproxy.showUserByUserName(username).getBody();
+		Registration user = uproxy.showUserByUserName(username);
 		bookingdetails.setName(user.getName());
 		bookingdetails.setEmail(user.getEmail());
 		bookingdetails.setPhonenumber(user.getMobile());
@@ -65,7 +65,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
-	public String removeBookingDetails(long bookingid) {
+	public String removeHotelBookingDetailsByHotelBookingId(long bookingid) {
 		if (bookingrepo.findByHotelBookingId(bookingid).isPresent()) {
 			bookingrepo.deleteByHotelBookingId(bookingid);
 			return "Booking details are deleted";
@@ -82,7 +82,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
-	public HotelBookingDetails showBookingDetailsbyId(long bookingid) {
+	public HotelBookingDetails showHotelBookingDetailsByHotelBookingId(long bookingid) {
 		if (bookingrepo.findByHotelBookingId(bookingid).isPresent()) {
 			HotelBookingDetails bd = bookingrepo.findByHotelBookingId(bookingid).get();
 			return bd;
@@ -91,7 +91,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
-	public HotelBookingDetails paymentstatuschange(long bookingid) {
+	public HotelBookingDetails paymentStatusChangeByHotelBookingId(long bookingid) {
 		Optional<HotelBookingDetails> bd = bookingrepo.findByHotelBookingId(bookingid);
 		if (bd.isPresent()) {
 			bd.get().setPaymentStatus("Payment done");
@@ -146,8 +146,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
-	public HotelBookingDetails showBookingDetailsbyUserNameAndHotelName(String userName, String hotelName) {
-		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
+	public HotelBookingDetails showHotelBookingDetailsByUserNameAndHotelName(String userName, String hotelName) {
+		String email = uproxy.showUserByUserName(userName).getEmail();
 		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
 				.filter(b -> b.getHotelname().equalsIgnoreCase(hotelName)).collect(Collectors.toList());
 		if (!bd.isEmpty()) {
@@ -158,8 +158,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
-	public List<HotelBookingDetails> showBookingDetailsbyUserName(String userName) {
-		String email = uproxy.showUserByUserName(userName).getBody().getEmail();
+	public List<HotelBookingDetails> showHotelBookingDetailsByUserName(String userName) {
+		String email = uproxy.showUserByUserName(userName).getEmail();
 		List<HotelBookingDetails> bd = bookingrepo.findAll().stream().filter(b -> b.getEmail().equalsIgnoreCase(email))
 				.sorted((b1, b2) -> b2.getBookedDate().compareTo(b1.getBookedDate())).collect(Collectors.toList());
 		if (!bd.isEmpty()) {
@@ -181,7 +181,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	}
 
 	@Override
-	public HotelBookingDetails resetStatus(long id) {
+	public HotelBookingDetails cancelPaymentByHotelBookingId(long id) {
 		Optional<HotelBookingDetails> bd = bookingrepo.findByHotelBookingId(id);
 		if (!bd.isEmpty()) {
 			bd.get().setPaymentStatus("Payment Cancelled & Refunded");

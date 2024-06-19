@@ -71,7 +71,7 @@ public class HotelBookingDetailsServiceTest {
 	void testRemoveBookingDetails() {
 		when(bookingDetailsRepository.findByHotelBookingId(123456)).thenReturn(Optional.of(bookingDetails));
 
-		String result = bookingDetailsService.removeBookingDetails(123456);
+		String result = bookingDetailsService.removeHotelBookingDetailsByHotelBookingId(123456);
 
 		assertEquals("Booking details are deleted", result);
 	}
@@ -92,7 +92,7 @@ public class HotelBookingDetailsServiceTest {
 	void testShowBookingDetailsbyId() {
 		when(bookingDetailsRepository.findByHotelBookingId(123456)).thenReturn(Optional.of(bookingDetails));
 
-		HotelBookingDetails result = bookingDetailsService.showBookingDetailsbyId(123456);
+		HotelBookingDetails result = bookingDetailsService.showHotelBookingDetailsByHotelBookingId(123456);
 
 		assertEquals(bookingDetails, result);
 	}
@@ -105,7 +105,7 @@ public class HotelBookingDetailsServiceTest {
 		when(bookingDetailsRepository.findByHotelBookingId(bookingId)).thenReturn(Optional.of(bookingDetails));
 		when(bookingDetailsRepository.save(any(HotelBookingDetails.class))).thenReturn(bookingDetails);
 
-		HotelBookingDetails result = bookingDetailsService.paymentstatuschange(bookingId);
+		HotelBookingDetails result = bookingDetailsService.paymentStatusChangeByHotelBookingId(bookingId);
 
 		assertEquals("Payment done", result.getPaymentStatus());
 
@@ -118,6 +118,6 @@ public class HotelBookingDetailsServiceTest {
 		when(bookingDetailsRepository.findByHotelBookingId(bookingId)).thenReturn(Optional.empty());
 
 		assertThrows(HotelBookingDetailsNotFoundException.class,
-				() -> bookingDetailsService.paymentstatuschange(bookingId));
+				() -> bookingDetailsService.paymentStatusChangeByHotelBookingId(bookingId));
 	}
 }

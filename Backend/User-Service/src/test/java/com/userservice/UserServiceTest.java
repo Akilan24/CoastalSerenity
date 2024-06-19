@@ -21,7 +21,7 @@ import com.userservice.repository.UserRepository;
 import com.userservice.service.UserServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
-class UserServiceImplTest {
+class UserServiceTest {
 
 	@Mock
 	private UserRepository userRepository;
@@ -44,7 +44,7 @@ class UserServiceImplTest {
 		when(userRepository.findById(user.getUsername())).thenReturn(Optional.of(user));
 		when(userRepository.save(updatedUser)).thenReturn(updatedUser);
 
-		Registration result = userService.updateUser(user.getUsername(), updatedUser);
+		Registration result = userService.updateUserByUserName(user.getUsername(), updatedUser);
 
 		assertEquals(updatedUser.getAddress(), result.getAddress());
 	}
@@ -57,7 +57,7 @@ class UserServiceImplTest {
 		when(userRepository.existsById(user.get().getUsername())).thenReturn(false);
 
 		assertThrows(UserDetailsNotFoundException.class,
-				() -> userService.updateUser(user.get().getUsername(), user.get()));
+				() -> userService.updateUserByUserName(user.get().getUsername(), user.get()));
 	}
 
 	@Test
@@ -65,7 +65,7 @@ class UserServiceImplTest {
 		String username = "Joe123";
 		when(userRepository.existsById(username)).thenReturn(true);
 
-		String result = userService.removeUser(username);
+		String result = userService.removeUserByUserName(username);
 
 		assertEquals("User details are deleted", result);
 	}
@@ -75,7 +75,7 @@ class UserServiceImplTest {
 		String username = "Joe123";
 		when(userRepository.existsById(username)).thenReturn(false);
 
-		assertThrows(UserDetailsNotFoundException.class, () -> userService.removeUser(username));
+		assertThrows(UserDetailsNotFoundException.class, () -> userService.removeUserByUserName(username));
 	}
 
 	@Test
@@ -178,7 +178,7 @@ class UserServiceImplTest {
 		when(userRepository.findById(username)).thenReturn(Optional.of(user));
 		when(passwordEncoder.encode(newPassword)).thenReturn(encodedPassword);
 
-		String result = userService.updateUserpasswordbyusername(username, newPassword);
+		String result = userService.updateUserPasswordByUserName(username, newPassword);
 
 		assertEquals("User password updated", result);
 		assertEquals(encodedPassword, user.getPassword());
@@ -192,7 +192,7 @@ class UserServiceImplTest {
 		when(userRepository.findById(username)).thenReturn(Optional.empty());
 
 		assertThrows(UserDetailsNotFoundException.class, () -> {
-			userService.updateUserpasswordbyusername(username, newPassword);
+			userService.updateUserPasswordByUserName(username, newPassword);
 		});
 	}
 
@@ -203,7 +203,7 @@ class UserServiceImplTest {
 		when(userRepository.findById(username)).thenReturn(Optional.empty());
 
 		assertThrows(UserDetailsNotFoundException.class,
-				() -> userService.updateUserpasswordbyusername(username, newPassword));
+				() -> userService.updateUserPasswordByUserName(username, newPassword));
 	}
 
 }

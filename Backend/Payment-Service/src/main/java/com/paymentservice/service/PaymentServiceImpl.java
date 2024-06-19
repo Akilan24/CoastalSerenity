@@ -47,7 +47,7 @@ public class PaymentServiceImpl implements PaymentService {
 	CabBookingDetailsProxy cbdproxy;
 
 	@Override
-	public Payment doPayment(String bookingid) {
+	public Payment doPaymentByBookingId(String bookingid) {
 		String[] value = bookingid.split("-");
 		long id = Long.parseLong(value[1]);
 
@@ -57,6 +57,7 @@ public class PaymentServiceImpl implements PaymentService {
 		int count = paymentRepository.findAll().size();
 		p.setPaymentid(count == 0 ? MIN_ID : MIN_ID + count);
 		p.setBookingId(id);
+		p.setPaymentService(value[0]);
 		p.setPaymentDate(LocalDateTime.now());
 		if (value[0].equalsIgnoreCase("hotel")) {
 			HotelBookingDetails hbd = hbdproxy.getBookingDetails(id);
@@ -123,7 +124,7 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public List<Payment> getallpayment() {
+	public List<Payment> getAllPayment() {
 		if (!paymentRepository.findAll().isEmpty())
 			return paymentRepository.findAll();
 		else
@@ -131,7 +132,7 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public String paymentCancel(String id) {
+	public String cancelPaymentByPaymentId(String id) {
 		String[] value = id.split("-");
 		long paymentid = Long.parseLong(value[1]);
 		Payment p;
@@ -140,14 +141,15 @@ public class PaymentServiceImpl implements PaymentService {
 			p.setPaymentStatus("Payment cancelled and refunded");
 			paymentRepository.save(p);
 			if (value[0].equalsIgnoreCase("hotel"))
-				hbdproxy.getBookingDetails(p.getBookingId()).setPaymentStatus("Payment cancelled and refunded");
+				hbdproxy.resetstatus(paymentid);
 			else if (value[0].equalsIgnoreCase("flight"))
-				fbdproxy.getFlightBookingDetailsById(p.getBookingId())
-						.setPaymentStatus("Payment cancelled and refunded");
+				fbdproxy.resetstatus(paymentid);
 			else if (value[0].equalsIgnoreCase("train"))
-				tbdproxy.getTrainBookingDetailsById(p.getBookingId())
-						.setPaymentStatus("Payment cancelled and refunded");
-
+				tbdproxy.resetstatus(paymentid);
+			else if (value[0].equalsIgnoreCase("cab"))
+				cbdproxy.resetstatusCab(paymentid);
+			else if (value[0].equalsIgnoreCase("rentalCab"))
+				cbdproxy.resetstatusRentalCab(paymentid);
 			return "Payment cancelled and refunded";
 		} else
 			throw new PaymentDetailsNotFoundException("Payment not found");

@@ -14,49 +14,50 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.authservice.constant.TrainConstant;
 import com.authservice.entity.Traveller;
 
-@FeignClient(name = "TRAIN-SERVICE", url = "http://localhost:8088/Train")
+@FeignClient(name = TrainConstant.SERVICE, url = TrainConstant.URL)
 public interface TrainProxyController {
 
-	@GetMapping("/getall")
+	@GetMapping(TrainConstant.GET_ALL_TRAIN)
 	public ResponseEntity<List<Train>> getAllTrain();
 
-	@GetMapping("/getbyid/{TrainId}")
+	@GetMapping(TrainConstant.GET_TRAIN_BY_TRAIN_ID)
 	public ResponseEntity<Optional<Train>> getTrainByTrainId(@PathVariable long TrainId);
 
-	@PutMapping("/addseats/{TrainId}")
-	public ResponseEntity<Train> addseat(@PathVariable long TrainId);
+	@PutMapping(TrainConstant.ADD_SEATS_BY_TRAIN_ID)
+	public ResponseEntity<Train> addSeatsByTrainId(@PathVariable long TrainId);
 
-	@PostMapping("/save")
-	public ResponseEntity<Train> createTrain(@RequestBody Train Train);
+	@PostMapping(TrainConstant.SAVE_TRAIN)
+	public ResponseEntity<Train> saveTrain(@RequestBody Train Train);
 
-	@PostMapping("/bookTrain/{id}/{seatType}/{boardingStation}/{username}")
+	@PostMapping(TrainConstant.BOOK_TRAIN_BY_TRAIN_ID)
 	public ResponseEntity<TrainBookingDetails> bookTrain(@PathVariable long id, @RequestBody List<Traveller> travellers,
 			@PathVariable String seatType, @PathVariable String boardingStation, @PathVariable String username);
 
-	@GetMapping("/getTrainbookingdetailsbyid/{id}")
-	public ResponseEntity<TrainBookingDetails> getTrainBookingDetailsById(@PathVariable long id);
+	@GetMapping(TrainConstant.GET_TRAIN_BOOKING_DETAILS_BY_ID)
+	public ResponseEntity<TrainBookingDetails> getTrainBookingDetailsByTrainBookingId(@PathVariable long id);
 
-	@GetMapping("/getTrainbookingdetailsbyusername/{username}")
-	public ResponseEntity<List<TrainBookingDetails>> getTrainBookingDetailsByUsername(@PathVariable String username);
+	@GetMapping(TrainConstant.GET_TRAIN_BOOKING_DETAILS_BY_USERNAME)
+	public ResponseEntity<List<TrainBookingDetails>> getTrainBookingDetailsByUserName(@PathVariable String username);
 
-	@PutMapping("/update/{TrainId}")
-	public ResponseEntity<Train> updateTrain(@PathVariable long TrainId, @RequestBody Train Train);
+	@PutMapping(TrainConstant.UPDATE_TRAIN_BY_TRAIN_ID)
+	public ResponseEntity<Train> updateTrainByTrainId(@PathVariable long TrainId, @RequestBody Train Train);
 
-	@DeleteMapping("/delete/{TrainId}")
-	public ResponseEntity<String> deleteTrain(@PathVariable long TrainId);
+	@DeleteMapping(TrainConstant.DELETE_TRAIN_BY_TRAIN_ID)
+	public ResponseEntity<String> deleteTrainByTrainId(@PathVariable long TrainId);
 
-	@PutMapping("/resetstatus/{TrainId}")
-	public ResponseEntity<TrainBookingDetails> resetstatus(@PathVariable long TrainId);
+	@PutMapping(TrainConstant.CANCEL_PAYMENT_BY_TRAIN_BOOKING_ID)
+	public ResponseEntity<TrainBookingDetails> cancelPaymentByTrainBookingId(@PathVariable long TrainId);
 
-	@GetMapping("/getallcitynames")
+	@GetMapping(TrainConstant.GET_ALL_CITY_NAMES)
 	public ResponseEntity<List<List<String>>> getAllCityNames();
 
-	@GetMapping("/paymentstatuschange/{bookingid}")
-	public ResponseEntity<TrainBookingDetails> paymentstatuschange(@PathVariable long bookingid);
+	@GetMapping(TrainConstant.PAYMENT_STATUS_CHANGE_BY_TRAIN_BOOKING_ID)
+	public ResponseEntity<TrainBookingDetails> paymentStatusChangeByTrainBookingId(@PathVariable long bookingid);
 
-	@GetMapping("/getallavailableTrains/{from}/{to}/{departure}")
+	@GetMapping(TrainConstant.GET_ALL_AVAILABLE_TRAINS)
 	public ResponseEntity<List<Train>> getAllAvailableTrains(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure);
 }

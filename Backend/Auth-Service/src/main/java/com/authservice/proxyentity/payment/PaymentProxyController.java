@@ -7,22 +7,24 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "PAYMENT-SERVICE", url = "http://localhost:8084/Payment")
+import com.authservice.constant.PaymentConstant;
+
+@FeignClient(name = PaymentConstant.SERVICE, url = PaymentConstant.URL)
 public interface PaymentProxyController {
 
-	@GetMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception;
+	@GetMapping(PaymentConstant.DO_PAYMENT_BY_BOOKING_ID)
+	public ResponseEntity<Payment> doPaymentByBookingId(@PathVariable String bookingid) throws Exception;
 
-	@GetMapping("/getallpayment")
-	public ResponseEntity<List<Payment>> getallpayments();
+	@GetMapping(PaymentConstant.GET_ALL_PAYMENT)
+	public ResponseEntity<List<Payment>> getAllPayment();
 
-	@GetMapping("/getpaymentbybookingid/{bookingid}")
-	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable long bookingid);
+	@GetMapping(PaymentConstant.GET_PAYMENT_BY_BOOKING_ID)
+	public ResponseEntity<Payment> getPaymentByBookingId(@PathVariable long bookingid);
 
-	@GetMapping("/getpaymentbypaymentid/{paymentid}")
-	public ResponseEntity<Payment> getpaymentbypaymentid(@PathVariable long paymentid);
+	@GetMapping(PaymentConstant.GET_PAYMENT_BY_PAYMENT_ID)
+	public ResponseEntity<Payment> getPaymentByPaymentId(@PathVariable long paymentid);
 
-	@GetMapping("/paymentCancel/{paymentid}")
-	public ResponseEntity<String> paymentCancel(@PathVariable long paymentid);
+	@GetMapping(PaymentConstant.CANCEL_PAYMENT_BY_PAYMENT_ID)
+	public ResponseEntity<String> cancelPaymentByPaymentId(@PathVariable String paymentid);
 
 }

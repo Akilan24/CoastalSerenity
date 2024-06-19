@@ -14,28 +14,28 @@ import com.busservice.entity.BusTravellerBusSeats;
 public interface BusService {
 	List<Bus> getAllBus();
 
-	Optional<Bus> getBusById(long id);
+	Optional<Bus> getBusByBusId(long id);
 
 	Bus saveBus(Bus Bus);
 
-	BusBookingDetails bookBus(long id, BusTravellerBusSeats btbs, String username, String pickUpPoint,
+	BusBookingDetails bookBusByBusId(long id, BusTravellerBusSeats btbs, String username, String pickUpPoint,
 			String dropPoint);
 
-	BusBookingDetails paymentstatuschange(long bookingid);
+	BusBookingDetails paymentStatusChangeByBusBookingId(long bookingid);
 
-	Bus updateBus(long id, Bus bus);
+	Bus updateBusByBusId(long id, Bus bus);
 
-	String deleteBus(long id);
+	String deleteBusByBusId(long id);
 
-	BusBookingDetails resetStatus(long id);
+	BusBookingDetails cancelPaymentByBusBookingId(long id);
 
 	List<List<String>> getAllCityNames();
 
 	List<Bus> getAllAvailableBuses(String from, String to, Date departure);
 
-	Bus addSeats(long id);
+	Bus addSeatsByBusId(long id);
 
-	BusBookingDetails getBusBookingDetailsById(long id);
+	BusBookingDetails getBusBookingDetailsByBusBookingId(long id);
 
 	List<BusBookingDetails> getBusBookingDetailsByUsername(String username);
 

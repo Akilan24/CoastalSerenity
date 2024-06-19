@@ -14,41 +14,47 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "FLIGHT-SERVICE", url = "http://localhost:8086/Flight")
+import com.authservice.constant.FlightConstant;
+
+@FeignClient(name = FlightConstant.SERVICE, url = FlightConstant.URL)
 public interface FlightProxyController {
 
-	@GetMapping("/getall")
-	public ResponseEntity<List<Flight>> getAllFlights();
+	@GetMapping(FlightConstant.GET_ALL_FLIGHT)
+	public ResponseEntity<List<Flight>> getAllFlight() ;
 
-	@GetMapping("/getbyid/{id}")
-	public ResponseEntity<Optional<Flight>> getFlightById(@PathVariable long id);
+	@GetMapping(FlightConstant.GET_FLIGHT_BY_FLIGHT_ID)
+	public ResponseEntity<Optional<Flight>> getFlightByFlightId(@PathVariable long id) ;
+	@PutMapping(FlightConstant.ADD_SEATS_BY_FLIGHT_ID)
+	public ResponseEntity<Flight> addSeatsByFlightId(@PathVariable long id);
+	@PostMapping(FlightConstant.SAVE_FLIGHT)
+	public ResponseEntity<Flight> saveFlight(@RequestBody Flight flight) ;
 
-	@PostMapping("/save")
-	public ResponseEntity<Flight> createFlight(@RequestBody Flight flight);
+	@PostMapping(FlightConstant.BOOK_FLIGHT_BY_FLIGHT_ID)
+	public ResponseEntity<FlightBookingDetails> bookFlight(@PathVariable long id,
+			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username) ;
 
-	@PutMapping("/update/{id}")
-	public ResponseEntity<Flight> updateFlight(@PathVariable long id, @RequestBody Flight flight);
+	@GetMapping(FlightConstant.GET_FLIGHT_BOOKING_DETAILS_BY_FLIGHT_BOOKING_ID)
+	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsByFlightBookingId(@PathVariable long id);
 
-	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<String> deleteFlight(@PathVariable long id);
+	@GetMapping(FlightConstant.GET_FLIGHT_BOOKING_DETAILS_BY_USERNAME)
+	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username);
 
-	@PutMapping("/resetstatus/{id}")
-	public ResponseEntity<Flight> resetstatus(@PathVariable long id);
+	@PutMapping(FlightConstant.UPDATE_FLIGHT_BY_FLIGHT_ID)
+	public ResponseEntity<Flight> updateFlightByFlightId(@PathVariable long id, @RequestBody Flight flight) ;
 
-	@GetMapping("/getallcitynames")
+	@DeleteMapping(FlightConstant.DELETE_FLIGHT_BY_FLIGHT_ID)
+	public ResponseEntity<String> deleteFlightByFlightId(@PathVariable long id);
+
+	@PutMapping(FlightConstant.CANCEL_PAYMENT_BY_FLIGHT_BOOKING_ID)
+	public ResponseEntity<FlightBookingDetails> cancelPaymentByFlightBookingId(@PathVariable long id);
+
+	@GetMapping(FlightConstant.GET_ALL_CITY_NAMES)
 	public ResponseEntity<List<List<String>>> getAllCityNames();
 
-	@GetMapping("/getallavailableflights/{from}/{to}/{departure}/{travellerClass}")
+	@GetMapping(FlightConstant.PAYMENT_STATUS_CHANGE_BY_FLIGHT_BOOKING_ID)
+	public ResponseEntity<FlightBookingDetails> paymentStatusChangeByFlightBookingId(@PathVariable long bookingid) ;
+
+	@GetMapping(FlightConstant.GET_ALL_AVAILABLE_FLIGHT)
 	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from, @PathVariable String to,
-			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure, @PathVariable String travellerClass);
-
-	@PostMapping("/bookflight/{id}/{username}")
-	public ResponseEntity<FlightBookingDetails> bookFlight(@PathVariable long id,
-			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username);
-
-	@GetMapping("/getflightbookingdetailsbyid/{id}")
-	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsById(@PathVariable long id);
-
-	@GetMapping("/getflightbookingdetailsbyusername/{username}")
-	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username);
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure, @PathVariable String travellerClass) ;
 }

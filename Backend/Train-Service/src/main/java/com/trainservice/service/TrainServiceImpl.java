@@ -33,9 +33,6 @@ public class TrainServiceImpl implements TrainService {
 	private TrainRepository trainRepository;
 
 	@Autowired
-	private TrainSeatsRepository trainSeatsRepository;
-
-	@Autowired
 	private TrainBookingDetailsRepository trainBookingDetailsRepository;
 
 	@Autowired
@@ -50,7 +47,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public Optional<Train> getTrainById(long id) {
+	public Optional<Train> getTrainByTrainId(long id) {
 		Optional<Train> Train = trainRepository.findById(id);
 		if (!Train.isEmpty())
 			return Train;
@@ -72,7 +69,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public String deleteTrain(long id) {
+	public String deleteTrainByTrainId(long id) {
 		Optional<Train> Train = trainRepository.findById(id);
 		if (!Train.isEmpty()) {
 			trainRepository.deleteById(id);
@@ -83,7 +80,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public Train updateTrain(long id, Train Train) {
+	public Train updateTrainByTrainId(long id, Train Train) {
 		Optional<Train> b = trainRepository.findById(id);
 		if (!b.isEmpty()) {
 			b.get().setPnr(Train.getPnr());
@@ -106,7 +103,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public TrainBookingDetails resetStatus(long id) {
+	public TrainBookingDetails cancelPaymentByTrainBookingId(long id) {
 		Optional<TrainBookingDetails> fbd = trainBookingDetailsRepository.findById(id);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment Cancelled & Refunded");
@@ -185,7 +182,7 @@ public class TrainServiceImpl implements TrainService {
 		bookingDetails.setNextDay(Train.getNextDay());
 		bookingDetails.setUsername(username);
 		bookingDetails.setPaymentStatus("Payment has to be done");
-		Registration user = uproxy.showUserByUserName(username).getBody();
+		Registration user = uproxy.showUserByUserName(username);
 		bookingDetails.setName(user.getName());
 		bookingDetails.setEmail(user.getEmail());
 		bookingDetails.setPhonenumber(user.getMobile());
@@ -259,7 +256,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public Train addSeats(long id) {
+	public Train addSeatsByTrainId(long id) {
 
 		int TOTAL_COACH_1A = 1;
 		int TOTAL_SEAT_PER_COACH_1A = 18;
@@ -340,7 +337,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public TrainBookingDetails paymentstatuschange(long bookingid) {
+	public TrainBookingDetails paymentStatusChangeByTrainBookingId(long bookingid) {
 		Optional<TrainBookingDetails> fbd = trainBookingDetailsRepository.findById(bookingid);
 		if (fbd.isPresent()) {
 			fbd.get().setPaymentStatus("Payment done");
@@ -351,7 +348,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public TrainBookingDetails getTrainBookingDetailsById(long id) {
+	public TrainBookingDetails getTrainBookingDetailsByTrainBookingId(long id) {
 		Optional<TrainBookingDetails> TrainBookingDetails = trainBookingDetailsRepository.findById(id);
 		if (!TrainBookingDetails.isEmpty())
 			return TrainBookingDetails.get();
@@ -361,7 +358,7 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
-	public List<TrainBookingDetails> getTrainBookingDetailsByUsername(String username) {
+	public List<TrainBookingDetails> getTrainBookingDetailsByUserName(String username) {
 		List<TrainBookingDetails> TrainBookingDetails = trainBookingDetailsRepository.findAll().stream()
 				.filter(b -> b.getUsername().equalsIgnoreCase(username))
 				.sorted((b1, b2) -> b2.getBookedDate().compareTo(b1.getBookedDate())).collect(Collectors.toList());

@@ -5,17 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
+import com.paymentservice.constant.TrainProxyConstant;
 import com.paymentservice.externalclass.TrainBookingDetails;
 
-@FeignClient(name = "TRAIN-SERVICE", url = "http://localhost:8088/Train")
+@FeignClient(name = TrainProxyConstant.SERVICE, url = TrainProxyConstant.URL)
 public interface TrainBookingDetailsProxy {
 
-	@GetMapping("/getTrainbookingdetailsbyid/{id}")
+	@GetMapping(TrainProxyConstant.GET_TRAIN_BOOKING_DETAILS_BY_TRAIN_BOOKING_ID)
 	public TrainBookingDetails getTrainBookingDetailsById(@PathVariable long id);
 
-	@GetMapping("/paymentstatuschange/{bookingid}")
+	@GetMapping(TrainProxyConstant.PAYMENT_STATUS_CHANGE_BY_TRAIN_BOOKING_ID)
 	public TrainBookingDetails paymentstatuschange(@PathVariable long bookingid);
 
-	@PutMapping("/resetstatus/{TrainId}")
+	@PutMapping(TrainProxyConstant.CANCEL_PAYMENT_BY_TRAIN_BOOKING_ID)
 	public TrainBookingDetails resetstatus(@PathVariable long TrainId);
 }

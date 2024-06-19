@@ -10,7 +10,7 @@ import com.userservice.entity.Traveller;
 @Service
 public interface UserService {
 
-	public String removeUser(String username);
+	public String removeUserByUserName(String username);
 
 	public List<Registration> ShowAllUser();
 
@@ -20,18 +20,18 @@ public interface UserService {
 
 	public Registration ShowUserByMobileNumber(String mobilenumber);
 
-	public Registration updateUser(String username, Registration user);
+	public Registration updateUserByUserName(String username, Registration user);
 
-	public String updateUserpasswordbyusername(String username, String password);
+	public String updateUserPasswordByUserName(String username, String password);
 
-	public List<Traveller> getTravellerByUsername(String username);
+	public List<Traveller> getAllTravellersByUsername(String username);
 
-	public String addtraveller(String username, Traveller t);
+	public String addTravellerByUserName(String username, Traveller t);
 
-	public String updatetraveller(String username, Traveller t);
+	public String updateTravellerByUserName(String username, Traveller t);
 
-	public Traveller gettraveller(String username, String name);
+	public Traveller getTravellerByTravellerName(String username, String name);
 
-	public String deletetraveller(String username, String name);
+	public String deleteTravellerByTravellerName(String username, String name);
 
 }

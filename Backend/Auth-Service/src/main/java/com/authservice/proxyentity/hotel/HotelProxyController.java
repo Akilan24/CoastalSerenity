@@ -14,70 +14,73 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.authservice.proxyentity.hotel.Hotel;
+import com.authservice.constant.HotelConstant;
 
 import jakarta.validation.Valid;
 
-@FeignClient(name = "HOTEL-SERVICE", url = "http://localhost:8082/Hotel")
+@FeignClient(name = HotelConstant.SERVICE, url = HotelConstant.URL)
 public interface HotelProxyController {
 
-	@GetMapping("/getallhotel")
-	public ResponseEntity<List<Hotel>> getHotels();
+	@GetMapping(HotelConstant.GET_ALL_HOTEL)
+	public ResponseEntity<List<Hotel>> getAllHotel() ;
 
-	@GetMapping("/getallhotelcitynames")
-	public ResponseEntity<Set<String>> getHotelCityNames();
-
-	@GetMapping("/getallhotelnamesbycity/{city}")
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_NAMES_BY_CITY)
 	public ResponseEntity<List<String>> getHotelNamesByCity(@PathVariable String city);
 
-	@GetMapping("/gethotelbyid/{id}")
-	public ResponseEntity<Hotel> gethotelbyid(@PathVariable Long id);
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_CITY_NAMES)
+	public ResponseEntity<Set<String>> getAllHotelCityNames() ;
 
-	@GetMapping("/gethotelbyhotelname/{hotelname}")
-	public ResponseEntity<Hotel> gethotelbyhotelname(@PathVariable String hotelname);
+	@GetMapping(HotelConstant.GET_HOTEL_BY_HOTEL_ID)
+	public ResponseEntity<Hotel> getHotelByHotelId(@PathVariable Long id);
 
-	@GetMapping("/gethotelbycityname/{cityname}")
-	public ResponseEntity<List<Hotel>> gethotelbycityname(@PathVariable String cityname);
+	@GetMapping(HotelConstant.GET_HOTEL_BY_HOTEL_NAME)
+	public ResponseEntity<Hotel> getHotelByHotelName(@PathVariable String hotelname) ;
 
-	@PostMapping("/addhotel")
-	public ResponseEntity<Hotel> addhotel(@RequestBody @Valid Hotel htl) throws Exception;
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_BY_CITY_NAME)
+	public ResponseEntity<List<Hotel>> getAllHotelByCity(@PathVariable String cityname) ;
 
-	@PutMapping("/updatehotel")
-	public ResponseEntity<Hotel> updatehotel(@RequestBody @Valid Hotel ht);
+	@PostMapping(HotelConstant.ADD_HOTEL)
+	public ResponseEntity<Hotel> addHotel(@RequestBody @Valid Hotel htl) throws Exception;
 
-	@DeleteMapping("/deletebyid/{id}")
-	public ResponseEntity<String> deletehotel(@PathVariable Long id);
+	@PutMapping(HotelConstant.UPDATE_HOTEL)
+	public ResponseEntity<Hotel> updateHotel(@RequestBody @Valid Hotel ht);
 
-	@GetMapping("/HotelBookingDetails/getall")
-	public ResponseEntity<List<HotelBookingDetails>> listBookingDetails();
+	@DeleteMapping(HotelConstant.DELETE_HOTEL_BY_HOTEL_ID)
+	public ResponseEntity<String> deleteHotelByHotelId(@PathVariable Long id) ;
 
-	@GetMapping("/HotelBookingDetails/availablerooms/{city}/{roomtype}/{fromDate}/{ToDate}")
+	@GetMapping(HotelConstant.GET_ALL_HOTEL_BOOKING_DETAILS)
+	public ResponseEntity<List<HotelBookingDetails>> listHotelBookingDetails() ;
+
+	@GetMapping(HotelConstant.GET_ALL_AVAILABLE_ROOMS)
 	public ResponseEntity<List<HotelRooms>> checkRoomAvailability(@PathVariable String city,
 			@PathVariable String roomtype, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date ToDate);
 
-	@GetMapping("/HotelBookingDetails/getbyid/{bookingid}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetails(@PathVariable long bookingid);
+	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_ID)
+	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid);
 
-	@GetMapping("/HotelBookingDetails/getbyusername/{username}/{hotelName}")
-	public ResponseEntity<HotelBookingDetails> getBookingDetailsbyusernameandhotelname(@PathVariable String username,
+	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME_AND_HOTELNAME)
+	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByUserNameAndHotelName(@PathVariable String username,
 			@PathVariable String hotelName);
 
-	@GetMapping("/HotelBookingDetails/getbyusername/{username}")
-	public ResponseEntity<List<HotelBookingDetails>> getBookingDetailsbyusername(@PathVariable String username);
+	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME)
+	public ResponseEntity<List<HotelBookingDetails>> showHotelBookingDetailsByUserName(@PathVariable String username);
 
-	@PutMapping("/HotelBookingDetails/paymentstatuschangebybid/{bookingid}")
-	public ResponseEntity<HotelBookingDetails> paymentstatuschange(@PathVariable long bookingid);
+	@PutMapping(HotelConstant.PAYMENT_STATUS_CHANGE_BY_HOTEL_BOOKING_ID)
+	public ResponseEntity<HotelBookingDetails> paymentStatusChangeByHotelBookingId(@PathVariable long bookingid);
 
-	@PostMapping("/HotelBookingDetails/bookroom/{username}")
+	@PostMapping(HotelConstant.BOOK_ROOM_BY_USERNAME)
 	public ResponseEntity<HotelBookingDetails> bookroom(@PathVariable String username,
 			@RequestBody HotelBookingDetails bd);
 
-	@DeleteMapping("/HotelBookingDetails/deletebyid/{bookingid}")
-	public ResponseEntity<String> remove(@PathVariable long bookingid);
+	@DeleteMapping(HotelConstant.DELETE_HOTEL_BOOKING_DETAILS_BY_HOTEL_BOOKING_ID)
+	public ResponseEntity<String> removeHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid);
 
-	@PostMapping("/HotelBookingDetails/addguests/{bookingid}")
+	@PostMapping(HotelConstant.ADD_GUEST_BY_BOOKING_ID)
 	public ResponseEntity<HotelBookingDetails> addGuest(@PathVariable long bookingid,
 			@RequestBody List<HotelGuest> guest);
+
+	@PutMapping(HotelConstant.CANCEL_PAYMENT_BY_HOTEL_BOOKING_ID)
+	public ResponseEntity<HotelBookingDetails> cancelPaymentByHotelBookingId(@PathVariable long id);
 
 }

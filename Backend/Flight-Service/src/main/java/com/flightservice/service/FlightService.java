@@ -12,29 +12,29 @@ import com.flightservice.entity.FlightTravellerFlightSeats;
 
 @Service
 public interface FlightService {
-	List<Flight> getAllFlights();
+	List<Flight> getAllFlight();
 
-	Optional<Flight> getFlightById(long id);
+	Optional<Flight> getFlightByFlightId(long id);
 
 	Flight saveFlight(Flight flight);
 
 	FlightBookingDetails bookFlight(long id, FlightTravellerFlightSeats ftfs, String username);
 
-	FlightBookingDetails paymentstatuschange(long bookingid);
+	FlightBookingDetails paymentStatusChangeByFlightBookingId(long bookingid);
 
-	Flight updateFlight(long id, Flight flight);
+	Flight updateFlightByFlightId(long id, Flight flight);
 
-	String deleteFlight(long id);
+	String deleteFlightByFlightId(long id);
 
-	FlightBookingDetails resetStatus(long id);
+	FlightBookingDetails cancelPaymentByFlightBookingId(long id);
 
 	List<List<String>> getAllCityNames();
 
 	List<Flight> getAllAvailableFlights(String from, String to, Date departure, String travellerClass);
 
-	Flight addSeats(long id);
+	Flight addSeatsByFlightId(long id);
 
-	FlightBookingDetails getFlightBookingDetailsById(long id);
+	FlightBookingDetails getFlightBookingDetailsByFlightBookingId(long id);
 
 	List<FlightBookingDetails> getFlightBookingDetailsByUsername(String username);
 

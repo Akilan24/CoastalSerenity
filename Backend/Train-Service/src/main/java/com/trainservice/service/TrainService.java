@@ -14,29 +14,29 @@ import com.trainservice.externalclass.Traveller;
 public interface TrainService {
 	List<Train> getAllTrain();
 
-	Optional<Train> getTrainById(long id);
+	Optional<Train> getTrainByTrainId(long id);
 
 	Train saveTrain(Train Train);
 
 	TrainBookingDetails bookTrain(long id, List<Traveller> travellers, String boardingStations, String seatType,
 			String username);
 
-	TrainBookingDetails paymentstatuschange(long bookingid);
+	TrainBookingDetails paymentStatusChangeByTrainBookingId(long bookingid);
 
-	Train updateTrain(long id, Train Train);
+	Train updateTrainByTrainId(long id, Train Train);
 
-	String deleteTrain(long id);
+	String deleteTrainByTrainId(long id);
 
-	TrainBookingDetails resetStatus(long id);
+	TrainBookingDetails cancelPaymentByTrainBookingId(long id);
 
 	List<List<String>> getAllCityNames();
 
 	List<Train> getAllAvailableTrains(String from, String to, Date departure);
 
-	Train addSeats(long id);
+	Train addSeatsByTrainId(long id);
 
-	TrainBookingDetails getTrainBookingDetailsById(long id);
+	TrainBookingDetails getTrainBookingDetailsByTrainBookingId(long id);
 
-	List<TrainBookingDetails> getTrainBookingDetailsByUsername(String username);
+	List<TrainBookingDetails> getTrainBookingDetailsByUserName(String username);
 
 }

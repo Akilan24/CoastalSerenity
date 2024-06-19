@@ -14,57 +14,68 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.roomservice.constant.RoomConstant;
 import com.roomservice.entity.Room;
 import com.roomservice.service.RoomServiceImpl;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/Room")
+@Slf4j
+@RequestMapping(RoomConstant.ROOM)
 public class RoomController {
 
 	@Autowired
 	RoomServiceImpl rservice;
 
-	@PostMapping("/addroom/{hid}")
-	public ResponseEntity<Room> addroom(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception {
-		return new ResponseEntity<>(rservice.addRoomDetails(hid, room), HttpStatus.OK);
+	@PostMapping(RoomConstant.ADD_ROOM_BY_HOTEL_ID)
+	public ResponseEntity<Room> addRoomByHotelId(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception {
+		log.info("addRoomByHotelId controller called");
+		return new ResponseEntity<>(rservice.addRoomDetailsByHotelId(hid, room), HttpStatus.OK);
 
 	}
 
-	@PutMapping("/updateroom")
-	public ResponseEntity<Room> updateroom(@RequestBody @Valid Room room) {
+	@PutMapping(RoomConstant.UPDATE_ROOM)
+	public ResponseEntity<Room> updateRoom(@RequestBody @Valid Room room) {
+		log.info("updateRoom controller called");
 		return new ResponseEntity<>(rservice.updateRoomDetails(room), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/deleteroombyid/{id}")
-	public ResponseEntity<String> deleteroom(@PathVariable Integer id) {
-		return new ResponseEntity<>(rservice.removeRoomDetails(id), HttpStatus.OK);
+	@DeleteMapping(RoomConstant.DELETE_ROOM_BY_HOTEL_ID)
+	public ResponseEntity<String> deleteRoomByRoomId(@PathVariable Integer id) {
+		log.info("deleteRoomByRoomId controller called");
+		return new ResponseEntity<>(rservice.removeRoomDetailsByRoomId(id), HttpStatus.OK);
 	}
 
-	@GetMapping("/getallroom")
-	public ResponseEntity<List<Room>> getall() {
+	@GetMapping(RoomConstant.GET_ALL_ROOM)
+	public ResponseEntity<List<Room>> getAllRoom() {
+		log.info("getAllRoom controller called");
 		return new ResponseEntity<>(rservice.showAllRoomDetails(), HttpStatus.OK);
 	}
 
-	@GetMapping("/getroombyid/{id}")
-	public ResponseEntity<Room> getroom(@PathVariable Integer id) {
-		return new ResponseEntity<>(rservice.showRoomDetailsbyId(id), HttpStatus.OK);
+	@GetMapping(RoomConstant.GET_ROOM_BY_ROOM_ID)
+	public ResponseEntity<Room> getRoomByRoomId(@PathVariable Integer id) {
+		log.info("getRoomByRoomId controller called");
+		return new ResponseEntity<>(rservice.showRoomDetailsByRoomId(id), HttpStatus.OK);
 	}
 
-	@GetMapping("/getroombyhotelid/{hid}")
-	public ResponseEntity<List<Room>> getroombyhid(@PathVariable Integer hid) {
+	@GetMapping(RoomConstant.GET_ROOMS_BY_HOTEL_ID)
+	public ResponseEntity<List<Room>> getRoomsByHotelId(@PathVariable Integer hid) {
+		log.info("getRoomsByHotelId controller called");
 		return new ResponseEntity<>(rservice.showAllRoomDetailsByHotelId(hid), HttpStatus.OK);
 	}
-
-	@GetMapping("/getroombyprice/{price}")
-	public ResponseEntity<List<Room>> getroom(@PathVariable Double price) {
-		return new ResponseEntity<>(rservice.showRoomDetailByPrice(price), HttpStatus.OK);
+ 
+	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_PRICE)
+	public ResponseEntity<List<Room>> getRoomsByRoomPrice(@PathVariable Double price) {
+		log.info("getRoomsByRoomPrice controller called");
+		return new ResponseEntity<>(rservice.showRoomDetailByRoomPrice(price), HttpStatus.OK);
 	}
 
-	@GetMapping("/getroombyroomtype/{type}")
-	public ResponseEntity<List<Room>> getroombytype(@PathVariable String type) {
-		return new ResponseEntity<>(rservice.showRoomDetailBytype(type), HttpStatus.OK);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_TYPE)
+	public ResponseEntity<List<Room>> getRoomsByRoomType(@PathVariable String type) {
+		log.info("getRoomsByRoomType controller called");
+		return new ResponseEntity<>(rservice.showRoomDetailByRoomType(type), HttpStatus.OK);
 	}
 
 }

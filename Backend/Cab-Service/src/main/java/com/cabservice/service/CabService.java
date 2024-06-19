@@ -19,67 +19,67 @@ import com.cabservice.entity.TripDetails;
 public interface CabService {
 	List<Cab> getAllCabs();
 
-	Optional<Cab> getCabById(long id);
+	Optional<Cab> getCabByCabId(long id);
 
 	Cab saveCab(Cab Cab);
 
-	CabBookingDetails bookCab(long id, String username, BookingRequest bookingRequest);
+	CabBookingDetails bookCabByCabId(long id, String username, BookingRequest bookingRequest);
 
-	RentalCabBookingDetails bookRentalCab(long id, String username, BookingRequest bookingRequest);
+	RentalCabBookingDetails bookRentalCabByRentalCabId(long id, String username, BookingRequest bookingRequest);
 
-	CabBookingDetails paymentstatuschangeCab(long bookingid);
+	CabBookingDetails paymentStatusChangeByCabBookingId(long bookingid);
 
-	RentalCabBookingDetails paymentstatuschangeRentalCab(long bookingid);
+	RentalCabBookingDetails paymentStatusChangeByRentalCabBookingId(long bookingid);
 
-	Cab updateCab(long id, Cab Cab);
+	Cab updateCabByCabId(long id, Cab Cab);
 
-	String deleteCab(long id);
+	String deleteCabByCabId(long id);
 
-	CabBookingDetails resetStatusCab(long id);
+	CabBookingDetails cancelPaymentByCabBookingId(long id);
 
-	RentalCabBookingDetails resetStatusRentalCab(long id);
+	RentalCabBookingDetails cancelPaymentByRentalCabBookingId(long id);
 
 	List<List<String>> getAllCityNames();
 
-	CabBookingDetails getCabBookingDetailsById(long id);
+	CabBookingDetails getCabBookingDetailsByCabBookingId(long id);
 
 	List<CabBookingDetails> getCabBookingDetailsByUsername(String username);
 
-	RentalCabBookingDetails getRentalCabBookingDetailsById(long id);
+	RentalCabBookingDetails getRentalCabBookingDetailsByRentalCabBookingId(long id);
 
 	List<RentalCabBookingDetails> getRentalCabBookingDetailsByUsername(String username);
 
 	TripDetails saveTrip(TripDetails trip);
 
-	TripDetails updateTrip(int id, TripDetails tripDetails);
+	TripDetails updateTripByTripId(int id, TripDetails tripDetails);
 
-	String deleteTrip(int id);
+	String deleteTripByTripId(int id);
 
 	List<TripDetails> getAllTrips();
 
-	Optional<TripDetails> getTripDetailById(int id);
+	Optional<TripDetails> getTripByTripId(int id);
 
 	RentalCab saveRentalCab(RentalCab rentalCab);
 
-	RentalCab updateRentalCab(long rentalCabId, RentalCab rentalCab);
+	RentalCab updateRentalCabByRentalCabId(long rentalCabId, RentalCab rentalCab);
 
-	String deleteRentalCab(long rentalCabId);
+	String deleteRentalCabByRentalCabId(long rentalCabId);
 
 	List<RentalCab> getAllRentalCab();
 
-	Optional<RentalCab> getRentalCabById(long rentalCabId);
+	Optional<RentalCab> getRentalCabByRentalCabId(long rentalCabId);
 
 	RentalPackage saveRentalPackage(RentalPackage rentalPackage);
 
 	List<String> getAllRentalCityNames();
 
-	RentalPackage updateRentalPackage(int rentalPackageId, RentalPackage rentalPackage);
+	RentalPackage updateRentalPackageByRentalPackageId(int rentalPackageId, RentalPackage rentalPackage);
 
-	String deleteRentalPackage(int rentalPackageId);
+	String deleteRentalPackageByRentalPackageId(int rentalPackageId);
 
 	List<RentalPackage> getAllRentalPackage();
 
-	Optional<RentalPackage> getRentalPackageById(int rentalPackageId);
+	Optional<RentalPackage> getRentalPackageByByRentalPackageId(int rentalPackageId);
 
 	CabDetailsTripDetails getCabDetailsAndTripDetails(String from, String to);
 

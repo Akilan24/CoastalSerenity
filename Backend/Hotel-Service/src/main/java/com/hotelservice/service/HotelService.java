@@ -10,22 +10,22 @@ import com.hotelservice.entity.Hotel;
 @Service
 public interface HotelService {
 
-	public List<Hotel> getHotels();
+	public List<Hotel> getAllHotel();
 
-	public Hotel gethotelByHotelId(long id);
+	public Hotel getHotelByHotelId(long id);
 
-	public Hotel gethotelByHotelName(String hotelName);
+	public Hotel getHotelByHotelName(String hotelName);
 
-	public List<Hotel> gethotelByCity(String City);
+	public List<Hotel> getAllHotelByCity(String City);
 
-	public Hotel addhotel(Hotel htl) throws Exception;
+	public Hotel addHotel(Hotel htl) throws Exception;
 
-	public Hotel updatehotel(Hotel ht);
+	public Hotel updateHotel(Hotel ht);
 
-	public String deletehotel(long id);
+	public String deleteHotelByHotelId(long id);
 
 	public List<String> getHotelNamesByCity(String city);
 
-	public Set<String> getHotelCityNames();
+	public Set<String> getAllHotelCityNames();
 
 }

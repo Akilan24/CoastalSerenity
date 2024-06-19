@@ -6,12 +6,10 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,9 +34,9 @@ class HotelControllerTest {
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", "image", null));
 		hotels.add(new Hotel(123457L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", "image", null));
-		when(hotelService.getHotels()).thenReturn(hotels);
+		when(hotelService.getAllHotel()).thenReturn(hotels);
 
-		ResponseEntity<List<Hotel>> response = hotelController.getHotels();
+		ResponseEntity<List<Hotel>> response = hotelController.getAllHotel();
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(hotels, response.getBody());
@@ -50,9 +48,9 @@ class HotelControllerTest {
 		Hotel hotel = new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", "image", null);
 
-		when(hotelService.gethotelByHotelId(id)).thenReturn(hotel);
+		when(hotelService.getHotelByHotelId(id)).thenReturn(hotel);
 
-		ResponseEntity<Hotel> response = hotelController.gethotelbyid(id);
+		ResponseEntity<Hotel> response = hotelController.getHotelByHotelId(id);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(hotel, response.getBody());
@@ -64,9 +62,9 @@ class HotelControllerTest {
 		Hotel hotel = new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", "image", null);
 
-		when(hotelService.gethotelByHotelName(hotelName)).thenReturn(hotel);
+		when(hotelService.getHotelByHotelName(hotelName)).thenReturn(hotel);
 
-		ResponseEntity<Hotel> response = hotelController.gethotelbyhotelname(hotelName);
+		ResponseEntity<Hotel> response = hotelController.getHotelByHotelName(hotelName);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(hotel, response.getBody());
@@ -81,9 +79,9 @@ class HotelControllerTest {
 		hotels.add(new Hotel(123457L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", "image", null));
 
-		when(hotelService.gethotelByCity(cityName)).thenReturn(hotels);
+		when(hotelService.getAllHotelByCity(cityName)).thenReturn(hotels);
 
-		ResponseEntity<List<Hotel>> response = hotelController.gethotelbycityname(cityName);
+		ResponseEntity<List<Hotel>> response = hotelController.getAllHotelByCity(cityName);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(hotels, response.getBody());
@@ -93,9 +91,9 @@ class HotelControllerTest {
 	void testAddHotel() throws Exception {
 		Hotel hotel = new Hotel(123456L, "Bangalore", "Hotel1", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876543210", "8765432109", "https://www.hotelwebsite.com", "image", null);
-		when(hotelService.addhotel(hotel)).thenReturn(hotel);
+		when(hotelService.addHotel(hotel)).thenReturn(hotel);
 
-		ResponseEntity<Hotel> response = hotelController.addhotel(hotel);
+		ResponseEntity<Hotel> response = hotelController.addHotel(hotel);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(hotel, response.getBody());
@@ -108,9 +106,9 @@ class HotelControllerTest {
 		Hotel updatedhotel = new Hotel(123456, "Bangalore", "Hotel", "123 Main Street", "Hotel Description",
 				"hotel@example.com", "9876548455", "8765474210", "https://www.hotelwebsite.com", "image", null);
 
-		when(hotelService.updatehotel(hotel)).thenReturn(updatedhotel);
+		when(hotelService.updateHotel(hotel)).thenReturn(updatedhotel);
 
-		ResponseEntity<Hotel> response = hotelController.updatehotel(hotel);
+		ResponseEntity<Hotel> response = hotelController.updateHotel(hotel);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(updatedhotel, response.getBody());
@@ -119,9 +117,9 @@ class HotelControllerTest {
 	@Test
 	void testDeleteHotel() {
 		Long id = 123456L;
-		when(hotelService.deletehotel(id)).thenReturn("Hotel deleted successfully");
+		when(hotelService.deleteHotelByHotelId(id)).thenReturn("Hotel deleted successfully");
 
-		ResponseEntity<String> response = hotelController.deletehotel(id);
+		ResponseEntity<String> response = hotelController.deleteHotelByHotelId(id);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals("Hotel deleted successfully", response.getBody());

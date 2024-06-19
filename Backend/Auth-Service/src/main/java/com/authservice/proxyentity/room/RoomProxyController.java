@@ -11,35 +11,36 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.authservice.proxyentity.room.Room;
+import com.authservice.constant.RoomConstant;
 
 import jakarta.validation.Valid;
 
-@FeignClient(name = "ROOM-SERVICE", url = "http://localhost:8083/Room")
+@FeignClient(name = RoomConstant.SERVICE, url = RoomConstant.URL)
 public interface RoomProxyController {
 
-	@PostMapping("/addroom/{hid}")
-	public ResponseEntity<Room> addroom(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception;
+	@PostMapping(RoomConstant.ADD_ROOM_BY_HOTEL_ID)
+	public ResponseEntity<Room> addRoomByHotelId(@PathVariable long hid, @RequestBody @Valid Room room)
+			throws Exception;
 
-	@PutMapping("/updateroom")
-	public ResponseEntity<Room> updateroom(@RequestBody @Valid Room room);
+	@PutMapping(RoomConstant.UPDATE_ROOM)
+	public ResponseEntity<Room> updateRoom(@RequestBody @Valid Room room);
 
-	@DeleteMapping("/deleteroombyid/{id}")
-	public ResponseEntity<String> deleteroom(@PathVariable Integer id);
+	@DeleteMapping(RoomConstant.DELETE_ROOM_BY_HOTEL_ID)
+	public ResponseEntity<String> deleteRoomByRoomId(@PathVariable Integer id);
 
-	@GetMapping("/getallroom")
-	public ResponseEntity<List<Room>> getall();
+	@GetMapping(RoomConstant.GET_ALL_ROOM)
+	public ResponseEntity<List<Room>> getAllRoom();
 
-	@GetMapping("/getroombyid/{id}")
-	public ResponseEntity<Room> getroom(@PathVariable Integer id);
+	@GetMapping(RoomConstant.GET_ROOM_BY_ROOM_ID)
+	public ResponseEntity<Room> getRoomByRoomId(@PathVariable Integer id);
 
-	@GetMapping("/getroombyhotelid/{hid}")
-	public ResponseEntity<List<Room>> getroombyhid(@PathVariable Integer hid);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_HOTEL_ID)
+	public ResponseEntity<List<Room>> getRoomsByHotelId(@PathVariable Integer hid);
 
-	@GetMapping("/getroombyprice/{price}")
-	public ResponseEntity<List<Room>> getroom(@PathVariable Double price);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_PRICE)
+	public ResponseEntity<List<Room>> getRoomsByRoomPrice(@PathVariable Double price);
 
-	@GetMapping("/getroombyroomtype/{type}")
-	public ResponseEntity<List<Room>> getroombytype(@PathVariable String type);
+	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_TYPE)
+	public ResponseEntity<List<Room>> getRoomsByRoomType(@PathVariable String type);
 
 }

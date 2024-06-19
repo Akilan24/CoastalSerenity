@@ -13,115 +13,116 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "CAB-SERVICE", url = "http://localhost:8085/Cab")
+import com.authservice.constant.CabConstant;
+
+@FeignClient(name = CabConstant.SERVICE, url = CabConstant.URL)
 public interface CabProxyController {
 
-	@GetMapping("/getall")
+	@GetMapping(CabConstant.GET_CAB_BY_CAB_ID)
 	ResponseEntity<List<Cab>> getAllCabs();
 
-	@GetMapping("/getbyid/{id}")
+	@GetMapping(CabConstant.ADD_SEATS_BY_CAB_ID)
 	ResponseEntity<Optional<Cab>> getCabById(@PathVariable("id") long id);
 
-	@PostMapping("/save")
+	@PostMapping(CabConstant.SAVE_CAB)
 	ResponseEntity<Cab> createCab(@RequestBody Cab cab);
 
-	@PostMapping("/bookCab/{id}/{username}")
+	@PostMapping(CabConstant.BOOK_CAB_BY_CAB_ID)
 	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable String id, @PathVariable String username,
 			@RequestBody BookingRequest bookingRequest);
 
-	@PostMapping("/bookRentalCab/{id}/{username}")
+	@PostMapping(CabConstant.BOOK_RENTAL_CAB_BY_CAB_ID)
 	public ResponseEntity<RentalCabBookingDetails> bookRentalCab(@PathVariable long id, @PathVariable String username,
 			@RequestBody BookingRequest bookingRequest);
 
-	@GetMapping("/getCabbookingdetailsbyid/{id}")
+	@GetMapping(CabConstant.GET_CAB_BOOKING_DETAILS_BY_CAB_BOOKING_ID)
 	ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id);
 
-	@GetMapping("/getCabbookingdetailsbyusername/{username}")
+	@GetMapping(CabConstant.GET_CAB_BOOKING_DETAILS_BY_USERNAME)
 	ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable("username") String username);
 
-	@GetMapping("/getRentalCabbookingdetailsbyid/{id}")
-	ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsById(@PathVariable("id") long id);
+	@GetMapping(CabConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_RENTAL_CAB_BOOKING_ID)
+	ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsByRentalCabBookingId(@PathVariable long id);
 
-	@GetMapping("/getRentalCabbookingdetailsbyusername/{username}")
-	ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(
-			@PathVariable("username") String username);
+	@GetMapping(CabConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_USERNAME)
+	ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(@PathVariable String username);
 
-	@PutMapping("/update/{id}")
+	@PutMapping(CabConstant.UPDATE_CAB_BY_CAB_ID)
 	ResponseEntity<Cab> updateCab(@PathVariable("id") long id, @RequestBody Cab cab);
 
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping(CabConstant.DELETE_CAB_BY_CAB_ID)
 	ResponseEntity<String> deleteCab(@PathVariable("id") long id);
 
-	@PutMapping("/resetstatusCab/{id}")
+	@PutMapping(CabConstant.CANCEL_PAYMENT_BY_CAB_BOOKING_ID)
 	ResponseEntity<CabBookingDetails> resetstatusCab(@PathVariable("id") long id);
 
-	@PutMapping("/resetstatusRentalCab/{id}")
+	@PutMapping(CabConstant.CANCEL_PAYMENT_BY_RENTAL_CAB_BOOKING_ID)
 	ResponseEntity<CabBookingDetails> resetstatusRentalCab(@PathVariable("id") long id);
 
-	@GetMapping("/getallcitynames")
+	@GetMapping(CabConstant.GET_ALL_CITY_NAMES)
 	ResponseEntity<List<List<String>>> getAllCityNames();
 
-	@GetMapping("/paymentstatuschangeCab/{bookingid}")
+	@GetMapping(CabConstant.PAYMENT_STATUS_CHANGE_BY_CAB_BOOKING_ID)
 	ResponseEntity<CabBookingDetails> paymentstatuschangeCab(@PathVariable("bookingid") long bookingid);
 
-	@GetMapping("/paymentstatuschangeRentalCab/{bookingid}")
+	@GetMapping(CabConstant.PAYMENT_STATUS_CHANGE_BY_RENTAL_CAB_BOOKING_ID)
 	ResponseEntity<CabBookingDetails> paymentstatuschangeRentalCab(@PathVariable("bookingid") long bookingid);
 
-	@GetMapping("/getCabDetailsAndTripDetails")
-	ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
+	@GetMapping(CabConstant.GET_CAB_DETAILS_AND_TRIP_DETAILS)
+	public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
 			@RequestParam String to);
 
-	@GetMapping("/getRentalCabAndRentalPackageDetails")
+	@GetMapping(CabConstant.GET_RENTAL_CAB_AND_RENTAL_PACKAGE_DETAILS)
 	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from,
 			@RequestParam String packageName);
 
-	@PostMapping("/saveTrip")
+	@PostMapping(CabConstant.SAVE_TRIP)
 	ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip);
 
-	@PutMapping("/updateTrip/{tripId}")
+	@PutMapping(CabConstant.UPDATE_TRIP_BY_TRIP_ID)
 	ResponseEntity<TripDetails> updateTrip(@PathVariable("tripId") int tripId, @RequestBody TripDetails trip);
 
-	@DeleteMapping("/deleteTrip/{tripId}")
+	@DeleteMapping(CabConstant.DELETE_TRIP_BY_TRIP_ID)
 	ResponseEntity<String> deleteTrip(@PathVariable("tripId") int tripId);
 
-	@GetMapping("/getAllTrip")
+	@GetMapping(CabConstant.GET_ALL_TRIP)
 	ResponseEntity<List<TripDetails>> getAllTrip();
 
-	@GetMapping("/getTripbyId/{tripId}")
+	@GetMapping(CabConstant.GET_TRIP_BY_TRIP_ID)
 	ResponseEntity<Optional<TripDetails>> getTripById(@PathVariable("tripId") int tripId);
 
-	@PostMapping("/saveRentalCab")
+	@PostMapping(CabConstant.SAVE_RENTAL_CAB)
 	ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab);
 
-	@PutMapping("/updateRentalCab/{rentalCabId}")
+	@PutMapping(CabConstant.UPDATE_RENTAL_CAB_BY_RENTAL_CAB_ID)
 	ResponseEntity<RentalCab> updateRentalCab(@PathVariable("rentalCabId") int rentalCabId,
 			@RequestBody RentalCab rentalCab);
 
-	@DeleteMapping("/deleteRentalCab/{rentalCabId}")
+	@DeleteMapping(CabConstant.DELETE_RENTAL_CAB_BY_RENTAL_CAB_ID)
 	ResponseEntity<String> deleteRentalCab(@PathVariable("rentalCabId") int rentalCabId);
 
-	@GetMapping("/getAllRentalCab")
+	@GetMapping(CabConstant.GET_ALL_RENTAL_CAB)
 	ResponseEntity<List<RentalCab>> getAllRentalCab();
 
-	@GetMapping("/getRentalCabbyId/{rentalCabId}")
+	@GetMapping(CabConstant.GET_RENTAL_CAB_BY_RENTAL_CAB_ID)
 	ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable("rentalCabId") int rentalCabId);
 
-	@PostMapping("/saveRentalPackage")
+	@PostMapping(CabConstant.SAVE_RENTAL_PACKAGE)
 	ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage);
 
-	@GetMapping("/getallRentalcitynames")
+	@GetMapping(CabConstant.GET_ALL_RENTAL_CITY_NAMES)
 	public ResponseEntity<List<String>> getAllRentalCityNames();
 
-	@PutMapping("/updateRentalPackage/{rentalPackageId}")
+	@PutMapping(CabConstant.UPDATE_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
 	ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId,
 			@RequestBody RentalPackage rentalPackage);
 
-	@DeleteMapping("/deleteRentalPackage/{rentalPackageId}")
+	@DeleteMapping(CabConstant.DELETE_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
 	ResponseEntity<String> deleteRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId);
 
-	@GetMapping("/getAllRentalPackage")
+	@GetMapping(CabConstant.GET_ALL_RENTAL_PACKAGE)
 	ResponseEntity<List<RentalPackage>> getAllRentalPackage();
 
-	@GetMapping("/getRentalPackagebyId/{rentalPackageId}")
+	@GetMapping(CabConstant.GET_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
 	ResponseEntity<Optional<RentalPackage>> getRentalPackageById(@PathVariable("rentalPackageId") int rentalPackageId);
 }

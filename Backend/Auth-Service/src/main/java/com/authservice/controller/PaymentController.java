@@ -10,40 +10,42 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.authservice.constant.PaymentConstant;
 import com.authservice.proxyentity.payment.Payment;
 import com.authservice.proxyentity.payment.PaymentProxyController;
 
 @RestController
-@RequestMapping("/CS/Payment")
-@CrossOrigin("http://localhost:5173")
+@RequestMapping(PaymentConstant.PAYMENT)
+@CrossOrigin(PaymentConstant.CROSS_ORIGIN)
 public class PaymentController {
 
 	@Autowired
 	private PaymentProxyController paymentProxy;
 
-	@GetMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception {
-		return paymentProxy.addPayment(bookingid);
+	@GetMapping(PaymentConstant.DO_PAYMENT_BY_BOOKING_ID)
+	public ResponseEntity<Payment> doPaymentByBookingId(@PathVariable String bookingid) throws Exception {
+		return paymentProxy.doPaymentByBookingId(bookingid);
 	}
 
-	@GetMapping("/getallpayment")
-	public ResponseEntity<List<Payment>> getallpayments() {
-		return paymentProxy.getallpayments();
+	@GetMapping(PaymentConstant.GET_ALL_PAYMENT)
+	public ResponseEntity<List<Payment>> getAllPayment() {
+		return paymentProxy.getAllPayment();
 	}
 
-	@GetMapping("/getpaymentbybookingid/{bookingid}")
-	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable long bookingid) {
-		return paymentProxy.getpaymentbybookingid(bookingid);
+	@GetMapping(PaymentConstant.GET_PAYMENT_BY_BOOKING_ID)
+	public ResponseEntity<Payment> getPaymentByBookingId(@PathVariable long bookingid) {
+		return paymentProxy.getPaymentByBookingId(bookingid);
+		}
+
+	@GetMapping(PaymentConstant.GET_PAYMENT_BY_PAYMENT_ID)
+	public ResponseEntity<Payment> getPaymentByPaymentId(@PathVariable long paymentid) {
+		return paymentProxy.getPaymentByPaymentId(paymentid);
+		}
+
+	@GetMapping(PaymentConstant.CANCEL_PAYMENT_BY_PAYMENT_ID)
+	public ResponseEntity<String> cancelPaymentByPaymentId(@PathVariable String paymentid) {
+		return paymentProxy.cancelPaymentByPaymentId(paymentid);
 	}
 
-	@GetMapping("/getpaymentbypaymentid/{paymentid}")
-	public ResponseEntity<Payment> getpaymentbypaymentid(@PathVariable long paymentid) {
-		return paymentProxy.getpaymentbypaymentid(paymentid);
-	}
-
-	@GetMapping("/paymentCancel/{paymentid}")
-	public ResponseEntity<String> paymentCancel(@PathVariable long paymentid) {
-		return paymentProxy.paymentCancel(paymentid);
-	}
 
 }

@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.authservice.constant.UserConstant;
 import com.authservice.entity.Registration;
 import com.authservice.entity.Traveller;
 import com.authservice.proxyentity.user.UserProxyController;
@@ -22,83 +22,73 @@ import com.authservice.proxyentity.user.UserProxyController;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/CS/User")
-@CrossOrigin("http://localhost:5173")
+@RequestMapping(UserConstant.USER)
+@CrossOrigin(UserConstant.CROSS_ORIGIN)
 public class UserController {
 	@Autowired
 	UserProxyController userProxy;
 
-	@PreAuthorize("hasAnyAuthority('admin','user')")
-	@GetMapping("/getallusers")
-	public ResponseEntity<List<Registration>> listUser() {
-		return userProxy.listUser();
+	@GetMapping(UserConstant.USER)
+	public ResponseEntity<List<Registration>> listAllUser() {
+		return userProxy.listAllUser();
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@GetMapping("/getalltravellers/{username}")
-	public ResponseEntity<List<Traveller>> getalltravellersbyusername(@PathVariable String username) {
-		return userProxy.getalltravellersbyusername(username);
+	@GetMapping(UserConstant.GET_ALL_TRAVELLERS)
+	public ResponseEntity<List<Traveller>> getAllTravellersByUsername(@PathVariable String username) {
+		return userProxy.getAllTravellersByUsername(username);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@PostMapping("/addtraveller/{username}")
-	public ResponseEntity<String> addtraveller(@PathVariable String username, @RequestBody @Valid Traveller t) {
-		return userProxy.addtraveller(username, t);
+	@PostMapping(UserConstant.ADD_TRAVELLER_BY_USERNAME)
+	public ResponseEntity<String> addTravellerByUsername(@PathVariable String username, @RequestBody Traveller t) {
+		return userProxy.addTravellerByUsername(username, t);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@PutMapping("/updatetraveller/{username}")
-	public ResponseEntity<String> updatetraveller(@PathVariable String username, @RequestBody @Valid Traveller t) {
-		return userProxy.updatetraveller(username, t);
+	@PutMapping(UserConstant.UPDATE_TRAVELLER_BY_USERNAME)
+	public ResponseEntity<String> updateTravellerByUsername(@PathVariable String username, @RequestBody Traveller t) {
+		return userProxy.updateTravellerByUsername(username, t);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@GetMapping("/gettraveller/{username}/{name}")
-	public ResponseEntity<Traveller> gettraveller(@PathVariable String username, @PathVariable String name) {
-		return userProxy.gettraveller(username, name);
+	@GetMapping(UserConstant.GET_TRAVELLER_BY_NAME)
+	public ResponseEntity<Traveller> getTravellerByTravellerName(@PathVariable String username,
+			@PathVariable String name) {
+		return userProxy.getTravellerByTravellerName(username, name);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@DeleteMapping("/deletetraveller/{username}/{name}")
-	public ResponseEntity<String> deletetraveller(@PathVariable String username, @PathVariable String name) {
-		return userProxy.deletetraveller(username, name);
+	@DeleteMapping(UserConstant.DELETE_TRAVELLER_BY_NAME)
+	public ResponseEntity<String> deleteTravellerByTravellerName(@PathVariable String username,
+			@PathVariable String name) {
+		return userProxy.deleteTravellerByTravellerName(username, name);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@PutMapping("/updateuser/{username}")
-	public ResponseEntity<Registration> updateuser(@PathVariable String username,
+	@PutMapping(UserConstant.UPDATE_USER_BY_USERNAME)
+	public ResponseEntity<Registration> updateUserByUsername(@PathVariable String username,
 			@RequestBody @Valid Registration user) {
-		return userProxy.updateuser(username, user);
+		return userProxy.updateUserByUsername(username, user);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@PutMapping("/updatepassword/{username}/{password}")
-	public ResponseEntity<String> updatepassword(@PathVariable String username, @PathVariable @Valid String password) {
-		return userProxy.updatepassword(username, password);
+	@PutMapping(UserConstant.UPDATE_USER_PASSWORD_BY_USERNAME)
+	public ResponseEntity<String> updatePasswordByUsername(@PathVariable String username,
+			@PathVariable @Valid String password) {
+		return userProxy.updatePasswordByUsername(username, password);
 	}
 
-	@PreAuthorize("hasAnyAuthority('admin','user')")
-	@GetMapping("/getuserbyname/{username}")
+	@GetMapping(UserConstant.GET_USER_BY_USERNAME)
 	public ResponseEntity<Registration> showUserByUserName(@PathVariable String username) {
-		return userProxy.showUserByUserName(username);
+		return userProxy.showUserByEmail(username);
 	}
 
-	@PreAuthorize("hasAuthority('admin')")
-	@GetMapping("/getuserbyemail/{email}")
+	@GetMapping(UserConstant.GET_USER_BY_EMAIL)
 	public ResponseEntity<Registration> showUserByEmail(@PathVariable String email) {
 		return userProxy.showUserByEmail(email);
 	}
 
-	@PreAuthorize("hasAuthority('admin')")
-	@GetMapping("/getuserbymobile/{mobile}")
+	@GetMapping(UserConstant.GET_USER_BY_MOBILE)
 	public ResponseEntity<Registration> showUserByMobileNumber(@PathVariable String mobile) {
 		return userProxy.showUserByMobileNumber(mobile);
 	}
 
-	@PreAuthorize("hasAuthority('user')")
-	@DeleteMapping("/deleteuserbyid/{username}")
-	public ResponseEntity<String> remove(@PathVariable String username) {
-		return userProxy.remove(username);
+	@DeleteMapping(UserConstant.DELETE_USER_BY_USERNAME)
+	public ResponseEntity<String> deleteUserByUsername(@PathVariable String username) {
+		return userProxy.deleteUserByUsername(username);
 	}
-
 }

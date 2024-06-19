@@ -20,6 +20,7 @@ public class Payment {
 	@Id
 	private long paymentid;
 	private long bookingId;
+	private String paymentService;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime paymentDate;
 	private String username;

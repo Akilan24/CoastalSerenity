@@ -10,40 +10,48 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.paymentservice.constant.PaymentConstant;
 import com.paymentservice.entity.Payment;
 import com.paymentservice.service.PaymentService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
-@RequestMapping("/Payment")
+@Slf4j
+@RequestMapping(PaymentConstant.PAYMENT)
 public class PaymentController {
 
 	@Autowired
 	private PaymentService paymentService;
 
-	@GetMapping("/doPayment/{bookingid}")
-	public ResponseEntity<Payment> addPayment(@PathVariable String bookingid) throws Exception {
-
-		return new ResponseEntity<>(paymentService.doPayment(bookingid), HttpStatus.OK);
+	@GetMapping(PaymentConstant.DO_PAYMENT_BY_BOOKING_ID)
+	public ResponseEntity<Payment> doPaymentByBookingId(@PathVariable String bookingid) throws Exception {
+		log.info("doPaymentByBookingId controller called");
+		return new ResponseEntity<>(paymentService.doPaymentByBookingId(bookingid), HttpStatus.OK);
 	}
 
-	@GetMapping("/getallpayment")
-	public ResponseEntity<List<Payment>> getallpayments() {
-		return new ResponseEntity<>(paymentService.getallpayment(), HttpStatus.OK);
+	@GetMapping(PaymentConstant.GET_ALL_PAYMENT)
+	public ResponseEntity<List<Payment>> getAllPayment() {
+		log.info("getAllPayment controller called");
+		return new ResponseEntity<>(paymentService.getAllPayment(), HttpStatus.OK);
 	}
 
-	@GetMapping("/getpaymentbybookingid/{bookingid}")
-	public ResponseEntity<Payment> getpaymentbybookingid(@PathVariable long bookingid) {
+	@GetMapping(PaymentConstant.GET_PAYMENT_BY_BOOKING_ID)
+	public ResponseEntity<Payment> getPaymentByBookingId(@PathVariable long bookingid) {
+		log.info("getPaymentByBookingId controller called");
 		return new ResponseEntity<>(paymentService.getPaymentbyBookingId(bookingid), HttpStatus.OK);
 	}
 
-	@GetMapping("/getpaymentbypaymentid/{paymentid}")
-	public ResponseEntity<Payment> getpaymentbypaymentid(@PathVariable long paymentid) {
+	@GetMapping(PaymentConstant.GET_PAYMENT_BY_PAYMENT_ID)
+	public ResponseEntity<Payment> getPaymentByPaymentId(@PathVariable long paymentid) {
+		log.info("getPaymentByPaymentId controller called");
 		return new ResponseEntity<>(paymentService.getPaymentbyPaymentId(paymentid), HttpStatus.OK);
 	}
 
-	@GetMapping("/paymentCancel/{paymentid}")
-	public ResponseEntity<String> paymentCancel(@PathVariable String paymentid) {
-		return new ResponseEntity<>(paymentService.paymentCancel(paymentid), HttpStatus.OK);
+	@GetMapping(PaymentConstant.CANCEL_PAYMENT_BY_PAYMENT_ID)
+	public ResponseEntity<String> cancelPaymentByPaymentId(@PathVariable String paymentid) {
+		log.info("cancelPaymentByPaymentId controller called");
+		return new ResponseEntity<>(paymentService.cancelPaymentByPaymentId(paymentid), HttpStatus.OK);
 	}
 
 }

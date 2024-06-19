@@ -20,7 +20,7 @@ public class RoomServiceImpl implements RoomService {
 	@Autowired
 	HotelRepository hrepo;
 
-	public Room addRoomDetails(long hid, Room room) throws Exception {
+	public Room addRoomDetailsByHotelId(long hid, Room room) throws Exception {
 		try {
 			long MIN_ID = 100000;
 			int count = rrepo.findAll().size();
@@ -49,7 +49,7 @@ public class RoomServiceImpl implements RoomService {
 			throw new RoomDetailsNotFoundException("Room details are not found");
 	}
 
-	public String removeRoomDetails(long roomId) {
+	public String removeRoomDetailsByRoomId(long roomId) {
 		if (rrepo.findByRoomId(roomId).isPresent()) {
 			rrepo.deleteByRoomId(roomId);
 			return "Room details are deleted";
@@ -66,7 +66,7 @@ public class RoomServiceImpl implements RoomService {
 
 	}
 
-	public Room showRoomDetailsbyId(long roomId) {
+	public Room showRoomDetailsByRoomId(long roomId) {
 		if (rrepo.findByRoomId(roomId).isPresent()) {
 			Room r = rrepo.findByRoomId(roomId).get();
 			return r;
@@ -85,7 +85,7 @@ public class RoomServiceImpl implements RoomService {
 	}
 
 	@Override
-	public List<Room> showRoomDetailBytype(String type) {
+	public List<Room> showRoomDetailByRoomType(String type) {
 		List<Room> r = rrepo.findAll().stream().filter(a -> a.getRoomtype().equals(type)).collect(Collectors.toList());
 		if (!r.isEmpty()) {
 			return r;
@@ -95,7 +95,7 @@ public class RoomServiceImpl implements RoomService {
 	}
 
 	@Override
-	public List<Room> showRoomDetailByPrice(double price) {
+	public List<Room> showRoomDetailByRoomPrice(double price) {
 		List<Room> r = rrepo.findAll().stream().filter(p -> p.getRate_per_day() <= price).collect(Collectors.toList());
 		if (!r.isEmpty()) {
 			return r;

@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
 	private PasswordEncoder passwordEncoder;
 
 	@Override
-	public Registration updateUser(String username, Registration u) {
+	public Registration updateUserByUserName(String username, Registration u) {
 		if (userrepo.existsById(username)) {
 			Optional<Registration> user = userrepo.findById(username);
 			user.get().setAddress(u.getAddress());
@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String removeUser(String username) {
+	public String removeUserByUserName(String username) {
 
 		if (userrepo.existsById(username)) {
 			userrepo.deleteById(username);
@@ -102,7 +102,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String updateUserpasswordbyusername(String username, String password) {
+	public String updateUserPasswordByUserName(String username, String password) {
 		if (userrepo.findById(username).isPresent()) {
 			Registration u = userrepo.findById(username).get();
 			u.setPassword(passwordEncoder.encode(password));
@@ -114,7 +114,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String addtraveller(String username, Traveller traveller) {
+	public String addTravellerByUserName(String username, Traveller traveller) {
 		Optional<Registration> res = userrepo.findByUsername(username);
 		if (!res.isEmpty()) {
 			res.get().getTraveller().add(traveller);
@@ -128,7 +128,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String updatetraveller(String username, Traveller traveller) {
+	public String updateTravellerByUserName(String username, Traveller traveller) {
 		Optional<Registration> res = userrepo.findByUsername(username);
 		if (!res.isEmpty()) {
 			List<Traveller> travellers = res.get().getTraveller();
@@ -152,7 +152,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String deletetraveller(String username, String name) {
+	public String deleteTravellerByTravellerName(String username, String name) {
 		if (userrepo.existsById(username)) {
 			Registration r = userrepo.findByUsername(username).get();
 			List<Traveller> l = r.getTraveller().stream().filter(t -> !t.getName().equalsIgnoreCase(t.getName()))
@@ -168,7 +168,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<Traveller> getTravellerByUsername(String username) {
+	public List<Traveller> getAllTravellersByUsername(String username) {
 		if (userrepo.findByUsername(username).isPresent()) {
 			List<Traveller> list = userrepo.findByUsername(username).get().getTraveller();
 			if (!list.isEmpty()) {
@@ -184,7 +184,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public Traveller gettraveller(String username, String name) {
+	public Traveller getTravellerByTravellerName(String username, String name) {
 		if (userrepo.existsById(username)) {
 			Registration r = userrepo.findByUsername(username).get();
 			log.info("Traveller details of username: " + username + " are found");

@@ -9,13 +9,13 @@ import com.paymentservice.entity.Payment;
 @Service
 public interface PaymentService {
 
-	Payment doPayment(String bookingid);
+	Payment doPaymentByBookingId(String bookingid);
 
 	Payment getPaymentbyBookingId(long bookingid);
 
-	List<Payment> getallpayment();
+	List<Payment> getAllPayment();
 
-	String paymentCancel(String id);
+	String cancelPaymentByPaymentId(String id);
 
 	Payment getPaymentbyPaymentId(long id);
 
