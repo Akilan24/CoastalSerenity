@@ -34,7 +34,6 @@ function Home() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/saveTraveller" element={<SaveTraveller />} />
           <Route path="/myTrips" element={<MyTrips />} />
-          <Route path="/myTrips/:value" element={<MyTrips />} />
           <Route path="/hotel" element={<Hotel />} />
           <Route
             path="/hotelBookingDetails/:value"

@@ -66,8 +66,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public String removeBookingDetails(long bookingid) {
-		if (bookingrepo.findByBookingid(bookingid).isPresent()) {
-			bookingrepo.deleteByBookingid(bookingid);
+		if (bookingrepo.findByHotelBookingId(bookingid).isPresent()) {
+			bookingrepo.deleteByHotelBookingId(bookingid);
 			return "Booking details are deleted";
 		} else
 			throw new HotelBookingDetailsNotFoundException("Booking details are not found");
@@ -83,8 +83,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public HotelBookingDetails showBookingDetailsbyId(long bookingid) {
-		if (bookingrepo.findByBookingid(bookingid).isPresent()) {
-			HotelBookingDetails bd = bookingrepo.findByBookingid(bookingid).get();
+		if (bookingrepo.findByHotelBookingId(bookingid).isPresent()) {
+			HotelBookingDetails bd = bookingrepo.findByHotelBookingId(bookingid).get();
 			return bd;
 		} else
 			throw new HotelBookingDetailsNotFoundException("Booking details are not found");
@@ -92,7 +92,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public HotelBookingDetails paymentstatuschange(long bookingid) {
-		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(bookingid);
+		Optional<HotelBookingDetails> bd = bookingrepo.findByHotelBookingId(bookingid);
 		if (bd.isPresent()) {
 			bd.get().setPaymentStatus("Payment done");
 			return bookingrepo.save(bd.get());
@@ -171,7 +171,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public HotelBookingDetails addGuest(long bookingId, List<HotelGuest> guest) {
-		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(bookingId);
+		Optional<HotelBookingDetails> bd = bookingrepo.findByHotelBookingId(bookingId);
 		if (!bd.isEmpty()) {
 			bd.get().setHotelGuest(guest);
 			return bookingrepo.save(bd.get());
@@ -182,7 +182,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 
 	@Override
 	public HotelBookingDetails resetStatus(long id) {
-		Optional<HotelBookingDetails> bd = bookingrepo.findByBookingid(id);
+		Optional<HotelBookingDetails> bd = bookingrepo.findByHotelBookingId(id);
 		if (!bd.isEmpty()) {
 			bd.get().setPaymentStatus("Payment Cancelled & Refunded");
 			;

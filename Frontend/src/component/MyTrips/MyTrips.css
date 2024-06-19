@@ -66,3 +66,13 @@
   color: #4bad57;
   padding-right: 30px;
 }
+#tripsClass #containerClass {
+  border-radius: 25px;
+  width: 500px;
+  background-color: white;
+  padding: 5px;
+  margin-top: 25px;
+}
+#tripsClass #notFound{
+  margin-top: 100px;
+}

@@ -37,7 +37,7 @@ public class HotelBookingDetails {
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime bookedDate;
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "bookingid", referencedColumnName = "bookingid")
+	@JoinColumn(name = "hotelBookingId", referencedColumnName = "hotelBookingId")
 	private List<HotelGuest> hotelGuest;
 	private String paymentStatus;
 	private String username;

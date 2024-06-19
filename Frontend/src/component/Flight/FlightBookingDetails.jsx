@@ -175,8 +175,8 @@ function FlightBookingDetails() {
       </div>
       {value.includes("-") ? (
         <div className="detail-button">
-          <button id="back" onClick={() => navigate(-1)}>
-            Back
+          <button id="exit" onClick={() => navigate("/flight")}>
+            Exit
           </button>
           <button id="print" onClick={downloadPDF}>
             Print

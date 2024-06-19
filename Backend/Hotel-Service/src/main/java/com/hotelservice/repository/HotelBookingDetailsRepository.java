@@ -10,12 +10,12 @@ import com.hotelservice.entity.HotelBookingDetails;
 @Repository
 public interface HotelBookingDetailsRepository extends JpaRepository<HotelBookingDetails, Long> {
 
-	boolean existsByBookingid(long bookingId);
+	boolean existsByHotelBookingId(long bookingId);
 
-	Optional<HotelBookingDetails> findByBookingid(long bookingId);
+	Optional<HotelBookingDetails> findByHotelBookingId(long bookingId);
 
 	Optional<HotelBookingDetails> findByEmail(String email);
 
-	void deleteByBookingid(long bookingId);
+	void deleteByHotelBookingId(long bookingId);
 
 }
