@@ -60,7 +60,7 @@ public class CabServiceImpl implements CabService {
 	UserProxy uproxy;
 
 	@Override
-	public List<Cab> getAllCabs() {
+	public List<Cab> getAllCab() {
 		List<Cab> list = CabRepository.findAll();
 		if (!list.isEmpty())
 			return list;

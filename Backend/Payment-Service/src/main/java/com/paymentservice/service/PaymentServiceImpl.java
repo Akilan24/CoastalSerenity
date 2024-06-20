@@ -42,7 +42,7 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Autowired
 	TrainBookingDetailsProxy tbdproxy;
-	
+
 	@Autowired
 	CabBookingDetailsProxy cbdproxy;
 
@@ -83,13 +83,13 @@ public class PaymentServiceImpl implements PaymentService {
 			p.setAmount(bbd.getTotalPrice());
 			p.setPaymentStatus("Payment Done");
 			fbdproxy.paymentstatuschange(id);
-		}else if (value[0].equalsIgnoreCase("cab")) {
+		} else if (value[0].equalsIgnoreCase("cab")) {
 			CabBookingDetails cbd = cbdproxy.getCabBookingDetailsById(id);
 			p.setUsername(cbd.getName());
 			p.setAmount(cbd.getCabPrice());
-			p.setPaymentStatus("Payment Done");  
+			p.setPaymentStatus("Payment Done");
 			cbdproxy.paymentstatuschangeCab(id);
-		}else if (value[0].equalsIgnoreCase("rentalCab")) {
+		} else if (value[0].equalsIgnoreCase("rentalCab")) {
 			RentalCabBookingDetails rbd = cbdproxy.getRentalCabBookingDetailsById(id);
 			p.setUsername(rbd.getName());
 			p.setAmount(rbd.getRentalCabPrice());

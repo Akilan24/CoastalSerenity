@@ -64,7 +64,7 @@ public class HotelBookingDetailsServiceTest {
 		when(hotelRepo.findAll()).thenReturn(Arrays.asList(hotel));
 		when(bookingDetailsRepository.save(any(HotelBookingDetails.class))).thenReturn(bookingDetails);
 
-		assertEquals(bookingDetails, bookingDetailsService.BookRoom(userId, bookingDetails));
+		assertEquals(bookingDetails, bookingDetailsService.bookRoom(userId, bookingDetails));
 	}
 
 	@Test

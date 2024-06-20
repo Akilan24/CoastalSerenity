@@ -22,22 +22,22 @@ import jakarta.validation.Valid;
 public interface HotelProxyController {
 
 	@GetMapping(HotelConstant.GET_ALL_HOTEL)
-	public ResponseEntity<List<Hotel>> getAllHotel() ;
+	public ResponseEntity<List<Hotel>> getAllHotel();
 
 	@GetMapping(HotelConstant.GET_ALL_HOTEL_NAMES_BY_CITY)
 	public ResponseEntity<List<String>> getHotelNamesByCity(@PathVariable String city);
 
 	@GetMapping(HotelConstant.GET_ALL_HOTEL_CITY_NAMES)
-	public ResponseEntity<Set<String>> getAllHotelCityNames() ;
+	public ResponseEntity<Set<String>> getAllHotelCityNames();
 
 	@GetMapping(HotelConstant.GET_HOTEL_BY_HOTEL_ID)
 	public ResponseEntity<Hotel> getHotelByHotelId(@PathVariable Long id);
 
 	@GetMapping(HotelConstant.GET_HOTEL_BY_HOTEL_NAME)
-	public ResponseEntity<Hotel> getHotelByHotelName(@PathVariable String hotelname) ;
+	public ResponseEntity<Hotel> getHotelByHotelName(@PathVariable String hotelname);
 
 	@GetMapping(HotelConstant.GET_ALL_HOTEL_BY_CITY_NAME)
-	public ResponseEntity<List<Hotel>> getAllHotelByCity(@PathVariable String cityname) ;
+	public ResponseEntity<List<Hotel>> getAllHotelByCity(@PathVariable String cityname);
 
 	@PostMapping(HotelConstant.ADD_HOTEL)
 	public ResponseEntity<Hotel> addHotel(@RequestBody @Valid Hotel htl) throws Exception;
@@ -46,10 +46,10 @@ public interface HotelProxyController {
 	public ResponseEntity<Hotel> updateHotel(@RequestBody @Valid Hotel ht);
 
 	@DeleteMapping(HotelConstant.DELETE_HOTEL_BY_HOTEL_ID)
-	public ResponseEntity<String> deleteHotelByHotelId(@PathVariable Long id) ;
+	public ResponseEntity<String> deleteHotelByHotelId(@PathVariable Long id);
 
 	@GetMapping(HotelConstant.GET_ALL_HOTEL_BOOKING_DETAILS)
-	public ResponseEntity<List<HotelBookingDetails>> listHotelBookingDetails() ;
+	public ResponseEntity<List<HotelBookingDetails>> listHotelBookingDetails();
 
 	@GetMapping(HotelConstant.GET_ALL_AVAILABLE_ROOMS)
 	public ResponseEntity<List<HotelRooms>> checkRoomAvailability(@PathVariable String city,
@@ -60,8 +60,8 @@ public interface HotelProxyController {
 	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid);
 
 	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME_AND_HOTELNAME)
-	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByUserNameAndHotelName(@PathVariable String username,
-			@PathVariable String hotelName);
+	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByUserNameAndHotelName(
+			@PathVariable String username, @PathVariable String hotelName);
 
 	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME)
 	public ResponseEntity<List<HotelBookingDetails>> showHotelBookingDetailsByUserName(@PathVariable String username);
@@ -70,7 +70,7 @@ public interface HotelProxyController {
 	public ResponseEntity<HotelBookingDetails> paymentStatusChangeByHotelBookingId(@PathVariable long bookingid);
 
 	@PostMapping(HotelConstant.BOOK_ROOM_BY_USERNAME)
-	public ResponseEntity<HotelBookingDetails> bookroom(@PathVariable String username,
+	public ResponseEntity<HotelBookingDetails> bookRoom(@PathVariable String username,
 			@RequestBody HotelBookingDetails bd);
 
 	@DeleteMapping(HotelConstant.DELETE_HOTEL_BOOKING_DETAILS_BY_HOTEL_BOOKING_ID)

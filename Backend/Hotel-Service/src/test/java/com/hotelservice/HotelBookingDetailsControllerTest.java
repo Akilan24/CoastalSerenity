@@ -71,15 +71,16 @@ class HotelhotelControllerTest {
 
 	@Test
 	void testBookRoom() {
-		when(bookingDetailsService.BookRoom(anyString(), any(HotelBookingDetails.class))).thenReturn(bookingDetails);
-		ResponseEntity<HotelBookingDetails> response = hotelController.bookroom("user123", bookingDetails);
+		when(bookingDetailsService.bookRoom(anyString(), any(HotelBookingDetails.class))).thenReturn(bookingDetails);
+		ResponseEntity<HotelBookingDetails> response = hotelController.bookRoom("user123", bookingDetails);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals(bookingDetails, response.getBody());
 	}
 
 	@Test
 	void testRemove() {
-		when(bookingDetailsService.removeHotelBookingDetailsByHotelBookingId(123456)).thenReturn("Booking details removed successfully");
+		when(bookingDetailsService.removeHotelBookingDetailsByHotelBookingId(123456))
+				.thenReturn("Booking details removed successfully");
 		ResponseEntity<String> response = hotelController.removeHotelBookingDetailsByHotelBookingId(123456);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertEquals("Booking details removed successfully", response.getBody());

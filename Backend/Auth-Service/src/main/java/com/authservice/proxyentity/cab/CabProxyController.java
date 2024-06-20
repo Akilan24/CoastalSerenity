@@ -19,54 +19,57 @@ import com.authservice.constant.CabConstant;
 public interface CabProxyController {
 
 	@GetMapping(CabConstant.GET_CAB_BY_CAB_ID)
-	ResponseEntity<List<Cab>> getAllCabs();
+	public ResponseEntity<List<Cab>> getAllCab();
 
 	@GetMapping(CabConstant.ADD_SEATS_BY_CAB_ID)
-	ResponseEntity<Optional<Cab>> getCabById(@PathVariable("id") long id);
+	public ResponseEntity<Optional<Cab>> getCabByCabId(@PathVariable long id);
 
 	@PostMapping(CabConstant.SAVE_CAB)
-	ResponseEntity<Cab> createCab(@RequestBody Cab cab);
+	public ResponseEntity<Cab> saveCab(@RequestBody Cab Cab);
 
 	@PostMapping(CabConstant.BOOK_CAB_BY_CAB_ID)
-	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable String id, @PathVariable String username,
+	public ResponseEntity<CabBookingDetails> bookCabByCabId(@PathVariable long id, @PathVariable String username,
 			@RequestBody BookingRequest bookingRequest);
 
 	@PostMapping(CabConstant.BOOK_RENTAL_CAB_BY_CAB_ID)
-	public ResponseEntity<RentalCabBookingDetails> bookRentalCab(@PathVariable long id, @PathVariable String username,
-			@RequestBody BookingRequest bookingRequest);
+	public ResponseEntity<RentalCabBookingDetails> bookRentalCabByRentalCabId(@PathVariable long id,
+			@PathVariable String username, @RequestBody BookingRequest bookingRequest);
 
 	@GetMapping(CabConstant.GET_CAB_BOOKING_DETAILS_BY_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id);
+	public ResponseEntity<CabBookingDetails> getCabBookingDetailsByCabBookingId(@PathVariable long id);
 
 	@GetMapping(CabConstant.GET_CAB_BOOKING_DETAILS_BY_USERNAME)
-	ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable("username") String username);
+	public ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable String username);
 
 	@GetMapping(CabConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_RENTAL_CAB_BOOKING_ID)
-	ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsByRentalCabBookingId(@PathVariable long id);
+	public ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsByRentalCabBookingId(
+			@PathVariable long id);
 
 	@GetMapping(CabConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_USERNAME)
-	ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(@PathVariable String username);
+	public ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(
+			@PathVariable String username);
 
 	@PutMapping(CabConstant.UPDATE_CAB_BY_CAB_ID)
-	ResponseEntity<Cab> updateCab(@PathVariable("id") long id, @RequestBody Cab cab);
+	public ResponseEntity<Cab> updateCabByCabId(@PathVariable long id, @RequestBody Cab Cab);
 
 	@DeleteMapping(CabConstant.DELETE_CAB_BY_CAB_ID)
-	ResponseEntity<String> deleteCab(@PathVariable("id") long id);
+	public ResponseEntity<String> deleteCabByCabId(@PathVariable long id);
 
 	@PutMapping(CabConstant.CANCEL_PAYMENT_BY_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> resetstatusCab(@PathVariable("id") long id);
+	public ResponseEntity<CabBookingDetails> cancelPaymentByCabBookingId(@PathVariable long id);
 
 	@PutMapping(CabConstant.CANCEL_PAYMENT_BY_RENTAL_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> resetstatusRentalCab(@PathVariable("id") long id);
+	public ResponseEntity<RentalCabBookingDetails> cancelPaymentByRentalCabBookingId(@PathVariable long id);
 
 	@GetMapping(CabConstant.GET_ALL_CITY_NAMES)
-	ResponseEntity<List<List<String>>> getAllCityNames();
+	public ResponseEntity<List<List<String>>> getAllCityNames();
 
 	@GetMapping(CabConstant.PAYMENT_STATUS_CHANGE_BY_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> paymentstatuschangeCab(@PathVariable("bookingid") long bookingid);
+	public ResponseEntity<CabBookingDetails> paymentStatusChangeByCabBookingId(@PathVariable long bookingid);
 
 	@GetMapping(CabConstant.PAYMENT_STATUS_CHANGE_BY_RENTAL_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> paymentstatuschangeRentalCab(@PathVariable("bookingid") long bookingid);
+	public ResponseEntity<RentalCabBookingDetails> paymentStatusChangeByRentalCabBookingId(
+			@PathVariable long bookingid);
 
 	@GetMapping(CabConstant.GET_CAB_DETAILS_AND_TRIP_DETAILS)
 	public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
@@ -77,52 +80,52 @@ public interface CabProxyController {
 			@RequestParam String packageName);
 
 	@PostMapping(CabConstant.SAVE_TRIP)
-	ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip);
+	public ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip);
 
 	@PutMapping(CabConstant.UPDATE_TRIP_BY_TRIP_ID)
-	ResponseEntity<TripDetails> updateTrip(@PathVariable("tripId") int tripId, @RequestBody TripDetails trip);
+	public ResponseEntity<TripDetails> updateTripByTripId(@PathVariable int tripId, @RequestBody TripDetails trip);
 
 	@DeleteMapping(CabConstant.DELETE_TRIP_BY_TRIP_ID)
-	ResponseEntity<String> deleteTrip(@PathVariable("tripId") int tripId);
+	public ResponseEntity<String> deleteTripByTripId(@PathVariable int tripId);
 
 	@GetMapping(CabConstant.GET_ALL_TRIP)
-	ResponseEntity<List<TripDetails>> getAllTrip();
+	public ResponseEntity<List<TripDetails>> getAllTrip();
 
 	@GetMapping(CabConstant.GET_TRIP_BY_TRIP_ID)
-	ResponseEntity<Optional<TripDetails>> getTripById(@PathVariable("tripId") int tripId);
+	public ResponseEntity<Optional<TripDetails>> getTripByTripId(@PathVariable int tripId);
 
 	@PostMapping(CabConstant.SAVE_RENTAL_CAB)
-	ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab);
+	public ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab);
 
 	@PutMapping(CabConstant.UPDATE_RENTAL_CAB_BY_RENTAL_CAB_ID)
-	ResponseEntity<RentalCab> updateRentalCab(@PathVariable("rentalCabId") int rentalCabId,
+	public ResponseEntity<RentalCab> updateRentalCabByRentalCabId(@PathVariable long rentalCabId,
 			@RequestBody RentalCab rentalCab);
 
 	@DeleteMapping(CabConstant.DELETE_RENTAL_CAB_BY_RENTAL_CAB_ID)
-	ResponseEntity<String> deleteRentalCab(@PathVariable("rentalCabId") int rentalCabId);
+	public ResponseEntity<String> deleteRentalCabByRentalCabId(@PathVariable long rentalCabId);
 
 	@GetMapping(CabConstant.GET_ALL_RENTAL_CAB)
-	ResponseEntity<List<RentalCab>> getAllRentalCab();
+	public ResponseEntity<List<RentalCab>> getAllRentalCab();
 
 	@GetMapping(CabConstant.GET_RENTAL_CAB_BY_RENTAL_CAB_ID)
-	ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable("rentalCabId") int rentalCabId);
+	public ResponseEntity<Optional<RentalCab>> getRentalCabByRentalCabId(@PathVariable long rentalCabId);
 
 	@PostMapping(CabConstant.SAVE_RENTAL_PACKAGE)
-	ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage);
+	public ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage);
 
 	@GetMapping(CabConstant.GET_ALL_RENTAL_CITY_NAMES)
 	public ResponseEntity<List<String>> getAllRentalCityNames();
 
 	@PutMapping(CabConstant.UPDATE_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
-	ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId,
+	public ResponseEntity<RentalPackage> updateRentalPackageByRentalPackageId(@PathVariable int rentalPackageId,
 			@RequestBody RentalPackage rentalPackage);
 
 	@DeleteMapping(CabConstant.DELETE_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
-	ResponseEntity<String> deleteRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId);
+	public ResponseEntity<String> deleteRentalPackageByRentalPackageId(@PathVariable int rentalPackageId);
 
 	@GetMapping(CabConstant.GET_ALL_RENTAL_PACKAGE)
-	ResponseEntity<List<RentalPackage>> getAllRentalPackage();
+	public ResponseEntity<List<RentalPackage>> getAllRentalPackage();
 
 	@GetMapping(CabConstant.GET_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
-	ResponseEntity<Optional<RentalPackage>> getRentalPackageById(@PathVariable("rentalPackageId") int rentalPackageId);
+	public ResponseEntity<Optional<RentalPackage>> getRentalPackageByRentalPackageId(@PathVariable int rentalPackageId);
 }

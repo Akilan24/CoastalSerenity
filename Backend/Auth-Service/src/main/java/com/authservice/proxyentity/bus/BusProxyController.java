@@ -18,7 +18,7 @@ import com.authservice.constant.BusConstant;
 
 @FeignClient(name = BusConstant.SERVICE, url = BusConstant.URL)
 public interface BusProxyController {
-	
+
 	@GetMapping(BusConstant.GET_ALL_BUS)
 	public ResponseEntity<List<Bus>> getAllBus();
 

@@ -13,4 +13,3 @@ public interface UserProxy {
 	@GetMapping(UserProxyConstant.GET_USER_BY_USERNAME)
 	public Registration showUserByUserName(@PathVariable String username);
 }
-

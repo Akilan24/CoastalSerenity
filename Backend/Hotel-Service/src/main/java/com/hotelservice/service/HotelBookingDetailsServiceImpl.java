@@ -39,7 +39,7 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 	HotelRepository hrepo;
 
 	@Override
-	public HotelBookingDetails BookRoom(String username, HotelBookingDetails bookingdetails) {
+	public HotelBookingDetails bookRoom(String username, HotelBookingDetails bookingdetails) {
 		System.out.println(bookingdetails.getRoomno());
 		long MIN_id = 100000;
 		int count = bookingrepo.findAll().size();
@@ -49,7 +49,8 @@ public class HotelBookingDetailsServiceImpl implements HotelBookingDetailsServic
 		bookingdetails.setEmail(user.getEmail());
 		bookingdetails.setPhonenumber(user.getMobile());
 		bookingdetails.setUsername(username);
-		long daysBetween = 0;		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
+		long daysBetween = 0;
+		daysBetween = DateUtils.daysBetween(bookingdetails.getBooked_from(), bookingdetails.getBooked_to());
 		daysBetween = daysBetween == 0 ? 1 : daysBetween;
 		Hotel hotel = hrepo.findAll().stream()
 				.filter(h -> h.getHotelName().equalsIgnoreCase(bookingdetails.getHotelname()))

@@ -29,7 +29,10 @@ import com.authservice.proxyentity.cab.RentalCabsRentalPackageDetails;
 import com.authservice.proxyentity.cab.RentalPackage;
 import com.authservice.proxyentity.cab.TripDetails;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 @RequestMapping(CabConstant.CAB)
 @CrossOrigin(CabConstant.CROSS_ORIGIN)
 public class CabController {
@@ -38,179 +41,216 @@ public class CabController {
 	private CabProxyController cabProxy;
 
 	@GetMapping(CabConstant.GET_CAB_BY_CAB_ID)
-	ResponseEntity<List<Cab>> getAllCabs() {
-		return cabProxy.getAllCabs();
+	public ResponseEntity<List<Cab>> getAllCab() {
+		log.info("getAllCab controller called");
+		return cabProxy.getAllCab();
 	}
 
 	@GetMapping(CabConstant.ADD_SEATS_BY_CAB_ID)
-	ResponseEntity<Optional<Cab>> getCabById(@PathVariable("id") long id) {
-		return cabProxy.getCabById(id);
+	public ResponseEntity<Optional<Cab>> getCabByCabId(@PathVariable long id) {
+		log.info("getCabByCabId controller called");
+		return cabProxy.getCabByCabId(id);
 	}
 
 	@PostMapping(CabConstant.SAVE_CAB)
-	ResponseEntity<Cab> createCab(@RequestBody Cab cab) {
-		return cabProxy.createCab(cab);
+	public ResponseEntity<Cab> saveCab(@RequestBody Cab Cab) {
+		log.info("saveCab controller called");
+		return cabProxy.saveCab(Cab);
 	}
 
 	@PostMapping(CabConstant.BOOK_CAB_BY_CAB_ID)
-	public ResponseEntity<CabBookingDetails> bookCab(@PathVariable String id, @PathVariable String username,
+	public ResponseEntity<CabBookingDetails> bookCabByCabId(@PathVariable long id, @PathVariable String username,
 			@RequestBody BookingRequest bookingRequest) {
-		return cabProxy.bookCab(id, username, bookingRequest);
+		log.info("bookCabByCabId controller called");
+		return cabProxy.bookCabByCabId(id, username, bookingRequest);
 	}
 
 	@PostMapping(CabConstant.BOOK_RENTAL_CAB_BY_CAB_ID)
-	public ResponseEntity<RentalCabBookingDetails> bookRentalCab(@PathVariable long id, @PathVariable String username,
-			@RequestBody BookingRequest bookingRequest) {
-		return cabProxy.bookRentalCab(id, username, bookingRequest);
+	public ResponseEntity<RentalCabBookingDetails> bookRentalCabByRentalCabId(@PathVariable long id,
+			@PathVariable String username, @RequestBody BookingRequest bookingRequest) {
+		log.info("bookRentalCabByRentalCabId controller called");
+		return cabProxy.bookRentalCabByRentalCabId(id, username, bookingRequest);
 	}
 
 	@GetMapping(CabConstant.GET_CAB_BOOKING_DETAILS_BY_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> getCabBookingDetailsById(@PathVariable("id") long id) {
-		return cabProxy.getCabBookingDetailsById(id);
+	public ResponseEntity<CabBookingDetails> getCabBookingDetailsByCabBookingId(@PathVariable long id) {
+		log.info("getCabBookingDetailsByCabBookingId controller called");
+		return cabProxy.getCabBookingDetailsByCabBookingId(id);
 	}
 
 	@GetMapping(CabConstant.GET_CAB_BOOKING_DETAILS_BY_USERNAME)
-	ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable("username") String username) {
+	public ResponseEntity<List<CabBookingDetails>> getCabBookingDetailsByUsername(@PathVariable String username) {
+		log.info("getCabBookingDetailsByUsername controller called");
 		return cabProxy.getCabBookingDetailsByUsername(username);
 	}
-	
+
 	@GetMapping(CabConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_RENTAL_CAB_BOOKING_ID)
-	 ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsByRentalCabBookingId(@PathVariable long id) {
+	public ResponseEntity<RentalCabBookingDetails> getRentalCabBookingDetailsByRentalCabBookingId(
+			@PathVariable long id) {
+		log.info("getRentalCabBookingDetailsByRentalCabBookingId controller called");
 		return cabProxy.getRentalCabBookingDetailsByRentalCabBookingId(id);
 	}
 
 	@GetMapping(CabConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_USERNAME)
-	ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(
+	public ResponseEntity<List<RentalCabBookingDetails>> getRentalCabBookingDetailsByUsername(
 			@PathVariable String username) {
+		log.info("getRentalCabBookingDetailsByUsername controller called");
 		return cabProxy.getRentalCabBookingDetailsByUsername(username);
 	}
-	
+
 	@PutMapping(CabConstant.UPDATE_CAB_BY_CAB_ID)
-	ResponseEntity<Cab> updateCab(@PathVariable("id") long id, @RequestBody Cab cab) {
-		return cabProxy.updateCab(id, cab);
+	public ResponseEntity<Cab> updateCabByCabId(@PathVariable long id, @RequestBody Cab Cab) {
+		log.info("updateCabByCabId controller called");
+		return cabProxy.updateCabByCabId(id, Cab);
 	}
 
 	@DeleteMapping(CabConstant.DELETE_CAB_BY_CAB_ID)
-	ResponseEntity<String> deleteCab(@PathVariable("id") long id) {
-		return cabProxy.deleteCab(id);
+	public ResponseEntity<String> deleteCabByCabId(@PathVariable long id) {
+		log.info("deleteCabByCabId controller called");
+		return cabProxy.deleteCabByCabId(id);
 	}
 
 	@PutMapping(CabConstant.CANCEL_PAYMENT_BY_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> resetstatusCab(@PathVariable("id") long id) {
-		return cabProxy.resetstatusCab(id);
+	public ResponseEntity<CabBookingDetails> cancelPaymentByCabBookingId(@PathVariable long id) {
+		log.info("cancelPaymentByCabBookingId controller called");
+		return cabProxy.cancelPaymentByCabBookingId(id);
 	}
 
 	@PutMapping(CabConstant.CANCEL_PAYMENT_BY_RENTAL_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> resetstatusRentalCab(@PathVariable("id") long id) {
-		return cabProxy.resetstatusRentalCab(id);
+	public ResponseEntity<RentalCabBookingDetails> cancelPaymentByRentalCabBookingId(@PathVariable long id) {
+		log.info("cancelPaymentByRentalCabBookingId controller called");
+		return cabProxy.cancelPaymentByRentalCabBookingId(id);
 	}
 
 	@GetMapping(CabConstant.GET_ALL_CITY_NAMES)
-	ResponseEntity<List<List<String>>> getAllCityNames() {
+	public ResponseEntity<List<List<String>>> getAllCityNames() {
+		log.info("getAllCityNames controller called");
 		return cabProxy.getAllCityNames();
 	}
 
 	@GetMapping(CabConstant.PAYMENT_STATUS_CHANGE_BY_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> paymentstatuschangeCab(@PathVariable("bookingid") long bookingid) {
-		return cabProxy.paymentstatuschangeCab(bookingid);
+	public ResponseEntity<CabBookingDetails> paymentStatusChangeByCabBookingId(@PathVariable long bookingid) {
+		log.info("paymentStatusChangeByCabBookingId controller called");
+		return cabProxy.paymentStatusChangeByCabBookingId(bookingid);
 	}
 
 	@GetMapping(CabConstant.PAYMENT_STATUS_CHANGE_BY_RENTAL_CAB_BOOKING_ID)
-	ResponseEntity<CabBookingDetails> paymentstatuschangeRentalCab(@PathVariable("bookingid") long bookingid) {
-		return cabProxy.paymentstatuschangeRentalCab(bookingid);
+	public ResponseEntity<RentalCabBookingDetails> paymentStatusChangeByRentalCabBookingId(
+			@PathVariable long bookingid) {
+		log.info("paymentStatusChangeByRentalCabBookingId controller called");
+		return cabProxy.paymentStatusChangeByRentalCabBookingId(bookingid);
 	}
 
 	@GetMapping(CabConstant.GET_CAB_DETAILS_AND_TRIP_DETAILS)
 	public ResponseEntity<CabDetailsTripDetails> getCabDetailsAndTripDetails(@RequestParam String from,
 			@RequestParam String to) {
+		log.info("getCabDetailsAndTripDetails controller called");
 		return cabProxy.getCabDetailsAndTripDetails(from, to);
 	}
 
 	@GetMapping(CabConstant.GET_RENTAL_CAB_AND_RENTAL_PACKAGE_DETAILS)
 	public ResponseEntity<RentalCabsRentalPackageDetails> getRentalCabAndRentalPackageDetails(@RequestParam String from,
 			@RequestParam String packageName) {
+		log.info("getRentalCabAndRentalPackageDetails controller called");
 		return cabProxy.getRentalCabAndRentalPackageDetails(from, packageName);
 	}
 
 	@PostMapping(CabConstant.SAVE_TRIP)
-	ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip) {
+	public ResponseEntity<TripDetails> saveTrip(@RequestBody TripDetails trip) {
+		log.info("saveTrip controller called");
 		return cabProxy.saveTrip(trip);
 	}
 
 	@PutMapping(CabConstant.UPDATE_TRIP_BY_TRIP_ID)
-	ResponseEntity<TripDetails> updateTrip(@PathVariable("tripId") int tripId, @RequestBody TripDetails trip) {
-		return cabProxy.updateTrip(tripId, trip);
+	public ResponseEntity<TripDetails> updateTripByTripId(@PathVariable int tripId, @RequestBody TripDetails trip) {
+		log.info("updateTripByTripId controller called");
+		return cabProxy.updateTripByTripId(tripId, trip);
 	}
 
 	@DeleteMapping(CabConstant.DELETE_TRIP_BY_TRIP_ID)
-	ResponseEntity<String> deleteTrip(@PathVariable("tripId") int tripId) {
-		return cabProxy.deleteTrip(tripId);
+	public ResponseEntity<String> deleteTripByTripId(@PathVariable int tripId) {
+		log.info("deleteTripByTripId controller called");
+		return cabProxy.deleteTripByTripId(tripId);
 	}
 
 	@GetMapping(CabConstant.GET_ALL_TRIP)
-	ResponseEntity<List<TripDetails>> getAllTrip() {
+	public ResponseEntity<List<TripDetails>> getAllTrip() {
+		log.info("getAllTrip controller called");
 		return cabProxy.getAllTrip();
 	}
 
 	@GetMapping(CabConstant.GET_TRIP_BY_TRIP_ID)
-	ResponseEntity<Optional<TripDetails>> getTripById(@PathVariable("tripId") int tripId) {
-		return cabProxy.getTripById(tripId);
+	public ResponseEntity<Optional<TripDetails>> getTripByTripId(@PathVariable int tripId) {
+		log.info("getTripByTripId controller called");
+		return cabProxy.getTripByTripId(tripId);
 	}
 
 	@PostMapping(CabConstant.SAVE_RENTAL_CAB)
-	ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab) {
+	public ResponseEntity<RentalCab> saveRentalCab(@RequestBody RentalCab rentalCab) {
+		log.info("saveRentalCab controller called");
 		return cabProxy.saveRentalCab(rentalCab);
 	}
 
 	@PutMapping(CabConstant.UPDATE_RENTAL_CAB_BY_RENTAL_CAB_ID)
-	ResponseEntity<RentalCab> updateRentalCab(@PathVariable("rentalCabId") int rentalCabId,
+	public ResponseEntity<RentalCab> updateRentalCabByRentalCabId(@PathVariable long rentalCabId,
 			@RequestBody RentalCab rentalCab) {
-		return cabProxy.updateRentalCab(rentalCabId, rentalCab);
+		log.info("updateRentalCabByRentalCabId controller called");
+		return cabProxy.updateRentalCabByRentalCabId(rentalCabId, rentalCab);
 	}
 
 	@DeleteMapping(CabConstant.DELETE_RENTAL_CAB_BY_RENTAL_CAB_ID)
-	ResponseEntity<String> deleteRentalCab(@PathVariable("rentalCabId") int rentalCabId) {
-		return cabProxy.deleteRentalCab(rentalCabId);
+	public ResponseEntity<String> deleteRentalCabByRentalCabId(@PathVariable long rentalCabId) {
+		log.info("deleteRentalCabByRentalCabId controller called");
+		return cabProxy.deleteRentalCabByRentalCabId(rentalCabId);
 	}
 
 	@GetMapping(CabConstant.GET_ALL_RENTAL_CAB)
-	ResponseEntity<List<RentalCab>> getAllRentalCab() {
+	public ResponseEntity<List<RentalCab>> getAllRentalCab() {
+		log.info("getAllRentalCab controller called");
 		return cabProxy.getAllRentalCab();
 	}
 
 	@GetMapping(CabConstant.GET_RENTAL_CAB_BY_RENTAL_CAB_ID)
-	ResponseEntity<Optional<RentalCab>> getRentalCabById(@PathVariable("rentalCabId") int rentalCabId) {
-		return cabProxy.getRentalCabById(rentalCabId);
+	public ResponseEntity<Optional<RentalCab>> getRentalCabByRentalCabId(@PathVariable long rentalCabId) {
+		log.info("getRentalCabByRentalCabId controller called");
+		return cabProxy.getRentalCabByRentalCabId(rentalCabId);
 	}
 
 	@PostMapping(CabConstant.SAVE_RENTAL_PACKAGE)
-	ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage) {
+	public ResponseEntity<RentalPackage> saveRentalPackage(@RequestBody RentalPackage rentalPackage) {
+		log.info("saveRentalPackage controller called");
 		return cabProxy.saveRentalPackage(rentalPackage);
 	}
 
 	@GetMapping(CabConstant.GET_ALL_RENTAL_CITY_NAMES)
 	public ResponseEntity<List<String>> getAllRentalCityNames() {
+		log.info("getAllRentalCityNames controller called");
 		return cabProxy.getAllRentalCityNames();
 	}
 
 	@PutMapping(CabConstant.UPDATE_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
-	ResponseEntity<RentalPackage> updateRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId,
+	public ResponseEntity<RentalPackage> updateRentalPackageByRentalPackageId(@PathVariable int rentalPackageId,
 			@RequestBody RentalPackage rentalPackage) {
-		return cabProxy.updateRentalPackage(rentalPackageId, rentalPackage);
+		log.info("updateRentalPackageByRentalPackageId controller called");
+		return cabProxy.updateRentalPackageByRentalPackageId(rentalPackageId, rentalPackage);
 	}
 
 	@DeleteMapping(CabConstant.DELETE_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
-	ResponseEntity<String> deleteRentalPackage(@PathVariable("rentalPackageId") int rentalPackageId) {
-		return cabProxy.deleteRentalPackage(rentalPackageId);
+	public ResponseEntity<String> deleteRentalPackageByRentalPackageId(@PathVariable int rentalPackageId) {
+		log.info("deleteRentalPackageByRentalPackageId controller called");
+		return cabProxy.deleteRentalPackageByRentalPackageId(rentalPackageId);
 	}
 
 	@GetMapping(CabConstant.GET_ALL_RENTAL_PACKAGE)
-	ResponseEntity<List<RentalPackage>> getAllRentalPackage() {
+	public ResponseEntity<List<RentalPackage>> getAllRentalPackage() {
+		log.info("getAllRentalPackage controller called");
 		return cabProxy.getAllRentalPackage();
 	}
 
 	@GetMapping(CabConstant.GET_RENTAL_PACKAGE_BY_RENTAL_PACKAGE_ID)
-	ResponseEntity<Optional<RentalPackage>> getRentalPackageById(@PathVariable("rentalPackageId") int rentalPackageId) {
-		return cabProxy.getRentalPackageById(rentalPackageId);
+	public ResponseEntity<Optional<RentalPackage>> getRentalPackageByRentalPackageId(
+			@PathVariable int rentalPackageId) {
+		log.info("getRentalPackageByRentalPackageId controller called");
+		return cabProxy.getRentalPackageByRentalPackageId(rentalPackageId);
 	}
 }

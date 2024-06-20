@@ -16,16 +16,16 @@ public interface CabBookingDetailsProxy {
 	public CabBookingDetails getCabBookingDetailsById(@PathVariable long id);
 
 	@GetMapping(CabProxyConstant.GET_RENTAL_CAB_BOOKING_DETAILS_BY_RENTAL_CAB_BOOKING_ID)
-	public RentalCabBookingDetails getRentalCabBookingDetailsById(@PathVariable long id) ;
-	
+	public RentalCabBookingDetails getRentalCabBookingDetailsById(@PathVariable long id);
+
 	@GetMapping(CabProxyConstant.PAYMENT_STATUS_CHANGE_BY_CAB_BOOKING_ID)
-	public CabBookingDetails paymentstatuschangeCab(@PathVariable long bookingid) ;
+	public CabBookingDetails paymentstatuschangeCab(@PathVariable long bookingid);
 
 	@GetMapping(CabProxyConstant.PAYMENT_STATUS_CHANGE_BY_RENTAL_CAB_BOOKING_ID)
 	public RentalCabBookingDetails paymentstatuschangeRentalCab(@PathVariable long bookingid);
-	
+
 	@PutMapping(CabProxyConstant.CANCEL_PAYMENT_BY_CAB_BOOKING_ID)
-	public CabBookingDetails resetstatusCab(@PathVariable long id) ;
+	public CabBookingDetails resetstatusCab(@PathVariable long id);
 
 	@PutMapping(CabProxyConstant.CANCEL_PAYMENT_BY_RENTAL_CAB_BOOKING_ID)
 	public RentalCabBookingDetails resetstatusRentalCab(@PathVariable long id);

@@ -12,7 +12,7 @@ import com.hotelservice.entity.HotelRooms;
 @Service
 public interface HotelBookingDetailsService {
 
-	public HotelBookingDetails BookRoom(String username, HotelBookingDetails bookingdetails);
+	public HotelBookingDetails bookRoom(String username, HotelBookingDetails bookingdetails);
 
 	public String removeHotelBookingDetailsByHotelBookingId(long bookingId);
 

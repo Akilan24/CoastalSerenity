@@ -15,12 +15,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class HotelBookingDetails {
-
 
 	private long bookingId;
 	private String name;

@@ -229,7 +229,7 @@ public class TrainServiceImpl implements TrainService {
 					if (me.getValue() > 0) {
 						passenger.setSeatNo("Seat Confirmed");
 						map.put(seatType, me.getValue() - 1);
-						map.entrySet().stream().forEach(m->m.getValue());
+						map.entrySet().stream().forEach(m -> m.getValue());
 					} else {
 						for (Map.Entry<String, Integer> me1 : Train.getTrainBookingStatus().entrySet()) {
 							if (me1.getKey().equalsIgnoreCase(seatType)) {

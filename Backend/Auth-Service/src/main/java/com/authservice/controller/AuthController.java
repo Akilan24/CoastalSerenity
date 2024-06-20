@@ -18,8 +18,10 @@ import com.authservice.response.JwtResponse;
 import com.authservice.service.UserService;
 
 import jakarta.mail.MessagingException;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
+@Slf4j
 @RequestMapping(AuthConstant.AUTH)
 @CrossOrigin(AuthConstant.CROSS_ORIGIN)
 public class AuthController {
@@ -29,27 +31,32 @@ public class AuthController {
 
 	@PostMapping(AuthConstant.SAVE_USER)
 	public ResponseEntity<String> saveUser(@RequestBody Registration user) {
+		log.info("saveUser controller called");
 		return new ResponseEntity<>(userService.saveUser(user), HttpStatus.OK);
 	}
 
 	@PostMapping(AuthConstant.FORGOT_PASSWORD)
 	public ResponseEntity<Boolean> forgotpassword(@PathVariable String toEmail) throws MessagingException {
+		log.info("forgotpassword controller called");
 		return new ResponseEntity<>(userService.forgotpassword(toEmail), HttpStatus.OK);
 	}
 
 	@PostMapping(AuthConstant.LOGIN)
 	public ResponseEntity<JwtResponse> login(@RequestBody AuthRequest authRequest) {
+		log.info("login controller called");
 		return new ResponseEntity<>(userService.login(authRequest), HttpStatus.OK);
 
 	}
 
 	@PostMapping(AuthConstant.LOGOUT)
 	public ResponseEntity<String> logout(@RequestBody AuthRequest authRequest, @PathVariable String refreshToken) {
+		log.info("logout controller called");
 		return new ResponseEntity<>(userService.logout(authRequest, refreshToken), HttpStatus.OK);
 	}
 
 	@PostMapping(AuthConstant.REFRESH_TOKEN)
 	public ResponseEntity<JwtResponse> refreshToken(@RequestBody RefreshTokenRequest refreshTokenRequest) {
+		log.info("refreshToken controller called");
 		return new ResponseEntity<>(userService.refreshToken(refreshTokenRequest), HttpStatus.OK);
 	}
 

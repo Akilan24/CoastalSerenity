@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import com.paymentservice.constant.HotelProxyConstant;
 import com.paymentservice.externalclass.HotelBookingDetails;
 
-@FeignClient(name = HotelProxyConstant.SERVICE, url =HotelProxyConstant.URL)
+@FeignClient(name = HotelProxyConstant.SERVICE, url = HotelProxyConstant.URL)
 public interface HotelBookingDetailsProxy {
 
 	@GetMapping(HotelProxyConstant.GET_HOTEL_BOOKING_DETAILS_BY_HOTEL_BOOKING_ID)

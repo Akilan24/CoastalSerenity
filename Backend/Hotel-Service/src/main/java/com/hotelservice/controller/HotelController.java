@@ -95,7 +95,7 @@ public class HotelController {
 
 	@GetMapping(HotelConstant.GET_ALL_HOTEL_BOOKING_DETAILS)
 	public ResponseEntity<List<HotelBookingDetails>> listHotelBookingDetails() {
-		log.info("listBookingDetails controller called");
+		log.info("listHotelBookingDetails controller called");
 		return new ResponseEntity<>(hotelBookingDetailsService.showAllBookingDetails(), HttpStatus.OK);
 	}
 
@@ -110,14 +110,15 @@ public class HotelController {
 
 	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_ID)
 	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid) {
-		log.info("showBookingDetailsByHotelBookingId controller called");
-		return new ResponseEntity<>(hotelBookingDetailsService.showHotelBookingDetailsByHotelBookingId(bookingid), HttpStatus.OK);
+		log.info("showHotelBookingDetailsByHotelBookingId controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.showHotelBookingDetailsByHotelBookingId(bookingid),
+				HttpStatus.OK);
 	}
 
 	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME_AND_HOTELNAME)
-	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByUserNameAndHotelName(@PathVariable String username,
-			@PathVariable String hotelName) {
-		log.info("showBookingDetailsByUserNameAndHotelName controller called");
+	public ResponseEntity<HotelBookingDetails> showHotelBookingDetailsByUserNameAndHotelName(
+			@PathVariable String username, @PathVariable String hotelName) {
+		log.info("showHotelBookingDetailsByUserNameAndHotelName controller called");
 		return new ResponseEntity<>(
 				hotelBookingDetailsService.showHotelBookingDetailsByUserNameAndHotelName(username, hotelName),
 				HttpStatus.OK);
@@ -125,27 +126,30 @@ public class HotelController {
 
 	@GetMapping(HotelConstant.GET_HOTEL_BOOKING_DETAILS_BY_USERNAME)
 	public ResponseEntity<List<HotelBookingDetails>> showHotelBookingDetailsByUserName(@PathVariable String username) {
-		log.info("showBookingDetailsByUserName controller called");
-		return new ResponseEntity<>(hotelBookingDetailsService.showHotelBookingDetailsByUserName(username), HttpStatus.OK);
+		log.info("showHotelBookingDetailsByUserName controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.showHotelBookingDetailsByUserName(username),
+				HttpStatus.OK);
 	}
 
 	@PutMapping(HotelConstant.PAYMENT_STATUS_CHANGE_BY_HOTEL_BOOKING_ID)
 	public ResponseEntity<HotelBookingDetails> paymentStatusChangeByHotelBookingId(@PathVariable long bookingid) {
 		log.info("paymentStatusChangeByHotelBookingId controller called");
-		return new ResponseEntity<>(hotelBookingDetailsService.paymentStatusChangeByHotelBookingId(bookingid), HttpStatus.OK);
+		return new ResponseEntity<>(hotelBookingDetailsService.paymentStatusChangeByHotelBookingId(bookingid),
+				HttpStatus.OK);
 	}
 
 	@PostMapping(HotelConstant.BOOK_ROOM_BY_USERNAME)
-	public ResponseEntity<HotelBookingDetails> bookroom(@PathVariable String username,
+	public ResponseEntity<HotelBookingDetails> bookRoom(@PathVariable String username,
 			@RequestBody HotelBookingDetails bd) {
-		log.info("bookroom controller called");
-		return new ResponseEntity<>(hotelBookingDetailsService.BookRoom(username, bd), HttpStatus.OK);
+		log.info("bookRoom controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.bookRoom(username, bd), HttpStatus.OK);
 	}
 
 	@DeleteMapping(HotelConstant.DELETE_HOTEL_BOOKING_DETAILS_BY_HOTEL_BOOKING_ID)
 	public ResponseEntity<String> removeHotelBookingDetailsByHotelBookingId(@PathVariable long bookingid) {
-		log.info("removeBookingDetailsByHotelBookingId controller called");
-		return new ResponseEntity<>(hotelBookingDetailsService.removeHotelBookingDetailsByHotelBookingId(bookingid), HttpStatus.OK);
+		log.info("removeHotelBookingDetailsByHotelBookingId controller called");
+		return new ResponseEntity<>(hotelBookingDetailsService.removeHotelBookingDetailsByHotelBookingId(bookingid),
+				HttpStatus.OK);
 	}
 
 	@PostMapping(HotelConstant.ADD_GUEST_BY_BOOKING_ID)

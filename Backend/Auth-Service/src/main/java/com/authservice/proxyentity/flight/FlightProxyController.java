@@ -20,18 +20,20 @@ import com.authservice.constant.FlightConstant;
 public interface FlightProxyController {
 
 	@GetMapping(FlightConstant.GET_ALL_FLIGHT)
-	public ResponseEntity<List<Flight>> getAllFlight() ;
+	public ResponseEntity<List<Flight>> getAllFlight();
 
 	@GetMapping(FlightConstant.GET_FLIGHT_BY_FLIGHT_ID)
-	public ResponseEntity<Optional<Flight>> getFlightByFlightId(@PathVariable long id) ;
+	public ResponseEntity<Optional<Flight>> getFlightByFlightId(@PathVariable long id);
+
 	@PutMapping(FlightConstant.ADD_SEATS_BY_FLIGHT_ID)
 	public ResponseEntity<Flight> addSeatsByFlightId(@PathVariable long id);
+
 	@PostMapping(FlightConstant.SAVE_FLIGHT)
-	public ResponseEntity<Flight> saveFlight(@RequestBody Flight flight) ;
+	public ResponseEntity<Flight> saveFlight(@RequestBody Flight flight);
 
 	@PostMapping(FlightConstant.BOOK_FLIGHT_BY_FLIGHT_ID)
 	public ResponseEntity<FlightBookingDetails> bookFlight(@PathVariable long id,
-			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username) ;
+			@RequestBody FlightTravellerFlightSeats ftfs, @PathVariable String username);
 
 	@GetMapping(FlightConstant.GET_FLIGHT_BOOKING_DETAILS_BY_FLIGHT_BOOKING_ID)
 	public ResponseEntity<FlightBookingDetails> getFlightBookingDetailsByFlightBookingId(@PathVariable long id);
@@ -40,7 +42,7 @@ public interface FlightProxyController {
 	public ResponseEntity<List<FlightBookingDetails>> getFlightBookingDetailsByUsername(@PathVariable String username);
 
 	@PutMapping(FlightConstant.UPDATE_FLIGHT_BY_FLIGHT_ID)
-	public ResponseEntity<Flight> updateFlightByFlightId(@PathVariable long id, @RequestBody Flight flight) ;
+	public ResponseEntity<Flight> updateFlightByFlightId(@PathVariable long id, @RequestBody Flight flight);
 
 	@DeleteMapping(FlightConstant.DELETE_FLIGHT_BY_FLIGHT_ID)
 	public ResponseEntity<String> deleteFlightByFlightId(@PathVariable long id);
@@ -52,9 +54,9 @@ public interface FlightProxyController {
 	public ResponseEntity<List<List<String>>> getAllCityNames();
 
 	@GetMapping(FlightConstant.PAYMENT_STATUS_CHANGE_BY_FLIGHT_BOOKING_ID)
-	public ResponseEntity<FlightBookingDetails> paymentStatusChangeByFlightBookingId(@PathVariable long bookingid) ;
+	public ResponseEntity<FlightBookingDetails> paymentStatusChangeByFlightBookingId(@PathVariable long bookingid);
 
 	@GetMapping(FlightConstant.GET_ALL_AVAILABLE_FLIGHT)
 	public ResponseEntity<List<Flight>> getAllAvailableFlights(@PathVariable String from, @PathVariable String to,
-			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure, @PathVariable String travellerClass) ;
+			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure, @PathVariable String travellerClass);
 }

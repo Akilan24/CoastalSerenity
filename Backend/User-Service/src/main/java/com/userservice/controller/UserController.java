@@ -55,13 +55,15 @@ public class UserController {
 	}
 
 	@GetMapping(UserConstant.GET_TRAVELLER_BY_NAME)
-	public ResponseEntity<Traveller> getTravellerByTravellerName(@PathVariable String username, @PathVariable String name) {
+	public ResponseEntity<Traveller> getTravellerByTravellerName(@PathVariable String username,
+			@PathVariable String name) {
 		log.info("getTravellerByTravellerName controller called");
 		return new ResponseEntity<>(userService.getTravellerByTravellerName(username, name), HttpStatus.OK);
 	}
 
 	@DeleteMapping(UserConstant.DELETE_TRAVELLER_BY_NAME)
-	public ResponseEntity<String> deleteTravellerByTravellerName(@PathVariable String username, @PathVariable String name) {
+	public ResponseEntity<String> deleteTravellerByTravellerName(@PathVariable String username,
+			@PathVariable String name) {
 		log.info("deleteTravellerByTravellerName controller called");
 		return new ResponseEntity<>(userService.deleteTravellerByTravellerName(username, name), HttpStatus.OK);
 	}
@@ -74,7 +76,8 @@ public class UserController {
 	}
 
 	@PutMapping(UserConstant.UPDATE_USER_PASSWORD_BY_USERNAME)
-	public ResponseEntity<String> updatePasswordByUsername(@PathVariable String username, @PathVariable @Valid String password) {
+	public ResponseEntity<String> updatePasswordByUsername(@PathVariable String username,
+			@PathVariable @Valid String password) {
 		log.info("updatePasswordByUsername controller called");
 		return new ResponseEntity<>(userService.updateUserPasswordByUserName(username, password), HttpStatus.OK);
 	}

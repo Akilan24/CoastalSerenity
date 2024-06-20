@@ -30,7 +30,8 @@ public class RoomController {
 	RoomServiceImpl rservice;
 
 	@PostMapping(RoomConstant.ADD_ROOM_BY_HOTEL_ID)
-	public ResponseEntity<Room> addRoomByHotelId(@PathVariable long hid, @RequestBody @Valid Room room) throws Exception {
+	public ResponseEntity<Room> addRoomByHotelId(@PathVariable long hid, @RequestBody @Valid Room room)
+			throws Exception {
 		log.info("addRoomByHotelId controller called");
 		return new ResponseEntity<>(rservice.addRoomDetailsByHotelId(hid, room), HttpStatus.OK);
 
@@ -65,7 +66,7 @@ public class RoomController {
 		log.info("getRoomsByHotelId controller called");
 		return new ResponseEntity<>(rservice.showAllRoomDetailsByHotelId(hid), HttpStatus.OK);
 	}
- 
+
 	@GetMapping(RoomConstant.GET_ROOMS_BY_ROOM_PRICE)
 	public ResponseEntity<List<Room>> getRoomsByRoomPrice(@PathVariable Double price) {
 		log.info("getRoomsByRoomPrice controller called");

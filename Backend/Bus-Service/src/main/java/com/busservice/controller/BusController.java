@@ -23,7 +23,10 @@ import com.busservice.entity.BusBookingDetails;
 import com.busservice.entity.BusTravellerBusSeats;
 import com.busservice.service.BusService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 @RequestMapping(BusConstant.BUS)
 public class BusController {
 
@@ -32,69 +35,84 @@ public class BusController {
 
 	@GetMapping(BusConstant.GET_ALL_BUS)
 	public ResponseEntity<List<Bus>> getAllBus() {
+		log.info("getAllBus controller called");
 		return new ResponseEntity<>(BusService.getAllBus(), HttpStatus.OK);
 	}
 
 	@GetMapping(BusConstant.GET_BUS_BY_BUS_ID)
 	public ResponseEntity<Optional<Bus>> getBusByBusId(@PathVariable long busId) {
+		log.info("getBusByBusId controller called");
 		return new ResponseEntity<>(BusService.getBusByBusId(busId), HttpStatus.OK);
 	}
 
 	@PutMapping(BusConstant.ADD_SEATS_BY_BUS_ID)
 	public ResponseEntity<Bus> addSeatsByBusId(@PathVariable long busId) {
+		log.info("addSeatsByBusId controller called");
 		return new ResponseEntity<>(BusService.addSeatsByBusId(busId), HttpStatus.CREATED);
 	}
 
 	@PostMapping(BusConstant.SAVE_BUS)
 	public ResponseEntity<Bus> saveBus(@RequestBody Bus Bus) {
+		log.info("saveBus controller called");
 		return new ResponseEntity<>(BusService.saveBus(Bus), HttpStatus.CREATED);
 	}
 
 	@PostMapping(BusConstant.BOOK_BUS_BY_BUS_ID)
-	public ResponseEntity<BusBookingDetails> bookBusByBusId(@PathVariable long id, @RequestBody BusTravellerBusSeats btbs,
-			@PathVariable String username, @PathVariable String pickUpPoint, @PathVariable String dropPoint) {
-		return new ResponseEntity<>(BusService.bookBusByBusId(id, btbs, username, pickUpPoint, dropPoint), HttpStatus.CREATED);
+	public ResponseEntity<BusBookingDetails> bookBusByBusId(@PathVariable long id,
+			@RequestBody BusTravellerBusSeats btbs, @PathVariable String username, @PathVariable String pickUpPoint,
+			@PathVariable String dropPoint) {
+		log.info("bookBusByBusId controller called");
+		return new ResponseEntity<>(BusService.bookBusByBusId(id, btbs, username, pickUpPoint, dropPoint),
+				HttpStatus.CREATED);
 	}
 
 	@GetMapping(BusConstant.GET_BUS_BOOKING_DETAILS_BY_BUS_BOOKING_ID)
 	public ResponseEntity<BusBookingDetails> getBusBookingDetailsByBusBookingId(@PathVariable long id) {
+		log.info("getBusBookingDetailsByBusBookingId controller called");
 		return new ResponseEntity<>(BusService.getBusBookingDetailsByBusBookingId(id), HttpStatus.OK);
 	}
 
 	@GetMapping(BusConstant.GET_BUS_BOOKING_DETAILS_BY_USERNAME)
 	public ResponseEntity<List<BusBookingDetails>> getBusBookingDetailsByUsername(@PathVariable String username) {
+		log.info("getBusBookingDetailsByUsername controller called");
 		return new ResponseEntity<>(BusService.getBusBookingDetailsByUsername(username), HttpStatus.OK);
 	}
 
 	@PutMapping(BusConstant.UPDATE_BUS_BY_BUS_ID)
 	public ResponseEntity<Bus> updateBusByBusId(@PathVariable long busId, @RequestBody Bus Bus) {
+		log.info("updateBusByBusId controller called");
 		return new ResponseEntity<>(BusService.updateBusByBusId(busId, Bus), HttpStatus.OK);
 	}
 
 	@DeleteMapping(BusConstant.DELETE_BUS_BY_BUS_ID)
 	public ResponseEntity<String> deleteBusByBusId(@PathVariable long busId) {
+		log.info("deleteBusByBusId controller called");
 		return new ResponseEntity<>(BusService.deleteBusByBusId(busId), HttpStatus.OK);
 
 	}
 
 	@PutMapping(BusConstant.CANCEL_PAYMENT_BY_BUS_BOOKING_ID)
 	public ResponseEntity<BusBookingDetails> cancelPaymentByBusBookingId(@PathVariable long busId) {
+		log.info("cancelPaymentByBusBookingId controller called");
 		return new ResponseEntity<>(BusService.cancelPaymentByBusBookingId(busId), HttpStatus.OK);
 	}
 
 	@GetMapping(BusConstant.GET_ALL_CITY_NAMES)
 	public ResponseEntity<List<List<String>>> getAllCityNames() {
+		log.info("getAllCityNames controller called");
 		return new ResponseEntity<>(BusService.getAllCityNames(), HttpStatus.OK);
 	}
 
 	@GetMapping(BusConstant.PAYMENT_STATUS_CHANGE_BY_BUS_BOOKING_ID)
 	public ResponseEntity<BusBookingDetails> paymentStatusChangeByBusBookingId(@PathVariable long bookingid) {
+		log.info("paymentStatusChangeByBusBookingId controller called");
 		return new ResponseEntity<>(BusService.paymentStatusChangeByBusBookingId(bookingid), HttpStatus.OK);
 	}
 
 	@GetMapping(BusConstant.GET_ALL_AVAILABLE_BUS)
 	public ResponseEntity<List<Bus>> getAllAvailableBuses(@PathVariable String from, @PathVariable String to,
 			@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date departure) {
+		log.info("getAllAvailableBuses controller called");
 		return new ResponseEntity<>(BusService.getAllAvailableBuses(from, to, departure), HttpStatus.OK);
 	}
 }

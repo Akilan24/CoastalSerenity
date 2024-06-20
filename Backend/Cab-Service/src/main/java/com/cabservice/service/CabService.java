@@ -17,7 +17,7 @@ import com.cabservice.entity.TripDetails;
 
 @Service
 public interface CabService {
-	List<Cab> getAllCabs();
+	List<Cab> getAllCab();
 
 	Optional<Cab> getCabByCabId(long id);
 

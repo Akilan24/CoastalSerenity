@@ -34,7 +34,7 @@ class PaymentControllerTest {
 
 	@Test
 	void testAddPayment() throws Exception {
-		Payment payment = new Payment(123456, 987654,"Hotel", LocalDateTime.now(), "user123", 5000.0, "Payment Done");
+		Payment payment = new Payment(123456, 987654, "Hotel", LocalDateTime.now(), "user123", 5000.0, "Payment Done");
 		when(paymentService.doPaymentByBookingId(id[1])).thenReturn(payment);
 
 		ResponseEntity<Payment> response = paymentController.doPaymentByBookingId(id[1]);
@@ -57,7 +57,7 @@ class PaymentControllerTest {
 	@Test
 	void testGetPaymentByBookingId() {
 		int bookingId = 987654;
-		Payment payment = new Payment(123456, 987654,"Hotel", LocalDateTime.now(), "user123", 5000.0, "Payment Done");
+		Payment payment = new Payment(123456, 987654, "Hotel", LocalDateTime.now(), "user123", 5000.0, "Payment Done");
 		when(paymentService.getPaymentbyBookingId(bookingId)).thenReturn(payment);
 
 		ResponseEntity<Payment> response = paymentController.getPaymentByBookingId(bookingId);
@@ -69,7 +69,7 @@ class PaymentControllerTest {
 	@Test
 	void testGetPaymentByPaymentId() {
 		long paymentId = 123456;
-		Payment payment = new Payment(123456, 987654, "Hotel",LocalDateTime.now(), "user123", 5000.0, "Payment Done");
+		Payment payment = new Payment(123456, 987654, "Hotel", LocalDateTime.now(), "user123", 5000.0, "Payment Done");
 		when(paymentService.getPaymentbyPaymentId(paymentId)).thenReturn(payment);
 
 		ResponseEntity<Payment> response = paymentController.getPaymentByPaymentId(paymentId);

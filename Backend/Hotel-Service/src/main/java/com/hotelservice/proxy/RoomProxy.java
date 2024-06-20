@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.hotelservice.constant.RoomProxyConstant;
 import com.hotelservice.externalclass.Room;
 
-@FeignClient(name = RoomProxyConstant.SERVICE, url =RoomProxyConstant.URL)
+@FeignClient(name = RoomProxyConstant.SERVICE, url = RoomProxyConstant.URL)
 public interface RoomProxy {
 
 	@GetMapping(RoomProxyConstant.GET_ROOM_BY_ROOM_ID)
