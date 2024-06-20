@@ -1,6 +1,6 @@
 package com.authservice.service;
 
-import java.security.SecureRandom;
+import java.security.SecureRandom; 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -99,16 +99,11 @@ public class UserServiceImpl implements UserService {
 			Authentication authentication = authenticationManager.authenticate(
 					new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
 
-			System.out.println(userRepo.findByUsername(authRequest.getUsername()));
-			Optional<RefreshToken> r = refreshTokenRepo.findByUsername(authRequest.getUsername());
 			List<RefreshToken> refreshTokenList = refreshTokenRepo.findAll().stream()
 					.filter(t -> t.getUsername().equalsIgnoreCase(authRequest.getUsername()))
 					.collect(Collectors.toList());
 			for (RefreshToken rt : refreshTokenList) {
 				refreshTokenRepo.deleteById(rt.getId());
-			}
-			if (r.isPresent()) {
-				refreshTokenRepo.deleteById(r.get().getId());
 			}
 			if (authentication.isAuthenticated()) {
 				return JwtResponse.builder().accessToken(jwtutil.generateToken(authentication))

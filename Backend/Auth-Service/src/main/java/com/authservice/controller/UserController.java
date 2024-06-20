@@ -30,7 +30,7 @@ public class UserController {
 	@Autowired
 	UserProxyController userProxy;
 
-	@GetMapping(UserConstant.USER)
+	@GetMapping(UserConstant.GET_ALL_USERS)
 	public ResponseEntity<List<Registration>> listAllUser() {
 		log.info("listAllUser controller called");
 		return userProxy.listAllUser();
@@ -85,7 +85,7 @@ public class UserController {
 	@GetMapping(UserConstant.GET_USER_BY_USERNAME)
 	public ResponseEntity<Registration> showUserByUserName(@PathVariable String username) {
 		log.info("showUserByUserName controller called");
-		return userProxy.showUserByEmail(username);
+		return userProxy.showUserByUserName(username);
 	}
 
 	@GetMapping(UserConstant.GET_USER_BY_EMAIL)

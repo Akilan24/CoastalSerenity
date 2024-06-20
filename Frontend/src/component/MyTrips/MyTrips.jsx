@@ -152,6 +152,7 @@ function MyTrips() {
       </div>
       <div id="myTrips">
         <img id="logo" src="./cslogo.png" />
+        <h2>Booking Details</h2>
         <div className="tripTabs">
           <div id="ttab">
             <input
@@ -262,15 +263,15 @@ function MyTrips() {
                     </span>
                   </div>
                   <div className="detail-row">
-                    <span className="detail-label">Flight Name:</span>
+                    <span className="detail-label">Airline:</span>
                     <span className="detail-value">
-                      {bookingDetail.flightName}
+                      {bookingDetail.airline}
                     </span>
                   </div>
                   <div className="detail-row">
-                    <span className="detail-label">Flight No:</span>
+                    <span className="detail-label">Flight Model:</span>
                     <span className="detail-value">
-                      {bookingDetail.flightNo}
+                      {bookingDetail.flightModel}
                     </span>
                   </div>
                   <div className="detail-row">
@@ -281,7 +282,9 @@ function MyTrips() {
                   </div>
                   <div className="detail-row">
                     <span className="detail-label">Amount:</span>
-                    <span className="detail-value">{bookingDetail.amount}</span>
+                    <span className="detail-value">
+                      {bookingDetail.totalPrice}
+                    </span>
                   </div>
                   <button
                     id="view"

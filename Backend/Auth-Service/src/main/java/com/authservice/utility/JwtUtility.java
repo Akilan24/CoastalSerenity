@@ -4,15 +4,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.authservice.entity.Registration;
-import com.authservice.repository.UserRepository;
 import com.authservice.service.UserDetailsImpl;
 
 import io.jsonwebtoken.Claims;
@@ -42,7 +38,7 @@ public class JwtUtility {
 
 	}
 
-	public boolean validatieToken(String token) {
+	public boolean validateToken(String token) {
 		parse(token);
 		return true;
 	}

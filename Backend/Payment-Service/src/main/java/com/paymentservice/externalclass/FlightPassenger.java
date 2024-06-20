@@ -1,7 +1,5 @@
 package com.paymentservice.externalclass;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
@@ -13,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FlightPassenger {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private int flightPassengerId;
 	@Pattern(regexp = "^[a-zA-Z]{3,20}$", message = "Please provide a Name")
 	private String name;

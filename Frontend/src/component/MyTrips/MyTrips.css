@@ -45,7 +45,14 @@
   border-radius: 0px;
   position: fixed;
 }
-
+#tripsClass h2 {
+  color: #4bad57;
+  font-size: 50px;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+  margin-bottom: 5px;
+}
 #tripsClass .detail-row {
   display: flex;
   justify-content: space-between;
@@ -73,6 +80,6 @@
   padding: 5px;
   margin-top: 25px;
 }
-#tripsClass #notFound{
+#tripsClass #notFound {
   margin-top: 100px;
 }

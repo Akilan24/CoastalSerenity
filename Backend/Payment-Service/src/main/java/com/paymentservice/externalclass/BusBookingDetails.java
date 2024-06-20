@@ -17,10 +17,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class BusBookingDetails {
 
-	@Id
 	private long busBookingId;
 	private String busModel;
 	private String busCompany;
