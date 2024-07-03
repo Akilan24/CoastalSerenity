@@ -67,7 +67,7 @@ function ResetPassword() {
         </button>
       </div>
       <div className="reset">
-        <img id="l" src="./b.jpg" />
+        <img id="img" src="./reset.jpg" />
         <form className="formclass" onSubmit={onreset}>
           <h2>Reset Password</h2>
           <div>

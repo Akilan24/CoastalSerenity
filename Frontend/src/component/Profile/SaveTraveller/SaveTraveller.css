@@ -40,9 +40,27 @@
   flex-direction: column;
   padding-bottom: 10px;
 }
-.stc .travellerclass #submit {
+.stc .travellerclass #submit,
+.stc .savedtravellerclass #submit {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+}
+.stc .travellerclass #submit {
+  margin-top: 15px;
+}
+.stc .savedtravellerclass #submit {
+  margin-bottom: 15px;
+}
+.stc button {
+  border-radius: 25px;
+  width: 80px;
+  height: 40px;
+  font-size: 25px;
+  border: 0px;
+  font-family: "Times New Roman", Times, serif;
 }
 .stc .travellerclass input,
 .stc .travellerclass select {
@@ -53,6 +71,12 @@
   font-family: "Times New Roman", Times, serif;
   border: 1px solid;
 }
+.stc #stdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .stc .travellerclass label {
   color: black;
@@ -60,8 +84,17 @@
 }
 .stc #s {
   background-color: #4a21db;
+  color: white;
 }
 .stc #c {
+  background-color: transparent;
+  color: black;
+}
+.stdiv #s {
+  background-color: #4a21db;
+  color: white;
+}
+.stdiv #c {
   background-color: transparent;
   color: black;
 }

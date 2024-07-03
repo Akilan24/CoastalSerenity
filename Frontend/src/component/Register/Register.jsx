@@ -159,7 +159,7 @@ function Register() {
           </div>
         </form>
 
-        <img id="l" src="./3.jpg" />
+        <img id="img" src="./register.jpg" />
       </div>
     </div>
   );

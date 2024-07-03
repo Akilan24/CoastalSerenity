@@ -19,6 +19,15 @@
   background-color: rgb(211, 229, 233);
   border-radius: 0%;
 }
+#cabClass .formclass button {
+  background-color: rgb(145, 51, 186);
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  color: white;
+  border: 0px;
+  border-radius: 25px;
+}
 #cjs .divclass {
   display: flex;
   flex-direction: row;

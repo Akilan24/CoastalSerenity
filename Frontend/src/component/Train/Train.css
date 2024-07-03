@@ -43,7 +43,11 @@ select {
 #tjs .formclass {
   position: sticky;
 }
-
+#tjs .formclass button {
+  border: 0px;
+  border-radius: 25px;
+  color: white;
+}
 #tjs #but {
   cursor: pointer;
   width: 100px;

@@ -10,11 +10,12 @@ select {
   border-radius: 4px;
   font-size: 25px;
 }
+
 #travellerClass label {
   color: rgb(145, 51, 186);
 }
 #travellerClass input[type="date"] {
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid;
 }
 #travellerClass #departure {
@@ -34,8 +35,15 @@ select {
   margin-right: 5px;
 }
 
-.formclass button {
+#travellerClass .formclass button {
   background-color: rgb(145, 51, 186);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: white;
+  border: 0px;
+  height: 45px;
+  width: 100px;
+  border-radius: 25px;
 }
 .formclass {
   position: sticky;

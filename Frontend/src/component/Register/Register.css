@@ -43,7 +43,7 @@
   background-color: rgb(238, 237, 237);
 }
 
-.form-group {
+.register .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 14px;
@@ -64,8 +64,7 @@
   justify-content: space-around;
   width: 80%;
   border-radius: 25px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 10px;
   background-color: white;
 }
 
@@ -81,7 +80,7 @@
   box-sizing: border-box;
 }
 
-button {
+.register button {
   padding: 10px 20px;
   background-color: #4bad57;
   color: #fff;
@@ -99,27 +98,27 @@ button {
   font-size: 50px;
   font-style: italic;
 }
-.input {
+.register .input {
   display: flex;
   flex-direction: row;
 }
 
-.input input {
+.register .input input {
   width: 200px;
   height: 40px;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
 }
-.input select {
+.register .input select {
   width: 200px;
   height: 40px;
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
 }
-[type="submit"] {
+.register [type="submit"] {
   background-color: rgb(69, 40, 237);
 }
-#l {
+.register #img {
   width: 580px;
   height: 560px;
 }

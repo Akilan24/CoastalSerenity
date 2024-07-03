@@ -175,7 +175,7 @@ function SaveTraveller() {
               </div>
             </div>
           ))}
-          <div>
+          <div id="submit">
             <button id="c" onClick={() => navigate(-1)}>
               Cancel
             </button>

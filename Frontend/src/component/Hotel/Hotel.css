@@ -25,22 +25,29 @@ select {
   background-color: rgb(211, 229, 233);
   border-radius: 0%;
 }
-.divclass {
+#hotelclass .divclass {
   margin-right: 5px;
 }
 
-.formclass button {
+#hotelclass .formclass button {
   background-color: rgb(145, 51, 186);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: white;
+  border: 0px;
+  height: 45px;
+  width: 100px;
+  border-radius: 25px;
 }
-.formclass {
+#hotelclass .formclass {
   position: sticky;
 }
 
-p {
+#hotelclass p {
   margin: 0%;
   color: rgb(145, 51, 186);
 }
-button {
+#hotelclass button {
   cursor: pointer;
 }
 
@@ -88,23 +95,23 @@ button {
   align-items: center;
   width: 100%;
 }
-.room #imgr {
+.hoteldetails .room #imgr {
   width: 300px;
   border-radius: 15px;
 }
-.hotel #imgh {
+.hoteldetails .hotel #imgh {
   width: 400px;
   border-radius: 15px;
   margin-left: 200px;
 }
-.room .roomdisplay {
+.hoteldetails .room .roomdisplay {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 30vw;
 }
-.roomdetails {
+.hoteldetails .roomdetails {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -112,7 +119,7 @@ button {
 .hoteldisplay {
   margin-top: 50px;
 }
-#roombutton button {
+.hoteldetails #roombutton button {
   background-color: rgb(145, 51, 186);
   color: white;
   width: 100px;

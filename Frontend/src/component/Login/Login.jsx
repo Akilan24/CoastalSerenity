@@ -77,7 +77,7 @@ function Login() {
             Forgot Password?
           </button>
         </form>
-        <img id="l" src="./2.jpg" />
+        <img id="img" src="./login.jpg" />
       </div>
     </div>
   );

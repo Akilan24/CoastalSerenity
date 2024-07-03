@@ -1,11 +1,11 @@
-#myTrips {
+#tripsClass #myTrips {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.tripTabs {
+#tripsClass .tripTabs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,20 +14,21 @@
   width: 80%;
   background-color: white;
 }
-#ttab {
+#tripsClass #ttab {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 250px;
 }
-#ttab label {
+
+#tripsClass #ttab label {
   width: 150px;
   color: rgb(153, 7, 183);
 }
-#ttab input[type="radio"] {
+#tripsClass #ttab input[type="radio"] {
   width: 50px;
 }
-#logo {
+#tripsClass #logo {
   padding: 0px;
   width: 450px;
   margin-bottom: 20px;
@@ -44,9 +45,11 @@
 #tripsClass .selector {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 100px;
   height: 100vh;
   border-radius: 0px;
+  background-color: white;
   position: fixed;
 }
 #tripsClass .selector p {
@@ -84,4 +87,7 @@
 }
 #tripsClass .selector button {
   background-color: transparent;
+  border: 0px;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
 }

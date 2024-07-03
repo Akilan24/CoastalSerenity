@@ -7,12 +7,13 @@
   border-radius: 25px;
   width: 30%;
   backdrop-filter: blur(5px);
-  margin-bottom: 15px;
 }
 
 .profileclass h2 {
   color: #4bad57;
+  margin-top: 10px;
   margin-bottom: 5px;
+  font-size: 40px;
 }
 .profileclass div {
   display: flex;
@@ -22,6 +23,9 @@
 .profileclass #submit {
   display: flex;
   flex-direction: row;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .profileclass input {
@@ -48,6 +52,15 @@
   width: 450px;
   margin-bottom: 20px;
   margin-top: 10px;
+}
+.profile button {
+  border: 0px;
+  width: 80px;
+  height: 45px;
+  font-size: 25px;
+  color: white;
+  border-radius: 25px;
+  font-family: "Times New Roman", Times, serif;
 }
 .profile select {
   width: 400px;

@@ -209,7 +209,7 @@ function Flight() {
             </div>
           ))
         ) : (
-          <p>No Flights available for the selected cities.</p>
+          <p id="not">No Flights available for the selected cities.</p>
         )}
       </div>
       <AccountDetails />

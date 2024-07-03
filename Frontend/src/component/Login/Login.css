@@ -18,7 +18,7 @@
   border-radius: 25px;
   background-color: white;
 }
-.loginclass .login #l {
+.loginclass .login #img {
   width: 620px;
   height: 600px;
   border-radius: 100px;
@@ -60,6 +60,10 @@
 .loginclass #log {
   background-color: rgb(69, 40, 237);
   font-size: 25px;
+  color: white;
+  height: 45px;
+  width: 100px;
+  border: 0px;
   border-radius: 25px;
   font-family: "Times New Roman", Times, serif;
 }
@@ -67,6 +71,7 @@
   background-color: transparent;
   color: rgb(69, 40, 237);
   padding: 0px;
+  border: 0px;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
 }
@@ -84,6 +89,7 @@
   background-color: rgb(255, 255, 255);
   width: 150px;
   height: 50px;
+  border: 0px;
   font-size: 25px;
   border-radius: 25px;
 }

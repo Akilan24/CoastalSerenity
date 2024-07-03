@@ -5,7 +5,7 @@
   background-color: white;
   padding-top: 10px;
 }
-#tabs {
+.menu #tabs {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -13,11 +13,14 @@
   flex-direction: column;
   background-color: transparent;
 }
-#tabs p {
+.menu #tabs p {
   color: rgb(145, 51, 186);
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
-#tabs button {
+.menu #tabs button {
   background-color: transparent;
+  border: 0px;
 }
 #hotellogo,
 #planelogo,
@@ -28,14 +31,14 @@
   width: 30px;
   cursor: pointer;
 }
-.cslogo {
+.menu .cslogo {
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.selector {
+.menu .selector {
   display: flex;
   justify-content: space-around;
   width: 50%;
@@ -44,17 +47,17 @@
   background-color: white;
   border-radius: 25px;
 }
-#tabsLogo {
+.menu #tabsLogo {
   height: 80px;
   width: fit-content;
   position: relative;
   left: 10px;
   bottom: 5px;
 }
-#icon {
+.menu #icon {
   width: 40px;
 }
-#tabs .login {
+.menu #tabs .login {
   font-size: 25px;
   background-color: rgb(90, 213, 250);
   color: white;
@@ -63,5 +66,6 @@
   padding: 2px;
   height: 40px;
   width: 120px;
+  font-family: "Times New Roman", Times, serif;
   align-items: center;
 }

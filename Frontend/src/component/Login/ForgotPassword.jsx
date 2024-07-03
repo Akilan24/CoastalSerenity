@@ -40,7 +40,7 @@ function ForgotPassword() {
       </div>
 
       <div className="forgot">
-        <img id="l" src="./a.jpg" />
+        <img id="img" src="./forgot.jpg" />
         <form className="formclass" onSubmit={onsubmit}>
           <h2>Forgot Password</h2>
           <div>
