@@ -7,6 +7,7 @@
   border-radius: 25px;
   width: 30%;
   backdrop-filter: blur(5px);
+  margin-bottom: 15px;
 }
 
 .profileclass h2 {
@@ -25,9 +26,18 @@
 
 .profileclass input {
   width: 400px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid;
+}
+.profileclass label {
+  color: black;
+  font-weight: lighter;
 }
 #s {
-  background-color: rgb(145, 51, 186);
+  background-color: rgb(69, 40, 237);
 }
 #c {
   background-color: transparent;
@@ -41,4 +51,6 @@
 }
 .profile select {
   width: 400px;
+  height: 35px;
+  border-radius: 4px;
 }

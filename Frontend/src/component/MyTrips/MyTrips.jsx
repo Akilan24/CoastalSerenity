@@ -152,7 +152,6 @@ function MyTrips() {
       </div>
       <div id="myTrips">
         <img id="logo" src="./cslogo.png" />
-        <h2>Booking Details</h2>
         <div className="tripTabs">
           <div id="ttab">
             <input

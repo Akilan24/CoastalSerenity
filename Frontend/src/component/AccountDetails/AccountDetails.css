@@ -25,7 +25,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-weight: bold;
+  font-weight: lighter;
   color: rgb(145, 51, 186);
 }
 #profile #imgIcon {

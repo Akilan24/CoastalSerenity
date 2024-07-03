@@ -1,20 +1,46 @@
 #register {
-  margin: 4px;
+  width: 100%;
+  text-align: start;
+  color: rgb(69, 40, 237);
+  font-size: 35px;
 }
-.register #logo {
-  padding: 0px;
-  padding-top: 25px;
-  width: 450px;
-  margin-bottom: 0px;
-}
-.registerclass {
+.register {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+}
+.register #logo {
+  padding: 0px;
+  width: 350px;
+  margin-bottom: 0px;
+}
+.register #tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  width: 90%;
+}
+.register #login {
+  background-color: white;
+  color: rgb(69, 40, 237);
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 25px;
+}
+.register .registerclass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
   margin-top: 5px;
   border-radius: 25px;
-  width: 30%;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(238, 237, 237);
 }
 
 .form-group {
@@ -25,20 +51,33 @@
 
 .register label {
   font-weight: bold;
-  color: rgb(145, 51, 186);
+  color: black;
+  font-weight: lighter;
   margin-bottom: 3px;
   width: 100%;
-  text-align: center;
+  text-align: start;
+}
+.register #main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
 }
 
-input,
-select {
+.registerclass input,
+.registerclass select {
   padding: 8px;
   border: 1px solid hsl(0, 0%, 0%);
   border-radius: 4px;
   height: 35px;
-  width: 600px;
-  max-width: 100%;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  width: 400px;
   box-sizing: border-box;
 }
 
@@ -47,9 +86,12 @@ button {
   background-color: #4bad57;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
   cursor: pointer;
   margin: 0px;
+  background-color: white;
 }
 
 .register h2 {
@@ -61,10 +103,23 @@ button {
   display: flex;
   flex-direction: row;
 }
-.input select,
+
 .input input {
   width: 200px;
+  height: 40px;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+.input select {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
 }
 [type="submit"] {
-  background-color: rgb(145, 51, 186);
+  background-color: rgb(69, 40, 237);
+}
+#l {
+  width: 580px;
+  height: 560px;
 }

@@ -23,9 +23,12 @@
   padding: 10px;
   margin-top: 30px;
 }
-.stc .savedtravellerclass h2,
+.stc .savedtravellerclass h2 {
+  color: #4bad57;
+}
 .stc .travellerclass h2 {
   color: #4bad57;
+  margin-bottom: 10px;
 }
 .stc #logo {
   padding: 25px;
@@ -44,9 +47,19 @@
 .stc .travellerclass input,
 .stc .travellerclass select {
   width: 350px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid;
+}
+
+.stc .travellerclass label {
+  color: black;
+  font-weight: lighter;
 }
 .stc #s {
-  background-color: rgb(145, 51, 186);
+  background-color: #4a21db;
 }
 .stc #c {
   background-color: transparent;

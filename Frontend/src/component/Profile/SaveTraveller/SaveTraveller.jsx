@@ -201,6 +201,7 @@ function SaveTraveller() {
             name="name"
             id="name"
             value={traveller.name}
+            placeholder="Name"
             onChange={handleTravellerChange}
             required
           />
@@ -212,6 +213,7 @@ function SaveTraveller() {
             name="age"
             id="age"
             value={traveller.age}
+            placeholder="Age"
             onChange={handleTravellerChange}
             required
           />
@@ -223,6 +225,7 @@ function SaveTraveller() {
             name="mobile"
             id="mobile"
             value={traveller.mobile}
+            placeholder="Mobile number"
             onChange={handleTravellerChange}
             required
           />
@@ -234,6 +237,7 @@ function SaveTraveller() {
             name="address"
             id="address"
             value={traveller.address}
+            placeholder="Address"
             onChange={handleTravellerChange}
             required
           />

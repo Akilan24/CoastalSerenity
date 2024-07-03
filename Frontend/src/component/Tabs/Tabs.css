@@ -5,7 +5,7 @@
   background-color: white;
   padding-top: 10px;
 }
-#tab {
+#tabs {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -13,7 +13,10 @@
   flex-direction: column;
   background-color: transparent;
 }
-#tab button {
+#tabs p {
+  color: rgb(145, 51, 186);
+}
+#tabs button {
   background-color: transparent;
 }
 #hotellogo,
@@ -51,8 +54,8 @@
 #icon {
   width: 40px;
 }
-#tab .login {
-  font-size: 20px;
+#tabs .login {
+  font-size: 25px;
   background-color: rgb(90, 213, 250);
   color: white;
   display: flex;

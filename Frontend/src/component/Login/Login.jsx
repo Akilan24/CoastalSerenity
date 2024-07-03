@@ -38,43 +38,47 @@ function Login() {
 
   return (
     <div className="loginclass">
-      <img id="logo" src="./cslogo.png" />
-      <form className="formclass" onSubmit={onlogin}>
-        <h2>Login</h2>
-        <div>
-          <label htmlFor="username">Username: </label>
-          <input
-            type="text"
-            name="username"
-            value={formData.username}
-            id="username"
-            onChange={onchangeinput}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password: </label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            id="password"
-            onChange={onchangeinput}
-          />
-        </div>
-        <div>
+      <div id="tab">
+        <img id="logo" src="./cslogo.png" />
+        <button id="join" onClick={(e) => navigate("/register")}>
+          Register
+        </button>
+      </div>
+      <div className="login">
+        <form className="formclass" onSubmit={onlogin}>
+          <h2>Login</h2>
+          <div>
+            <label htmlFor="username">Username: </label>
+            <input
+              type="text"
+              name="username"
+              value={formData.username}
+              id="username"
+              placeholder="Username"
+              onChange={onchangeinput}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password: </label>
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              id="password"
+              placeholder="Password"
+              onChange={onchangeinput}
+            />
+          </div>
+
           <button id="log" type="submit">
             Login
           </button>
-        </div>
-        <div>
-          <Link id="a" to="/forgotpassword">
+          <button id="fp" onClick={(e) => navigate("/forgotpassword")}>
             Forgot Password?
-          </Link>
-          <Link id="a" to="/register">
-            Register
-          </Link>
-        </div>
-      </form>
+          </button>
+        </form>
+        <img id="l" src="./2.jpg" />
+      </div>
     </div>
   );
 }

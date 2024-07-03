@@ -41,6 +41,7 @@ function Password() {
           name="password"
           id="password"
           value={password}
+          placeholder="New Password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./ResetPassword.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function ResetPassword() {
   const [formData, setFormData] = useState({
-    userid: "",
+    username: "",
     resetpassword: "",
     newpassword: "",
   });
@@ -19,7 +19,7 @@ function ResetPassword() {
 
     try {
       const login = {
-        userid: formData.userid,
+        username: formData.username,
         password: formData.resetpassword,
       };
       const token = await axios.post(
@@ -42,7 +42,7 @@ function ResetPassword() {
       };
       const response = await axios.post(
         "http://localhost:8080/CS/User/updatepassword/" +
-          formData.userid +
+          formData.username +
           "/" +
           formData.newpassword,
         config
@@ -60,43 +60,54 @@ function ResetPassword() {
 
   return (
     <div className="resetclass">
-      <img id="logo" src="./cslogo.png" />
-      <h2>Reset Password</h2>
-      <form className="formclass" onSubmit={onreset}>
-        <div>
-          <label htmlFor="userid">Userid: </label>
-          <input
-            type="text"
-            name="userid"
-            value={formData.userid}
-            id="userid"
-            onChange={onchangeinput}
-          />
-        </div>
-        <div>
-          <label htmlFor="resetpassword">Reset Password: </label>
-          <input
-            type="resetpassword"
-            name="resetpassword"
-            value={formData.resetpassword}
-            id="resetpassword"
-            onChange={onchangeinput}
-          />
-        </div>
-        <div>
-          <label htmlFor="newpassword">New Password: </label>
-          <input
-            type="newpassword"
-            name="newpassword"
-            value={formData.newpassword}
-            id="newpassword"
-            onChange={onchangeinput}
-          />
-        </div>
-        <div>
-          <button type="submit">Reset</button>
-        </div>
-      </form>
+      <div id="tab">
+        <img id="logo" src="./cslogo.png" />
+        <button id="login" onClick={(e) => navigate("/login")}>
+          Log in
+        </button>
+      </div>
+      <div className="reset">
+        <img id="l" src="./b.jpg" />
+        <form className="formclass" onSubmit={onreset}>
+          <h2>Reset Password</h2>
+          <div>
+            <label htmlFor="username">Username: </label>
+            <input
+              type="text"
+              name="username"
+              value={formData.username}
+              id="username"
+              placeholder="Username"
+              onChange={onchangeinput}
+            />
+          </div>
+          <div>
+            <label htmlFor="resetpassword">Reset Password: </label>
+            <input
+              type="resetpassword"
+              name="resetpassword"
+              value={formData.resetpassword}
+              id="resetpassword"
+              placeholder="Reset Password"
+              onChange={onchangeinput}
+            />
+          </div>
+          <div>
+            <label htmlFor="newpassword">New Password: </label>
+            <input
+              type="newpassword"
+              name="newpassword"
+              value={formData.newpassword}
+              id="newpassword"
+              placeholder="New Password"
+              onChange={onchangeinput}
+            />
+          </div>
+          <div>
+            <button type="submit">Reset</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

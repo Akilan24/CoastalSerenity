@@ -67,6 +67,7 @@ function Profile() {
             name="name"
             id="name"
             value={profile.name}
+            placeholder="Name"
             onChange={handleprofileChange}
           />
         </div>
@@ -77,6 +78,7 @@ function Profile() {
             name="email"
             id="email"
             value={profile.email}
+            placeholder="Email"
             onChange={handleprofileChange}
           />
         </div>
@@ -87,6 +89,7 @@ function Profile() {
             name="mobile"
             id="mobile"
             value={profile.mobile}
+            placeholder="Mobile number"
             onChange={handleprofileChange}
           />
         </div>
@@ -97,6 +100,7 @@ function Profile() {
             name="address"
             id="address"
             value={profile.address}
+            placeholder="Address"
             onChange={handleprofileChange}
           />
         </div>

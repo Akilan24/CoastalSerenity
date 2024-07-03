@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./ForgotPassword.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function ForgotPassword() {
@@ -27,21 +27,40 @@ function ForgotPassword() {
   }
   return (
     <div className="forgotclass">
-      <img id="logo" src="./cslogo.png" />
-      <h2>Forgot Password</h2>
-      <form className="formclass" onSubmit={onsubmit}>
+      <div id="tab">
+        <img id="logo" src="./cslogo.png" />
         <div>
-          <label htmlFor="email">Enter your mail id: </label>
-          <input
-            type="text"
-            name="email"
-            value={formData}
-            id="email"
-            onChange={onchangeinput}
-          />
-          <button type="submit">Send</button>
+          <button id="login" onClick={(e) => navigate("/login")}>
+            Log in
+          </button>
+          <button id="join" onClick={(e) => navigate("/register")}>
+            Register
+          </button>
         </div>
-      </form>
+      </div>
+
+      <div className="forgot">
+        <img id="l" src="./a.jpg" />
+        <form className="formclass" onSubmit={onsubmit}>
+          <h2>Forgot Password</h2>
+          <div>
+            <label htmlFor="email">Enter your mail id: </label>
+            <input
+              type="text"
+              name="email"
+              value={formData}
+              id="email"
+              placeholder="Email"
+              onChange={onchangeinput}
+            />
+            <p>
+              We’ll send a verification code to this email if it matches an
+              existing Coastal Serenity account.
+            </p>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
